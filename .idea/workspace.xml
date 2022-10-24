@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Parse brackets">
-      <change afterPath="$PROJECT_DIR$/lib/exp4j-0.4.8.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added library for counting expressions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666589502285</updated>
-      <workItem from="1666589503910" duration="1449000" />
+      <workItem from="1666589503910" duration="1754000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -84,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666590368777</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added library for counting expressions">
+      <created>1666591725556</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666591725556</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +106,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added ArithmeticExpressionParser" />
     <MESSAGE value="Parse brackets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parse brackets" />
+    <MESSAGE value="Added library for counting expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added library for counting expressions" />
   </component>
 </project>
