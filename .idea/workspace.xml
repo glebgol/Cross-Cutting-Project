@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Archivated file to zip">
-      <change afterPath="$PROJECT_DIR$/file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Zipped file">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArchivationFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArchivationFileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666589502285</updated>
-      <workItem from="1666589503910" duration="2461000" />
+      <workItem from="1666589503910" duration="2596000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -102,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666592509842</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Zipped file">
+      <created>1666592731291</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666592731291</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +132,7 @@
     <MESSAGE value="Added library for counting expressions" />
     <MESSAGE value="Added another library for counting expressions" />
     <MESSAGE value="Archivated file to zip" />
-    <option name="LAST_COMMIT_MESSAGE" value="Archivated file to zip" />
+    <MESSAGE value="Zipped file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zipped file" />
   </component>
 </project>

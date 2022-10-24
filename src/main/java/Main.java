@@ -12,5 +12,10 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        try {
+            ArchivationFileManager.UnZipFile("file.zip", "file2.txt");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
