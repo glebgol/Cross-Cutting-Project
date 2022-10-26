@@ -29,5 +29,10 @@ public class Main {
         } catch (CryptoException e) {
             throw new RuntimeException(e);
         }
+        try {
+            ProcessingTxtFile.Calculate("file2.txt", "file5.txt");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
