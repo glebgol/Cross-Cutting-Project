@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactor packages">
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ReaderBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added TxtFileReader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/streams/EncryptingResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +66,7 @@
       <workItem from="1667157038575" duration="2541000" />
       <workItem from="1667225604269" duration="342000" />
       <workItem from="1667229157611" duration="84000" />
-      <workItem from="1667237704392" duration="3752000" />
+      <workItem from="1667237704392" duration="4460000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -173,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667240872293</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added TxtFileReader">
+      <created>1667241688737</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667241688737</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +205,18 @@
     <MESSAGE value="Added interfaces" />
     <MESSAGE value="Added DefaultReader" />
     <MESSAGE value="Refactor packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor packages" />
+    <MESSAGE value="Added TxtFileReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TxtFileReader" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/DefaultReader.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
