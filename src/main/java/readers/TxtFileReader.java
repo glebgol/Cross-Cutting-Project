@@ -1,5 +1,6 @@
 package readers;
 
+import exceptions.CryptoException;
 import interfaces.IFIleReader;
 import interfaces.IStream;
 
@@ -29,12 +30,12 @@ public class TxtFileReader implements IFIleReader {
     }
 
     @Override
-    public void Write(IStream stream) throws IOException {
+    public void Write(IStream stream) throws IOException, CryptoException {
         _reader.Write(stream);
     }
 
     @Override
-    public IStream Read() throws FileNotFoundException {
+    public IStream Read() throws FileNotFoundException, CryptoException {
         return _reader.Read();
     }
 
