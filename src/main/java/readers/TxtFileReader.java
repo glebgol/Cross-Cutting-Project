@@ -1,19 +1,19 @@
 package readers;
 
 import exceptions.CryptoException;
-import interfaces.IFIleReader;
+import interfaces.IFileReader;
 import interfaces.IStream;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class TxtFileReader implements IFIleReader {
+public class TxtFileReader implements IFileReader {
 
     protected String inputFilename;
     protected String outputFilename;
-    protected IFIleReader _reader;
+    protected IFileReader _reader;
 
-    public TxtFileReader(IFIleReader reader) {
+    public TxtFileReader(IFileReader reader) {
         _reader = reader;
         inputFilename = reader.getInputFilename();
         outputFilename = reader.getOutputFilename();
@@ -40,7 +40,7 @@ public class TxtFileReader implements IFIleReader {
     }
 
     @Override
-    public IStream Calculate() throws FileNotFoundException {
-        return _reader.Calculate();
+    public IStream Calculate(IStream stream) throws FileNotFoundException, CryptoException {
+        return _reader.Calculate(stream);
     }
 }

@@ -1,6 +1,6 @@
 package readers;
 
-import interfaces.IFIleReader;
+import interfaces.IFileReader;
 import interfaces.IStream;
 import parsers.ProcessingTxtFile;
 import streams.CalculationResult;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DefaultReader implements IFIleReader {
+public class DefaultReader implements IFileReader {
 
     private String inputFilename;
     private String outputFilename;
@@ -56,10 +56,9 @@ public class DefaultReader implements IFIleReader {
     }
 
     @Override
-    public IStream Calculate() throws FileNotFoundException {
-        var readingResult = Read();
+    public IStream Calculate(IStream stream) throws FileNotFoundException {
         var calculatedLines = new ArrayList<String>();
-        for (var line : readingResult.lines()) {
+        for (var line : stream.lines()) {
             var calculateLine = ProcessingTxtFile.CalculateLine(line);
             calculatedLines.add(calculateLine);
         }

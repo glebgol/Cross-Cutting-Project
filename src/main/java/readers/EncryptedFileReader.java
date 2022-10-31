@@ -2,7 +2,7 @@ package readers;
 
 import ciphers.CryptoUtils;
 import exceptions.CryptoException;
-import interfaces.IFIleReader;
+import interfaces.IFileReader;
 import interfaces.IStream;
 import streams.ReadingResult;
 
@@ -13,14 +13,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class EncryptedFileReader implements IFIleReader {
+public class EncryptedFileReader implements IFileReader {
 
     protected String inputFilename;
     protected String outputFilename;
-    protected IFIleReader _reader;
+    protected IFileReader _reader;
     protected String key;
 
-    public EncryptedFileReader(String key, IFIleReader reader) {
+    public EncryptedFileReader(String key, IFileReader reader) {
         _reader = reader;
         inputFilename = reader.getInputFilename();
         outputFilename = reader.getOutputFilename();
@@ -38,15 +38,15 @@ public class EncryptedFileReader implements IFIleReader {
 
     @Override
     public void Write(IStream stream) throws IOException, CryptoException {
-        Encrypt();
+        _reader.Write(stream);
     }
 
     @Override
     public IStream Read() throws CryptoException {
-        var bytes = CryptoUtils.read(key, new File(inputFilename));
+        var bytes = CryptoUtils.GetDecrypting(key, new File(inputFilename));
         var stringResult = new String(bytes, StandardCharsets.UTF_8);
         var arrayListOfStrings = new ArrayList<String>();
-        var stringTokenizer = new StringTokenizer(stringResult, " ");
+        var stringTokenizer = new StringTokenizer(stringResult, "\n");
         while (stringTokenizer.hasMoreTokens()) {
             arrayListOfStrings.add(stringTokenizer.nextToken());
         }
@@ -54,11 +54,8 @@ public class EncryptedFileReader implements IFIleReader {
     }
 
     @Override
-    public IStream Calculate() throws FileNotFoundException {
-        return null;
-    }
-
-    private void Encrypt() throws CryptoException {
-        CryptoUtils.Encrypt(key, new File(inputFilename), new File(outputFilename));
+    public IStream Calculate(IStream stream) throws FileNotFoundException, CryptoException {
+        var readingResult = Read();
+        return _reader.Calculate(readingResult);
     }
 }
