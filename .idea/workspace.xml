@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added DefaultReader" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactor packages">
+      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ReaderBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +73,7 @@
       <workItem from="1667157038575" duration="2541000" />
       <workItem from="1667225604269" duration="342000" />
       <workItem from="1667229157611" duration="84000" />
-      <workItem from="1667237704392" duration="3019000" />
+      <workItem from="1667237704392" duration="3752000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -155,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667240707297</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Refactor packages">
+      <created>1667240872293</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667240872293</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +204,7 @@
     <MESSAGE value="Calculate txt file" />
     <MESSAGE value="Added interfaces" />
     <MESSAGE value="Added DefaultReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DefaultReader" />
+    <MESSAGE value="Refactor packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor packages" />
   </component>
 </project>

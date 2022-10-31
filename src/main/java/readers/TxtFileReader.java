@@ -3,10 +3,19 @@ package readers;
 import interfaces.IFIleReader;
 import interfaces.IStream;
 
-public class TxtFileReader extends ReaderBase {
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class TxtFileReader implements IFIleReader {
+
+    protected String inputFilename;
+    protected String outputFilename;
+    protected IFIleReader _reader;
 
     public TxtFileReader(IFIleReader reader) {
-        super(reader);
+        _reader = reader;
+        inputFilename = reader.getInputFilename();
+        outputFilename = reader.getOutputFilename();
     }
 
     @Override
@@ -20,17 +29,17 @@ public class TxtFileReader extends ReaderBase {
     }
 
     @Override
-    public void Write(IStream stream) {
-
+    public void Write(IStream stream) throws IOException {
+        _reader.Write(stream);
     }
 
     @Override
-    public IStream Read() {
-        return null;
+    public IStream Read() throws FileNotFoundException {
+        return _reader.Read();
     }
 
     @Override
-    public IStream Calculate() {
-        return null;
+    public IStream Calculate() throws FileNotFoundException {
+        return _reader.Calculate();
     }
 }
