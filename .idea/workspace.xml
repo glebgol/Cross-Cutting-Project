@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Tried encrypting and decrypting">
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/IStreamReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Calculate txt file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFIleReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/IStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,9 +41,9 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Cross-Cutting-Project/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java-Labs/SumOfRow&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
@@ -62,6 +62,11 @@
       <updated>1666589502285</updated>
       <workItem from="1666589503910" duration="5186000" />
       <workItem from="1666696556347" duration="1170000" />
+      <workItem from="1666818787125" duration="515000" />
+      <workItem from="1667157038575" duration="2541000" />
+      <workItem from="1667225604269" duration="342000" />
+      <workItem from="1667229157611" duration="84000" />
+      <workItem from="1667237704392" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -133,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666602991777</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Calculate txt file">
+      <created>1666819051033</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666819051033</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +173,7 @@
     <MESSAGE value="Unzip file" />
     <MESSAGE value="Add encrypting and decrypting" />
     <MESSAGE value="Tried encrypting and decrypting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried encrypting and decrypting" />
+    <MESSAGE value="Calculate txt file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculate txt file" />
   </component>
 </project>
