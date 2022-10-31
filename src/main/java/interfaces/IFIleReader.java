@@ -1,7 +1,12 @@
 package interfaces;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public interface IFIleReader {
-    void Write(IStream stream);
-    IStream Read();
-    IStream Calculate();
+    String getInputFilename();
+    String getOutputFilename();
+    void Write(IStream stream) throws IOException;
+    IStream Read() throws FileNotFoundException;
+    IStream Calculate() throws FileNotFoundException;
 }
