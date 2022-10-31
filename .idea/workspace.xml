@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Read and Write methods for EncryptedFileReader">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Calculate method for EncryptedFileReader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/IFIleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/DefaultReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +66,7 @@
       <workItem from="1667157038575" duration="2541000" />
       <workItem from="1667225604269" duration="342000" />
       <workItem from="1667229157611" duration="84000" />
-      <workItem from="1667237704392" duration="8943000" />
+      <workItem from="1667237704392" duration="10123000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -193,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667243941395</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added Calculate method for EncryptedFileReader">
+      <created>1667246893332</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667246893332</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +229,8 @@
     <MESSAGE value="Added TxtFileReader" />
     <MESSAGE value="Added EncryptedFileReader" />
     <MESSAGE value="Read and Write methods for EncryptedFileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Read and Write methods for EncryptedFileReader" />
+    <MESSAGE value="Added Calculate method for EncryptedFileReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Calculate method for EncryptedFileReader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
