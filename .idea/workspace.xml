@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added interfaces">
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/ReaderBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/streams/CalculationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/IFIleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFIleReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/IStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IStream.java" afterDir="false" />
-    </list>
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added DefaultReader" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +62,7 @@
       <workItem from="1667157038575" duration="2541000" />
       <workItem from="1667225604269" duration="342000" />
       <workItem from="1667229157611" duration="84000" />
-      <workItem from="1667237704392" duration="2639000" />
+      <workItem from="1667237704392" duration="3019000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -157,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667238232615</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added DefaultReader">
+      <created>1667240707297</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667240707297</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +185,7 @@
     <MESSAGE value="Tried encrypting and decrypting" />
     <MESSAGE value="Calculate txt file" />
     <MESSAGE value="Added interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added interfaces" />
+    <MESSAGE value="Added DefaultReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DefaultReader" />
   </component>
 </project>
