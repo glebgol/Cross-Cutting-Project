@@ -3,6 +3,7 @@ package archivers;
 import streams.ReadingResult;
 import streams.UnzippingResult;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,18 +47,27 @@ public class ArchivationFileManager {
     }
 
     public static UnzippingResult GetUnZipped(String filename) throws IOException {
-        ZipInputStream zin = new ZipInputStream(new FileInputStream(filename));
-        ZipEntry entry;
+        File destDir = new File("src/main/resources/unzipTest");
+        byte[] buffer = new byte[1024];
+        ZipInputStream zis = new ZipInputStream(new FileInputStream(filename));
+        ZipEntry zipEntry = zis.getNextEntry();
         StringBuilder stringBuilder = new StringBuilder();
-        var str = new String(zin.readAllBytes(), StandardCharsets.UTF_8);
-        zin.closeEntry();
+        while (zipEntry != null) {
+            int len;
+            while ((len = zis.read(buffer)) > 0) {
+                String str = new String(buffer, 0, len, StandardCharsets.UTF_8);
+                stringBuilder.append(str);
+            }
+            zipEntry = zis.getNextEntry();
+        }
+        zis.closeEntry();
+        zis.close();
 
         var arrayListOfStrings = new ArrayList<String>();
-        var stringTokenizer = new StringTokenizer(str, "\n");
+        var stringTokenizer = new StringTokenizer(stringBuilder.toString(), "\n");
         while (stringTokenizer.hasMoreTokens()) {
             arrayListOfStrings.add(stringTokenizer.nextToken());
         }
-
         return new UnzippingResult(arrayListOfStrings);
     }
 }

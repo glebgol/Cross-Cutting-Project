@@ -6,6 +6,7 @@ import parsers.ProcessingTxtFile;
 import readers.DefaultReader;
 import readers.EncryptedFileReader;
 import readers.TxtFileReader;
+import readers.ZipFileReader;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +14,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, CryptoException {
 
-        CryptoUtils.Encrypt("1234567812345678", new File("input.txt"), new File("input2.txt"));
-
-        var txtFileReader = new EncryptedFileReader("1234567812345678", new TxtFileReader(new DefaultReader("input2.txt", "output2.txt")));
-        txtFileReader.Write(txtFileReader.Calculate(txtFileReader.Read()));
+        var fileReader = new ZipFileReader(new TxtFileReader(new DefaultReader("input.zip", "output3.txt")));
+        fileReader.Write(fileReader.Calculate(fileReader.Read()));
     }
 }

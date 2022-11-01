@@ -12,6 +12,6 @@ public class UnzippingResult implements IStream {
     }
     @Override
     public ArrayList<String> lines() {
-        return null;
+        return lines;
     }
 }
