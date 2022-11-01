@@ -1,5 +1,6 @@
 package ciphers;
 
+import archivers.ArchivationFileManager;
 import exceptions.CryptoException;
 
 import javax.crypto.BadPaddingException;
@@ -61,14 +62,25 @@ public class CryptoUtils {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
-            FileInputStream inputStream = new FileInputStream(inputFile);
-            byte[] inputBytes = new byte[(int) inputFile.length()];
-            inputStream.read(inputBytes);
+            if (!inputFile.getName().substring(inputFile.getName().lastIndexOf('.'), inputFile.getName().length()).equals(".zip")) {
+                FileInputStream inputStream = new FileInputStream(inputFile);
+                var len = (int) inputFile.length();
+                byte[] inputBytes = new byte[len];
+                inputStream.read(inputBytes);
 
-            byte[] outputBytes = cipher.doFinal(inputBytes);
+                byte[] outputBytes = cipher.doFinal(inputBytes);
 
-            inputStream.close();
-            return outputBytes;
+                inputStream.close();
+                return outputBytes;
+            }
+            else {
+                var dearchivationResult = ArchivationFileManager.GetUnZipped(inputFile.getName());
+                StringBuilder stringBuilder = new StringBuilder();
+                for (var line : dearchivationResult.lines()) {
+                    stringBuilder.append(line).append('\n');
+                }
+                return stringBuilder.toString().getBytes();
+            }
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
