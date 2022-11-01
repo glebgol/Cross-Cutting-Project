@@ -56,6 +56,11 @@ public class DefaultReader implements IFileReader {
     }
 
     @Override
+    public IStream Transform(IStream stream) {
+        return null;
+    }
+
+    @Override
     public IStream Calculate(IStream stream) throws FileNotFoundException {
         var calculatedLines = new ArrayList<String>();
         for (var line : stream.lines()) {
