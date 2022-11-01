@@ -40,8 +40,8 @@ public class TxtFileReader implements IFileReader {
     }
 
     @Override
-    public IStream Transform(IStream stream) {
-        return null;
+    public IStream Transform(IStream stream) throws IOException, CryptoException {
+        return _reader.Transform(stream);
     }
 
     @Override

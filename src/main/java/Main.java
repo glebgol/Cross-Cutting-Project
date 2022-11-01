@@ -13,8 +13,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, CryptoException {
-
-        var fileReader = new ZipFileReader(new EncryptedFileReader("1234567812345678", new TxtFileReader(new DefaultReader("input3.zip", "output.txt"))));
+        //ArchivationFileManager.ZipFile("input.txt");
+        var fileReader = new ZipFileReader(new TxtFileReader(new DefaultReader("input.zip", "output.txt")));
         fileReader.Write(fileReader.Calculate(fileReader.Read()));
     }
 }

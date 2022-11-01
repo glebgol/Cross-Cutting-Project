@@ -57,7 +57,7 @@ public class DefaultReader implements IFileReader {
 
     @Override
     public IStream Transform(IStream stream) {
-        return null;
+        return stream;
     }
 
     @Override

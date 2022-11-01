@@ -2,6 +2,9 @@ package ciphers;
 
 import archivers.ArchivationFileManager;
 import exceptions.CryptoException;
+import interfaces.IStream;
+import streams.EncryptingResult;
+import streams.ReadingResult;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -12,9 +15,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class CryptoUtils {
     private static final String ALGORITHM = "AES";
@@ -89,5 +95,36 @@ public class CryptoUtils {
         }
     }
 
+    public static IStream GetDecryptingStream(String key, IStream stream) throws CryptoException {
+        try {
+            Key secretKey = new SecretKeySpec(key.getBytes(), ALGORITHM);
+            Cipher cipher = Cipher.getInstance(TRANSFORMATION);
+            cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (var line : stream.lines()) {
+                stringBuilder.append(line).append('\n');
+            }
+            var inputBytes = stringBuilder.toString().getBytes();
+
+            byte[] outputBytes = cipher.doFinal(inputBytes);
+
+            var stringResult = new String(outputBytes, StandardCharsets.UTF_8);
+            var arrayListOfStrings = new ArrayList<String>();
+            var stringTokenizer = new StringTokenizer(stringResult, "\n");
+            while (stringTokenizer.hasMoreTokens()) {
+                arrayListOfStrings.add(stringTokenizer.nextToken());
+            }
+            return new EncryptingResult(arrayListOfStrings);
+
+        } catch (NoSuchPaddingException | NoSuchAlgorithmException
+                 | InvalidKeyException | BadPaddingException
+                 | IllegalBlockSizeException ex) {
+            throw new CryptoException("Siiiii", ex);
+        }
+    }
+
+
+    // TODO IStream Decrypt(Istream stream, String key)
 }

@@ -4,6 +4,7 @@ import archivers.ArchivationFileManager;
 import exceptions.CryptoException;
 import interfaces.IFileReader;
 import interfaces.IStream;
+import streams.ReadingResult;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -37,18 +38,21 @@ public class ZipFileReader implements IFileReader {
 
     @Override
     public IStream Read() throws IOException, CryptoException {
-        var unZipped = ArchivationFileManager.GetUnZipped(inputFilename);
-        return unZipped;
+        var unzippingResult = ArchivationFileManager.GetUnZipped(inputFilename);
+        return _reader.Transform(unzippingResult);
     }
 
     @Override
-    public IStream Transform(IStream stream) {
-        return null;
+    public IStream Transform(IStream stream) throws IOException, CryptoException {
+        // TODO think about this
+        var result = _reader.Transform(stream);
+        return result;
     }
 
     @Override
     public IStream Calculate(IStream stream) throws IOException, CryptoException {
         var unZippingResult = Read();
-        return _reader.Calculate(unZippingResult);
+        var result = _reader.Calculate(unZippingResult);
+        return result;
     }
 }
