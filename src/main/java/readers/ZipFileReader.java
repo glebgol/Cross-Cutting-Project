@@ -32,7 +32,7 @@ public class ZipFileReader implements IFileReader {
 
     @Override
     public void Write(IStream stream) throws IOException, CryptoException {
-        _reader.Write(Read());
+        _reader.Write(stream);
     }
 
     @Override
