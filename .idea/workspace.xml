@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Calculate method for EncryptedFileReader">
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added ZipFileReader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" afterDir="false" />
     </list>
@@ -66,7 +65,7 @@
       <workItem from="1667157038575" duration="2541000" />
       <workItem from="1667225604269" duration="342000" />
       <workItem from="1667229157611" duration="84000" />
-      <workItem from="1667237704392" duration="10123000" />
+      <workItem from="1667237704392" duration="11571000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -194,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667246893332</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added ZipFileReader">
+      <created>1667247856387</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667247856387</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +236,8 @@
     <MESSAGE value="Added EncryptedFileReader" />
     <MESSAGE value="Read and Write methods for EncryptedFileReader" />
     <MESSAGE value="Added Calculate method for EncryptedFileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Calculate method for EncryptedFileReader" />
+    <MESSAGE value="Added ZipFileReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ZipFileReader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

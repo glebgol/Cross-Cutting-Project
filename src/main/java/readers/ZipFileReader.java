@@ -1,5 +1,6 @@
 package readers;
 
+import archivers.ArchivationFileManager;
 import exceptions.CryptoException;
 import interfaces.IFileReader;
 import interfaces.IStream;
@@ -31,7 +32,8 @@ public class ZipFileReader implements IFileReader {
 
     @Override
     public void Write(IStream stream) throws IOException, CryptoException {
-        _reader.Write(stream);
+        var unZipped = ArchivationFileManager.GetUnZipped(inputFilename);
+        _reader.Write(unZipped);
     }
 
     @Override
