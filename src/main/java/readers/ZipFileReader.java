@@ -32,17 +32,18 @@ public class ZipFileReader implements IFileReader {
 
     @Override
     public void Write(IStream stream) throws IOException, CryptoException {
+        _reader.Write(Read());
+    }
+
+    @Override
+    public IStream Read() throws IOException, CryptoException {
         var unZipped = ArchivationFileManager.GetUnZipped(inputFilename);
-        _reader.Write(unZipped);
+        return unZipped;
     }
 
     @Override
-    public IStream Read() throws FileNotFoundException, CryptoException {
-        return _reader.Read();
-    }
-
-    @Override
-    public IStream Calculate(IStream stream) throws FileNotFoundException, CryptoException {
-        return _reader.Calculate(stream);
+    public IStream Calculate(IStream stream) throws IOException, CryptoException {
+        var unZippingResult = Read();
+        return _reader.Calculate(unZippingResult);
     }
 }

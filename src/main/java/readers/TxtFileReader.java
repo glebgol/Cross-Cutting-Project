@@ -35,7 +35,7 @@ public class TxtFileReader implements IFileReader {
     }
 
     @Override
-    public IStream Read() throws FileNotFoundException, CryptoException {
+    public IStream Read() throws IOException, CryptoException {
         return _reader.Read();
     }
 

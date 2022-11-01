@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added ZipFileReader">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Write method">
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
       <workItem from="1667157038575" duration="2541000" />
       <workItem from="1667225604269" duration="342000" />
       <workItem from="1667229157611" duration="84000" />
-      <workItem from="1667237704392" duration="11571000" />
+      <workItem from="1667237704392" duration="12510000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -200,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667247856387</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Write method">
+      <created>1667292236892</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667292236892</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +246,8 @@
     <MESSAGE value="Read and Write methods for EncryptedFileReader" />
     <MESSAGE value="Added Calculate method for EncryptedFileReader" />
     <MESSAGE value="Added ZipFileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ZipFileReader" />
+    <MESSAGE value="Write method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

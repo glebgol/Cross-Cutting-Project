@@ -54,7 +54,7 @@ public class EncryptedFileReader implements IFileReader {
     }
 
     @Override
-    public IStream Calculate(IStream stream) throws FileNotFoundException, CryptoException {
+    public IStream Calculate(IStream stream) throws IOException, CryptoException {
         var readingResult = Read();
         return _reader.Calculate(readingResult);
     }

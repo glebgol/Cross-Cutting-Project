@@ -9,6 +9,6 @@ public interface IFileReader {
     String getInputFilename();
     String getOutputFilename();
     void Write(IStream stream) throws IOException, CryptoException;
-    IStream Read() throws FileNotFoundException, CryptoException;
-    IStream Calculate(IStream stream) throws FileNotFoundException, CryptoException;
+    IStream Read() throws IOException, CryptoException;
+    IStream Calculate(IStream stream) throws IOException, CryptoException;
 }
