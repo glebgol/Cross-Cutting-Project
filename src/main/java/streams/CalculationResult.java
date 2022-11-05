@@ -14,4 +14,9 @@ public class CalculationResult implements IStream {
     public ArrayList<String> lines() {
         return lines;
     }
+
+    @Override
+    public byte[] bytes() {
+        return new byte[0];
+    }
 }

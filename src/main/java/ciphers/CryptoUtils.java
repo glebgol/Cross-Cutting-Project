@@ -11,15 +11,14 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class CryptoUtils {
@@ -68,25 +67,15 @@ public class CryptoUtils {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
-            if (!inputFile.getName().substring(inputFile.getName().lastIndexOf('.'), inputFile.getName().length()).equals(".zip")) {
-                FileInputStream inputStream = new FileInputStream(inputFile);
-                var len = (int) inputFile.length();
-                byte[] inputBytes = new byte[len];
-                inputStream.read(inputBytes);
+            FileInputStream inputStream = new FileInputStream(inputFile);
+            var len = (int) inputFile.length();
+            byte[] inputBytes = new byte[len];
+            inputStream.read(inputBytes);
 
-                byte[] outputBytes = cipher.doFinal(inputBytes);
+            byte[] outputBytes = cipher.doFinal(inputBytes);
 
-                inputStream.close();
-                return outputBytes;
-            }
-            else {
-                var dearchivationResult = ArchivationFileManager.GetUnZipped(inputFile.getName());
-                StringBuilder stringBuilder = new StringBuilder();
-                for (var line : dearchivationResult.lines()) {
-                    stringBuilder.append(line).append('\n');
-                }
-                return stringBuilder.toString().getBytes();
-            }
+            inputStream.close();
+            return outputBytes;
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
@@ -95,36 +84,31 @@ public class CryptoUtils {
         }
     }
 
-    public static IStream GetDecryptingStream(String key, IStream stream) throws CryptoException {
+    // TODO IStream Decrypt(Istream stream, String key)
+    public static IStream Decrypt(IStream stream, String key) throws CryptoException {
         try {
             Key secretKey = new SecretKeySpec(key.getBytes(), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
-
-            StringBuilder stringBuilder = new StringBuilder();
-            for (var line : stream.lines()) {
-                stringBuilder.append(line).append('\n');
-            }
-            var inputBytes = stringBuilder.toString().getBytes();
+            var inputBytes = stream.bytes();
 
             byte[] outputBytes = cipher.doFinal(inputBytes);
 
-            var stringResult = new String(outputBytes, StandardCharsets.UTF_8);
+            StringBuilder stringBuilder = new StringBuilder(outputBytes.toString());
+
             var arrayListOfStrings = new ArrayList<String>();
-            var stringTokenizer = new StringTokenizer(stringResult, "\n");
+            var stringTokenizer = new StringTokenizer(stringBuilder.toString(), "\n");
             while (stringTokenizer.hasMoreTokens()) {
                 arrayListOfStrings.add(stringTokenizer.nextToken());
             }
-            return new EncryptingResult(arrayListOfStrings);
+
+            return new EncryptingResult(arrayListOfStrings, outputBytes);
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
                  | IllegalBlockSizeException ex) {
-            throw new CryptoException("Siiiii", ex);
+            throw new CryptoException("Error encrypting/decrypting file", ex);
         }
     }
-
-
-    // TODO IStream Decrypt(Istream stream, String key)
 }

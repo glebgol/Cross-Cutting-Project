@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.StringTokenizer;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -63,11 +64,13 @@ public class ArchivationFileManager {
         zis.closeEntry();
         zis.close();
 
+        var bytes = stringBuilder.toString().getBytes();
+
         var arrayListOfStrings = new ArrayList<String>();
         var stringTokenizer = new StringTokenizer(stringBuilder.toString(), "\n");
         while (stringTokenizer.hasMoreTokens()) {
             arrayListOfStrings.add(stringTokenizer.nextToken());
         }
-        return new UnzippingResult(arrayListOfStrings);
+        return new UnzippingResult(arrayListOfStrings, bytes);
     }
 }

@@ -4,4 +4,5 @@ import java.util.ArrayList;
 
 public interface IStream {
     ArrayList<String> lines();
+    byte[] bytes();
 }
