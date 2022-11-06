@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added bytes to IStream">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="changes in decrypting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +68,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="8458000" />
+      <workItem from="1667675232223" duration="9074000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -268,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667644058642</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="changes in decrypting">
+      <created>1667734683059</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667734683059</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +284,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parse brackets" />
     <MESSAGE value="Added library for counting expressions" />
     <MESSAGE value="Added another library for counting expressions" />
     <MESSAGE value="Archivated file to zip" />
@@ -311,7 +308,8 @@
     <MESSAGE value="Added new Transform method to IFileReader" />
     <MESSAGE value="Calculated zipped file" />
     <MESSAGE value="Added bytes to IStream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bytes to IStream" />
+    <MESSAGE value="changes in decrypting" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in decrypting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -332,18 +330,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
-          <line>65</line>
+          <line>75</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java</url>
           <line>53</line>
           <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
