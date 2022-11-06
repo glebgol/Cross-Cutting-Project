@@ -23,22 +23,7 @@ public class ProcessingTxtFile {
     }
 
     public static String CalculateLine(String line) {
-//        Expression expression = new Expression(line);
-//        var tokens = GetTokens(expression);
-//        String resultLine;
-//
-//        int k = 0;
-//        for (int i = k; i < tokens.size(); i++) {
-//            StringBuilder expressionString = new StringBuilder(tokens.get(i).tokenStr);
-//            for (int j = k + 1; j < tokens.size(); j++) {
-//                expressionString.append(tokens.get(j).tokenStr);
-//                if (CheckSyntax(expressionString.toString())) {
-//
-//                }
-//            }
-//        }
-//        return "";
-        Expression expression = new Expression(line);
+        var expression = new Expression(line);
         if (expression.checkSyntax()) {
             var result = expression.calculate();
             return String.valueOf(result);

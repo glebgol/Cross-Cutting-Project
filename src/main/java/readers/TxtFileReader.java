@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class TxtFileReader implements IFileReader {
 
-    private String inputFilename;
-    private String outputFilename;
+    protected String inputFilename;
+    protected String outputFilename;
 
     public TxtFileReader(String inputFilename, String outputFilename) {
         this.inputFilename = inputFilename;
