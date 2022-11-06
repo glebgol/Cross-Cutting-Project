@@ -1,9 +1,9 @@
 package parsers;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
+import ArgumentProviders.CalculateTxtLineArgumentProvider;
 
 class ProcessingTxtFileTest {
     @ParameterizedTest
