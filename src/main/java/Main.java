@@ -22,8 +22,8 @@ public class Main {
 //        ArchivationFileManager.ZipFile("input2.txt");
         //var fileReader = new EncryptedFileReader("1234567812345678", new TxtFileReader(new DefaultReader("input2.txt", "output5.txt")));
         //fileReader.Write(fileReader.Calculate(fileReader.Read()));
-        CryptoUtils.Encrypt("1234567812345678", new File("input.txt"), new File("input2.txt"));
-        CryptoUtils.Decrypt("1234567812345678", new File("input2.txt"), new File("input3.txt"));
+        CryptoUtils.Encrypt("1234567812345678", "input.txt", "input2.txt");
+        CryptoUtils.Decrypt("1234567812345678","input2.txt", "input3.txt");
 
     }
 }

@@ -22,9 +22,11 @@ public class CryptoUtils {
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES";
 
-    public static void Encrypt(String key, File inputFile, File outputFile)
+    public static void Encrypt(String key, String inputFilename, String outputFilename)
             throws CryptoException {
         try {
+            var inputFile = new File(inputFilename);
+            var outputFile = new File(outputFilename);
             Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
@@ -47,9 +49,11 @@ public class CryptoUtils {
         }
     }
 
-    public static void Decrypt(String key, File inputFile, File outputFile)
+    public static void Decrypt(String key, String inputFilename, String outputFilename)
             throws CryptoException {
         try {
+            var inputFile = new File(inputFilename);
+            var outputFile = new File(outputFilename);
             Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="changes in decrypting">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Deleted doEncrypt method">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +68,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="9074000" />
+      <workItem from="1667675232223" duration="9389000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -266,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667734683059</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Deleted doEncrypt method">
+      <created>1667735330989</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1667735330989</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +291,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added library for counting expressions" />
     <MESSAGE value="Added another library for counting expressions" />
     <MESSAGE value="Archivated file to zip" />
     <MESSAGE value="Zipped file" />
@@ -309,7 +315,8 @@
     <MESSAGE value="Calculated zipped file" />
     <MESSAGE value="Added bytes to IStream" />
     <MESSAGE value="changes in decrypting" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in decrypting" />
+    <MESSAGE value="Deleted doEncrypt method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted doEncrypt method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -330,7 +337,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
-          <line>75</line>
+          <line>79</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
