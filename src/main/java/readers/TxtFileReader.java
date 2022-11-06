@@ -48,4 +48,11 @@ public class TxtFileReader implements IFileReader {
     public IStream Calculate(IStream stream) throws IOException, CryptoException {
         return _reader.Calculate(stream);
     }
+
+    @Override
+    public void WriteCalculated() throws IOException, CryptoException {
+        var readingResult = Read();
+        var calculatedResult = Calculate(readingResult);
+        Write(calculatedResult);
+    }
 }

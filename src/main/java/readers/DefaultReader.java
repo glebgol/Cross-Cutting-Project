@@ -60,4 +60,11 @@ public class DefaultReader implements IFileReader {
         var calculationResult = new CalculationResult(calculatedLines);
         return calculationResult;
     }
+
+    @Override
+    public void WriteCalculated() throws IOException {
+        var readingResult = Read();
+        var calculatedResult = Calculate(readingResult);
+        Write(calculatedResult);
+    }
 }
