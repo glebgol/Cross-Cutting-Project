@@ -2,13 +2,19 @@ package streams;
 
 import interfaces.IStream;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class CalculationResult implements IStream {
-    private ArrayList<String> lines;
-
+    private final ArrayList<String> lines;
+    private final byte[] bytes;
     public CalculationResult(ArrayList<String> lines) {
         this.lines = lines;
+        StringBuilder stringBuilder = new StringBuilder();
+        for (var line : lines) {
+            stringBuilder.append(line).append('\n');
+        }
+        this.bytes = stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
     }
     @Override
     public ArrayList<String> lines() {
@@ -17,6 +23,6 @@ public class CalculationResult implements IStream {
 
     @Override
     public byte[] bytes() {
-        return new byte[0];
+        return bytes;
     }
 }

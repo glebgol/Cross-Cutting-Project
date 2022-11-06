@@ -6,10 +6,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class ReadingResult implements IStream {
+public class DecryptingResult implements IStream {
     private final ArrayList<String> lines;
     private final byte[] bytes;
-    public ReadingResult(byte[] bytes) {
+    public DecryptingResult(byte[] bytes) {
         this.bytes = bytes;
         var lines = new ArrayList<String>();
         var str = new String(bytes, StandardCharsets.UTF_8);

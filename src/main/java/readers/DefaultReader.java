@@ -6,10 +6,7 @@ import parsers.ProcessingTxtFile;
 import streams.CalculationResult;
 import streams.ReadingResult;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,25 +31,18 @@ public class DefaultReader implements IFileReader {
 
     @Override
     public void Write(IStream stream) throws IOException {
-        FileWriter outputFile = new FileWriter(outputFilename);
-        for (var line : stream.lines()) {
-            outputFile.write(line);
-            outputFile.write('\n');
-        }
+        FileOutputStream outputFile = new FileOutputStream(outputFilename);
+        outputFile.write(stream.bytes());
         outputFile.close();
     }
 
     @Override
-    public IStream Read() throws FileNotFoundException {
+    public IStream Read() throws IOException {
         File inputFile = new File(inputFilename);
-        Scanner inputScanner = new Scanner(inputFile);
-        var lines = new ArrayList<String>();
-        while (inputScanner.hasNextLine()) {
-            var line = inputScanner.nextLine();
-            lines.add(line);
-        }
-        var readingResult = new ReadingResult(lines);
-        return readingResult;
+        FileInputStream fileInputStream = new FileInputStream(inputFile);
+        var bytes = fileInputStream.readAllBytes();
+        fileInputStream.close();
+        return new ReadingResult(bytes);
     }
 
     @Override

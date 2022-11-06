@@ -43,16 +43,7 @@ public class EncryptedFileReader implements IFileReader {
 
     @Override
     public IStream Read() throws CryptoException, IOException {
-        // TODO encapsulate this
-        var bytes = CryptoUtils.GetDecrypting(key, new File(inputFilename));
-        var stringResult = new String(bytes, StandardCharsets.UTF_8);
-        var arrayListOfStrings = new ArrayList<String>();
-        var stringTokenizer = new StringTokenizer(stringResult, "\n");
-        while (stringTokenizer.hasMoreTokens()) {
-            arrayListOfStrings.add(stringTokenizer.nextToken());
-        }
-        var result = new ReadingResult(arrayListOfStrings);
-
+        var result = CryptoUtils.GetDecrypting(key, inputFilename);
         return _reader.Transform(result);
     }
 

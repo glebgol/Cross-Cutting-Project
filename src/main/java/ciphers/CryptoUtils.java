@@ -1,10 +1,8 @@
 package ciphers;
 
-import archivers.ArchivationFileManager;
 import exceptions.CryptoException;
 import interfaces.IStream;
-import streams.EncryptingResult;
-import streams.ReadingResult;
+import streams.DecryptingResult;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -12,7 +10,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
@@ -76,23 +73,20 @@ public class CryptoUtils {
             throw new CryptoException("Error decrypting file", ex);
         }
     }
-    public static byte[] GetDecrypting(String key, File inputFile) throws CryptoException {
+
+    public static DecryptingResult GetDecrypting(String key, String inputFilename) throws CryptoException {
         try {
-            byte[] decodedKey = Base64.getDecoder().decode(key);
-            Key secretKey = new SecretKeySpec(Arrays.copyOf(decodedKey, 16), ALGORITHM);
+            var inputFile = new File(inputFilename);
+
+            Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
             FileInputStream inputStream = new FileInputStream(inputFile);
-            var len = (int) inputFile.length();
-            byte[] inputBytes = new byte[len];
-            inputStream.read(inputBytes);
-
+            var inputBytes = inputStream.readAllBytes();
             byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
 
-            inputStream.close();
-            return Base64.getDecoder().decode(outputBytes);
-
+            return new DecryptingResult(outputBytes);
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
                  | IllegalBlockSizeException | IOException ex) {
@@ -107,25 +101,15 @@ public class CryptoUtils {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
-//            var inputBytes = Base64.getDecoder().decode(stream.bytes());
             var inputBytes = stream.bytes();
-
             byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
 
-            var str = new String(outputBytes);
-
-            var arrayListOfStrings = new ArrayList<String>();
-            var stringTokenizer = new StringTokenizer(str, "\n");
-            while (stringTokenizer.hasMoreTokens()) {
-                arrayListOfStrings.add(stringTokenizer.nextToken());
-            }
-
-            return new EncryptingResult(arrayListOfStrings, outputBytes);
+            return new DecryptingResult(outputBytes);
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
                  | IllegalBlockSizeException ex) {
-            throw new CryptoException("Error encrypting/decrypting file", ex);
+            throw new CryptoException("Decrypting error", ex);
         }
     }
 }

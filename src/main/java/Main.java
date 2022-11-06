@@ -15,7 +15,10 @@ public class Main {
     public static void main(String[] args) throws IOException, CryptoException {
         String key = "1234567812345678";
         //ArchivationFileManager.ZipFile("input.txt");
-        var fileReader = new ZipFileReader(new EncryptedFileReader(key, new TxtFileReader(new DefaultReader("input2.zip", "output.txt"))));
+//        var fileReader = new ZipFileReader(new EncryptedFileReader(key, new TxtFileReader(new DefaultReader("input2.zip", "output.txt"))));
+//        fileReader.Write(fileReader.Calculate(fileReader.Read()));
+
+        var fileReader = new TxtFileReader(new DefaultReader("input.txt", "output3.txt"));
         fileReader.Write(fileReader.Calculate(fileReader.Read()));
 
 //        CryptoUtils.Encrypt(key, new File("input.txt"), new File("input2.txt"));

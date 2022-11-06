@@ -64,12 +64,6 @@ public class ArchivationFileManager {
         zis.close();
 
         var bytes = stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
-
-        var arrayListOfStrings = new ArrayList<String>();
-        var stringTokenizer = new StringTokenizer(stringBuilder.toString(), "\n");
-        while (stringTokenizer.hasMoreTokens()) {
-            arrayListOfStrings.add(stringTokenizer.nextToken());
-        }
-        return new UnzippingResult(arrayListOfStrings, bytes);
+        return new UnzippingResult(bytes);
     }
 }
