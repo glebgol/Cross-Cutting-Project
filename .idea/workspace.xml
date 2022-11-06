@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Deleted doEncrypt method">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Changed Encrypt and Decrypt method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="9389000" />
+      <workItem from="1667675232223" duration="10230000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -273,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667735330989</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Changed Encrypt and Decrypt method">
+      <created>1667735499505</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667735499505</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +299,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added another library for counting expressions" />
     <MESSAGE value="Archivated file to zip" />
     <MESSAGE value="Zipped file" />
     <MESSAGE value="Unzip file" />
@@ -316,7 +323,8 @@
     <MESSAGE value="Added bytes to IStream" />
     <MESSAGE value="changes in decrypting" />
     <MESSAGE value="Deleted doEncrypt method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted doEncrypt method" />
+    <MESSAGE value="Changed Encrypt and Decrypt method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Encrypt and Decrypt method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,9 +349,24 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="39" />
+          <line>40</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

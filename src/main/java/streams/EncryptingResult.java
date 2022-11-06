@@ -14,7 +14,7 @@ public class EncryptingResult implements IStream {
     }
     @Override
     public ArrayList<String> lines() {
-        return null;
+        return lines;
     }
 
     @Override

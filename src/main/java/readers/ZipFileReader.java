@@ -44,15 +44,11 @@ public class ZipFileReader implements IFileReader {
 
     @Override
     public IStream Transform(IStream stream) throws IOException, CryptoException {
-        // TODO think about this
-        var result = _reader.Transform(stream);
-        return result;
+        return _reader.Transform(stream);
     }
 
     @Override
     public IStream Calculate(IStream stream) throws IOException, CryptoException {
-        //var unZippingResult = Read();
-        var result = _reader.Calculate(stream);
-        return result;
+        return _reader.Calculate(stream);
     }
 }
