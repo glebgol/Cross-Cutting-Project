@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Deleted DefaultReader">
-      <change afterPath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added unit tests for parsing txt file">
+      <change afterPath="$PROJECT_DIR$/src/test/java/parsers/CalculateTxtLineArgumentProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,7 +111,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="18626000" />
+      <workItem from="1667675232223" duration="19355000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -355,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667749442921</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added unit tests for parsing txt file">
+      <created>1667755741279</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1667755741279</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +376,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tried encrypting and decrypting" />
     <MESSAGE value="Calculate txt file" />
     <MESSAGE value="Added interfaces" />
     <MESSAGE value="Added DefaultReader" />
@@ -398,7 +400,8 @@
     <MESSAGE value="Add constructor with bytes to streams" />
     <MESSAGE value="Added WriteCalculated method" />
     <MESSAGE value="Deleted DefaultReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted DefaultReader" />
+    <MESSAGE value="Added unit tests for parsing txt file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added unit tests for parsing txt file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
