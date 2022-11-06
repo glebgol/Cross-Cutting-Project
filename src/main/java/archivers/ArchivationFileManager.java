@@ -48,7 +48,6 @@ public class ArchivationFileManager {
     }
 
     public static UnzippingResult GetUnZipped(String filename) throws IOException {
-        File destDir = new File("src/main/resources/unzipTest");
         byte[] buffer = new byte[1024];
         ZipInputStream zis = new ZipInputStream(new FileInputStream(filename));
         ZipEntry zipEntry = zis.getNextEntry();
@@ -64,7 +63,7 @@ public class ArchivationFileManager {
         zis.closeEntry();
         zis.close();
 
-        var bytes = stringBuilder.toString().getBytes();
+        var bytes = stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
 
         var arrayListOfStrings = new ArrayList<String>();
         var stringTokenizer = new StringTokenizer(stringBuilder.toString(), "\n");

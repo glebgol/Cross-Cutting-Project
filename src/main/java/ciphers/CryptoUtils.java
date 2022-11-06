@@ -16,10 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class CryptoUtils {
     private static final String ALGORITHM = "AES";
@@ -38,19 +35,23 @@ public class CryptoUtils {
     private static void doCrypto(int cipherMode, String key, File inputFile,
                                  File outputFile) throws CryptoException {
         try {
-            Key secretKey = new SecretKeySpec(key.getBytes(), ALGORITHM);
+            Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(cipherMode, secretKey);
 
             FileInputStream inputStream = new FileInputStream(inputFile);
-            byte[] inputBytes = new byte[(int) inputFile.length()];
-            inputStream.read(inputBytes);
+            var inputBytes = inputStream.readAllBytes();
 
-            byte[] outputBytes = cipher.doFinal(inputBytes);
-
+            byte[] outputBytes;
             FileOutputStream outputStream = new FileOutputStream(outputFile);
-            outputStream.write(outputBytes);
-
+            if (cipherMode == Cipher.ENCRYPT_MODE) {
+                outputBytes = cipher.doFinal(inputBytes);
+                outputStream.write(Base64.getEncoder().encode(outputBytes));
+            }
+            else {
+                outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
+                outputStream.write(outputBytes);
+            }
             inputStream.close();
             outputStream.close();
 
@@ -63,7 +64,8 @@ public class CryptoUtils {
 
     public static byte[] GetDecrypting(String key, File inputFile) throws CryptoException {
         try {
-            Key secretKey = new SecretKeySpec(key.getBytes(), ALGORITHM);
+            byte[] decodedKey = Base64.getDecoder().decode(key);
+            Key secretKey = new SecretKeySpec(Arrays.copyOf(decodedKey, 16), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
@@ -72,10 +74,10 @@ public class CryptoUtils {
             byte[] inputBytes = new byte[len];
             inputStream.read(inputBytes);
 
-            byte[] outputBytes = cipher.doFinal(inputBytes);
+            byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
 
             inputStream.close();
-            return outputBytes;
+            return Base64.getDecoder().decode(outputBytes);
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
@@ -91,14 +93,15 @@ public class CryptoUtils {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
 
+//            var inputBytes = Base64.getDecoder().decode(stream.bytes());
             var inputBytes = stream.bytes();
 
-            byte[] outputBytes = cipher.doFinal(inputBytes);
+            byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
 
-            StringBuilder stringBuilder = new StringBuilder(outputBytes.toString());
+            var str = new String(outputBytes);
 
             var arrayListOfStrings = new ArrayList<String>();
-            var stringTokenizer = new StringTokenizer(stringBuilder.toString(), "\n");
+            var stringTokenizer = new StringTokenizer(str, "\n");
             while (stringTokenizer.hasMoreTokens()) {
                 arrayListOfStrings.add(stringTokenizer.nextToken());
             }

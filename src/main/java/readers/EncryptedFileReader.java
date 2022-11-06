@@ -64,7 +64,7 @@ public class EncryptedFileReader implements IFileReader {
 
     @Override
     public IStream Calculate(IStream stream) throws IOException, CryptoException {
-        var readingResult = Read();
+        var readingResult = CryptoUtils.Decrypt(stream, key);
         return _reader.Calculate(readingResult);
     }
 }

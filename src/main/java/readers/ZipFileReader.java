@@ -51,8 +51,8 @@ public class ZipFileReader implements IFileReader {
 
     @Override
     public IStream Calculate(IStream stream) throws IOException, CryptoException {
-        var unZippingResult = Read();
-        var result = _reader.Calculate(unZippingResult);
+        //var unZippingResult = Read();
+        var result = _reader.Calculate(stream);
         return result;
     }
 }
