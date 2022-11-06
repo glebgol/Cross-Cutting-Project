@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added unit tests for parsing txt file">
-      <change afterPath="$PROJECT_DIR$/src/test/java/parsers/CalculateTxtLineArgumentProvider.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added ArgumentProvider for CalculateLine_Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/CalculateTxtLineArgumentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parsers/CalculateTxtLineArgumentProvider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +112,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="19355000" />
+      <workItem from="1667675232223" duration="20230000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -358,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667755741279</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added ArgumentProvider for CalculateLine_Test">
+      <created>1667758798159</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1667758798159</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +384,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Calculate txt file" />
     <MESSAGE value="Added interfaces" />
     <MESSAGE value="Added DefaultReader" />
     <MESSAGE value="Refactor packages" />
@@ -401,7 +408,8 @@
     <MESSAGE value="Added WriteCalculated method" />
     <MESSAGE value="Deleted DefaultReader" />
     <MESSAGE value="Added unit tests for parsing txt file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added unit tests for parsing txt file" />
+    <MESSAGE value="Added ArgumentProvider for CalculateLine_Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ArgumentProvider for CalculateLine_Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -414,6 +422,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
           <line>98</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

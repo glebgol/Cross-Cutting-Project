@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProcessingTxtFile {
+    private static final String DivisionByZeroMessage = "Division by zero!";
     private static ArrayList<Token> GetTokens(Expression expression) {
         var tokens = expression.getCopyOfInitialTokens();
         ArrayList<Token> tokenArrayList = new ArrayList<Token>(tokens.size());
@@ -26,6 +27,9 @@ public class ProcessingTxtFile {
         var expression = new Expression(line);
         if (expression.checkSyntax()) {
             var result = expression.calculate();
+            if (Double.isNaN(result)) {
+                return DivisionByZeroMessage;
+            }
             return String.valueOf(result);
         }
         return line;

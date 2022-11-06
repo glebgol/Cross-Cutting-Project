@@ -23,7 +23,10 @@ public class CalculateTxtLineArgumentProvider implements ArgumentsProvider {
         return Stream.of(
                 Arguments.of(new ArgForTesting("1 + 2", "3.0")),
                 Arguments.of(new ArgForTesting("(1 + 2) + 3.0", "6.0")),
-                Arguments.of(new ArgForTesting("((1 + 2) + 3.0) / 2 * 1", "3.0"))
+                Arguments.of(new ArgForTesting("((1 + 2) + 3.0) / 2 * 1", "3.0")),
+
+                Arguments.of(new ArgForTesting("2 / 0", "Division by zero!")),
+                Arguments.of(new ArgForTesting("2 / 1 привет", "Division by zero!"))
         );
     }
 }
