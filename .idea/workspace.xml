@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Division by zero message">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added new package for Argument providers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/CalculateTxtLineArgumentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/CalculateTxtLineArgumentProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProcessingTxtFileTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Cross-Cutting-Project" />
@@ -91,8 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProcessingTxtFileTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ProcessingTxtFileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +111,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="22376000" />
+      <workItem from="1667675232223" duration="24507000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -374,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667759419366</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added new package for Argument providers">
+      <created>1667761514041</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1667761514041</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added DefaultReader" />
     <MESSAGE value="Refactor packages" />
     <MESSAGE value="Added TxtFileReader" />
     <MESSAGE value="Added EncryptedFileReader" />
@@ -417,7 +421,8 @@
     <MESSAGE value="Added unit tests for parsing txt file" />
     <MESSAGE value="Added ArgumentProvider for CalculateLine_Test" />
     <MESSAGE value="Added Division by zero message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Division by zero message" />
+    <MESSAGE value="Added new package for Argument providers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new package for Argument providers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

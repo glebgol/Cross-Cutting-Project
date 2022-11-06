@@ -2,7 +2,6 @@ package interfaces;
 
 import exceptions.CryptoException;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface IFileReader {
@@ -14,4 +13,6 @@ public interface IFileReader {
     IStream Calculate(IStream stream) throws IOException, CryptoException;
 
     void WriteCalculated() throws IOException, CryptoException;
+//    void Zip();
+//    void Encrypt();
 }

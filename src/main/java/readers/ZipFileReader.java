@@ -4,9 +4,7 @@ import archivers.ArchivationFileManager;
 import exceptions.CryptoException;
 import interfaces.IFileReader;
 import interfaces.IStream;
-import streams.ReadingResult;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ZipFileReader implements IFileReader {

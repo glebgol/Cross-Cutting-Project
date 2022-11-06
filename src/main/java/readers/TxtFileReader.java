@@ -1,6 +1,5 @@
 package readers;
 
-import exceptions.CryptoException;
 import interfaces.IFileReader;
 import interfaces.IStream;
 import parsers.ProcessingTxtFile;

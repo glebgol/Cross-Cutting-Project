@@ -4,14 +4,8 @@ import ciphers.CryptoUtils;
 import exceptions.CryptoException;
 import interfaces.IFileReader;
 import interfaces.IStream;
-import streams.ReadingResult;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class EncryptedFileReader implements IFileReader {
 
