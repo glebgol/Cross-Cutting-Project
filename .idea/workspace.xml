@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added mock">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/readers/TxtFileReaderTest.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Add test for calculate method">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/default.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/encrypted.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +67,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All_Tests">
+  <component name="RunManager" selected="JUnit.ProcessingTxtFileTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Cross-Cutting-Project" />
@@ -98,23 +95,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="parsers" />
       <option name="MAIN_CLASS_NAME" value="parsers.ProcessingTxtFileTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TxtFileReaderTest.writeCalculated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Cross-Cutting-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="readers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="readers" />
-      <option name="MAIN_CLASS_NAME" value="readers.TxtFileReaderTest" />
-      <option name="METHOD_NAME" value="writeCalculated" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,13 +104,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All_Tests" />
-      <item itemvalue="JUnit.TxtFileReaderTest.writeCalculated" />
       <item itemvalue="JUnit.ProcessingTxtFileTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TxtFileReaderTest.writeCalculated" />
         <item itemvalue="JUnit.ProcessingTxtFileTest" />
       </list>
     </recent_temporary>
@@ -150,7 +130,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="30960000" />
+      <workItem from="1667675232223" duration="32067000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -432,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667810767683</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Add test for calculate method">
+      <created>1667814861941</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1667814861941</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added EncryptedFileReader" />
     <MESSAGE value="Read and Write methods for EncryptedFileReader" />
     <MESSAGE value="Added Calculate method for EncryptedFileReader" />
     <MESSAGE value="Added ZipFileReader" />
@@ -475,7 +461,8 @@
     <MESSAGE value="Added new package for Argument providers" />
     <MESSAGE value="Added new Contracts package" />
     <MESSAGE value="Added mock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mock" />
+    <MESSAGE value="Add test for calculate method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test for calculate method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
