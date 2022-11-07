@@ -11,7 +11,7 @@ public class StreamArguments {
         return new ReadingResult(new ArrayList<>(
                 Arrays.asList(
                         "123 + 1234.5",
-                        "qwerty",
+                        "qwerty\r",
                         "23-1999*100",
                         "1000 -12"
                 )));
@@ -21,7 +21,7 @@ public class StreamArguments {
         return new CalculationResult(new ArrayList<>(
                 Arrays.asList(
                     "1357.5",
-                    "qwerty",
+                    "qwerty\r",
                     "-199877.0",
                     "988.0"
         )));
