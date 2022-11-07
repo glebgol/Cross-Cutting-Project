@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created sources folder for tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Tests for calculating encrypted file">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/double_encrypted.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/encrypted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/encrypted.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="33662000" />
+      <workItem from="1667675232223" duration="34484000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -426,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667815902885</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Tests for calculating encrypted file">
+      <created>1667817584914</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1667817584914</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Calculate method for EncryptedFileReader" />
     <MESSAGE value="Added ZipFileReader" />
     <MESSAGE value="Write method" />
     <MESSAGE value="Calculate and Read methods for ZipFileReader" />
@@ -469,7 +475,8 @@
     <MESSAGE value="Added mock" />
     <MESSAGE value="Add test for calculate method" />
     <MESSAGE value="Created sources folder for tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created sources folder for tests" />
+    <MESSAGE value="Tests for calculating encrypted file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests for calculating encrypted file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -512,11 +519,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
           <line>77</line>
           <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
