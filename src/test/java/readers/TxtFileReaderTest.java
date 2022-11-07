@@ -4,11 +4,6 @@ import ArgumentProviders.StreamArguments;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import org.mockito.verification.VerificationMode;
-
-import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TxtFileReaderTest {
     @Test

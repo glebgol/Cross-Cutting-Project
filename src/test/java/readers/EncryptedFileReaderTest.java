@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class EncryptedFileReaderTest {
     private static final String FirstKey = "qwsdcvbgfthyrdfw";
     private static final String SecondKey = "asdfghjkqewrtyto";

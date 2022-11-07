@@ -10,6 +10,6 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, CryptoException {
-        ArchivationFileManager.ZipFile("src/test/resources/default.txt");
+        ArchivationFileManager.ZipFile("src/test/resources/encrypted.txt");
     }
 }
