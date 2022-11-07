@@ -19,6 +19,15 @@ public class ReadingResult implements IStream {
         }
         this.lines = lines;
     }
+
+    public ReadingResult(ArrayList<String> lines) {
+        this.lines = lines;
+        StringBuilder stringBuilder = new StringBuilder();
+        for (var line : lines) {
+            stringBuilder.append(line).append('\n');
+        }
+        this.bytes = stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
+    }
     @Override
     public ArrayList<String> lines() {
         return lines;

@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added new Contracts package">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added mock">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/readers/TxtFileReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +52,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Java-Labs/Task3",
+    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/src/test",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -61,13 +66,24 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="readers" />
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All_Tests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Cross-Cutting-Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All_Tests" type="JUnit" factoryName="JUnit">
+      <module name="Cross-Cutting-Project" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,9 +103,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TxtFileReaderTest.writeCalculated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cross-Cutting-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="readers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="readers" />
+      <option name="MAIN_CLASS_NAME" value="readers.TxtFileReaderTest" />
+      <option name="METHOD_NAME" value="writeCalculated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.All_Tests" />
+      <item itemvalue="JUnit.TxtFileReaderTest.writeCalculated" />
+      <item itemvalue="JUnit.ProcessingTxtFileTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TxtFileReaderTest.writeCalculated" />
         <item itemvalue="JUnit.ProcessingTxtFileTest" />
       </list>
     </recent_temporary>
@@ -111,7 +150,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="26775000" />
+      <workItem from="1667675232223" duration="30960000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -386,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667766041175</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added mock">
+      <created>1667810767683</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1667810767683</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added TxtFileReader" />
     <MESSAGE value="Added EncryptedFileReader" />
     <MESSAGE value="Read and Write methods for EncryptedFileReader" />
     <MESSAGE value="Added Calculate method for EncryptedFileReader" />
@@ -429,7 +474,8 @@
     <MESSAGE value="Added Division by zero message" />
     <MESSAGE value="Added new package for Argument providers" />
     <MESSAGE value="Added new Contracts package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new Contracts package" />
+    <MESSAGE value="Added mock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added mock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,7 +494,32 @@
           <line>26</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((DecryptingResult)stream).bytes" custom="streams.DecryptingResult" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
