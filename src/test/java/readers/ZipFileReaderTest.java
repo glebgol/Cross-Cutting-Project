@@ -42,4 +42,22 @@ class ZipFileReaderTest {
         // Assert
         Assertions.assertEquals(expectedCalculationResultLines, calculationResultLines);
     }
+
+    @Test
+    void Calculate_ZippedAndDoubleEncryptedFile() throws IOException, CryptoException {
+        var reader = new ZipFileReader(
+                new EncryptedFileReader(SecondKey,
+                        new EncryptedFileReader(FirstKey,
+                                new TxtFileReader("src/test/resources/double_encrypted.zip", "src/test/resources/output.txt"))));
+        var expectedCalculationResult = StreamArguments.CalculationResult();
+        var expectedCalculationResultLines = expectedCalculationResult.lines();
+
+        // Act
+        var readingResult = reader.Read();
+        var calculationResult = reader.Calculate(readingResult);
+        var calculationResultLines = calculationResult.lines();
+
+        // Assert
+        Assertions.assertEquals(expectedCalculationResultLines, calculationResultLines);
+    }
 }
