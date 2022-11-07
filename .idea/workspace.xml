@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added test for calculating zipped file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added test for calculating zipped and double encrypted file">
       <change beforePath="$PROJECT_DIR$/src/test/java/readers/ZipFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/ZipFileReaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +127,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="36808000" />
+      <workItem from="1667675232223" duration="37089000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -446,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667853378769</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added test for calculating zipped and encrypted file">
+      <created>1667853583633</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1667853583633</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added test for calculating zipped and double encrypted file">
+      <created>1667853756767</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1667853756767</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,8 +476,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Calculate and Read methods for ZipFileReader" />
-    <MESSAGE value="Changed GetUnZipped method" />
     <MESSAGE value="Calculated Zipped file" />
     <MESSAGE value="Tried calculating" />
     <MESSAGE value="Added new Transform method to IFileReader" />
@@ -489,7 +499,9 @@
     <MESSAGE value="Tests for calculating encrypted file" />
     <MESSAGE value="Added test for calculating double encrypted file" />
     <MESSAGE value="Added test for calculating zipped file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for calculating zipped file" />
+    <MESSAGE value="Added test for calculating zipped and encrypted file" />
+    <MESSAGE value="Added test for calculating zipped and double encrypted file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for calculating zipped and double encrypted file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
