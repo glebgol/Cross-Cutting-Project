@@ -24,8 +24,8 @@ public class Main {
 //        CryptoUtils.Decrypt("1234567812345678","input2.txt", "input3.txt");
 //        ArchivationFileManager.ZipFile("input2.txt");
 
-        var exp = new Expression("sin");
-        exp.disableImpliedMultiplicationMode();
+        var exp = new Expression("sin(3.14) sin cos 12 + 34 hi sin 100 + (12 + 13)");
+        //exp.disableImpliedMultiplicationMode();
         //exp.disableUnicodeBuiltinKeyWordsMode();
         exp.consolePrintCopyOfInitialTokens();
         System.out.println(exp.calculate());

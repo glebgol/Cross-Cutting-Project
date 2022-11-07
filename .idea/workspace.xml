@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added new package for Argument providers">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added new Contracts package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
     "last_opened_file_path": "D:/Java-Labs/Task3",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -111,7 +111,7 @@
       <workItem from="1667237704392" duration="36288000" />
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
-      <workItem from="1667675232223" duration="24507000" />
+      <workItem from="1667675232223" duration="26775000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666589593911</created>
@@ -379,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667761514041</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added new Contracts package">
+      <created>1667766041175</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1667766041175</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +404,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor packages" />
     <MESSAGE value="Added TxtFileReader" />
     <MESSAGE value="Added EncryptedFileReader" />
     <MESSAGE value="Read and Write methods for EncryptedFileReader" />
@@ -422,7 +428,8 @@
     <MESSAGE value="Added ArgumentProvider for CalculateLine_Test" />
     <MESSAGE value="Added Division by zero message" />
     <MESSAGE value="Added new package for Argument providers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new package for Argument providers" />
+    <MESSAGE value="Added new Contracts package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new Contracts package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
