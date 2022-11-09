@@ -9,10 +9,21 @@ import java.io.IOException;
 public class XmlFileReader implements IFileReader {
     protected String inputFilename;
     protected String outputFilename;
+    protected Class classToRead;
 
-    public XmlFileReader(String inputFilename, String outputFilename) {
+    public static class Temp {
+        public String name;
+        public String age;
+    }
+    public static void foo(Class clazz) {
+        var d = clazz.getFields();
+        System.out.println(d[0].getName());
+        System.out.println(d[1].toString());
+    }
+    public XmlFileReader(Class classToRead, String inputFilename, String outputFilename) {
         this.inputFilename = inputFilename;
         this.outputFilename = outputFilename;
+        this.classToRead = classToRead;
     }
     @Override
     public String getInputFilename() {
@@ -36,7 +47,7 @@ public class XmlFileReader implements IFileReader {
 
     @Override
     public IStream Transform(IStream stream) throws IOException, CryptoException {
-        return null;
+        return stream;
     }
 
     @Override
