@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added enum FileExtension">
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created FileReaderBuilder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,14 +114,7 @@
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
       <workItem from="1667675232223" duration="45961000" />
-      <workItem from="1668024071548" duration="1495000" />
-    </task>
-    <task id="LOCAL-00003" summary="Parse brackets">
-      <created>1666590368777</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1666590368777</updated>
+      <workItem from="1668024071548" duration="2028000" />
     </task>
     <task id="LOCAL-00004" summary="Added library for counting expressions">
       <created>1666591725556</created>
@@ -458,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668025130909</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Created FileReaderBuilder">
+      <created>1668025605630</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1668025605631</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Calculated zipped file" />
     <MESSAGE value="Added bytes to IStream" />
     <MESSAGE value="changes in decrypting" />
     <MESSAGE value="Deleted doEncrypt method" />
@@ -501,7 +501,8 @@
     <MESSAGE value="Added XmlFileReader" />
     <MESSAGE value="Added IFileReaderBuilder" />
     <MESSAGE value="Added enum FileExtension" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added enum FileExtension" />
+    <MESSAGE value="Created FileReaderBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created FileReaderBuilder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

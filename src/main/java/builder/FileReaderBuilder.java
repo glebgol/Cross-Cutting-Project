@@ -11,6 +11,10 @@ public class FileReaderBuilder implements IFileReaderBuilder {
     protected IFileReader fileReader;
     protected String inputFilename;
     protected String outputFilename;
+    public FileReaderBuilder(String inputFilename, String outputFilename) {
+        this.inputFilename = inputFilename;
+        this.outputFilename = outputFilename;
+    }
     @Override
     public void setEncrypting(String key) {
         fileReader = new EncryptedFileReader(key, fileReader);
@@ -26,16 +30,6 @@ public class FileReaderBuilder implements IFileReaderBuilder {
         if (extension == FileExtension.Txt) {
             fileReader = new TxtFileReader(inputFilename, outputFilename);
         }
-    }
-
-    @Override
-    public void setInputFilename(String inputFilename) {
-        this.inputFilename = inputFilename;
-    }
-
-    @Override
-    public void setOutputFilename(String outputFilename) {
-        this.outputFilename = outputFilename;
     }
 
     @Override
