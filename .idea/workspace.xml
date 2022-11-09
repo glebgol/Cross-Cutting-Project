@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added XmlFileReader">
-      <change afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/streams/XmlReadingResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/readers/XmlFileReaderTest.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added enum FileExtension">
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +18,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -116,21 +113,7 @@
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
       <workItem from="1667675232223" duration="45961000" />
-      <workItem from="1668024071548" duration="809000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1666589593911</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1666589593911</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added ArithmeticExpressionParser">
-      <created>1666590044559</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1666590044559</updated>
+      <workItem from="1668024071548" duration="1495000" />
     </task>
     <task id="LOCAL-00003" summary="Parse brackets">
       <created>1666590368777</created>
@@ -461,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667854131876</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added IFileReaderBuilder">
+      <created>1668025032542</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1668025032542</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Added enum FileExtension">
+      <created>1668025130909</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1668025130909</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,8 +476,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tried calculating" />
-    <MESSAGE value="Added new Transform method to IFileReader" />
     <MESSAGE value="Calculated zipped file" />
     <MESSAGE value="Added bytes to IStream" />
     <MESSAGE value="changes in decrypting" />
@@ -504,7 +499,9 @@
     <MESSAGE value="Added test for calculating zipped and encrypted file" />
     <MESSAGE value="Added test for calculating zipped and double encrypted file" />
     <MESSAGE value="Added XmlFileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added XmlFileReader" />
+    <MESSAGE value="Added IFileReaderBuilder" />
+    <MESSAGE value="Added enum FileExtension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enum FileExtension" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
