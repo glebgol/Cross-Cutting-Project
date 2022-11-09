@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added rest-api project">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created FileReaderController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +124,7 @@
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
       <workItem from="1667675232223" duration="45961000" />
-      <workItem from="1668024071548" duration="6305000" />
-    </task>
-    <task id="LOCAL-00006" summary="Archivated file to zip">
-      <created>1666592509842</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1666592509842</updated>
+      <workItem from="1668024071548" duration="7586000" />
     </task>
     <task id="LOCAL-00007" summary="Zipped file">
       <created>1666592731291</created>
@@ -469,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668026603606</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Created FileReaderController">
+      <created>1668031350477</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1668031350477</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted doEncrypt method" />
     <MESSAGE value="Changed Encrypt and Decrypt method" />
     <MESSAGE value="Calculated encrypted + zipped file" />
     <MESSAGE value="Add constructor with bytes to streams" />
@@ -512,7 +511,8 @@
     <MESSAGE value="Created FileReaderBuilder" />
     <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
     <MESSAGE value="Added rest-api project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rest-api project" />
+    <MESSAGE value="Created FileReaderController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created FileReaderController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
