@@ -7,10 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Cross-Cutting-Project" />
+        <module name="rest-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Cross-Cutting-Project" target="18" />
+      <module name="rest-api" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rest-api" options="-parameters" />
+    </option>
   </component>
 </project>

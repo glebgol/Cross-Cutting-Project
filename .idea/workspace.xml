@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created FileReaderBuilder">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
-    </list>
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Checked FileReaderBuilder on double encrypted and zipped file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,9 +81,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rest-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All_Tests" />
+      <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -114,14 +117,7 @@
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
       <workItem from="1667675232223" duration="45961000" />
-      <workItem from="1668024071548" duration="2028000" />
-    </task>
-    <task id="LOCAL-00004" summary="Added library for counting expressions">
-      <created>1666591725556</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1666591725556</updated>
+      <workItem from="1668024071548" duration="2418000" />
     </task>
     <task id="LOCAL-00005" summary="Added another library for counting expressions">
       <created>1666592173568</created>
@@ -459,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668025605631</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Checked FileReaderBuilder on double encrypted and zipped file">
+      <created>1668026297393</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1668026297393</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +480,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added bytes to IStream" />
     <MESSAGE value="changes in decrypting" />
     <MESSAGE value="Deleted doEncrypt method" />
     <MESSAGE value="Changed Encrypt and Decrypt method" />
@@ -502,7 +504,8 @@
     <MESSAGE value="Added IFileReaderBuilder" />
     <MESSAGE value="Added enum FileExtension" />
     <MESSAGE value="Created FileReaderBuilder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created FileReaderBuilder" />
+    <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checked FileReaderBuilder on double encrypted and zipped file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
