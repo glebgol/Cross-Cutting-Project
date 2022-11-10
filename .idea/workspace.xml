@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created react-ui module">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/RestApiApplication.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added runConfiguration file">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/src/test",
+    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/lib/MathParser.org-mXparser.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,20 +84,12 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="JUnit.All_Tests" />
       <item itemvalue="npm.npm start" />
@@ -104,8 +97,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -130,14 +121,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="2031000" />
-    </task>
-    <task id="LOCAL-00009" summary="Add encrypting and decrypting">
-      <created>1666600012567</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1666600012567</updated>
+      <workItem from="1668090382604" duration="4128000" />
     </task>
     <task id="LOCAL-00010" summary="Tried encrypting and decrypting">
       <created>1666602991777</created>
@@ -475,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668091054614</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Added runConfiguration file">
+      <created>1668094569461</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1668094569461</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add constructor with bytes to streams" />
     <MESSAGE value="Added WriteCalculated method" />
     <MESSAGE value="Deleted DefaultReader" />
     <MESSAGE value="Added unit tests for parsing txt file" />
@@ -518,7 +508,8 @@
     <MESSAGE value="Created FileReaderController" />
     <MESSAGE value="Created stub methods" />
     <MESSAGE value="Created react-ui module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created react-ui module" />
+    <MESSAGE value="Added runConfiguration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added runConfiguration file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
