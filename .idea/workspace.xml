@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added runConfiguration file">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added HttpGet Calculate method">
+      <change afterPath="$PROJECT_DIR$/double_encrypted.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +56,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/lib/MathParser.org-mXparser.jar",
+    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Anton\Cross-Cutting-Project" />
       <recent name="D:\Anton\Cross-Cutting-Project\lib" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -121,14 +119,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="4128000" />
-    </task>
-    <task id="LOCAL-00010" summary="Tried encrypting and decrypting">
-      <created>1666602991777</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1666602991777</updated>
+      <workItem from="1668090382604" duration="5556000" />
     </task>
     <task id="LOCAL-00011" summary="Calculate txt file">
       <created>1666819051033</created>
@@ -466,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668094569461</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Added HttpGet Calculate method">
+      <created>1668096818743</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1668096818743</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added WriteCalculated method" />
     <MESSAGE value="Deleted DefaultReader" />
     <MESSAGE value="Added unit tests for parsing txt file" />
     <MESSAGE value="Added ArgumentProvider for CalculateLine_Test" />
@@ -509,7 +506,8 @@
     <MESSAGE value="Created stub methods" />
     <MESSAGE value="Created react-ui module" />
     <MESSAGE value="Added runConfiguration file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added runConfiguration file" />
+    <MESSAGE value="Added HttpGet Calculate method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added HttpGet Calculate method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
