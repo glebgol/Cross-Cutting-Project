@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created FileReaderController">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created stub methods">
+      <change afterPath="$PROJECT_DIR$/react-ui.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,9 +59,14 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
     "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/src/test",
-    "project.structure.last.edited": "Libraries",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,13 +81,19 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Cross-Cutting-Project" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="All_Tests" type="JUnit" factoryName="JUnit">
       <module name="Cross-Cutting-Project" />
@@ -88,6 +105,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
     <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="rest-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -95,13 +115,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/react-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="HTTP Request.generated-requests | #2" />
+      <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="JUnit.All_Tests" />
+      <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -124,14 +160,9 @@
       <workItem from="1667452886935" duration="8000" />
       <workItem from="1667600758420" duration="3388000" />
       <workItem from="1667675232223" duration="45961000" />
-      <workItem from="1668024071548" duration="7586000" />
-    </task>
-    <task id="LOCAL-00007" summary="Zipped file">
-      <created>1666592731291</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1666592731291</updated>
+      <workItem from="1668024071548" duration="8671000" />
+      <workItem from="1668059964167" duration="442000" />
+      <workItem from="1668090382604" duration="605000" />
     </task>
     <task id="LOCAL-00008" summary="Unzip file">
       <created>1666592963441</created>
@@ -469,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668031350477</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Created stub methods">
+      <created>1668032826242</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1668032826242</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed Encrypt and Decrypt method" />
     <MESSAGE value="Calculated encrypted + zipped file" />
     <MESSAGE value="Add constructor with bytes to streams" />
     <MESSAGE value="Added WriteCalculated method" />
@@ -512,7 +549,8 @@
     <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
     <MESSAGE value="Added rest-api project" />
     <MESSAGE value="Created FileReaderController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created FileReaderController" />
+    <MESSAGE value="Created stub methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created stub methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

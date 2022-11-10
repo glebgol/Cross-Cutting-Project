@@ -1,0 +1,18 @@
+GET http://localhost:8080/api/encrypt/?inputfile=qwerty.txt&outputfile=asd.txt&key=12345
+
+<> 2022-11-10T090226.200.txt
+
+###
+
+GET http://localhost:8080/api/zip?inputfile=ff&outputfile=fr
+
+<> 2022-11-10T090109.404.json
+
+###
+
+GET http://localhost:8080/api/zip/ff/fr
+
+<> 2022-11-10T090040.404.json
+
+###
+
