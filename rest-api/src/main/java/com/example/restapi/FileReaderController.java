@@ -1,14 +1,13 @@
 package com.example.restapi;
 
+import archivers.ArchivationFileManager;
 import builder.FileReaderBuilder;
+import ciphers.CryptoUtils;
 import enums.FileExtension;
-import org.springframework.http.HttpCookie;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-import java.net.http.HttpResponse;
 import java.util.List;
 
 @RestController
@@ -56,18 +55,27 @@ public class FileReaderController {
         return new ResponseEntity<>(inputFilename + " " + outputFilename + " " + isZipped + " " + decryptionKeys, HttpStatus.OK);
     }
 
+    // http://localhost:8080/api/file-reader/encrypt/?inputfile=input.txt&outputfile=input3.txt&key=1234567812345678
     @GetMapping("encrypt/")
     public ResponseEntity<String> Encrypt(@RequestParam(value= "inputfile") String inputFilename,
                                             @RequestParam(value = "outputfile") String outputFilename,
                                             @RequestParam(value="key", required = false) String key) {
-
+        try {
+            CryptoUtils.Encrypt(key, inputFilename, outputFilename);
+        } catch (Exception ex) {
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity<>(inputFilename + " " + outputFilename + " " + key, HttpStatus.OK);
     }
 
+    // http://localhost:8080/api/file-reader/zip/?inputfile=input.txt
     @GetMapping("zip/")
-    public ResponseEntity<String> Zip(@RequestParam(value= "inputfile") String inputFilename,
-                                          @RequestParam(value = "outputfile") String outputFilename) {
-
-        return new ResponseEntity<>(inputFilename + " " + outputFilename, HttpStatus.OK);
+    public ResponseEntity<String> Zip(@RequestParam(value= "inputfile") String inputFilename) {
+        try {
+            ArchivationFileManager.ZipFile(inputFilename);
+        } catch (Exception ex) {
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(inputFilename, HttpStatus.OK);
     }
 }
