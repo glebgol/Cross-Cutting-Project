@@ -60,9 +60,23 @@ class ApiFileReaderTest {
 
     @Test
     void Zip_Returns_200_StatusCode() {
+        var uri = String.format("%s/zip/?inputfile=%s", Uri, InputFilename);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(200);
     }
 
     @Test
     void Zip_Returns_400_StatusCode() {
+        var uri = String.format("%s/zip/?inputfile=%s", Uri, NonExistingFilename);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(400);
     }
 }
