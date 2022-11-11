@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created Encrypt and Zip http get methods">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Update README.md">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/io_rest_assured.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +17,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -55,14 +56,14 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project",
+    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/rest-api/src/test/java/com/example/restapi",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
     "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
@@ -77,18 +78,30 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.restapi" />
       <recent name="readers" />
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="JUnit.ApiTests">
+    <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
+      <module name="rest-api" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JavaScript Debug.Debug Application" />
-      <item itemvalue="JUnit.All_Tests" />
+      <item itemvalue="JUnit.ApiTests" />
+      <item itemvalue="JUnit.FileReaderTests" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
@@ -118,14 +131,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="7886000" />
-    </task>
-    <task id="LOCAL-00013" summary="Added DefaultReader">
-      <created>1667240707297</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1667240707297</updated>
+      <workItem from="1668090382604" duration="11331000" />
     </task>
     <task id="LOCAL-00014" summary="Refactor packages">
       <created>1667240872293</created>
@@ -463,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668104914562</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Update README.md">
+      <created>1668106085591</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1668106085592</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +494,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ArgumentProvider for CalculateLine_Test" />
     <MESSAGE value="Added Division by zero message" />
     <MESSAGE value="Added new package for Argument providers" />
     <MESSAGE value="Added new Contracts package" />
@@ -506,7 +518,8 @@
     <MESSAGE value="Added HttpGet Calculate method" />
     <MESSAGE value="Added setDecryption in Calculate method" />
     <MESSAGE value="Created Encrypt and Zip http get methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Encrypt and Zip http get methods" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
