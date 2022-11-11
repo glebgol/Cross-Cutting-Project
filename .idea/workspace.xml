@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Api tests for zip">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete README.md">
+      <change afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +93,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTests">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -134,14 +141,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="13207000" />
-    </task>
-    <task id="LOCAL-00018" summary="Added Calculate method for EncryptedFileReader">
-      <created>1667246893332</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1667246893332</updated>
+      <workItem from="1668090382604" duration="22325000" />
     </task>
     <task id="LOCAL-00019" summary="Added ZipFileReader">
       <created>1667247856387</created>
@@ -479,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668172312006</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Delete README.md">
+      <created>1668172712656</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1668172712656</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add test for calculate method" />
     <MESSAGE value="Created sources folder for tests" />
     <MESSAGE value="Tests for calculating encrypted file" />
     <MESSAGE value="Added test for calculating double encrypted file" />
@@ -522,7 +528,8 @@
     <MESSAGE value="Api tests for calculate" />
     <MESSAGE value="Api tests for encrypt" />
     <MESSAGE value="Added Api tests for zip" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Api tests for zip" />
+    <MESSAGE value="Delete README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
