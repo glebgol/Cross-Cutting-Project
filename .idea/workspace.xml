@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Update README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/io_rest_assured.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created Api tests">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/double_encrypted.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/rest-api/src/test/java/com/example/restapi",
+    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/rest-api/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,11 +71,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
       <recent name="D:\Anton\Cross-Cutting-Project" />
       <recent name="D:\Anton\Cross-Cutting-Project\lib" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.restapi" />
@@ -131,14 +135,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="11331000" />
-    </task>
-    <task id="LOCAL-00014" summary="Refactor packages">
-      <created>1667240872293</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1667240872293</updated>
+      <workItem from="1668090382604" duration="12723000" />
     </task>
     <task id="LOCAL-00015" summary="Added TxtFileReader">
       <created>1667241688737</created>
@@ -476,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668106085592</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Created Api tests">
+      <created>1668170594555</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1668170594555</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Division by zero message" />
     <MESSAGE value="Added new package for Argument providers" />
     <MESSAGE value="Added new Contracts package" />
     <MESSAGE value="Added mock" />
@@ -519,7 +522,8 @@
     <MESSAGE value="Added setDecryption in Calculate method" />
     <MESSAGE value="Created Encrypt and Zip http get methods" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Created Api tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Api tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
