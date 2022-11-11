@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete README.md">
-      <change afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Changed App">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -141,14 +134,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="22325000" />
-    </task>
-    <task id="LOCAL-00019" summary="Added ZipFileReader">
-      <created>1667247856387</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1667247856387</updated>
+      <workItem from="1668090382604" duration="25053000" />
     </task>
     <task id="LOCAL-00020" summary="Write method">
       <created>1667292236892</created>
@@ -486,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668172712656</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Changed App">
+      <created>1668183398363</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1668183398363</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created sources folder for tests" />
     <MESSAGE value="Tests for calculating encrypted file" />
     <MESSAGE value="Added test for calculating double encrypted file" />
     <MESSAGE value="Added test for calculating zipped file" />
@@ -529,7 +521,8 @@
     <MESSAGE value="Api tests for encrypt" />
     <MESSAGE value="Added Api tests for zip" />
     <MESSAGE value="Delete README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete README.md" />
+    <MESSAGE value="Changed App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
