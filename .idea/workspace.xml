@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created Api tests">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/double_encrypted.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Api tests for calculate">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,14 +134,7 @@
       <workItem from="1667675232223" duration="45961000" />
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
-      <workItem from="1668090382604" duration="12723000" />
-    </task>
-    <task id="LOCAL-00015" summary="Added TxtFileReader">
-      <created>1667241688737</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1667241688737</updated>
+      <workItem from="1668090382604" duration="12868000" />
     </task>
     <task id="LOCAL-00016" summary="Added EncryptedFileReader">
       <created>1667242191756</created>
@@ -480,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668170594555</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Api tests for calculate">
+      <created>1668171872552</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1668171872552</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new package for Argument providers" />
     <MESSAGE value="Added new Contracts package" />
     <MESSAGE value="Added mock" />
     <MESSAGE value="Add test for calculate method" />
@@ -523,7 +521,8 @@
     <MESSAGE value="Created Encrypt and Zip http get methods" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Created Api tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Api tests" />
+    <MESSAGE value="Api tests for calculate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api tests for calculate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
