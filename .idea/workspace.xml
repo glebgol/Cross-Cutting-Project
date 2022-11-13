@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Fix bug in RestAssured test">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FileReaderTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FileReaderTests.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Edit test run configurations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatingTests">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -104,6 +101,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/react-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JavaScript Debug.Debug Application" />
@@ -111,8 +118,14 @@
       <item itemvalue="JUnit.FileReaderTests" />
       <item itemvalue="JUnit.CalculatingTests" />
       <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.test" />
       <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,14 +148,7 @@
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
-      <workItem from="1668230901790" duration="1734000" />
-    </task>
-    <task id="LOCAL-00022" summary="Changed GetUnZipped method">
-      <created>1667301177035</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1667301177035</updated>
+      <workItem from="1668230901790" duration="10400000" />
     </task>
     <task id="LOCAL-00023" summary="Calculated Zipped file">
       <created>1667301512295</created>
@@ -480,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668201174581</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Edit test run configurations">
+      <created>1668237343369</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1668237343370</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added test for calculating double encrypted file" />
     <MESSAGE value="Added test for calculating zipped file" />
     <MESSAGE value="Added test for calculating zipped and encrypted file" />
     <MESSAGE value="Added test for calculating zipped and double encrypted file" />
@@ -523,7 +535,8 @@
     <MESSAGE value="Delete README.md" />
     <MESSAGE value="Changed App" />
     <MESSAGE value="Fix bug in RestAssured test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bug in RestAssured test" />
+    <MESSAGE value="Edit test run configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit test run configurations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
