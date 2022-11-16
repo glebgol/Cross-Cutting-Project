@@ -7,27 +7,12 @@ import interfaces.IStream;
 
 import java.io.IOException;
 
-public class EncryptedFileReader implements IFileReader {
-
-    protected String inputFilename;
-    protected String outputFilename;
-    protected IFileReader _reader;
+public class EncryptedFileReader extends FileReader {
     protected String key;
 
     public EncryptedFileReader(String key, IFileReader reader) {
-        _reader = reader;
-        inputFilename = reader.getInputFilename();
-        outputFilename = reader.getOutputFilename();
+        super(reader);
         this.key = key;
-    }
-    @Override
-    public String getInputFilename() {
-        return inputFilename;
-    }
-
-    @Override
-    public String getOutputFilename() {
-        return outputFilename;
     }
 
     @Override

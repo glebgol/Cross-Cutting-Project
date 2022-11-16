@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete package-lock.json">
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2022_15_29_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created abstract DefaultFileReader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/readers/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,14 +150,7 @@
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
-      <workItem from="1668230901790" duration="13015000" />
-    </task>
-    <task id="LOCAL-00024" summary="Tried calculating">
-      <created>1667308463306</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1667308463306</updated>
+      <workItem from="1668230901790" duration="13401000" />
     </task>
     <task id="LOCAL-00025" summary="Added new Transform method to IFileReader">
       <created>1667308679147</created>
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668352927351</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Created abstract DefaultFileReader">
+      <created>1668622652742</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1668622652742</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,8 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added test for calculating zipped and encrypted file" />
-    <MESSAGE value="Added test for calculating zipped and double encrypted file" />
     <MESSAGE value="Added XmlFileReader" />
     <MESSAGE value="Added IFileReaderBuilder" />
     <MESSAGE value="Added enum FileExtension" />
@@ -538,7 +536,9 @@
     <MESSAGE value="Fix bug in RestAssured test" />
     <MESSAGE value="Edit test run configurations" />
     <MESSAGE value="Delete package-lock.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete package-lock.json" />
+    <MESSAGE value="Created abstract DefaultReader" />
+    <MESSAGE value="Created abstract DefaultFileReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created abstract DefaultFileReader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
