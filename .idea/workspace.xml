@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created abstract FileReader">
-      <change afterPath="$PROJECT_DIR$/src/main/java/streams/DefaultStreamResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/UnzippingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/UnzippingResult.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactoring StreamResult objects">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ciphers/KeyValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileReaderTests">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -148,14 +150,7 @@
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
-      <workItem from="1668230901790" duration="13883000" />
-    </task>
-    <task id="LOCAL-00026" summary="Calculated zipped file">
-      <created>1667326082296</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1667326082296</updated>
+      <workItem from="1668230901790" duration="16969000" />
     </task>
     <task id="LOCAL-00027" summary="Added bytes to IStream">
       <created>1667644058642</created>
@@ -493,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668622978301</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Refactoring StreamResult objects">
+      <created>1668623733315</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1668623733315</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added IFileReaderBuilder" />
     <MESSAGE value="Added enum FileExtension" />
     <MESSAGE value="Created FileReaderBuilder" />
     <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
@@ -536,7 +537,8 @@
     <MESSAGE value="Created abstract DefaultReader" />
     <MESSAGE value="Created abstract DefaultFileReader" />
     <MESSAGE value="Created abstract FileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created abstract FileReader" />
+    <MESSAGE value="Refactoring StreamResult objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring StreamResult objects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
