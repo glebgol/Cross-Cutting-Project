@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created abstract DefaultFileReader">
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created abstract FileReader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/streams/DefaultStreamResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/UnzippingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/UnzippingResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,14 +148,7 @@
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
-      <workItem from="1668230901790" duration="13401000" />
-    </task>
-    <task id="LOCAL-00025" summary="Added new Transform method to IFileReader">
-      <created>1667308679147</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1667308679147</updated>
+      <workItem from="1668230901790" duration="13883000" />
     </task>
     <task id="LOCAL-00026" summary="Calculated zipped file">
       <created>1667326082296</created>
@@ -495,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668622652742</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Created abstract FileReader">
+      <created>1668622978301</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1668622978301</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added XmlFileReader" />
     <MESSAGE value="Added IFileReaderBuilder" />
     <MESSAGE value="Added enum FileExtension" />
     <MESSAGE value="Created FileReaderBuilder" />
@@ -538,7 +535,8 @@
     <MESSAGE value="Delete package-lock.json" />
     <MESSAGE value="Created abstract DefaultReader" />
     <MESSAGE value="Created abstract DefaultFileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created abstract DefaultFileReader" />
+    <MESSAGE value="Created abstract FileReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created abstract FileReader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -555,26 +553,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
           <line>98</line>
           <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>

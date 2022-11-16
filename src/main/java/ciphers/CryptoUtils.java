@@ -2,7 +2,7 @@ package ciphers;
 
 import exceptions.CryptoException;
 import interfaces.IStream;
-import streams.DecryptingResult;
+import streams.EncryptingResult;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -74,7 +74,7 @@ public class CryptoUtils {
         }
     }
 
-    public static DecryptingResult GetDecrypting(String key, String inputFilename) throws CryptoException {
+    public static EncryptingResult GetDecrypting(String key, String inputFilename) throws CryptoException {
         try {
             var inputFile = new File(inputFilename);
 
@@ -86,7 +86,7 @@ public class CryptoUtils {
             var inputBytes = inputStream.readAllBytes();
             byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
 
-            return new DecryptingResult(outputBytes);
+            return new EncryptingResult(outputBytes);
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
                  | IllegalBlockSizeException | IOException ex) {
@@ -104,7 +104,7 @@ public class CryptoUtils {
             var inputBytes = stream.bytes();
             byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
 
-            return new DecryptingResult(outputBytes);
+            return new EncryptingResult(outputBytes);
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
