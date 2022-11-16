@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Edit test run configurations">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete package-lock.json">
+      <change afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2022_15_29_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,7 +89,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="JUnit.FileReaderTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -148,14 +150,7 @@
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
-      <workItem from="1668230901790" duration="10400000" />
-    </task>
-    <task id="LOCAL-00023" summary="Calculated Zipped file">
-      <created>1667301512295</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1667301512296</updated>
+      <workItem from="1668230901790" duration="13015000" />
     </task>
     <task id="LOCAL-00024" summary="Tried calculating">
       <created>1667308463306</created>
@@ -493,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668237343370</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Delete package-lock.json">
+      <created>1668352927350</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1668352927351</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added test for calculating zipped file" />
     <MESSAGE value="Added test for calculating zipped and encrypted file" />
     <MESSAGE value="Added test for calculating zipped and double encrypted file" />
     <MESSAGE value="Added XmlFileReader" />
@@ -536,7 +537,8 @@
     <MESSAGE value="Changed App" />
     <MESSAGE value="Fix bug in RestAssured test" />
     <MESSAGE value="Edit test run configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit test run configurations" />
+    <MESSAGE value="Delete package-lock.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete package-lock.json" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,22 +558,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>53</line>
+          <line>38</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>64</line>
+          <line>49</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>39</line>
+          <line>24</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
-          <line>32</line>
+          <line>17</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

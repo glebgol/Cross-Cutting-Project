@@ -1,6 +1,5 @@
 package readers;
 
-import interfaces.IFileReader;
 import interfaces.IStream;
 import parsers.ProcessingTxtFile;
 import streams.CalculationResult;
@@ -9,23 +8,9 @@ import streams.ReadingResult;
 import java.io.*;
 import java.util.ArrayList;
 
-public class TxtFileReader implements IFileReader {
-
-    protected String inputFilename;
-    protected String outputFilename;
-
+public class TxtFileReader extends DefaultFileReader {
     public TxtFileReader(String inputFilename, String outputFilename) {
-        this.inputFilename = inputFilename;
-        this.outputFilename = outputFilename;
-    }
-    @Override
-    public String getInputFilename() {
-        return inputFilename;
-    }
-
-    @Override
-    public String getOutputFilename() {
-        return outputFilename;
+        super(inputFilename, outputFilename);
     }
 
     @Override
