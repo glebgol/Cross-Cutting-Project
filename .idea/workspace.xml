@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Key validation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete tests dependencies">
+      <change afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,14 +147,7 @@
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
       <workItem from="1668230901790" duration="20839000" />
-      <workItem from="1668703965432" duration="37000" />
-    </task>
-    <task id="LOCAL-00028" summary="changes in decrypting">
-      <created>1667734683059</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1667734683059</updated>
+      <workItem from="1668703965432" duration="796000" />
     </task>
     <task id="LOCAL-00029" summary="Deleted doEncrypt method">
       <created>1667735330989</created>
@@ -495,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668626554811</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Delete tests dependencies">
+      <created>1668704112013</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1668704112013</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created FileReaderBuilder" />
     <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
     <MESSAGE value="Added rest-api project" />
     <MESSAGE value="Created FileReaderController" />
@@ -538,7 +534,8 @@
     <MESSAGE value="Created abstract FileReader" />
     <MESSAGE value="Refactoring StreamResult objects" />
     <MESSAGE value="Added Key validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Key validation" />
+    <MESSAGE value="Delete tests dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete tests dependencies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
