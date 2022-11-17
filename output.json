@@ -1,0 +1,12 @@
+[
+  {
+    "expression1": "1+2",
+    "expression2": "1+3",
+    "expression3": "1+4"
+  },
+  {
+    "expression1": "1*2",
+    "expression2": "13*12",
+    "expression3": "10*4"
+  }
+]

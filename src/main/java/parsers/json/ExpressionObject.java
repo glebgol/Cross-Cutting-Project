@@ -1,6 +1,8 @@
 package parsers.json;
 
-public class ExpressionObject {
+import interfaces.IExpression;
+
+public class ExpressionObject implements IExpression {
     public String expression1;
     public String expression2;
     public String expression3;

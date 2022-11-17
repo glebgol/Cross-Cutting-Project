@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete tests dependencies">
-      <change afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create ExpressionObject for json parsing">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -85,7 +94,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -147,14 +156,7 @@
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
       <workItem from="1668230901790" duration="20839000" />
-      <workItem from="1668703965432" duration="796000" />
-    </task>
-    <task id="LOCAL-00029" summary="Deleted doEncrypt method">
-      <created>1667735330989</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1667735330989</updated>
+      <workItem from="1668703965432" duration="2945000" />
     </task>
     <task id="LOCAL-00030" summary="Changed Encrypt and Decrypt method">
       <created>1667735499505</created>
@@ -492,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668704112013</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Create ExpressionObject for json parsing">
+      <created>1668705526593</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1668705526593</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
     <MESSAGE value="Added rest-api project" />
     <MESSAGE value="Created FileReaderController" />
     <MESSAGE value="Created stub methods" />
@@ -535,7 +543,8 @@
     <MESSAGE value="Refactoring StreamResult objects" />
     <MESSAGE value="Added Key validation" />
     <MESSAGE value="Delete tests dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete tests dependencies" />
+    <MESSAGE value="Create ExpressionObject for json parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create ExpressionObject for json parsing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
