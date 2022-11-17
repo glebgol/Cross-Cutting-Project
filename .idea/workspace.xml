@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactoring StreamResult objects">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ciphers/KeyValidation.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Key validation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,36 +40,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project/src/test/java/readers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Cross-Cutting-Project/src/test/java/readers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
@@ -89,7 +88,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -150,14 +149,8 @@
       <workItem from="1668024071548" duration="8671000" />
       <workItem from="1668059964167" duration="442000" />
       <workItem from="1668090382604" duration="27398000" />
-      <workItem from="1668230901790" duration="16969000" />
-    </task>
-    <task id="LOCAL-00027" summary="Added bytes to IStream">
-      <created>1667644058642</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1667644058642</updated>
+      <workItem from="1668230901790" duration="20839000" />
+      <workItem from="1668703965432" duration="37000" />
     </task>
     <task id="LOCAL-00028" summary="changes in decrypting">
       <created>1667734683059</created>
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668623733315</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Added Key validation">
+      <created>1668626554811</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1668626554811</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added enum FileExtension" />
     <MESSAGE value="Created FileReaderBuilder" />
     <MESSAGE value="Checked FileReaderBuilder on double encrypted and zipped file" />
     <MESSAGE value="Added rest-api project" />
@@ -538,7 +537,8 @@
     <MESSAGE value="Created abstract DefaultFileReader" />
     <MESSAGE value="Created abstract FileReader" />
     <MESSAGE value="Refactoring StreamResult objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring StreamResult objects" />
+    <MESSAGE value="Added Key validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Key validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

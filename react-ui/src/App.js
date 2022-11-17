@@ -1,4 +1,5 @@
 import './App.css';
+import Input from "./Input";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <button>
                     Encrypt
                 </button>
+                <Input>OKK</Input>
             </div>
         </div>
     </div>
