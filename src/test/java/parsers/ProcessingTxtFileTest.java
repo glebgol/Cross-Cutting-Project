@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import ArgumentProviders.CalculateTxtLineArgumentProvider;
-import org.mockito.configuration.IMockitoConfiguration;
-import static org.mockito.Mockito.*;
 
 class ProcessingTxtFileTest {
     @ParameterizedTest
@@ -16,7 +14,7 @@ class ProcessingTxtFileTest {
         var expectedLine = arg.expectedLine;
 
         // Act
-        var result = ProcessingTxtFile.CalculateLine(line);
+        var result = CalculationEngine.CalculateLine(line);
 
         // Assert
         Assertions.assertEquals(expectedLine, result);

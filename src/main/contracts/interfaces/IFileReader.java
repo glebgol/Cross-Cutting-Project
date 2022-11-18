@@ -11,8 +11,5 @@ public interface IFileReader {
     IStream Read() throws IOException, CryptoException;
     IStream Transform(IStream stream) throws IOException, CryptoException;
     IStream Calculate(IStream stream) throws IOException, CryptoException;
-
     void WriteCalculated() throws IOException, CryptoException;
-//    void Zip();
-//    void Encrypt();
 }

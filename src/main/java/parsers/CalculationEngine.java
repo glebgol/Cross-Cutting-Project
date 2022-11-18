@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ProcessingTxtFile {
+public class CalculationEngine {
     private static final String DivisionByZeroMessage = "Division by zero!";
     private static ArrayList<Token> GetTokens(Expression expression) {
         var tokens = expression.getCopyOfInitialTokens();

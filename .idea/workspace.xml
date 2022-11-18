@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete lib">
-      <change afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IExpressionList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Write Json Expressions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/CalculationEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,35 +47,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Cross-Cutting-Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
@@ -91,7 +94,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.FileReaderTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -156,13 +159,7 @@
       <workItem from="1668703965432" duration="2945000" />
       <workItem from="1668787513890" duration="266000" />
       <workItem from="1668787821190" duration="3921000" />
-    </task>
-    <task id="LOCAL-00031" summary="Calculated encrypted + zipped file">
-      <created>1667739256677</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1667739256677</updated>
+      <workItem from="1668791766484" duration="2573000" />
     </task>
     <task id="LOCAL-00032" summary="Add constructor with bytes to streams">
       <created>1667748752856</created>
@@ -500,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668789270106</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Write Json Expressions">
+      <created>1668791941235</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1668791941235</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created stub methods" />
     <MESSAGE value="Created react-ui module" />
     <MESSAGE value="Added runConfiguration file" />
     <MESSAGE value="Added HttpGet Calculate method" />
@@ -543,7 +546,8 @@
     <MESSAGE value="Create ExpressionObject for json parsing" />
     <MESSAGE value="delete lib" />
     <MESSAGE value="Delete lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete lib" />
+    <MESSAGE value="Write Json Expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write Json Expressions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -565,11 +569,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java</url>
           <line>77</line>
           <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java</url>

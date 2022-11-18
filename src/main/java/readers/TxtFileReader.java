@@ -1,7 +1,7 @@
 package readers;
 
 import interfaces.IStream;
-import parsers.ProcessingTxtFile;
+import parsers.CalculationEngine;
 import streams.CalculationResult;
 import streams.ReadingResult;
 
@@ -38,7 +38,7 @@ public class TxtFileReader extends DefaultFileReader {
     public IStream Calculate(IStream stream) {
         var calculatedLines = new ArrayList<String>();
         for (var line : stream.lines()) {
-            var calculateLine = ProcessingTxtFile.CalculateLine(line);
+            var calculateLine = CalculationEngine.CalculateLine(line);
             calculatedLines.add(calculateLine);
         }
         var calculationResult = new CalculationResult(calculatedLines);

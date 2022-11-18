@@ -1,8 +1,8 @@
 package parsers.json;
 
-import interfaces.IExpression;
+import parsers.CalculationEngine;
 
-public class ExpressionObject implements IExpression {
+public class ExpressionObject {
     public String expression1;
     public String expression2;
     public String expression3;
@@ -11,5 +11,13 @@ public class ExpressionObject implements IExpression {
         this.expression1 = expression1;
         this.expression2 = expression2;
         this.expression3 = expression3;
+    }
+
+    public ExpressionObject Calculate() {
+        var calculatedExp1 = CalculationEngine.CalculateLine(expression1);
+        var calculatedExp2 = CalculationEngine.CalculateLine(expression3);
+        var calculatedExp3 = CalculationEngine.CalculateLine(expression3);
+
+        return new ExpressionObject(calculatedExp1, calculatedExp2, calculatedExp3);
     }
 }

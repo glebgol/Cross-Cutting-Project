@@ -13,4 +13,6 @@ import java.nio.file.Paths;
 public interface IExpressionList {
     void WriteToJsonFile(String jsonFileName) throws IOException;
     void ReadFromJsonFile(String jsonFileName) throws IOException;
+
+    IExpressionList Calculate();
 }

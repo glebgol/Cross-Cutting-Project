@@ -1,22 +1,14 @@
 package readers;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import exceptions.CryptoException;
-import interfaces.IExpression;
 import interfaces.IExpressionList;
-import interfaces.IFileReader;
 import interfaces.IStream;
 import parsers.json.ExpressionList;
-import parsers.json.ExpressionObject;
 import streams.JsonStream;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.Writer;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class JsonFileReader extends DefaultFileReader {
 
@@ -26,7 +18,9 @@ public class JsonFileReader extends DefaultFileReader {
 
     @Override
     public void Write(IStream stream) throws IOException, CryptoException {
-
+        FileOutputStream outputFile = new FileOutputStream(outputFilename);
+        outputFile.write(stream.bytes());
+        outputFile.close();
     }
     public void WriteJsonExpressions(IExpressionList expressionList) throws IOException {
         expressionList.WriteToJsonFile(outputFilename);
@@ -39,9 +33,17 @@ public class JsonFileReader extends DefaultFileReader {
         return new JsonStream(expressions);
     }
 
+    public IStream ReadFromJson() throws IOException, CryptoException {
+        var expressions = new ExpressionList();
+        expressions.ReadFromJsonFile(inputFilename);
+        return new JsonStream(expressions);
+    }
+
     @Override
     public IStream Transform(IStream stream) throws IOException, CryptoException {
-        return null;
+        var str = new String(stream.bytes());
+        var lst = new Gson().fromJson(str, ExpressionList.class);
+        return new JsonStream(lst);
     }
 
     @Override

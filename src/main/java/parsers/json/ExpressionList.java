@@ -2,7 +2,6 @@ package parsers.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import interfaces.IExpression;
 import interfaces.IExpressionList;
 
 import java.io.IOException;
@@ -13,9 +12,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class ExpressionList implements IExpressionList {
-    protected ArrayList<IExpression> expressions;
+    protected ArrayList<ExpressionObject> expressions;
     public ExpressionList() {}
-    public ExpressionList(ArrayList<IExpression> expressions) {
+    public ExpressionList(ArrayList<ExpressionObject> expressions) {
         this.expressions = expressions;
     }
 
@@ -33,4 +32,14 @@ public class ExpressionList implements IExpressionList {
         expressions = lst.expressions;
         reader.close();
     }
+
+    @Override
+    public IExpressionList Calculate() {
+        var calculatedExpressions = new ArrayList<ExpressionObject>(expressions.size());
+        for (var exp : expressions) {
+            calculatedExpressions.add(exp.Calculate());
+        }
+        return new ExpressionList(calculatedExpressions);
+    }
+
 }
