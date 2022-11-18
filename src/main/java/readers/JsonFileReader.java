@@ -3,8 +3,11 @@ package readers;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import exceptions.CryptoException;
+import interfaces.IExpression;
+import interfaces.IExpressionList;
 import interfaces.IFileReader;
 import interfaces.IStream;
+import parsers.json.ExpressionList;
 import parsers.json.ExpressionObject;
 import streams.JsonStream;
 
@@ -23,21 +26,17 @@ public class JsonFileReader extends DefaultFileReader {
 
     @Override
     public void Write(IStream stream) throws IOException, CryptoException {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        Writer writer = Files.newBufferedWriter(Paths.get(outputFilename));
 
-        var expressions = new ArrayList<>(Arrays.asList(
-                new ExpressionObject("1+2", "1+3", "1+4"),
-                new ExpressionObject("1*2", "13*12", "10*4")
-                ));
-        
-        gson.toJson(expressions, writer);
-        writer.close();
+    }
+    public void WriteJsonExpressions(IExpressionList expressionList) throws IOException {
+        expressionList.WriteToJsonFile(outputFilename);
     }
 
     @Override
     public IStream Read() throws IOException, CryptoException {
-        return null;
+        var expressions = new ExpressionList();
+        expressions.ReadFromJsonFile(inputFilename);
+        return new JsonStream(expressions);
     }
 
     @Override
