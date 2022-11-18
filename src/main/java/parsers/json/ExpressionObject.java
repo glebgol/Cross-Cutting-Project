@@ -15,7 +15,7 @@ public class ExpressionObject {
 
     public ExpressionObject Calculate() {
         var calculatedExp1 = CalculationEngine.CalculateLine(expression1);
-        var calculatedExp2 = CalculationEngine.CalculateLine(expression3);
+        var calculatedExp2 = CalculationEngine.CalculateLine(expression2);
         var calculatedExp3 = CalculationEngine.CalculateLine(expression3);
 
         return new ExpressionObject(calculatedExp1, calculatedExp2, calculatedExp3);
