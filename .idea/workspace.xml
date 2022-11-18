@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added new api test (for not valid keys)">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Changed FileReaderBuilder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +152,7 @@
       <workItem from="1668703965432" duration="2945000" />
       <workItem from="1668787513890" duration="266000" />
       <workItem from="1668787821190" duration="3921000" />
-      <workItem from="1668791766484" duration="8971000" />
-    </task>
-    <task id="LOCAL-00037" summary="Added Division by zero message">
-      <created>1667759419366</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1667759419366</updated>
+      <workItem from="1668791766484" duration="10013000" />
     </task>
     <task id="LOCAL-00038" summary="Added new package for Argument providers">
       <created>1667761514041</created>
@@ -498,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668802634995</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Changed FileReaderBuilder">
+      <created>1668803455562</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1668803455562</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update README.md" />
     <MESSAGE value="Created Api tests" />
     <MESSAGE value="Api tests for calculate" />
     <MESSAGE value="Api tests for encrypt" />
@@ -541,7 +539,8 @@
     <MESSAGE value="Refactor streams" />
     <MESSAGE value="Added JsonFileReader Test" />
     <MESSAGE value="Added new api test (for not valid keys)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new api test (for not valid keys)" />
+    <MESSAGE value="Changed FileReaderBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed FileReaderBuilder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

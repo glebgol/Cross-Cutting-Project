@@ -14,18 +14,28 @@ import java.util.List;
 @RestController
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
+    private FileExtension GetFileExtension(String extension) {
+        var fileExtension = extension.toUpperCase();
+        if (fileExtension.equals(FileExtension.Txt.name().toUpperCase())) {
+            return FileExtension.Txt;
+        }
+        else {
+            return FileExtension.Json;
+        }
+    }
     // http://localhost:8080/api/file-reader/calculate/?inputfile=double_encrypted.zip&outputfile=qwe.txt&iszipped=true&decryptionkeys=qwsdcvbgfthyrdfw,asdfghjkqewrtyto
     @GetMapping("calculate/")
     public ResponseEntity<String> Calculate(@RequestParam(value= "inputfile") String inputFilename,
                             @RequestParam(value = "outputfile") String outputFilename,
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
-                            @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys) {
+                            @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
+                                            @RequestParam(value = "extension") String extension) {
 
         if (decryptionKeys != null && !KeyValidation.IsValidDecryptionKeys(decryptionKeys)) {
             return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
         }
-
-        var readerBuilder = new FileReaderBuilder(FileExtension.Txt, inputFilename, outputFilename);
+        var fileExtension = GetFileExtension(extension);
+        var readerBuilder = new FileReaderBuilder(fileExtension, inputFilename, outputFilename);
         readerBuilder.setEncrypting(decryptionKeys);
         readerBuilder.setZipping(isZipped);
 
