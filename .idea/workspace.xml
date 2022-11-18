@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Write Json Expressions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rename ProcessingTxtFile to CalculationEngine">
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ProcessingTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/CalculationEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +87,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileReaderTests">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -159,14 +152,7 @@
       <workItem from="1668703965432" duration="2945000" />
       <workItem from="1668787513890" duration="266000" />
       <workItem from="1668787821190" duration="3921000" />
-      <workItem from="1668791766484" duration="2573000" />
-    </task>
-    <task id="LOCAL-00032" summary="Add constructor with bytes to streams">
-      <created>1667748752856</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1667748752856</updated>
+      <workItem from="1668791766484" duration="3161000" />
     </task>
     <task id="LOCAL-00033" summary="Added WriteCalculated method">
       <created>1667749185032</created>
@@ -504,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668791941235</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Rename ProcessingTxtFile to CalculationEngine">
+      <created>1668795782385</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1668795782385</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created react-ui module" />
     <MESSAGE value="Added runConfiguration file" />
     <MESSAGE value="Added HttpGet Calculate method" />
     <MESSAGE value="Added setDecryption in Calculate method" />
@@ -547,7 +539,8 @@
     <MESSAGE value="delete lib" />
     <MESSAGE value="Delete lib" />
     <MESSAGE value="Write Json Expressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write Json Expressions" />
+    <MESSAGE value="Rename ProcessingTxtFile to CalculationEngine" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename ProcessingTxtFile to CalculationEngine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

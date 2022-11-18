@@ -41,5 +41,4 @@ public class ExpressionList implements IExpressionList {
         }
         return new ExpressionList(calculatedExpressions);
     }
-
 }

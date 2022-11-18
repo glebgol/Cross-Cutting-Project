@@ -34,8 +34,6 @@ public class Main {
         CryptoUtils.Encrypt("1234567812345678", "output.json", "1.json");
 
         var reader = new EncryptedFileReader("1234567812345678", new JsonFileReader("1.json", "3.json"));
-        var reading = reader.Read();
-        reader.Write(reading);
-        CryptoUtils.Decrypt("1234567812345678", "1.json", "2.json");
+        reader.WriteCalculated();
     }
 }
