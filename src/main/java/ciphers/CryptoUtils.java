@@ -74,7 +74,7 @@ public class CryptoUtils {
         }
     }
 
-    public static EncryptingResult GetDecrypting(String key, String inputFilename) throws CryptoException {
+    public static IStream GetDecrypting(String key, String inputFilename) throws CryptoException {
         try {
             var inputFile = new File(inputFilename);
 

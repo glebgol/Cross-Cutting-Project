@@ -1,14 +1,14 @@
 package ArgumentProviders;
 
-import streams.CalculationResult;
-import streams.ReadingResult;
+import interfaces.IStream;
+import streams.TxtStream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class StreamArguments {
-    public static ReadingResult ReadingResult() {
-        return new ReadingResult(new ArrayList<>(
+    public static IStream ReadingResult() {
+        return new TxtStream(new ArrayList<>(
                 Arrays.asList(
                         "123 + 1234.5",
                         "qwerty\r",
@@ -17,8 +17,8 @@ public class StreamArguments {
                 )));
     }
 
-    public static CalculationResult CalculationResult() {
-        return new CalculationResult(new ArrayList<>(
+    public static IStream CalculationResult() {
+        return new TxtStream(new ArrayList<>(
                 Arrays.asList(
                     "1357.5",
                     "qwerty\r",

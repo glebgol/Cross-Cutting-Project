@@ -2,8 +2,7 @@ package readers;
 
 import interfaces.IStream;
 import parsers.CalculationEngine;
-import streams.CalculationResult;
-import streams.ReadingResult;
+import streams.TxtStream;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public class TxtFileReader extends DefaultFileReader {
         FileInputStream fileInputStream = new FileInputStream(inputFile);
         var bytes = fileInputStream.readAllBytes();
         fileInputStream.close();
-        return new ReadingResult(bytes);
+        return new TxtStream(bytes);
     }
 
     @Override
@@ -41,8 +40,7 @@ public class TxtFileReader extends DefaultFileReader {
             var calculateLine = CalculationEngine.CalculateLine(line);
             calculatedLines.add(calculateLine);
         }
-        var calculationResult = new CalculationResult(calculatedLines);
-        return calculationResult;
+        return new TxtStream(calculatedLines);
     }
 
     @Override

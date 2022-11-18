@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rename ProcessingTxtFile to CalculationEngine">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Calculated Json file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/streams/TxtStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivationFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/CalculationResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/ReadingResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/UnzippingResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +25,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,7 +92,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.FileReaderTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -152,14 +157,7 @@
       <workItem from="1668703965432" duration="2945000" />
       <workItem from="1668787513890" duration="266000" />
       <workItem from="1668787821190" duration="3921000" />
-      <workItem from="1668791766484" duration="3161000" />
-    </task>
-    <task id="LOCAL-00033" summary="Added WriteCalculated method">
-      <created>1667749185032</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1667749185032</updated>
+      <workItem from="1668791766484" duration="4081000" />
     </task>
     <task id="LOCAL-00034" summary="Deleted DefaultReader">
       <created>1667749442921</created>
@@ -497,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668795782385</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Calculated Json file">
+      <created>1668796040372</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1668796040372</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added runConfiguration file" />
     <MESSAGE value="Added HttpGet Calculate method" />
     <MESSAGE value="Added setDecryption in Calculate method" />
     <MESSAGE value="Created Encrypt and Zip http get methods" />
@@ -540,7 +544,8 @@
     <MESSAGE value="Delete lib" />
     <MESSAGE value="Write Json Expressions" />
     <MESSAGE value="Rename ProcessingTxtFile to CalculationEngine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename ProcessingTxtFile to CalculationEngine" />
+    <MESSAGE value="Calculated Json file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculated Json file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

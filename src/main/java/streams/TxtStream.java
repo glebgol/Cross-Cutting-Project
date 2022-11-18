@@ -3,11 +3,11 @@ package streams;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-public class CalculationResult extends DefaultStreamResult {
-    public CalculationResult(byte[] bytes) {
+public class TxtStream extends DefaultStreamResult {
+    public TxtStream(byte[] bytes) {
         super(bytes);
     }
-    public CalculationResult(ArrayList<String> lines) {
+    public TxtStream(ArrayList<String> lines) {
         this.lines = lines;
         StringBuilder stringBuilder = new StringBuilder();
         for (var line : lines) {

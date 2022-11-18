@@ -1,16 +1,12 @@
 package archivers;
 
-import streams.ReadingResult;
-import streams.UnzippingResult;
+import interfaces.IStream;
+import streams.TxtStream;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.StringTokenizer;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -47,7 +43,7 @@ public class ArchivationFileManager {
         }
     }
 
-    public static UnzippingResult GetUnZipped(String filename) throws IOException {
+    public static IStream GetUnZipped(String filename) throws IOException {
         byte[] buffer = new byte[1024];
         ZipInputStream zis = new ZipInputStream(new FileInputStream(filename));
         ZipEntry zipEntry = zis.getNextEntry();
@@ -64,6 +60,6 @@ public class ArchivationFileManager {
         zis.close();
 
         var bytes = stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
-        return new UnzippingResult(bytes);
+        return new TxtStream(bytes);
     }
 }
