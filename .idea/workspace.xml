@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added JsonFileReader Test">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added new api test (for not valid keys)">
       <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,14 +153,7 @@
       <workItem from="1668703965432" duration="2945000" />
       <workItem from="1668787513890" duration="266000" />
       <workItem from="1668787821190" duration="3921000" />
-      <workItem from="1668791766484" duration="8322000" />
-    </task>
-    <task id="LOCAL-00036" summary="Added ArgumentProvider for CalculateLine_Test">
-      <created>1667758798159</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1667758798159</updated>
+      <workItem from="1668791766484" duration="8971000" />
     </task>
     <task id="LOCAL-00037" summary="Added Division by zero message">
       <created>1667759419366</created>
@@ -494,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668801797314</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Added new api test (for not valid keys)">
+      <created>1668802634995</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1668802634995</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Encrypt and Zip http get methods" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Created Api tests" />
     <MESSAGE value="Api tests for calculate" />
@@ -537,7 +540,8 @@
     <MESSAGE value="Calculated Json file" />
     <MESSAGE value="Refactor streams" />
     <MESSAGE value="Added JsonFileReader Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JsonFileReader Test" />
+    <MESSAGE value="Added new api test (for not valid keys)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new api test (for not valid keys)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

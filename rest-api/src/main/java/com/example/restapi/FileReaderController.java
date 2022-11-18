@@ -25,18 +25,11 @@ public class FileReaderController {
             return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
         }
 
+        var readerBuilder = new FileReaderBuilder(FileExtension.Txt, inputFilename, outputFilename);
+        readerBuilder.setEncrypting(decryptionKeys);
+        readerBuilder.setZipping(isZipped);
+
         try {
-            var readerBuilder = new FileReaderBuilder(inputFilename, outputFilename);
-            readerBuilder.setFileExtension(FileExtension.Txt);
-            if (decryptionKeys != null) {
-                for (var key : decryptionKeys) {
-                    readerBuilder.setEncrypting(key);
-                    System.out.println(key);
-                }
-            }
-            if (isZipped) {
-                readerBuilder.setZipping();
-            }
             var reader = readerBuilder.getResult();
             reader.WriteCalculated();
         } catch (Exception ex) {
