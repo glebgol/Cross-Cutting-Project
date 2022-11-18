@@ -26,8 +26,19 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Calculate_Returns_400_StatusCode() {
+    void Calculate_NonExistingFilename_Returns_400_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKeys);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(400);
+    }
+
+    @Test
+    void Calculate_NotValidKeys_Returns_400_StatusCode1() {
+        var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s", Uri, ExistingFilename, OutputFilename, "abra,cada,bra");
 
         RestAssured
                 .when()
