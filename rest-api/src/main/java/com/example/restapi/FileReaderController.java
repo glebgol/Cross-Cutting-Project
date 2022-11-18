@@ -21,9 +21,9 @@ public class FileReaderController {
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys) {
 
-        if (decryptionKeys != null && !KeyValidation.IsValidDecryptionKeys(decryptionKeys)) {
-            return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
-        }
+//        if (decryptionKeys != null && !KeyValidation.IsValidDecryptionKeys(decryptionKeys)) {
+//            return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
+//        }
 
         try {
             var readerBuilder = new FileReaderBuilder(inputFilename, outputFilename);
@@ -31,6 +31,7 @@ public class FileReaderController {
             if (decryptionKeys != null) {
                 for (var key : decryptionKeys) {
                     readerBuilder.setEncrypting(key);
+                    System.out.println(key);
                 }
             }
             if (isZipped) {
