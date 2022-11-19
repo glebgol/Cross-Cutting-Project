@@ -42,12 +42,27 @@ public class FileReaderController {
     @GetMapping("encrypt/")
     public ResponseEntity<String> Encrypt(@RequestParam(value= "inputfile") String inputFilename,
                                             @RequestParam(value = "outputfile") String outputFilename,
-                                            @RequestParam(value="key", required = false) String key) {
+                                            @RequestParam(value="key") String key) {
         if (!KeyValidation.IsValidDecryptionKey(key)) {
             return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
         }
         try {
             CryptoUtils.Encrypt(key, inputFilename, outputFilename);
+        } catch (Exception ex) {
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(inputFilename + " " + outputFilename + " " + key, HttpStatus.OK);
+    }
+
+    @GetMapping("decrypt/")
+    public ResponseEntity<String> Decrypt(@RequestParam(value= "inputfile") String inputFilename,
+                                          @RequestParam(value = "outputfile") String outputFilename,
+                                          @RequestParam(value="key") String key) {
+        if (!KeyValidation.IsValidDecryptionKey(key)) {
+            return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
+        }
+        try {
+            CryptoUtils.Decrypt(key, inputFilename, outputFilename);
         } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }

@@ -70,6 +70,28 @@ class ApiFileReaderTest {
     }
 
     @Test
+    void Decrypt_Returns_200_StatusCode() {
+        var uri = String.format("%s/decrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, InputFilename, OutputFilename, DecryptionKey);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    void Decrypt_NonExistingFilename_Returns_400_StatusCode() {
+        var uri = String.format("%s/decrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKey);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(400);
+    }
+
+    @Test
     void Zip_Returns_200_StatusCode() {
         var uri = String.format("%s/zip/?inputfile=%s", Uri, InputFilename);
 
