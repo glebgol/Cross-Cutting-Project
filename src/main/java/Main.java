@@ -1,18 +1,6 @@
-import builder.FileReaderBuilder;
-import ciphers.CryptoUtils;
-import enums.FileExtension;
 import exceptions.CryptoException;
-import parsers.json.ExpressionList;
-import parsers.json.ExpressionObject;
-import readers.EncryptedFileReader;
-import readers.JsonFileReader;
-import readers.TxtFileReader;
-import readers.ZipFileReader;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     private static final String FirstKey = "qwsdcvbgfthyrdfw";

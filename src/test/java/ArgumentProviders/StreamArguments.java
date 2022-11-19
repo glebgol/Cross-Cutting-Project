@@ -1,8 +1,8 @@
 package ArgumentProviders;
 
 import interfaces.IStream;
-import parsers.json.ExpressionList;
-import parsers.json.ExpressionObject;
+import parsers.json.JsonExpressionList;
+import parsers.json.JsonExpressionObject;
 import streams.JsonStream;
 import streams.TxtStream;
 
@@ -32,22 +32,22 @@ public class StreamArguments {
     }
 
     public static JsonStream JsonStream() {
-        return new JsonStream(new ExpressionList( new ArrayList<>(
+        return new JsonStream(new JsonExpressionList( new ArrayList<>(
                 List.of(
-                        new ExpressionObject("12-100", "12-345", "12"),
-                        new ExpressionObject("120/100", "120-345", "121"),
-                        new ExpressionObject("12+100", "100-1", "12"),
-                        new ExpressionObject("12*100", "12.1*4", "12/4")
+                        new JsonExpressionObject("12-100", "12-345", "12"),
+                        new JsonExpressionObject("120/100", "120-345", "121"),
+                        new JsonExpressionObject("12+100", "100-1", "12"),
+                        new JsonExpressionObject("12*100", "12.1*4", "12/4")
                 ))));
     }
 
     public static JsonStream JsonCalculationStream() {
-        return new JsonStream(new ExpressionList(new ArrayList<>(
+        return new JsonStream(new JsonExpressionList(new ArrayList<>(
                 List.of(
-                        new ExpressionObject("-88.0", "-333.0", "12.0"),
-                        new ExpressionObject("1.2", "-225.0", "121.0"),
-                        new ExpressionObject("112.0", "99.0", "12.0"),
-                        new ExpressionObject("1200.0", "48.4", "3.0")
+                        new JsonExpressionObject("-88.0", "-333.0", "12.0"),
+                        new JsonExpressionObject("1.2", "-225.0", "121.0"),
+                        new JsonExpressionObject("112.0", "99.0", "12.0"),
+                        new JsonExpressionObject("1200.0", "48.4", "3.0")
                 ))));
     }
 }

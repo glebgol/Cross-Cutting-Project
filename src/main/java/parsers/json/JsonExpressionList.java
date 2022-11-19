@@ -2,7 +2,7 @@ package parsers.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import interfaces.IExpressionList;
+import interfaces.IJsonExpressionList;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -11,10 +11,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class ExpressionList implements IExpressionList {
-    protected ArrayList<ExpressionObject> expressions;
-    public ExpressionList() {}
-    public ExpressionList(ArrayList<ExpressionObject> expressions) {
+public class JsonExpressionList implements IJsonExpressionList {
+    protected ArrayList<JsonExpressionObject> expressions;
+    public JsonExpressionList() {}
+    public JsonExpressionList(ArrayList<JsonExpressionObject> expressions) {
         this.expressions = expressions;
     }
 
@@ -28,17 +28,17 @@ public class ExpressionList implements IExpressionList {
     public void ReadFromJsonFile(String jsonFileName) throws IOException {
         Gson gson = new Gson();
         Reader reader = Files.newBufferedReader(Paths.get(jsonFileName));
-        var lst = gson.fromJson(reader, ExpressionList.class);
+        var lst = gson.fromJson(reader, JsonExpressionList.class);
         expressions = lst.expressions;
         reader.close();
     }
 
     @Override
-    public IExpressionList Calculate() {
-        var calculatedExpressions = new ArrayList<ExpressionObject>(expressions.size());
+    public IJsonExpressionList Calculate() {
+        var calculatedExpressions = new ArrayList<JsonExpressionObject>(expressions.size());
         for (var exp : expressions) {
             calculatedExpressions.add(exp.Calculate());
         }
-        return new ExpressionList(calculatedExpressions);
+        return new JsonExpressionList(calculatedExpressions);
     }
 }

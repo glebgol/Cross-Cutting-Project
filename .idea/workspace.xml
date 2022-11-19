@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added file extension">
-      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added Xml Expression">
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IExpressionList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/ExpressionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -92,7 +93,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatingTests">
+  <component name="RunManager" selected="JUnit.FileReaderTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -160,21 +161,7 @@
       <workItem from="1668791766484" duration="12662000" />
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
-      <workItem from="1668836781816" duration="2182000" />
-    </task>
-    <task id="LOCAL-00039" summary="Added new Contracts package">
-      <created>1667766041175</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1667766041175</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Added mock">
-      <created>1667810767683</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1667810767683</updated>
+      <workItem from="1668836781816" duration="2693000" />
     </task>
     <task id="LOCAL-00041" summary="Add test for calculate method">
       <created>1667814861941</created>
@@ -505,7 +492,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668804459024</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Added xml">
+      <created>1668843343598</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1668843343599</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Added Xml Expression">
+      <created>1668843358947</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1668843358947</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,8 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Api tests for calculate" />
-    <MESSAGE value="Api tests for encrypt" />
     <MESSAGE value="Added Api tests for zip" />
     <MESSAGE value="Delete README.md" />
     <MESSAGE value="Changed App" />
@@ -548,7 +547,9 @@
     <MESSAGE value="Added new api test (for not valid keys)" />
     <MESSAGE value="Changed FileReaderBuilder" />
     <MESSAGE value="Added file extension" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file extension" />
+    <MESSAGE value="Added xml" />
+    <MESSAGE value="Added Xml Expression" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Xml Expression" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
