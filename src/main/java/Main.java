@@ -6,6 +6,8 @@ import parsers.json.ExpressionList;
 import parsers.json.ExpressionObject;
 import readers.EncryptedFileReader;
 import readers.JsonFileReader;
+import readers.TxtFileReader;
+import readers.ZipFileReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +15,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    private static final String FirstKey = "qwsdcvbgfthyrdfw";
+    private static final String SecondKey = "asdfghjkqewrtyto";
     public static void main(String[] args) throws IOException, CryptoException {
 //        String FirstKey = "qwsdcvbgfthyrdfw";
 //        String SecondKey = "asdfghjkqewrtyto";
@@ -31,9 +35,5 @@ public class Main {
 //        var expList = new ExpressionList(new ArrayList<>(List.of(new ExpressionObject("12-100", "12-345", "12"))));
 //        reader.WriteJsonExpressions(expList);
 
-        CryptoUtils.Encrypt("1234567812345678", "output.json", "1.json");
-
-        var reader = new EncryptedFileReader("1234567812345678", new JsonFileReader("1.json", "3.json"));
-        reader.WriteCalculated();
     }
 }
