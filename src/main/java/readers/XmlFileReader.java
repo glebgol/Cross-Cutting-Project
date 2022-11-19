@@ -6,9 +6,10 @@ import interfaces.IStream;
 
 import java.io.IOException;
 
-public class XmlFileReader extends FileReader {
-    public XmlFileReader(IFileReader reader) {
-        super(reader);
+public class XmlFileReader extends DefaultFileReader {
+
+    public XmlFileReader(String inputFilename, String outputFilename) {
+        super(inputFilename, outputFilename);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class XmlFileReader extends FileReader {
 
     @Override
     public IStream Transform(IStream stream) throws IOException, CryptoException {
-        return stream;
+        return null;
     }
 
     @Override

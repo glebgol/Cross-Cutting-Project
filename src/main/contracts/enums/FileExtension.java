@@ -2,5 +2,6 @@ package enums;
 
 public enum FileExtension {
     Txt,
-    Json
+    Json,
+    Xml
 }

@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Changed FileReaderBuilder">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added file extension">
+      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,6 +70,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
   }
 }</component>
@@ -87,7 +92,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTests">
+  <component name="RunManager" selected="JUnit.CalculatingTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -152,14 +157,10 @@
       <workItem from="1668703965432" duration="2945000" />
       <workItem from="1668787513890" duration="266000" />
       <workItem from="1668787821190" duration="3921000" />
-      <workItem from="1668791766484" duration="10013000" />
-    </task>
-    <task id="LOCAL-00038" summary="Added new package for Argument providers">
-      <created>1667761514041</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1667761514041</updated>
+      <workItem from="1668791766484" duration="12662000" />
+      <workItem from="1668835369163" duration="223000" />
+      <workItem from="1668835743335" duration="948000" />
+      <workItem from="1668836781816" duration="2182000" />
     </task>
     <task id="LOCAL-00039" summary="Added new Contracts package">
       <created>1667766041175</created>
@@ -497,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668803455562</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Added file extension">
+      <created>1668804459024</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1668804459024</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +523,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Api tests" />
     <MESSAGE value="Api tests for calculate" />
     <MESSAGE value="Api tests for encrypt" />
     <MESSAGE value="Added Api tests for zip" />
@@ -540,7 +547,8 @@
     <MESSAGE value="Added JsonFileReader Test" />
     <MESSAGE value="Added new api test (for not valid keys)" />
     <MESSAGE value="Changed FileReaderBuilder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed FileReaderBuilder" />
+    <MESSAGE value="Added file extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added file extension" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,11 +561,6 @@
           <properties class="groovy.lang.GroovyRuntimeException" package="groovy.lang" />
           <option name="timeStamp" value="53" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

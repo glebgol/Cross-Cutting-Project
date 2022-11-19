@@ -3,10 +3,7 @@ package builder;
 import enums.FileExtension;
 import interfaces.IFileReader;
 import interfaces.IFileReaderBuilder;
-import readers.EncryptedFileReader;
-import readers.JsonFileReader;
-import readers.TxtFileReader;
-import readers.ZipFileReader;
+import readers.*;
 
 import java.util.List;
 
@@ -18,8 +15,11 @@ public class FileReaderBuilder implements IFileReaderBuilder {
         if (extension == FileExtension.Txt) {
             fileReader = new TxtFileReader(inputFilename, outputFilename);
         }
-        else if (extension == FileExtension.Json){
+        else if (extension == FileExtension.Json) {
             fileReader = new JsonFileReader(inputFilename, outputFilename);
+        }
+        else if (extension == FileExtension.Xml) {
+            fileReader = new XmlFileReader(inputFilename, outputFilename);
         }
         this.inputFilename = inputFilename;
         this.outputFilename = outputFilename;
