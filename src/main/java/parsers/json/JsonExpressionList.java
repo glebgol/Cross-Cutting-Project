@@ -10,11 +10,12 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 public class JsonExpressionList implements IJsonExpressionList {
-    protected ArrayList<JsonExpressionObject> expressions;
+    protected List<JsonExpression> expressions;
     public JsonExpressionList() {}
-    public JsonExpressionList(ArrayList<JsonExpressionObject> expressions) {
+    public JsonExpressionList(List<JsonExpression> expressions) {
         this.expressions = expressions;
     }
 
@@ -35,7 +36,7 @@ public class JsonExpressionList implements IJsonExpressionList {
 
     @Override
     public IJsonExpressionList Calculate() {
-        var calculatedExpressions = new ArrayList<JsonExpressionObject>(expressions.size());
+        var calculatedExpressions = new ArrayList<JsonExpression>(expressions.size());
         for (var exp : expressions) {
             calculatedExpressions.add(exp.Calculate());
         }

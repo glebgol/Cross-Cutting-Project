@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Renamed Json objects">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added FileReaderBuilder constructor with string fileExtension">
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +36,8 @@
     <setting file="file://$PROJECT_DIR$/src/main/contracts/interfaces/IJsonExpressionList.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/contracts/interfaces/IXmlExpressionList.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/parsers/json/JsonExpression.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionObject.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpression.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" root0="FORCE_HIGHLIGHTING" />
@@ -101,7 +102,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTests">
+  <component name="RunManager" selected="JUnit.FileReaderTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -170,14 +171,7 @@
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
       <workItem from="1668836781816" duration="4400000" />
-      <workItem from="1668852503800" duration="419000" />
-    </task>
-    <task id="LOCAL-00042" summary="Created sources folder for tests">
-      <created>1667815902885</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1667815902885</updated>
+      <workItem from="1668852503800" duration="775000" />
     </task>
     <task id="LOCAL-00043" summary="Tests for calculating encrypted file">
       <created>1667817584914</created>
@@ -515,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668843463160</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Added FileReaderBuilder constructor with string fileExtension">
+      <created>1668852991800</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1668852991801</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete README.md" />
     <MESSAGE value="Changed App" />
     <MESSAGE value="Fix bug in RestAssured test" />
     <MESSAGE value="Edit test run configurations" />
@@ -558,7 +558,8 @@
     <MESSAGE value="Added xml" />
     <MESSAGE value="Added Xml Expression" />
     <MESSAGE value="Renamed Json objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed Json objects" />
+    <MESSAGE value="Added FileReaderBuilder constructor with string fileExtension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FileReaderBuilder constructor with string fileExtension" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

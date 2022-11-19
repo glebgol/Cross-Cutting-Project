@@ -1,6 +1,6 @@
 import exceptions.CryptoException;
 import parsers.json.JsonExpressionList;
-import parsers.json.JsonExpressionObject;
+import parsers.json.JsonExpression;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,11 +28,11 @@ public class Main {
 //        reader.WriteJsonExpressions(expList);
 
         var s = new JsonExpressionList(new ArrayList<>(List.of(
-                new JsonExpressionObject("12-100", "12-345", "12"),
-                new JsonExpressionObject("12-100", "12-345", "12"),
-                new JsonExpressionObject("12-100", "12-345", "12"),
-                new JsonExpressionObject("12-100", "12-345", "12"),
-                new JsonExpressionObject("12-100", "12-345", "12")
+                new JsonExpression("12-100", "12-345", "12"),
+                new JsonExpression("12-100", "12-345", "12"),
+                new JsonExpression("12-100", "12-345", "12"),
+                new JsonExpression("12-100", "12-345", "12"),
+                new JsonExpression("12-100", "12-345", "12")
                 )));
 
         s.WriteToJsonFile("new.json");

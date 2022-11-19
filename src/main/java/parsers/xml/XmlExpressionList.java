@@ -3,12 +3,12 @@ package parsers.xml;
 import interfaces.IXmlExpressionList;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class XmlExpressionList implements IXmlExpressionList {
-    protected ArrayList<XmlExpression> expressions;
+    protected List<XmlExpression> expressions;
     public XmlExpressionList() {}
-    public XmlExpressionList(ArrayList<XmlExpression> expressions) {
+    public XmlExpressionList(List<XmlExpression> expressions) {
         this.expressions = expressions;
     }
     @Override
