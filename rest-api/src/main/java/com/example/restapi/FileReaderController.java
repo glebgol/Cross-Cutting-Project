@@ -75,7 +75,17 @@ public class FileReaderController {
         try {
             ArchivationFileManager.ZipFile(inputFilename);
         } catch (Exception ex) {
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(inputFilename, HttpStatus.OK);
+    }
+
+    @GetMapping("unzip/")
+    public ResponseEntity<String> UnZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
+        try {
+            ArchivationFileManager.UnZipFile(inputFilename, outputFilename);
+        } catch (Exception ex) {
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(inputFilename, HttpStatus.OK);
     }

@@ -15,7 +15,7 @@ class ApiFileReaderTest {
     protected final String FileExtension = "txt";
     protected final String NotValidDecryptionKeys = "abra,cada,bra";
     @Test
-    void Calculate_Returns_200_StatusCode() {
+    void Calculate_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, ExistingFilename, OutputFilename, DecryptionKeys, FileExtension);
 
         RestAssured
@@ -26,7 +26,7 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Calculate_NonExistingFilename_Returns_400_StatusCode() {
+    void Calculate_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKeys, FileExtension);
 
         RestAssured
@@ -48,7 +48,7 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Encrypt_Returns_200_StatusCode() {
+    void Encrypt_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/encrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, InputFilename, OutputFilename, DecryptionKey);
 
         RestAssured
@@ -59,7 +59,7 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Encrypt_NonExistingFilename_Returns_400_StatusCode() {
+    void Encrypt_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/encrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKey);
 
         RestAssured
@@ -70,7 +70,7 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Decrypt_Returns_200_StatusCode() {
+    void Decrypt_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/decrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, InputFilename, OutputFilename, DecryptionKey);
 
         RestAssured
@@ -81,7 +81,7 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Decrypt_NonExistingFilename_Returns_400_StatusCode() {
+    void Decrypt_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/decrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKey);
 
         RestAssured
@@ -92,7 +92,7 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Zip_Returns_200_StatusCode() {
+    void Zip_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/zip/?inputfile=%s", Uri, InputFilename);
 
         RestAssured
@@ -103,8 +103,30 @@ class ApiFileReaderTest {
     }
 
     @Test
-    void Zip_NonExistingFilename_Returns_400_StatusCode() {
+    void Zip_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/zip/?inputfile=%s", Uri, NonExistingFilename);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(400);
+    }
+
+    @Test
+    void UnZip_ExistingFile_Returns_200_StatusCode() {
+        var uri = String.format("%s/unzip/?inputfile=%s&outputfile=%s", Uri, InputFilename, OutputFilename);
+
+        RestAssured
+                .when()
+                .get(uri)
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    void UnZip_NonExistingFile_Returns_400_StatusCode() {
+        var uri = String.format("%s/unzip/?inputfile=%s&outputfile=%s", Uri, NonExistingFilename, OutputFilename);
 
         RestAssured
                 .when()
