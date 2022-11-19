@@ -1,6 +1,10 @@
 import exceptions.CryptoException;
+import parsers.json.JsonExpressionList;
+import parsers.json.JsonExpressionObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     private static final String FirstKey = "qwsdcvbgfthyrdfw";
@@ -23,5 +27,15 @@ public class Main {
 //        var expList = new ExpressionList(new ArrayList<>(List.of(new ExpressionObject("12-100", "12-345", "12"))));
 //        reader.WriteJsonExpressions(expList);
 
+        var s = new JsonExpressionList(new ArrayList<>(List.of(
+                new JsonExpressionObject("12-100", "12-345", "12"),
+                new JsonExpressionObject("12-100", "12-345", "12"),
+                new JsonExpressionObject("12-100", "12-345", "12"),
+                new JsonExpressionObject("12-100", "12-345", "12"),
+                new JsonExpressionObject("12-100", "12-345", "12")
+                )));
+
+        s.WriteToJsonFile("new.json");
+        s.Calculate().WriteToJsonFile("new.json");
     }
 }

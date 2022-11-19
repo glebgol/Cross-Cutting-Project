@@ -4,7 +4,6 @@ import archivers.ArchivationFileManager;
 import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
-import enums.FileExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,15 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
-    private FileExtension GetFileExtension(String extension) {
-        var fileExtension = extension.toUpperCase();
-        if (fileExtension.equals(FileExtension.Txt.name().toUpperCase())) {
-            return FileExtension.Txt;
-        }
-        else {
-            return FileExtension.Json;
-        }
-    }
     // http://localhost:8080/api/file-reader/calculate/?inputfile=double_encrypted.zip&outputfile=qwe.txt&iszipped=true&decryptionkeys=qwsdcvbgfthyrdfw,asdfghjkqewrtyto
     @GetMapping("calculate/")
     public ResponseEntity<String> Calculate(@RequestParam(value= "inputfile") String inputFilename,
@@ -34,8 +24,8 @@ public class FileReaderController {
         if (decryptionKeys != null && !KeyValidation.IsValidDecryptionKeys(decryptionKeys)) {
             return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
         }
-        var fileExtension = GetFileExtension(extension);
-        var readerBuilder = new FileReaderBuilder(fileExtension, inputFilename, outputFilename);
+
+        var readerBuilder = new FileReaderBuilder(extension, inputFilename, outputFilename);
         readerBuilder.setEncrypting(decryptionKeys);
         readerBuilder.setZipping(isZipped);
 

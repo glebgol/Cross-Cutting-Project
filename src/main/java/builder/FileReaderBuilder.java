@@ -24,6 +24,22 @@ public class FileReaderBuilder implements IFileReaderBuilder {
         this.inputFilename = inputFilename;
         this.outputFilename = outputFilename;
     }
+
+    public FileReaderBuilder(String extension, String inputFilename, String outputFilename) {
+        var fileExtension = extension.toUpperCase();
+        if (fileExtension.equals(FileExtension.Txt.name().toUpperCase())) {
+            fileReader = new TxtFileReader(inputFilename, outputFilename);
+        }
+        else if ((fileExtension.equals(FileExtension.Json.name().toUpperCase()))){
+            fileReader = new JsonFileReader(inputFilename, outputFilename);
+        }
+        else {
+            fileReader = new XmlFileReader(inputFilename, outputFilename);
+        }
+        this.inputFilename = inputFilename;
+        this.outputFilename = outputFilename;
+    }
+
     @Override
     public void setEncrypting(String key) {
         fileReader = new EncryptedFileReader(key, fileReader);
