@@ -5,13 +5,14 @@ import exceptions.CryptoException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 
 class ZipFileReaderTest {
     private static final String FirstKey = "qwsdcvbgfthyrdfw";
     private static final String SecondKey = "asdfghjkqewrtyto";
     @Test
-    void Calculate_ZippedFile() throws IOException, CryptoException {
+    void Calculate_ZippedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new ZipFileReader(
                 new TxtFileReader("src/test/resources/default.zip", "src/test/resources/output.txt"));
@@ -28,7 +29,7 @@ class ZipFileReaderTest {
     }
 
     @Test
-    void Calculate_ZippedAndEncryptedFile() throws IOException, CryptoException {
+    void Calculate_ZippedAndEncryptedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new ZipFileReader(
                 new EncryptedFileReader(FirstKey,
@@ -46,7 +47,7 @@ class ZipFileReaderTest {
     }
 
     @Test
-    void Calculate_ZippedAndDoubleEncryptedFile() throws IOException, CryptoException {
+    void Calculate_ZippedAndDoubleEncryptedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new ZipFileReader(
                 new EncryptedFileReader(SecondKey,

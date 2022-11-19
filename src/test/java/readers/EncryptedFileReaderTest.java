@@ -5,6 +5,7 @@ import exceptions.CryptoException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 
 class EncryptedFileReaderTest {
@@ -12,7 +13,7 @@ class EncryptedFileReaderTest {
     private static final String SecondKey = "asdfghjkqewrtyto";
 
     @Test
-    void Calculate_EncryptedFile() throws IOException, CryptoException {
+    void Calculate_EncryptedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new EncryptedFileReader(FirstKey,
                 new TxtFileReader("src/test/resources/encrypted.txt", "src/test/resources/output.txt"));
@@ -29,7 +30,7 @@ class EncryptedFileReaderTest {
     }
 
     @Test
-    void Calculate_DoubleEncryptedFile() throws IOException, CryptoException {
+    void Calculate_DoubleEncryptedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new EncryptedFileReader(SecondKey,
                 new EncryptedFileReader(FirstKey,
