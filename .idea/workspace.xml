@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added test for calculating Encrypted Xml file">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added test for calculating Encrypted Json file">
       <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/CalculatingException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/ReadingException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/WritingException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +108,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileReaderTests">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -197,14 +195,7 @@
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
       <workItem from="1668836781816" duration="4400000" />
-      <workItem from="1668852503800" duration="16299000" />
-    </task>
-    <task id="LOCAL-00048" summary="Added test for calculating zipped and double encrypted file">
-      <created>1667853833281</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1667853833281</updated>
+      <workItem from="1668852503800" duration="17003000" />
     </task>
     <task id="LOCAL-00049" summary="Added XmlFileReader">
       <created>1667854131876</created>
@@ -542,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668936327110</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Added test for calculating Encrypted Json file">
+      <created>1668950609134</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1668950609134</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +565,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created abstract DefaultFileReader" />
     <MESSAGE value="Created abstract FileReader" />
     <MESSAGE value="Refactoring StreamResult objects" />
     <MESSAGE value="Added Key validation" />
@@ -592,7 +589,8 @@
     <MESSAGE value="Read, Write, Calculate Xml file" />
     <MESSAGE value="Added unzip endpoint" />
     <MESSAGE value="Added test for calculating Encrypted Xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for calculating Encrypted Xml file" />
+    <MESSAGE value="Added test for calculating Encrypted Json file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for calculating Encrypted Json file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
-    // http://localhost:8080/api/file-reader/calculate/?inputfile=double_encrypted.zip&outputfile=qwe.txt&iszipped=true&decryptionkeys=qwsdcvbgfthyrdfw,asdfghjkqewrtyto
     @GetMapping("calculate/")
     public ResponseEntity<String> Calculate(@RequestParam(value= "inputfile") String inputFilename,
                             @RequestParam(value = "outputfile") String outputFilename,
@@ -35,10 +34,10 @@ public class FileReaderController {
         } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(inputFilename + " " + outputFilename + " " + isZipped + " " + decryptionKeys, HttpStatus.OK);
+        var bodyString = String.format("%s file successfully calculated and has been written to %s", inputFilename, outputFilename);
+        return new ResponseEntity<>(bodyString, HttpStatus.OK);
     }
 
-    // http://localhost:8080/api/file-reader/encrypt/?inputfile=input.txt&outputfile=input3.txt&key=1234567812345678
     @GetMapping("encrypt/")
     public ResponseEntity<String> Encrypt(@RequestParam(value= "inputfile") String inputFilename,
                                             @RequestParam(value = "outputfile") String outputFilename,
@@ -51,7 +50,8 @@ public class FileReaderController {
         } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(inputFilename + " " + outputFilename + " " + key, HttpStatus.OK);
+        var bodyString = String.format("%s file successfully encrypted and has been written to %s", inputFilename, outputFilename);
+        return new ResponseEntity<>(bodyString, HttpStatus.OK);
     }
 
     @GetMapping("decrypt/")
@@ -66,10 +66,10 @@ public class FileReaderController {
         } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(inputFilename + " " + outputFilename + " " + key, HttpStatus.OK);
+        var bodyString = String.format("%s file successfully decrypted and has been written to %s", inputFilename, outputFilename);
+        return new ResponseEntity<>(bodyString, HttpStatus.OK);
     }
 
-    // http://localhost:8080/api/file-reader/zip/?inputfile=input.txt
     @GetMapping("zip/")
     public ResponseEntity<String> Zip(@RequestParam(value= "inputfile") String inputFilename) {
         try {
@@ -77,7 +77,8 @@ public class FileReaderController {
         } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(inputFilename, HttpStatus.OK);
+        var bodyString = String.format("%s file successfully zipped", inputFilename);
+        return new ResponseEntity<>(bodyString, HttpStatus.OK);
     }
 
     @GetMapping("unzip/")
@@ -87,6 +88,7 @@ public class FileReaderController {
         } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(inputFilename, HttpStatus.OK);
+        var bodyString = String.format("%s file successfully unzipped to %s", inputFilename, outputFilename);
+        return new ResponseEntity<>(bodyString, HttpStatus.OK);
     }
 }
