@@ -1,9 +1,29 @@
 {
   "expressions": [
     {
-      "expression1": "12-100",
-      "expression2": "12-345",
-      "expression3": "12"
+      "expression1": "2.0",
+      "expression2": "4.0",
+      "expression3": "6.0"
+    },
+    {
+      "expression1": "1.0",
+      "expression2": "2.0",
+      "expression3": "3.0"
+    },
+    {
+      "expression1": "2.5",
+      "expression2": "1.5",
+      "expression3": "2.0"
+    },
+    {
+      "expression1": "24.0",
+      "expression2": "4.0",
+      "expression3": "7.5"
+    },
+    {
+      "expression1": "1.0",
+      "expression2": "1.0",
+      "expression3": "3.0"
     }
   ]
 }

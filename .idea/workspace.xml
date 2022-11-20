@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added test for calculating Encrypted Json file">
-      <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/CalculatingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/ReadingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/WritingException.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added body strings to ResponseEntities">
+      <change afterPath="$PROJECT_DIR$/input.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/",
+    "last_opened_file_path": "D:/Anton/Cross-Cutting-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,8 +94,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
       <recent name="D:\Anton\Cross-Cutting-Project" />
+      <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
       <recent name="D:\Anton\Cross-Cutting-Project\lib" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -108,29 +111,13 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EncryptedFileReaderTest.Calculate_EncryptedXmlFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Cross-Cutting-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="readers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="readers" />
-      <option name="MAIN_CLASS_NAME" value="readers.EncryptedFileReaderTest" />
-      <option name="METHOD_NAME" value="Calculate_EncryptedXmlFile" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,14 +141,12 @@
       <item itemvalue="JUnit.ApiTests" />
       <item itemvalue="JUnit.FileReaderTests" />
       <item itemvalue="JUnit.CalculatingTests" />
-      <item itemvalue="JUnit.EncryptedFileReaderTest.Calculate_EncryptedXmlFile" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.test" />
       <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EncryptedFileReaderTest.Calculate_EncryptedXmlFile" />
         <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
@@ -195,14 +180,7 @@
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
       <workItem from="1668836781816" duration="4400000" />
-      <workItem from="1668852503800" duration="17003000" />
-    </task>
-    <task id="LOCAL-00049" summary="Added XmlFileReader">
-      <created>1667854131876</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1667854131876</updated>
+      <workItem from="1668852503800" duration="17724000" />
     </task>
     <task id="LOCAL-00050" summary="Added IFileReaderBuilder">
       <created>1668025032542</created>
@@ -540,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668950609134</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Added body strings to ResponseEntities">
+      <created>1668951510904</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1668951510904</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +550,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created abstract FileReader" />
     <MESSAGE value="Refactoring StreamResult objects" />
     <MESSAGE value="Added Key validation" />
     <MESSAGE value="Delete tests dependencies" />
@@ -590,7 +574,8 @@
     <MESSAGE value="Added unzip endpoint" />
     <MESSAGE value="Added test for calculating Encrypted Xml file" />
     <MESSAGE value="Added test for calculating Encrypted Json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for calculating Encrypted Json file" />
+    <MESSAGE value="Added body strings to ResponseEntities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added body strings to ResponseEntities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
