@@ -50,4 +50,71 @@ public class StreamArguments {
                         new JsonExpression("1200.0", "48.4", "3.0")
                 ))));
     }
+
+    public static ArrayList<String> CalculatedXmlLines() {
+        var str = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" +
+                "<xmlExpressionList>\n" +
+                "    <expressions>\n" +
+                "        <expression1>2.0</expression1>\n" +
+                "        <expression2>4.0</expression2>\n" +
+                "        <expression3>6.0</expression3>\n" +
+                "    </expressions>\n" +
+                "    <expressions>\n" +
+                "        <expression1>0.0</expression1>\n" +
+                "        <expression2>1.0</expression2>\n" +
+                "        <expression3>2.0</expression3>\n" +
+                "    </expressions>\n" +
+                "    <expressions>\n" +
+                "        <expression1>3.5</expression1>\n" +
+                "        <expression2>2.5</expression2>\n" +
+                "        <expression3>5.0</expression3>\n" +
+                "    </expressions>\n" +
+                "    <expressions>\n" +
+                "        <expression1>100.0</expression1>\n" +
+                "        <expression2>16.0</expression2>\n" +
+                "        <expression3>12.0</expression3>\n" +
+                "    </expressions>\n" +
+                "    <expressions>\n" +
+                "        <expression1>9.0</expression1>\n" +
+                "        <expression2>2.0</expression2>\n" +
+                "        <expression3>2.0</expression3>\n" +
+                "    </expressions>\n" +
+                "</xmlExpressionList>\n";
+        return new ArrayList<>(List.of(
+                str.split("\n")));
+    }
+
+    public static ArrayList<String> CalculatedJsonLines() {
+        var str = "{\n" +
+                "  \"expressions\": [\n" +
+                "    {\n" +
+                "      \"expression1\": \"2.0\",\n" +
+                "      \"expression2\": \"4.0\",\n" +
+                "      \"expression3\": \"6.0\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"expression1\": \"1.0\",\n" +
+                "      \"expression2\": \"2.0\",\n" +
+                "      \"expression3\": \"3.0\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"expression1\": \"2.5\",\n" +
+                "      \"expression2\": \"1.5\",\n" +
+                "      \"expression3\": \"2.0\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"expression1\": \"24.0\",\n" +
+                "      \"expression2\": \"4.0\",\n" +
+                "      \"expression3\": \"7.5\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"expression1\": \"1.0\",\n" +
+                "      \"expression2\": \"1.0\",\n" +
+                "      \"expression3\": \"3.0\"\n" +
+                "    }\n" +
+                "  ]\n" +
+                "}";
+        return new ArrayList<>(List.of(
+                str.split("\n")));
+    }
 }

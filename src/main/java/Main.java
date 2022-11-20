@@ -1,5 +1,7 @@
 import ciphers.CryptoUtils;
 import exceptions.CryptoException;
+import parsers.json.JsonExpression;
+import parsers.json.JsonExpressionList;
 import parsers.xml.XmlExpression;
 import parsers.xml.XmlExpressionList;
 import readers.XmlFileReader;
@@ -29,17 +31,8 @@ public class Main {
 //        var expList = new ExpressionList(new ArrayList<>(List.of(new ExpressionObject("12-100", "12-345", "12"))));
 //        reader.WriteJsonExpressions(expList);
 
-//        var s = new XmlExpressionList(List.of(
-//                new XmlExpression("12-100", "12-345", "12"),
-//                new XmlExpression("12-54545454", "12-345", "12"),
-//                new XmlExpression("12-5454534545", "12-3343", "12"),
-//                new XmlExpression("12-103652640", "12-546", "12"),
-//                new XmlExpression("12-645654654", "5645645-345", "12")
-//                ));
-//
-//        s.WriteToXmlFile("src/test/resources/input.xml");
 
-        CryptoUtils.Encrypt("qwsdcvbgfthyrdfw", "src/test/resources/input.xml", "src/test/resources/enc_xml.txt");
+        CryptoUtils.Encrypt("qwsdcvbgfthyrdfw", "src/test/resources/input.json", "src/test/resources/enc_json.txt");
 
     }
 }
