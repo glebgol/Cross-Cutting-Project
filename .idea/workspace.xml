@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added body strings to ResponseEntities">
-      <change afterPath="$PROJECT_DIR$/input.json" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Calculated double encrypted file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,21 +174,7 @@
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
       <workItem from="1668836781816" duration="4400000" />
-      <workItem from="1668852503800" duration="17724000" />
-    </task>
-    <task id="LOCAL-00050" summary="Added IFileReaderBuilder">
-      <created>1668025032542</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1668025032542</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Added enum FileExtension">
-      <created>1668025130909</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1668025130909</updated>
+      <workItem from="1668852503800" duration="18350000" />
     </task>
     <task id="LOCAL-00052" summary="Created FileReaderBuilder">
       <created>1668025605630</created>
@@ -525,7 +505,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668951510904</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Calculated xml, json and double encrypted files">
+      <created>1668952129414</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1668952129414</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Calculated double encrypted file">
+      <created>1668952173165</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1668952173165</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,8 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring StreamResult objects" />
-    <MESSAGE value="Added Key validation" />
     <MESSAGE value="Delete tests dependencies" />
     <MESSAGE value="Create ExpressionObject for json parsing" />
     <MESSAGE value="delete lib" />
@@ -575,7 +567,9 @@
     <MESSAGE value="Added test for calculating Encrypted Xml file" />
     <MESSAGE value="Added test for calculating Encrypted Json file" />
     <MESSAGE value="Added body strings to ResponseEntities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added body strings to ResponseEntities" />
+    <MESSAGE value="Calculated xml, json and double encrypted files" />
+    <MESSAGE value="Calculated double encrypted file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculated double encrypted file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
