@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Read, Write, Calculate Xml file">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added unzip endpoint">
+      <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/CalculatingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/ReadingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/WritingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/input.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi/ApiFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/exceptions/CryptoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/exceptions/CryptoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +99,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Anton\Cross-Cutting-Project\src\test\resources" />
       <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -102,13 +108,29 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTests">
+  <component name="RunManager" selected="JUnit.FileReaderTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncryptedFileReaderTest.Calculate_EncryptedXmlFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cross-Cutting-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="readers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="readers" />
+      <option name="MAIN_CLASS_NAME" value="readers.EncryptedFileReaderTest" />
+      <option name="METHOD_NAME" value="Calculate_EncryptedXmlFile" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,12 +154,14 @@
       <item itemvalue="JUnit.ApiTests" />
       <item itemvalue="JUnit.FileReaderTests" />
       <item itemvalue="JUnit.CalculatingTests" />
+      <item itemvalue="JUnit.EncryptedFileReaderTest.Calculate_EncryptedXmlFile" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.test" />
       <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EncryptedFileReaderTest.Calculate_EncryptedXmlFile" />
         <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
@@ -171,14 +195,7 @@
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
       <workItem from="1668836781816" duration="4400000" />
-      <workItem from="1668852503800" duration="8795000" />
-    </task>
-    <task id="LOCAL-00046" summary="Added test for calculating zipped and encrypted file">
-      <created>1667853583633</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1667853583633</updated>
+      <workItem from="1668852503800" duration="13081000" />
     </task>
     <task id="LOCAL-00047" summary="Added test for calculating zipped and double encrypted file">
       <created>1667853756767</created>
@@ -516,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668895960492</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Added unzip endpoint">
+      <created>1668897410726</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1668897410726</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,14 +551,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="98" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="37" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete package-lock.json" />
     <MESSAGE value="Created abstract DefaultReader" />
     <MESSAGE value="Created abstract DefaultFileReader" />
     <MESSAGE value="Created abstract FileReader" />
@@ -559,7 +589,8 @@
     <MESSAGE value="Renamed JsonExpression" />
     <MESSAGE value="Add Decrypt endpoint" />
     <MESSAGE value="Read, Write, Calculate Xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Read, Write, Calculate Xml file" />
+    <MESSAGE value="Added unzip endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added unzip endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -572,6 +603,36 @@
           <properties class="groovy.lang.GroovyRuntimeException" package="groovy.lang" />
           <option name="timeStamp" value="53" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

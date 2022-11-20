@@ -40,7 +40,7 @@ public class XmlFileReader extends DefaultFileReader {
         var jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
         var expressions = (XmlExpressionList) jaxbUnmarshaller.unmarshal(new StringReader(xmlString));
-        return new XmlStream((IXmlExpressionList) expressions.expressions);
+        return new XmlStream(expressions);
     }
 
     @Override

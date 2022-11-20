@@ -4,6 +4,7 @@ import ArgumentProviders.StreamArguments;
 import exceptions.CryptoException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import streams.XmlStream;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
@@ -47,4 +48,23 @@ class EncryptedFileReaderTest {
         // Assert
         Assertions.assertEquals(expectedCalculationResultLines, calculationResultLines);
     }
+
+    //todo json and xml encrypted tests
+    @Test
+    void Calculate_EncryptedXmlFile() throws IOException, CryptoException, JAXBException {
+        // Arrange
+        var reader = new EncryptedFileReader(FirstKey,
+                        new XmlFileReader("src/test/resources/enc_xml.txt", "src/test/resources/output.xml"));
+
+        var expectedCalculationResultLines = StreamArguments.CalculatedXmlLines();
+
+        // Act
+        var readingResult = reader.Read();
+        var calculationResult = (XmlStream) reader.Calculate(readingResult);
+        var calculationResultLines = calculationResult.lines();
+
+        // Assert
+        Assertions.assertEquals(expectedCalculationResultLines, calculationResultLines);
+    }
+
 }
