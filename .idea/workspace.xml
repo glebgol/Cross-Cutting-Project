@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Calculated double encrypted file">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Update README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -105,7 +105,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ApiTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -174,14 +174,7 @@
       <workItem from="1668835369163" duration="223000" />
       <workItem from="1668835743335" duration="948000" />
       <workItem from="1668836781816" duration="4400000" />
-      <workItem from="1668852503800" duration="18350000" />
-    </task>
-    <task id="LOCAL-00052" summary="Created FileReaderBuilder">
-      <created>1668025605630</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1668025605631</updated>
+      <workItem from="1668852503800" duration="19718000" />
     </task>
     <task id="LOCAL-00053" summary="Checked FileReaderBuilder on double encrypted and zipped file">
       <created>1668026297393</created>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668952173165</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Update README.md">
+      <created>1668953381497</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1668953381497</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete tests dependencies" />
     <MESSAGE value="Create ExpressionObject for json parsing" />
     <MESSAGE value="delete lib" />
     <MESSAGE value="Delete lib" />
@@ -569,7 +568,8 @@
     <MESSAGE value="Added body strings to ResponseEntities" />
     <MESSAGE value="Calculated xml, json and double encrypted files" />
     <MESSAGE value="Calculated double encrypted file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculated double encrypted file" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
