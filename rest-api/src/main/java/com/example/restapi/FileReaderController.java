@@ -4,10 +4,7 @@ import archivers.ArchivationFileManager;
 import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
-import com.example.restapi.ResponseEntities.CalculateResponse;
-import com.example.restapi.ResponseEntities.DecryptResponse;
-import com.example.restapi.ResponseEntities.EncryptResponse;
-import org.springframework.http.HttpStatus;
+import com.example.restapi.ResponseEntities.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -71,24 +68,22 @@ public class FileReaderController {
     }
 
     @GetMapping("zip/")
-    public ResponseEntity<String> Zip(@RequestParam(value= "inputfile") String inputFilename) {
+    public ResponseEntity<ZipResponse> Zip(@RequestParam(value= "inputfile") String inputFilename) {
         try {
             ArchivationFileManager.ZipFile(inputFilename);
         } catch (Exception ex) {
-            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
-        var bodyString = String.format("%s file successfully zipped", inputFilename);
-        return new ResponseEntity<>(bodyString, HttpStatus.OK);
+        return ResponseEntity.ok(new ZipResponse(inputFilename));
     }
 
     @GetMapping("unzip/")
-    public ResponseEntity<String> UnZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
+    public ResponseEntity<UnzipResponse> UnZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
         try {
             ArchivationFileManager.UnZipFile(inputFilename, outputFilename);
         } catch (Exception ex) {
-            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
-        var bodyString = String.format("%s file successfully unzipped to %s", inputFilename, outputFilename);
-        return new ResponseEntity<>(bodyString, HttpStatus.OK);
+        return ResponseEntity.ok(new UnzipResponse(inputFilename, outputFilename));
     }
 }

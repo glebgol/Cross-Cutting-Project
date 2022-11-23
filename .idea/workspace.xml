@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete unused XmlReadingResult">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/CalculateResponse.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added EncryptResponse and DecryptResponse">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/UnzipResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/ZipResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
@@ -110,7 +111,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="JUnit.ApiTests">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -181,21 +182,7 @@
       <workItem from="1668836781816" duration="4400000" />
       <workItem from="1668852503800" duration="34658000" />
       <workItem from="1669131658880" duration="1189000" />
-      <workItem from="1669134365253" duration="7429000" />
-    </task>
-    <task id="LOCAL-00055" summary="Created FileReaderController">
-      <created>1668031350477</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1668031350477</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Created stub methods">
-      <created>1668032826242</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1668032826242</updated>
+      <workItem from="1669134365253" duration="8270000" />
     </task>
     <task id="LOCAL-00057" summary="Created react-ui module">
       <created>1668091054614</created>
@@ -526,7 +513,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669131814649</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Created CalculateResponse">
+      <created>1669227886793</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1669227886793</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Added EncryptResponse and DecryptResponse">
+      <created>1669228219639</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1669228219639</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,8 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete lib" />
-    <MESSAGE value="Delete lib" />
     <MESSAGE value="Write Json Expressions" />
     <MESSAGE value="Rename ProcessingTxtFile to CalculationEngine" />
     <MESSAGE value="Calculated Json file" />
@@ -576,7 +575,9 @@
     <MESSAGE value="Calculated double encrypted file" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Delete unused XmlReadingResult" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete unused XmlReadingResult" />
+    <MESSAGE value="Created CalculateResponse" />
+    <MESSAGE value="Added EncryptResponse and DecryptResponse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added EncryptResponse and DecryptResponse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
