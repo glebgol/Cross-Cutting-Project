@@ -5,6 +5,8 @@ import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
 import com.example.restapi.ResponseEntities.CalculateResponse;
+import com.example.restapi.ResponseEntities.DecryptResponse;
+import com.example.restapi.ResponseEntities.EncryptResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,35 +41,33 @@ public class FileReaderController {
     }
 
     @GetMapping("encrypt/")
-    public ResponseEntity<String> Encrypt(@RequestParam(value= "inputfile") String inputFilename,
-                                            @RequestParam(value = "outputfile") String outputFilename,
-                                            @RequestParam(value="key") String key) {
+    public ResponseEntity<EncryptResponse> Encrypt(@RequestParam(value= "inputfile") String inputFilename,
+                                                   @RequestParam(value = "outputfile") String outputFilename,
+                                                   @RequestParam(value="key") String key) {
         if (!KeyValidation.IsValidDecryptionKey(key)) {
-            return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
         try {
             CryptoUtils.Encrypt(key, inputFilename, outputFilename);
         } catch (Exception ex) {
-            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
-        var bodyString = String.format("%s file successfully encrypted and has been written to %s", inputFilename, outputFilename);
-        return new ResponseEntity<>(bodyString, HttpStatus.OK);
+        return ResponseEntity.ok(new EncryptResponse(inputFilename, outputFilename));
     }
 
     @GetMapping("decrypt/")
-    public ResponseEntity<String> Decrypt(@RequestParam(value= "inputfile") String inputFilename,
-                                          @RequestParam(value = "outputfile") String outputFilename,
-                                          @RequestParam(value="key") String key) {
+    public ResponseEntity<DecryptResponse> Decrypt(@RequestParam(value= "inputfile") String inputFilename,
+                                                   @RequestParam(value = "outputfile") String outputFilename,
+                                                   @RequestParam(value="key") String key) {
         if (!KeyValidation.IsValidDecryptionKey(key)) {
-            return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
         try {
             CryptoUtils.Decrypt(key, inputFilename, outputFilename);
         } catch (Exception ex) {
-            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
-        var bodyString = String.format("%s file successfully decrypted and has been written to %s", inputFilename, outputFilename);
-        return new ResponseEntity<>(bodyString, HttpStatus.OK);
+        return ResponseEntity.ok(new DecryptResponse(inputFilename, outputFilename));
     }
 
     @GetMapping("zip/")
