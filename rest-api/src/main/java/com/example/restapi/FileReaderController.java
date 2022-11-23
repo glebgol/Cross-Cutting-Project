@@ -4,6 +4,7 @@ import archivers.ArchivationFileManager;
 import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
+import com.example.restapi.ResponseEntities.CalculateResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,28 +15,27 @@ import java.util.List;
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
     @GetMapping("calculate/")
-    public ResponseEntity<String> Calculate(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<CalculateResponse> Calculate(@RequestParam(value= "inputfile") String inputFilename,
                             @RequestParam(value = "outputfile") String outputFilename,
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
                                             @RequestParam(value = "extension") String extension) {
 
         if (decryptionKeys != null && !KeyValidation.IsValidDecryptionKeys(decryptionKeys)) {
-            return new ResponseEntity<>("Key must be 16 length, when decrypting with padded cipher", HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
 
-        var readerBuilder = new FileReaderBuilder(extension, inputFilename, outputFilename);
-        readerBuilder.setEncrypting(decryptionKeys);
-        readerBuilder.setZipping(isZipped);
-
         try {
+            var readerBuilder = new FileReaderBuilder(extension, inputFilename, outputFilename);
+            readerBuilder.setEncrypting(decryptionKeys);
+            readerBuilder.setZipping(isZipped);
+
             var reader = readerBuilder.getResult();
             reader.WriteCalculated();
         } catch (Exception ex) {
-            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().build();
         }
-        var bodyString = String.format("%s file successfully calculated and has been written to %s", inputFilename, outputFilename);
-        return new ResponseEntity<>(bodyString, HttpStatus.OK);
+        return ResponseEntity.ok().body(new CalculateResponse(inputFilename, outputFilename));
     }
 
     @GetMapping("encrypt/")
