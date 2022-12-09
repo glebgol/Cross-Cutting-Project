@@ -30,7 +30,7 @@ public class FileReaderController {
             readerBuilder.setZipping(isZipped);
 
             var reader = readerBuilder.getResult();
-            reader.WriteCalculated();
+            reader.GetResult(outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }

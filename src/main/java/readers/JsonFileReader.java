@@ -17,7 +17,7 @@ public class JsonFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void Write(IStream stream) throws IOException, CryptoException {
+    public void Write(IStream stream) throws IOException {
         FileOutputStream outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
@@ -27,20 +27,20 @@ public class JsonFileReader extends DefaultFileReader {
     }
 
     @Override
-    public IStream Read() throws IOException, CryptoException {
+    public IStream Read() throws IOException {
         var expressions = new JsonExpressionList();
         expressions.ReadFromJsonFile(inputFilename);
         return new JsonStream(expressions);
     }
 
-    public IStream ReadFromJson() throws IOException, CryptoException {
+    public IStream ReadFromJson() throws IOException {
         var expressions = new JsonExpressionList();
         expressions.ReadFromJsonFile(inputFilename);
         return new JsonStream(expressions);
     }
 
     @Override
-    public IStream Transform(IStream stream) throws IOException, CryptoException {
+    public IStream Transform(IStream stream) {
         var str = new String(stream.bytes());
         var lst = new Gson().fromJson(str, JsonExpressionList.class);
         return new JsonStream(lst);
@@ -53,7 +53,7 @@ public class JsonFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void WriteCalculated() throws IOException, CryptoException {
+    public void GetResult(String outputFileName) throws IOException, CryptoException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
         Write(calculatedResult);

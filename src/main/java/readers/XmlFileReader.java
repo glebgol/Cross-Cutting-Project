@@ -2,7 +2,6 @@ package readers;
 
 import exceptions.CryptoException;
 import interfaces.IStream;
-import interfaces.IXmlExpressionList;
 import parsers.xml.XmlExpressionList;
 import streams.XmlStream;
 
@@ -19,21 +18,21 @@ public class XmlFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void Write(IStream stream) throws IOException, CryptoException {
+    public void Write(IStream stream) throws IOException {
         var outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
     }
 
     @Override
-    public IStream Read() throws IOException, CryptoException, JAXBException {
+    public IStream Read() throws IOException, JAXBException {
         var expressions = new XmlExpressionList();
         expressions.ReadFromXmlFile(inputFilename);
         return new XmlStream(expressions);
     }
 
     @Override
-    public IStream Transform(IStream stream) throws IOException, CryptoException, JAXBException {
+    public IStream Transform(IStream stream) throws JAXBException {
         var xmlString = new String(stream.bytes());
         var jaxbContext = JAXBContext.newInstance(XmlExpressionList.class);
 
@@ -50,7 +49,7 @@ public class XmlFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void WriteCalculated() throws IOException, CryptoException, JAXBException {
+    public void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
         Write(calculatedResult);

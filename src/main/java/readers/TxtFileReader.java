@@ -44,7 +44,7 @@ public class TxtFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void WriteCalculated() throws IOException {
+    public void GetResult(String outputFileName) throws IOException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
         Write(calculatedResult);

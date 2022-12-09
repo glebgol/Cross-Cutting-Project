@@ -39,7 +39,7 @@ public class EncryptedFileReader extends FileReader {
     }
 
     @Override
-    public void WriteCalculated() throws IOException, CryptoException, JAXBException {
+    public void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
         Write(calculatedResult);

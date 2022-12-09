@@ -18,12 +18,12 @@ public class Main {
         builder.setZipping(true);
 
         var reader = builder.getResult();
-        reader.WriteCalculated();
+        reader.GetResult("output.txt");
 
         var jsonReader = new JsonFileReader("input.json", "output.json");
-        jsonReader.WriteCalculated();
+        jsonReader.GetResult("output.json");
 
         var xmlReader = new XmlFileReader("input.xml", "output.xml");
-        xmlReader.WriteCalculated();
+        xmlReader.GetResult("output.xml");
     }
 }
