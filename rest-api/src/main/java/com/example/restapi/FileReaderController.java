@@ -25,7 +25,7 @@ public class FileReaderController {
         }
 
         try {
-            var readerBuilder = new FileReaderBuilder(extension, inputFilename, outputFilename);
+            var readerBuilder = new FileReaderBuilder(extension, inputFilename);
             readerBuilder.setEncrypting(decryptionKeys);
             readerBuilder.setZipping(isZipped);
 

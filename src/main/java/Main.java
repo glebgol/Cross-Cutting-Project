@@ -12,7 +12,7 @@ public class Main {
     private static final String SecondKey = "asdfghjkqewrtyto";
     public static void main(String[] args) throws IOException, CryptoException, JAXBException {
 
-        var builder = new FileReaderBuilder(FileExtension.Txt, "double_encrypted.zip", "output.txt");
+        var builder = new FileReaderBuilder(FileExtension.Txt, "double_encrypted.zip");
         builder.setEncrypting(FirstKey);
         builder.setEncrypting(SecondKey);
         builder.setZipping(true);
@@ -20,10 +20,10 @@ public class Main {
         var reader = builder.getResult();
         reader.GetResult("output.txt");
 
-        var jsonReader = new JsonFileReader("input.json", "output.json");
+        var jsonReader = new JsonFileReader("input.json");
         jsonReader.GetResult("output.json");
 
-        var xmlReader = new XmlFileReader("input.xml", "output.xml");
+        var xmlReader = new XmlFileReader("input.xml");
         xmlReader.GetResult("output.xml");
     }
 }

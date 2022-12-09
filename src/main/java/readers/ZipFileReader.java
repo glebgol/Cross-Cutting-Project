@@ -15,8 +15,8 @@ public class ZipFileReader extends FileReader {
     }
 
     @Override
-    public void Write(IStream stream) throws IOException, CryptoException {
-        _reader.Write(stream);
+    public void Write(IStream stream, String outputFilename) throws IOException, CryptoException {
+        _reader.Write(stream, outputFilename);
     }
 
     @Override
@@ -39,6 +39,6 @@ public class ZipFileReader extends FileReader {
     public void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult);
+        Write(calculatedResult, outputFileName);
     }
 }

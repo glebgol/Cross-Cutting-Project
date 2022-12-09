@@ -11,7 +11,7 @@ class JsonFileReaderTest {
     @Test
     public void Calculate() throws IOException, CryptoException {
         // Arrange
-        var spyReader = Mockito.spy(new JsonFileReader(null, null));
+        var spyReader = Mockito.spy(new JsonFileReader(null));
         var streamForCalculation = StreamArguments.JsonStream();
         var expectedCalculationResult = StreamArguments.JsonCalculationStream();
         var expectedCalculationResultLines = expectedCalculationResult.lines();

@@ -10,34 +10,31 @@ import java.util.List;
 public class FileReaderBuilder implements IFileReaderBuilder {
     protected IFileReader fileReader;
     protected String inputFilename;
-    protected String outputFilename;
-    public FileReaderBuilder(FileExtension extension, String inputFilename, String outputFilename) {
+    public FileReaderBuilder(FileExtension extension, String inputFilename) {
         if (extension == FileExtension.Txt) {
-            fileReader = new TxtFileReader(inputFilename, outputFilename);
+            fileReader = new TxtFileReader(inputFilename);
         }
         else if (extension == FileExtension.Json) {
-            fileReader = new JsonFileReader(inputFilename, outputFilename);
+            fileReader = new JsonFileReader(inputFilename);
         }
         else if (extension == FileExtension.Xml) {
-            fileReader = new XmlFileReader(inputFilename, outputFilename);
+            fileReader = new XmlFileReader(inputFilename);
         }
         this.inputFilename = inputFilename;
-        this.outputFilename = outputFilename;
     }
 
-    public FileReaderBuilder(String extension, String inputFilename, String outputFilename) {
+    public FileReaderBuilder(String extension, String inputFilename) {
         var fileExtension = extension.toUpperCase();
         if (fileExtension.equals(FileExtension.Txt.name().toUpperCase())) {
-            fileReader = new TxtFileReader(inputFilename, outputFilename);
+            fileReader = new TxtFileReader(inputFilename);
         }
         else if ((fileExtension.equals(FileExtension.Json.name().toUpperCase()))){
-            fileReader = new JsonFileReader(inputFilename, outputFilename);
+            fileReader = new JsonFileReader(inputFilename);
         }
         else {
-            fileReader = new XmlFileReader(inputFilename, outputFilename);
+            fileReader = new XmlFileReader(inputFilename);
         }
         this.inputFilename = inputFilename;
-        this.outputFilename = outputFilename;
     }
 
     @Override

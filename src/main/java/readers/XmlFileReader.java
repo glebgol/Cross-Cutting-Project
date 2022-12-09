@@ -13,12 +13,12 @@ import java.io.StringReader;
 
 public class XmlFileReader extends DefaultFileReader {
 
-    public XmlFileReader(String inputFilename, String outputFilename) {
-        super(inputFilename, outputFilename);
+    public XmlFileReader(String inputFilename) {
+        super(inputFilename);
     }
 
     @Override
-    public void Write(IStream stream) throws IOException {
+    public void Write(IStream stream, String outputFilename) throws IOException {
         var outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
@@ -52,6 +52,6 @@ public class XmlFileReader extends DefaultFileReader {
     public void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult);
+        Write(calculatedResult, outputFileName);
     }
 }

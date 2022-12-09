@@ -9,7 +9,7 @@ class TxtFileReaderTest {
     @Test
     void Calculate() {
         // Arrange
-        var spyReader = Mockito.spy(new TxtFileReader(null, null));
+        var spyReader = Mockito.spy(new TxtFileReader(null));
         var streamForCalculation = StreamArguments.ReadingResult();
         var expectedCalculationResult = StreamArguments.CalculationResult();
         var expectedCalculationResultLines = expectedCalculationResult.lines();

@@ -8,12 +8,12 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class TxtFileReader extends DefaultFileReader {
-    public TxtFileReader(String inputFilename, String outputFilename) {
-        super(inputFilename, outputFilename);
+    public TxtFileReader(String inputFilename) {
+        super(inputFilename);
     }
 
     @Override
-    public void Write(IStream stream) throws IOException {
+    public void Write(IStream stream, String outputFilename) throws IOException {
         FileOutputStream outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
@@ -47,6 +47,6 @@ public class TxtFileReader extends DefaultFileReader {
     public void GetResult(String outputFileName) throws IOException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult);
+        Write(calculatedResult, outputFileName);
     }
 }

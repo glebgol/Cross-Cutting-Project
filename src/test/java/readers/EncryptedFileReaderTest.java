@@ -18,7 +18,7 @@ class EncryptedFileReaderTest {
     void Calculate_EncryptedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new EncryptedFileReader(FirstKey,
-                new TxtFileReader("src/test/resources/encrypted.txt", "src/test/resources/output.txt"));
+                new TxtFileReader("src/test/resources/encrypted.txt"));
         var expectedCalculationResult = StreamArguments.CalculationResult();
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
@@ -36,7 +36,7 @@ class EncryptedFileReaderTest {
         // Arrange
         var reader = new EncryptedFileReader(SecondKey,
                 new EncryptedFileReader(FirstKey,
-                        new TxtFileReader("src/test/resources/double_encrypted.txt", "src/test/resources/output.txt")));
+                        new TxtFileReader("src/test/resources/double_encrypted.txt")));
 
         var expectedCalculationResult = StreamArguments.CalculationResult();
         var expectedCalculationResultLines = expectedCalculationResult.lines();
@@ -53,7 +53,7 @@ class EncryptedFileReaderTest {
     void Calculate_EncryptedXmlFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new EncryptedFileReader(FirstKey,
-                        new XmlFileReader("src/test/resources/enc_xml.txt", "src/test/resources/output.xml"));
+                        new XmlFileReader("src/test/resources/enc_xml.txt"));
 
         var expectedCalculationResultLines = StreamArguments.CalculatedXmlLines();
 
@@ -70,7 +70,7 @@ class EncryptedFileReaderTest {
     void Calculate_EncryptedJsonFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new EncryptedFileReader(FirstKey,
-                new JsonFileReader("src/test/resources/enc_json.txt", "src/test/resources/output.json"));
+                new JsonFileReader("src/test/resources/enc_json.txt"));
 
         var expectedCalculationResultLines = StreamArguments.CalculatedJsonLines();
 

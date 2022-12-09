@@ -15,7 +15,7 @@ class ZipFileReaderTest {
     void Calculate_ZippedFile() throws IOException, CryptoException, JAXBException {
         // Arrange
         var reader = new ZipFileReader(
-                new TxtFileReader("src/test/resources/default.zip", "src/test/resources/output.txt"));
+                new TxtFileReader("src/test/resources/default.zip"));
         var expectedCalculationResult = StreamArguments.CalculationResult();
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
@@ -33,7 +33,7 @@ class ZipFileReaderTest {
         // Arrange
         var reader = new ZipFileReader(
                 new EncryptedFileReader(FirstKey,
-                        new TxtFileReader("src/test/resources/encrypted.zip", "src/test/resources/output.txt")));
+                        new TxtFileReader("src/test/resources/encrypted.zip")));
         var expectedCalculationResult = StreamArguments.CalculationResult();
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
@@ -52,7 +52,7 @@ class ZipFileReaderTest {
         var reader = new ZipFileReader(
                 new EncryptedFileReader(SecondKey,
                         new EncryptedFileReader(FirstKey,
-                                new TxtFileReader("src/test/resources/double_encrypted.zip", "src/test/resources/output.txt"))));
+                                new TxtFileReader("src/test/resources/double_encrypted.zip"))));
         var expectedCalculationResult = StreamArguments.CalculationResult();
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 

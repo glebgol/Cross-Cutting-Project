@@ -2,7 +2,6 @@ package readers;
 
 import com.google.gson.Gson;
 import exceptions.CryptoException;
-import interfaces.IJsonExpressionList;
 import interfaces.IStream;
 import parsers.json.JsonExpressionList;
 import streams.JsonStream;
@@ -12,28 +11,19 @@ import java.io.IOException;
 
 public class JsonFileReader extends DefaultFileReader {
 
-    public JsonFileReader(String inputFilename, String outputFilename) {
-        super(inputFilename, outputFilename);
+    public JsonFileReader(String inputFilename) {
+        super(inputFilename);
     }
 
     @Override
-    public void Write(IStream stream) throws IOException {
+    public void Write(IStream stream, String outputFilename) throws IOException {
         FileOutputStream outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
     }
-    public void WriteJsonExpressions(IJsonExpressionList expressionList) throws IOException {
-        expressionList.WriteToJsonFile(outputFilename);
-    }
 
     @Override
     public IStream Read() throws IOException {
-        var expressions = new JsonExpressionList();
-        expressions.ReadFromJsonFile(inputFilename);
-        return new JsonStream(expressions);
-    }
-
-    public IStream ReadFromJson() throws IOException {
         var expressions = new JsonExpressionList();
         expressions.ReadFromJsonFile(inputFilename);
         return new JsonStream(expressions);
@@ -56,6 +46,6 @@ public class JsonFileReader extends DefaultFileReader {
     public void GetResult(String outputFileName) throws IOException, CryptoException {
         var readingResult = Read();
         var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult);
+        Write(calculatedResult, outputFileName);
     }
 }
