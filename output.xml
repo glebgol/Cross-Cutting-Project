@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xmlExpressionList>
     <expressions>
-        <expression1>2.2186948853615522</expression1>
+        <expression1>1.2186948853615522</expression1>
         <expression2>-333.0</expression2>
         <expression3>12.0</expression3>
     </expressions>
     <expressions>
         <expression1>-29.0</expression1>
-        <expression2>-339.0</expression2>
+        <expression2>Division by zero!</expression2>
         <expression3>23.0</expression3>
     </expressions>
     <expressions>
-        <expression1>-32.0</expression1>
+        <expression1>-21.333333333333332</expression1>
         <expression2>-3331.0</expression2>
         <expression3>12.0</expression3>
     </expressions>

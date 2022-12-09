@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rename getResult in FileBuilder to getFileReader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.json" beforeDir="false" afterPath="$PROJECT_DIR$/input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/input.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/DefaultFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/DefaultFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/JsonFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/JsonFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/TxtFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/TxtFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/ZipFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/readers/ZipFileReaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +111,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTests">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -203,21 +191,7 @@
       <workItem from="1670097414195" duration="357000" />
       <workItem from="1670173288985" duration="8000" />
       <workItem from="1670173473818" duration="48000" />
-      <workItem from="1670582562830" duration="2569000" />
-    </task>
-    <task id="LOCAL-00060" summary="Added setDecryption in Calculate method">
-      <created>1668101996834</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1668101996834</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Created Encrypt and Zip http get methods">
-      <created>1668104914562</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1668104914562</updated>
+      <workItem from="1670582562830" duration="3585000" />
     </task>
     <task id="LOCAL-00062" summary="Update README.md">
       <created>1668106085591</created>
@@ -548,7 +522,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670596115755</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Refactoring readers">
+      <created>1670596957366</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1670596957366</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Rename getResult in FileBuilder to getFileReader">
+      <created>1670597357143</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1670597357144</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,8 +561,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor streams" />
-    <MESSAGE value="Added JsonFileReader Test" />
     <MESSAGE value="Added new api test (for not valid keys)" />
     <MESSAGE value="Changed FileReaderBuilder" />
     <MESSAGE value="Added file extension" />
@@ -598,7 +584,9 @@
     <MESSAGE value="Added ZipResponse and UnzipResponse" />
     <MESSAGE value="Created api test for not valid file extension" />
     <MESSAGE value="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)" />
+    <MESSAGE value="Refactoring readers" />
+    <MESSAGE value="Rename getResult in FileBuilder to getFileReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename getResult in FileBuilder to getFileReader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

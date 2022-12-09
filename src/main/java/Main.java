@@ -10,17 +10,21 @@ import java.io.IOException;
 public class Main {
     private static final String FirstKey = "qwsdcvbgfthyrdfw";
     private static final String SecondKey = "asdfghjkqewrtyto";
-    private static final String DoubleEncryptedFileName = "double_encrypted.zip";
+
+    private static final String DoubleEncryptedAndZippedFileName = "double_encrypted.zip";
     private static final String TxtOutputFileName = "output.txt";
+
     private static final String JsonFileName = "input.json";
     private static final String JsonOutputFileName = "output.json";
+
     private static final String XmlFileName = "input.xml";
     private static final String XmlOutputFileName = "output.xml";
 
 
     public static void main(String[] args) throws IOException, CryptoException, JAXBException {
 
-        var builder = new FileReaderBuilder(FileExtension.Txt, DoubleEncryptedFileName);
+        var builder = new FileReaderBuilder(FileExtension.Txt, DoubleEncryptedAndZippedFileName);
+
         builder.setEncrypting(FirstKey);
         builder.setEncrypting(SecondKey);
         builder.setZipping(true);
