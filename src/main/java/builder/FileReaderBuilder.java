@@ -59,7 +59,7 @@ public class FileReaderBuilder implements IFileReaderBuilder {
     }
 
     @Override
-    public IFileReader getResult() {
+    public IFileReader getFileReader() {
         return fileReader;
     }
 }

@@ -29,7 +29,7 @@ public class FileReaderController {
             readerBuilder.setEncrypting(decryptionKeys);
             readerBuilder.setZipping(isZipped);
 
-            var reader = readerBuilder.getResult();
+            var reader = readerBuilder.getFileReader();
             reader.GetResult(outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
