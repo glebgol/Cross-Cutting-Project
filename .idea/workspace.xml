@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rename getResult in FileBuilder to getFileReader">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added proxy">
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Calculate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Decrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Encrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/UnZip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Zip.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.json" beforeDir="false" afterPath="$PROJECT_DIR$/input.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/input.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,7 @@
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -102,6 +107,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
+      <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src" />
       <recent name="D:\Anton\Cross-Cutting-Project\src\test\resources" />
       <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
     </key>
@@ -111,7 +118,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
       <module name="rest-api" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -191,21 +198,9 @@
       <workItem from="1670097414195" duration="357000" />
       <workItem from="1670173288985" duration="8000" />
       <workItem from="1670173473818" duration="48000" />
-      <workItem from="1670582562830" duration="3585000" />
-    </task>
-    <task id="LOCAL-00062" summary="Update README.md">
-      <created>1668106085591</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1668106085592</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Created Api tests">
-      <created>1668170594555</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1668170594555</updated>
+      <workItem from="1670582562830" duration="6738000" />
+      <workItem from="1670650097359" duration="325000" />
+      <workItem from="1670650442788" duration="18710000" />
     </task>
     <task id="LOCAL-00064" summary="Api tests for calculate">
       <created>1668171872552</created>
@@ -536,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670597357144</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Calculated xml and json files">
+      <created>1670597865270</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1670597865270</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Added proxy">
+      <created>1670696268960</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1670696268960</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,8 +570,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new api test (for not valid keys)" />
-    <MESSAGE value="Changed FileReaderBuilder" />
     <MESSAGE value="Added file extension" />
     <MESSAGE value="Added xml" />
     <MESSAGE value="Added Xml Expression" />
@@ -586,7 +593,9 @@
     <MESSAGE value="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)" />
     <MESSAGE value="Refactoring readers" />
     <MESSAGE value="Rename getResult in FileBuilder to getFileReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename getResult in FileBuilder to getFileReader" />
+    <MESSAGE value="Calculated xml and json files" />
+    <MESSAGE value="Added proxy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added proxy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
