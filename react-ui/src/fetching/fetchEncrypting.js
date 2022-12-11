@@ -1,4 +1,4 @@
-const fetchCalculating = (inputFile, outputFile, key, setState) => {
+const fetchEncrypting = (inputFile, outputFile, key, setState) => {
     const url = 'api/file-reader/encrypt/?inputfile=' + inputFile + '&outputfile=' + outputFile + '&key=' + key;
     fetch(url)
         .then(response => response.json())
@@ -7,4 +7,4 @@ const fetchCalculating = (inputFile, outputFile, key, setState) => {
         });
 }
 
-export default fetchCalculating;
+export default fetchEncrypting;

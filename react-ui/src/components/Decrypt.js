@@ -1,8 +1,46 @@
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import fetchDecrypting from "../fetching/fetchDecrypting";
+
 const Decrypt = () => {
+    const [inputFile, setInputFile] = useState('')
+    const [outputFile, setOutputFile] = useState('')
+    const [key, setKey] = useState('')
+    const [resultInfo, setResultInfo] = useState('')
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetchDecrypting(inputFile, outputFile, key, setResultInfo);
+    }
     return (
-        <h2>
-            Decrypt
-        </h2>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <label>Input file:</label>
+                <input
+                    type="text"
+                    required
+                    value={inputFile}
+                    onChange={(e) => setInputFile(e.target.value)}
+                />
+                <label>Output file:</label>
+                <input
+                    type="text"
+                    required
+                    value={outputFile}
+                    onChange={(e) => setOutputFile(e.target.value)}
+                />
+                <label>Encrypted keys</label>
+                <input
+                    type="text"
+                    value={key}
+                    onChange={(e) => {
+                        setKey(e.target.value);
+                    }}
+                />
+                <button>Decrypt</button>
+            </form>
+            <p><b>{resultInfo}</b></p>
+            <Link to="/">Back to Home Page</Link>
+        </div>
     );
 }
 
