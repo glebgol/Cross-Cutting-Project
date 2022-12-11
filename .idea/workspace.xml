@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Added proxy">
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Calculate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Decrypt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Encrypt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/UnZip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-ui/src/components/Zip.js" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Fetch Zip and UnZip">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/ApiTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-ui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-ui/src/Input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/reactui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,8 +100,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src" />
+      <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
       <recent name="D:\Anton\Cross-Cutting-Project\src\test\resources" />
       <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
     </key>
@@ -119,27 +112,7 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
-    <configuration name="ApiTests" type="JUnit" factoryName="JUnit">
-      <module name="rest-api" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/rest-api/src/test/java/com/example/restapi" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/react-ui/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
       <method v="2" />
     </configuration>
     <list>
@@ -149,14 +122,8 @@
       <item itemvalue="JUnit.FileReaderTests" />
       <item itemvalue="JUnit.CalculatingTests" />
       <item itemvalue="npm.npm start" />
-      <item itemvalue="npm.test" />
       <item itemvalue="Spring Boot.RestApiApplication" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -200,77 +167,8 @@
       <workItem from="1670173473818" duration="48000" />
       <workItem from="1670582562830" duration="6738000" />
       <workItem from="1670650097359" duration="325000" />
-      <workItem from="1670650442788" duration="18710000" />
-    </task>
-    <task id="LOCAL-00064" summary="Api tests for calculate">
-      <created>1668171872552</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1668171872552</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Api tests for encrypt">
-      <created>1668172146939</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1668172146939</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Added Api tests for zip">
-      <created>1668172312006</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1668172312006</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Delete README.md">
-      <created>1668172712656</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1668172712656</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Changed App">
-      <created>1668183398363</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1668183398363</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Fix bug in RestAssured test">
-      <created>1668199758642</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1668199758642</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Fix bug in RestAssured test">
-      <created>1668201174581</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1668201174581</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Edit test run configurations">
-      <created>1668237343369</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1668237343370</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Delete package-lock.json">
-      <created>1668352927350</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1668352927351</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Created abstract DefaultFileReader">
-      <created>1668622652742</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1668622652742</updated>
+      <workItem from="1670650442788" duration="26612000" />
+      <workItem from="1670780053003" duration="6357000" />
     </task>
     <task id="LOCAL-00074" summary="Created abstract FileReader">
       <created>1668622978301</created>
@@ -545,7 +443,77 @@
       <option name="project" value="LOCAL" />
       <updated>1670696268960</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Create components">
+      <created>1670770743263</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1670770743263</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Create routing">
+      <created>1670770750138</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1670770750138</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Fetch calculating">
+      <created>1670778716584</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1670778716584</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Deleted default css">
+      <created>1670779770822</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1670779770822</updated>
+    </task>
+    <task id="LOCAL-00117" summary="temp">
+      <created>1670780473765</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1670780473765</updated>
+    </task>
+    <task id="LOCAL-00118" summary="css">
+      <created>1670780656587</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1670780656587</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Fetch Calculating and added result info message">
+      <created>1670784573278</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1670784573278</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Fetch Encrypting">
+      <created>1670785270323</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1670785270323</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Fetch Decrypting">
+      <created>1670785488078</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1670785488078</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Fetch Zip and UnZip">
+      <created>1670785875013</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1670785875013</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,16 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added file extension" />
-    <MESSAGE value="Added xml" />
-    <MESSAGE value="Added Xml Expression" />
-    <MESSAGE value="Renamed Json objects" />
-    <MESSAGE value="Added FileReaderBuilder constructor with string fileExtension" />
-    <MESSAGE value="Renamed JsonExpression" />
-    <MESSAGE value="Add Decrypt endpoint" />
-    <MESSAGE value="Read, Write, Calculate Xml file" />
-    <MESSAGE value="Added unzip endpoint" />
-    <MESSAGE value="Added test for calculating Encrypted Xml file" />
     <MESSAGE value="Added test for calculating Encrypted Json file" />
     <MESSAGE value="Added body strings to ResponseEntities" />
     <MESSAGE value="Calculated xml, json and double encrypted files" />
@@ -595,7 +553,17 @@
     <MESSAGE value="Rename getResult in FileBuilder to getFileReader" />
     <MESSAGE value="Calculated xml and json files" />
     <MESSAGE value="Added proxy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added proxy" />
+    <MESSAGE value="Create components" />
+    <MESSAGE value="Create routing" />
+    <MESSAGE value="Fetch calculating" />
+    <MESSAGE value="Deleted default css" />
+    <MESSAGE value="temp" />
+    <MESSAGE value="css" />
+    <MESSAGE value="Fetch Calculating and added result info message" />
+    <MESSAGE value="Fetch Encrypting" />
+    <MESSAGE value="Fetch Decrypting" />
+    <MESSAGE value="Fetch Zip and UnZip" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fetch Zip and UnZip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
