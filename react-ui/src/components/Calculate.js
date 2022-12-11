@@ -1,4 +1,6 @@
 import {useState} from "react";
+import {Link} from "react-router-dom";
+import fetchCalculating from "../fetching/fetchCalculating";
 
 const Calculate = () => {
     const [inputFile, setInputFile] = useState('')
@@ -6,12 +8,10 @@ const Calculate = () => {
     const [isZipped, setIsZipped] = useState(false)
     const [keys, setKeys] = useState('')
     const [extension, setExtension] = useState('Txt')
-    const [info, setInfo] = useState('')
+    const [resultInfo, setResultInfo] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('api/file-reader/calculate/?inputfile=' + inputFile + '&outputfile=' + outputFile + '&iszipped=' + isZipped + '&decryptionkeys=' + keys + '&extension=' + extension)
-            .then(response => console.log(response.json()))
-            .catch(re => console.log(re));
+        fetchCalculating(inputFile, outputFile, isZipped, keys, extension, setResultInfo);
     }
     return (
         <div>
@@ -40,7 +40,6 @@ const Calculate = () => {
                 <label>Encrypted keys</label>
                 <input
                     type="text"
-                    required
                     value={keys}
                     onChange={(e) => {
                         setKeys(e.target.value);
@@ -59,6 +58,8 @@ const Calculate = () => {
                 </select>
                 <button>Calculate</button>
             </form>
+            <p><b>{resultInfo}</b></p>
+            <Link to="/">Back to Home Page</Link>
         </div>
     );
 }
