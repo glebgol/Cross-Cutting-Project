@@ -4,6 +4,10 @@ const fetchUnZip = (inputFile, outputFile, setState) => {
         .then(response => response.json())
         .then(data => {
             setState(data.resultInfo);
+        })
+        .catch(err => {
+            console.log(err);
+            setState('Server error...');
         });
 }
 

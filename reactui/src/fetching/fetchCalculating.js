@@ -8,6 +8,10 @@ const fetchCalculating = (inputFile, outputFile, isZipped, keys, extension, setS
         .then(response => response.json())
         .then(data => {
             setState(data.resultInfo);
+        })
+        .catch(err => {
+            console.log(err);
+            setState('Server error');
         });
 }
 
