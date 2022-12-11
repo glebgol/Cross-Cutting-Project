@@ -1,4 +1,3 @@
-import './App.css';
 import Calculate from "./components/Calculate";
 import Decrypt from "./components/Decrypt";
 import UnZip from "./components/UnZip";
