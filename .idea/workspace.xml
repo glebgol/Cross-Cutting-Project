@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created FileUploadUtil">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/CalculateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/CalculateResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/DecryptResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/DecryptResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/EncryptResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/EncryptResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/FileUploadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/FileUploadResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/UnzipResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/UnzipResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/ZipResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/ZipResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Created FileUploadController">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileDownloadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileDownloadUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,14 +185,7 @@
       <workItem from="1670650097359" duration="325000" />
       <workItem from="1670650442788" duration="26612000" />
       <workItem from="1670780053003" duration="8497000" />
-      <workItem from="1670862883291" duration="15509000" />
-    </task>
-    <task id="LOCAL-00078" summary="Create ExpressionObject for json parsing">
-      <created>1668705526593</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1668705526593</updated>
+      <workItem from="1670862883291" duration="15659000" />
     </task>
     <task id="LOCAL-00079" summary="Delete lib">
       <created>1668789270106</created>
@@ -538,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670883793814</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Created FileUploadController">
+      <created>1670884195850</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1670884195850</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete unused XmlReadingResult" />
     <MESSAGE value="Created CalculateResponse" />
     <MESSAGE value="Added EncryptResponse and DecryptResponse" />
     <MESSAGE value="Added ZipResponse and UnzipResponse" />
@@ -588,7 +579,8 @@
     <MESSAGE value="Create selenium-ui-tests-module" />
     <MESSAGE value="Form validation in process" />
     <MESSAGE value="Created FileUploadUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created FileUploadUtil" />
+    <MESSAGE value="Created FileUploadController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created FileUploadController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
