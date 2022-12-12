@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create selenium-ui-tests-module">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Form validation in process">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_82.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/ResponseEntities/FileUploadResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,14 +186,7 @@
       <workItem from="1670650097359" duration="325000" />
       <workItem from="1670650442788" duration="26612000" />
       <workItem from="1670780053003" duration="8497000" />
-      <workItem from="1670862883291" duration="14073000" />
-    </task>
-    <task id="LOCAL-00076" summary="Added Key validation">
-      <created>1668626554811</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1668626554811</updated>
+      <workItem from="1670862883291" duration="15058000" />
     </task>
     <task id="LOCAL-00077" summary="Delete tests dependencies">
       <created>1668704112013</created>
@@ -531,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670865300901</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Form validation in process">
+      <created>1670883309971</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1670883309971</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Calculated double encrypted file" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Delete unused XmlReadingResult" />
     <MESSAGE value="Created CalculateResponse" />
@@ -581,7 +580,8 @@
     <MESSAGE value="Renamed react-ui module" />
     <MESSAGE value="Catch server errors" />
     <MESSAGE value="Create selenium-ui-tests-module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create selenium-ui-tests-module" />
+    <MESSAGE value="Form validation in process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form validation in process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
