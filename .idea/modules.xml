@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Cross-Cutting-Project.iml" filepath="$PROJECT_DIR$/Cross-Cutting-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/reactui.iml" filepath="$PROJECT_DIR$/reactui.iml" />
       <module fileurl="file://$PROJECT_DIR$/rest-api/rest-api.iml" filepath="$PROJECT_DIR$/rest-api/rest-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selenium-ui-tests/selenium-ui-tests.iml" filepath="$PROJECT_DIR$/selenium-ui-tests/selenium-ui-tests.iml" />
     </modules>
   </component>
 </project>

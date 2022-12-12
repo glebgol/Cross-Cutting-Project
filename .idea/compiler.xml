@@ -8,15 +8,19 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Cross-Cutting-Project" />
         <module name="rest-api" />
+        <module name="selenium-ui-tests" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Cross-Cutting-Project" target="18" />
+      <module name="demo" target="17" />
       <module name="rest-api" target="17" />
+      <module name="selenium-ui-tests" target="18" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
       <module name="rest-api" options="-parameters" />
     </option>
   </component>
