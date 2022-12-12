@@ -1,4 +1,4 @@
-package com.example.restapi.ResponseEntities;
+package com.example.restapi.responses;
 
 public class UnzipResponse {
     public String inputFilename;

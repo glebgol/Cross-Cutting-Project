@@ -4,7 +4,7 @@ import archivers.ArchivationFileManager;
 import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
-import com.example.restapi.ResponseEntities.*;
+import com.example.restapi.responses.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

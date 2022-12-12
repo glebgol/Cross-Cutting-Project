@@ -1,4 +1,4 @@
-package com.example.restapi.ResponseEntities;
+package com.example.restapi.responses;
 
 public class ZipResponse {
     public String inputFilename;
