@@ -1,7 +1,8 @@
 package com.example.restapi;
 
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
+
+import static io.restassured.RestAssured.when;
 
 
 class ApiFileReaderTest {
@@ -19,8 +20,8 @@ class ApiFileReaderTest {
     void Calculate_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, ExistingFilename, OutputFilename, DecryptionKeys, FileExtension);
 
-        RestAssured
-                .when()
+
+        when()
                 .get(uri)
                 .then()
                 .statusCode(200);
@@ -30,8 +31,7 @@ class ApiFileReaderTest {
     void Calculate_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKeys, FileExtension);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
@@ -41,8 +41,7 @@ class ApiFileReaderTest {
     void Calculate_NotValidKeys_Returns_400_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, ExistingFilename, OutputFilename, NotValidDecryptionKeys, FileExtension);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
@@ -52,8 +51,7 @@ class ApiFileReaderTest {
     void Calculate_NotValidExtension_Returns_400_StatusCode() {
         var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, ExistingFilename, OutputFilename, DecryptionKeys, NotValidExtension);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
@@ -63,8 +61,7 @@ class ApiFileReaderTest {
     void Encrypt_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/encrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, InputFilename, OutputFilename, DecryptionKey);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(200);
@@ -74,8 +71,7 @@ class ApiFileReaderTest {
     void Encrypt_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/encrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKey);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
@@ -85,8 +81,7 @@ class ApiFileReaderTest {
     void Decrypt_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/decrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, InputFilename, OutputFilename, DecryptionKey);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(200);
@@ -96,8 +91,7 @@ class ApiFileReaderTest {
     void Decrypt_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/decrypt/?inputfile=%s&outputfile=%s&key=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKey);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
@@ -107,8 +101,7 @@ class ApiFileReaderTest {
     void Zip_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/zip/?inputfile=%s", Uri, InputFilename);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(200);
@@ -118,8 +111,7 @@ class ApiFileReaderTest {
     void Zip_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/zip/?inputfile=%s", Uri, NonExistingFilename);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
@@ -129,8 +121,7 @@ class ApiFileReaderTest {
     void UnZip_ExistingFile_Returns_200_StatusCode() {
         var uri = String.format("%s/unzip/?inputfile=%s&outputfile=%s", Uri, InputFilename, OutputFilename);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(200);
@@ -140,8 +131,7 @@ class ApiFileReaderTest {
     void UnZip_NonExistingFile_Returns_400_StatusCode() {
         var uri = String.format("%s/unzip/?inputfile=%s&outputfile=%s", Uri, NonExistingFilename, OutputFilename);
 
-        RestAssured
-                .when()
+        when()
                 .get(uri)
                 .then()
                 .statusCode(400);
