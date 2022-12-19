@@ -1,8 +1,8 @@
 package interfaces;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface IStream {
-    ArrayList<String> lines();
+    List<String> lines();
     byte[] bytes();
 }

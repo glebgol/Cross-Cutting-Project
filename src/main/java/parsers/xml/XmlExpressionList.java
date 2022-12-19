@@ -18,7 +18,7 @@ public class XmlExpressionList implements IXmlExpressionList {
         this.expressions = expressions;
     }
     @Override
-    public void WriteToXmlFile(String xmlFileName) throws IOException, JAXBException {
+    public void writeToXmlFile(String xmlFileName) throws IOException, JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(XmlExpressionList.class);
         var jaxbMarshaller = jaxbContext.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
@@ -31,14 +31,14 @@ public class XmlExpressionList implements IXmlExpressionList {
     }
 
     @Override
-    public void ReadFromXmlFile(String xmlFileName) throws IOException, JAXBException {
+    public void readFromXmlFile(String xmlFileName) throws JAXBException {
         var jaxbContext = JAXBContext.newInstance(XmlExpressionList.class);
         var jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         var readingResult = (XmlExpressionList) jaxbUnmarshaller.unmarshal(new File(xmlFileName));
         this.expressions = readingResult.expressions;
     }
 
-    public XmlExpressionList Calculate() {
+    public XmlExpressionList calculate() {
         var calculatedExpressions = new ArrayList<XmlExpression>(expressions.size());
         for (var exp : expressions) {
             calculatedExpressions.add(exp.Calculate());

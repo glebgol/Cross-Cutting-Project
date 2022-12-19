@@ -25,7 +25,7 @@ public class JsonFileReader extends DefaultFileReader {
     @Override
     public IStream read() throws IOException {
         var expressions = new JsonExpressionList();
-        expressions.ReadFromJsonFile(inputFilename);
+        expressions.readFromJsonFile(inputFilename);
         return new JsonStream(expressions);
     }
 

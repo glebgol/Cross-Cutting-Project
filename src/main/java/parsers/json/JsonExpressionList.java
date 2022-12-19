@@ -19,14 +19,14 @@ public class JsonExpressionList implements IJsonExpressionList {
         this.expressions = expressions;
     }
 
-    public void WriteToJsonFile(String jsonFileName) throws IOException {
+    public void writeToJsonFile(String jsonFileName) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         Writer writer = Files.newBufferedWriter(Paths.get(jsonFileName));
         gson.toJson(this, writer);
         writer.close();
     }
 
-    public void ReadFromJsonFile(String jsonFileName) throws IOException {
+    public void readFromJsonFile(String jsonFileName) throws IOException {
         Gson gson = new Gson();
         Reader reader = Files.newBufferedReader(Paths.get(jsonFileName));
         var lst = gson.fromJson(reader, JsonExpressionList.class);
@@ -35,7 +35,7 @@ public class JsonExpressionList implements IJsonExpressionList {
     }
 
     @Override
-    public IJsonExpressionList Calculate() {
+    public IJsonExpressionList calculate() {
         var calculatedExpressions = new ArrayList<JsonExpression>(expressions.size());
         for (var exp : expressions) {
             calculatedExpressions.add(exp.Calculate());

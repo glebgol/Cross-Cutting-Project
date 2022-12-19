@@ -31,6 +31,6 @@ public class XmlStream extends DefaultStreamResult {
     }
 
     public XmlStream Calculate() throws JAXBException {
-        return new XmlStream(expressions.Calculate());
+        return new XmlStream(expressions.calculate());
     }
 }

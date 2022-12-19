@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.Serializable;
 
 public interface IXmlExpressionList extends Serializable {
-    void WriteToXmlFile(String xmlFileName) throws IOException, JAXBException;
-    void ReadFromXmlFile(String xmlFileName) throws IOException, JAXBException;
+    void writeToXmlFile(String xmlFileName) throws IOException, JAXBException;
+    void readFromXmlFile(String xmlFileName) throws IOException, JAXBException;
 
-    IXmlExpressionList Calculate();
+    IXmlExpressionList calculate();
 }

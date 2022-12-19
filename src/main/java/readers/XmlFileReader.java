@@ -27,7 +27,7 @@ public class XmlFileReader extends DefaultFileReader {
     @Override
     public IStream read() throws IOException, JAXBException {
         var expressions = new XmlExpressionList();
-        expressions.ReadFromXmlFile(inputFilename);
+        expressions.readFromXmlFile(inputFilename);
         return new XmlStream(expressions);
     }
 

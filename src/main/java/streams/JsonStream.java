@@ -9,9 +9,6 @@ import java.util.StringTokenizer;
 
 public class JsonStream extends DefaultStreamResult {
     protected IJsonExpressionList expressions;
-    public JsonStream(byte[] bytes) {
-        super(bytes);
-    }
     public JsonStream(IJsonExpressionList expressions) {
         this.expressions = expressions;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -26,6 +23,6 @@ public class JsonStream extends DefaultStreamResult {
     }
 
     public JsonStream Calculate() {
-        return new JsonStream(expressions.Calculate());
+        return new JsonStream(expressions.calculate());
     }
 }
