@@ -3,7 +3,7 @@ package ciphers;
 import java.util.List;
 
 public class KeyValidation {
-    public static boolean IsValidDecryptionKeys(List<String> decryptionKeys) {
+    public static boolean isValidDecryptionKeys(List<String> decryptionKeys) {
         for (var key : decryptionKeys) {
             if (key.length() != 16) {
                 return false;
@@ -12,7 +12,7 @@ public class KeyValidation {
         return true;
     }
 
-    public static boolean IsValidDecryptionKey(String decryptionKey) {
+    public static boolean isValidDecryptionKey(String decryptionKey) {
         return decryptionKey.length() == 16;
     }
 }

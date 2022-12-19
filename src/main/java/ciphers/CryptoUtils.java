@@ -19,7 +19,7 @@ public class CryptoUtils {
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES";
 
-    public static void Encrypt(String key, String inputFilename, String outputFilename)
+    public static void encrypt(String key, String inputFilename, String outputFilename)
             throws CryptoException {
         try {
             var inputFile = new File(inputFilename);
@@ -46,7 +46,7 @@ public class CryptoUtils {
         }
     }
 
-    public static void Decrypt(String key, String inputFilename, String outputFilename)
+    public static void decrypt(String key, String inputFilename, String outputFilename)
             throws CryptoException {
         try {
             var inputFile = new File(inputFilename);
@@ -74,7 +74,7 @@ public class CryptoUtils {
         }
     }
 
-    public static IStream GetDecrypting(String key, String inputFilename) throws CryptoException {
+    public static IStream getDecrypting(String key, String inputFilename) throws CryptoException {
         try {
             var inputFile = new File(inputFilename);
 
@@ -90,12 +90,10 @@ public class CryptoUtils {
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
                  | IllegalBlockSizeException | IOException ex) {
-            throw new CryptoException("Error encrypting/decrypting file", ex);
+            throw new CryptoException("Error decrypting file", ex);
         }
     }
-
-    // TODO IStream Decrypt(Istream stream, String key)
-    public static IStream Decrypt(IStream stream, String key) throws CryptoException {
+    public static IStream decrypt(IStream stream, String key) throws CryptoException {
         try {
             Key secretKey = new SecretKeySpec(key.getBytes(), ALGORITHM);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);

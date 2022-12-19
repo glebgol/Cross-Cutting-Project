@@ -20,7 +20,7 @@ public class FileReaderController {
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
                                             @RequestParam(value = "extension") String extension) {
 
-        if (decryptionKeys != null && !KeyValidation.IsValidDecryptionKeys(decryptionKeys)) {
+        if (decryptionKeys != null && !KeyValidation.isValidDecryptionKeys(decryptionKeys)) {
             return ResponseEntity.badRequest().build();
         }
 
@@ -41,11 +41,11 @@ public class FileReaderController {
     public ResponseEntity<EncryptResponse> encrypt(@RequestParam(value= "inputfile") String inputFilename,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) {
-        if (!KeyValidation.IsValidDecryptionKey(key)) {
+        if (!KeyValidation.isValidDecryptionKey(key)) {
             return ResponseEntity.badRequest().build();
         }
         try {
-            CryptoUtils.Encrypt(key, inputFilename, outputFilename);
+            CryptoUtils.encrypt(key, inputFilename, outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
@@ -56,11 +56,11 @@ public class FileReaderController {
     public ResponseEntity<DecryptResponse> decrypt(@RequestParam(value= "inputfile") String inputFilename,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) {
-        if (!KeyValidation.IsValidDecryptionKey(key)) {
+        if (!KeyValidation.isValidDecryptionKey(key)) {
             return ResponseEntity.badRequest().build();
         }
         try {
-            CryptoUtils.Decrypt(key, inputFilename, outputFilename);
+            CryptoUtils.decrypt(key, inputFilename, outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
