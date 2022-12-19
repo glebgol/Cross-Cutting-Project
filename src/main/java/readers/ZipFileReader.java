@@ -1,6 +1,6 @@
 package readers;
 
-import archivers.ArchivationFileManager;
+import archivers.ArchivingFileManager;
 import exceptions.CryptoException;
 import interfaces.IFileReader;
 import interfaces.IStream;
@@ -21,7 +21,7 @@ public class ZipFileReader extends FileReader {
 
     @Override
     public IStream read() throws IOException, CryptoException, JAXBException {
-        var unzippingResult = ArchivationFileManager.GetUnZipped(inputFilename);
+        var unzippingResult = ArchivingFileManager.getUnZipped(inputFilename);
         return _reader.transform(unzippingResult);
     }
 

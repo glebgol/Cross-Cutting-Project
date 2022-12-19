@@ -1,6 +1,6 @@
 package com.example.restapi.controllers;
 
-import archivers.ArchivationFileManager;
+import archivers.ArchivingFileManager;
 import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
@@ -70,7 +70,7 @@ public class FileReaderController {
     @GetMapping("zip/")
     public ResponseEntity<ZipResponse> zip(@RequestParam(value= "inputfile") String inputFilename) {
         try {
-            ArchivationFileManager.ZipFile(inputFilename);
+            ArchivingFileManager.zipFile(inputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
@@ -80,7 +80,7 @@ public class FileReaderController {
     @GetMapping("unzip/")
     public ResponseEntity<UnzipResponse> unZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
         try {
-            ArchivationFileManager.UnZipFile(inputFilename, outputFilename);
+            ArchivingFileManager.unZipFile(inputFilename, outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
