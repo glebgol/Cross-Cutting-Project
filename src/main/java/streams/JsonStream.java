@@ -22,7 +22,7 @@ public class JsonStream extends DefaultStreamResult {
         this.lines = lines;
     }
 
-    public JsonStream Calculate() {
+    public JsonStream calculate() {
         return new JsonStream(expressions.calculate());
     }
 }

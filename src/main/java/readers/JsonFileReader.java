@@ -39,7 +39,7 @@ public class JsonFileReader extends DefaultFileReader {
     @Override
     public IStream calculate(IStream stream) throws IOException, CryptoException {
         var jsonStream = (JsonStream) stream;
-        return jsonStream.Calculate();
+        return jsonStream.calculate();
     }
 
     @Override

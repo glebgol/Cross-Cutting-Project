@@ -45,7 +45,7 @@ public class XmlFileReader extends DefaultFileReader {
     @Override
     public IStream calculate(IStream stream) throws IOException, CryptoException, JAXBException {
         var xmlStream = (XmlStream) stream;
-        return xmlStream.Calculate();
+        return xmlStream.calculate();
     }
 
     @Override

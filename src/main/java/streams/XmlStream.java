@@ -30,7 +30,7 @@ public class XmlStream extends DefaultStreamResult {
         this.lines = lines;
     }
 
-    public XmlStream Calculate() throws JAXBException {
+    public XmlStream calculate() throws JAXBException {
         return new XmlStream(expressions.calculate());
     }
 }
