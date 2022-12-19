@@ -16,36 +16,36 @@ public class JsonFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void Write(IStream stream, String outputFilename) throws IOException {
+    public void write(IStream stream, String outputFilename) throws IOException {
         FileOutputStream outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
     }
 
     @Override
-    public IStream Read() throws IOException {
+    public IStream read() throws IOException {
         var expressions = new JsonExpressionList();
         expressions.ReadFromJsonFile(inputFilename);
         return new JsonStream(expressions);
     }
 
     @Override
-    public IStream Transform(IStream stream) {
+    public IStream transform(IStream stream) {
         var str = new String(stream.bytes());
         var lst = new Gson().fromJson(str, JsonExpressionList.class);
         return new JsonStream(lst);
     }
 
     @Override
-    public IStream Calculate(IStream stream) throws IOException, CryptoException {
+    public IStream calculate(IStream stream) throws IOException, CryptoException {
         var jsonStream = (JsonStream) stream;
         return jsonStream.Calculate();
     }
 
     @Override
-    public void GetResult(String outputFileName) throws IOException, CryptoException {
-        var readingResult = Read();
-        var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult, outputFileName);
+    public void getResult(String outputFileName) throws IOException, CryptoException {
+        var readingResult = read();
+        var calculatedResult = calculate(readingResult);
+        write(calculatedResult, outputFileName);
     }
 }

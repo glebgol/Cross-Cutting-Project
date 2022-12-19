@@ -13,14 +13,14 @@ public class TxtFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void Write(IStream stream, String outputFilename) throws IOException {
+    public void write(IStream stream, String outputFilename) throws IOException {
         FileOutputStream outputFile = new FileOutputStream(outputFilename);
         outputFile.write(stream.bytes());
         outputFile.close();
     }
 
     @Override
-    public IStream Read() throws IOException {
+    public IStream read() throws IOException {
         File inputFile = new File(inputFilename);
         FileInputStream fileInputStream = new FileInputStream(inputFile);
         var bytes = fileInputStream.readAllBytes();
@@ -29,12 +29,12 @@ public class TxtFileReader extends DefaultFileReader {
     }
 
     @Override
-    public IStream Transform(IStream stream) {
+    public IStream transform(IStream stream) {
         return stream;
     }
 
     @Override
-    public IStream Calculate(IStream stream) {
+    public IStream calculate(IStream stream) {
         var calculatedLines = new ArrayList<String>();
         for (var line : stream.lines()) {
             var calculateLine = CalculationEngine.CalculateLine(line);
@@ -44,9 +44,9 @@ public class TxtFileReader extends DefaultFileReader {
     }
 
     @Override
-    public void GetResult(String outputFileName) throws IOException {
-        var readingResult = Read();
-        var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult, outputFileName);
+    public void getResult(String outputFileName) throws IOException {
+        var readingResult = read();
+        var calculatedResult = calculate(readingResult);
+        write(calculatedResult, outputFileName);
     }
 }

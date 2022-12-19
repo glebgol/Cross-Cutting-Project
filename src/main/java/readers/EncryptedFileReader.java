@@ -17,31 +17,31 @@ public class EncryptedFileReader extends FileReader {
     }
 
     @Override
-    public void Write(IStream stream, String outputFilename) throws IOException, CryptoException {
-        _reader.Write(stream, outputFilename);
+    public void write(IStream stream, String outputFilename) throws IOException, CryptoException {
+        _reader.write(stream, outputFilename);
     }
 
     @Override
-    public IStream Read() throws CryptoException, IOException, JAXBException {
+    public IStream read() throws CryptoException, IOException, JAXBException {
         var result = CryptoUtils.GetDecrypting(key, inputFilename);
-        return _reader.Transform(result);
+        return _reader.transform(result);
     }
 
     @Override
-    public IStream Transform(IStream stream) throws CryptoException, IOException, JAXBException {
+    public IStream transform(IStream stream) throws CryptoException, IOException, JAXBException {
         var result = CryptoUtils.Decrypt(stream, key);
-        return _reader.Transform(result);
+        return _reader.transform(result);
     }
 
     @Override
-    public IStream Calculate(IStream stream) throws IOException, CryptoException, JAXBException {
-        return _reader.Calculate(stream);
+    public IStream calculate(IStream stream) throws IOException, CryptoException, JAXBException {
+        return _reader.calculate(stream);
     }
 
     @Override
-    public void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException {
-        var readingResult = Read();
-        var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult, outputFileName);
+    public void getResult(String outputFileName) throws IOException, CryptoException, JAXBException {
+        var readingResult = read();
+        var calculatedResult = calculate(readingResult);
+        write(calculatedResult, outputFileName);
     }
 }

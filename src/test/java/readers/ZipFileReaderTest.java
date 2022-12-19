@@ -20,8 +20,8 @@ class ZipFileReaderTest {
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert
@@ -38,8 +38,8 @@ class ZipFileReaderTest {
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert
@@ -57,8 +57,8 @@ class ZipFileReaderTest {
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert

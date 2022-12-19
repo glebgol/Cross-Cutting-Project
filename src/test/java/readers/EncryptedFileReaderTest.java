@@ -23,8 +23,8 @@ class EncryptedFileReaderTest {
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert
@@ -42,8 +42,8 @@ class EncryptedFileReaderTest {
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert
@@ -58,8 +58,8 @@ class EncryptedFileReaderTest {
         var expectedCalculationResultLines = StreamArguments.CalculatedXmlLines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = (XmlStream) reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = (XmlStream) reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert
@@ -75,8 +75,8 @@ class EncryptedFileReaderTest {
         var expectedCalculationResultLines = StreamArguments.CalculatedJsonLines();
 
         // Act
-        var readingResult = reader.Read();
-        var calculationResult = (JsonStream) reader.Calculate(readingResult);
+        var readingResult = reader.read();
+        var calculationResult = (JsonStream) reader.calculate(readingResult);
         var calculationResultLines = calculationResult.lines();
 
         // Assert

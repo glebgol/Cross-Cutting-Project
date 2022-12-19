@@ -5,21 +5,16 @@ import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
 import com.example.restapi.responses.*;
-import com.example.restapi.utils.FileUploadUtil;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
     @GetMapping("calculate/")
-    public ResponseEntity<CalculateResponse> Calculate(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<CalculateResponse> calculate(@RequestParam(value= "inputfile") String inputFilename,
                             @RequestParam(value = "outputfile") String outputFilename,
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
@@ -35,7 +30,7 @@ public class FileReaderController {
             readerBuilder.setZipping(isZipped);
 
             var reader = readerBuilder.getFileReader();
-            reader.GetResult(outputFilename);
+            reader.getResult(outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
@@ -43,7 +38,7 @@ public class FileReaderController {
     }
 
     @GetMapping("encrypt/")
-    public ResponseEntity<EncryptResponse> Encrypt(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<EncryptResponse> encrypt(@RequestParam(value= "inputfile") String inputFilename,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) {
         if (!KeyValidation.IsValidDecryptionKey(key)) {
@@ -58,7 +53,7 @@ public class FileReaderController {
     }
 
     @GetMapping("decrypt/")
-    public ResponseEntity<DecryptResponse> Decrypt(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<DecryptResponse> decrypt(@RequestParam(value= "inputfile") String inputFilename,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) {
         if (!KeyValidation.IsValidDecryptionKey(key)) {
@@ -73,7 +68,7 @@ public class FileReaderController {
     }
 
     @GetMapping("zip/")
-    public ResponseEntity<ZipResponse> Zip(@RequestParam(value= "inputfile") String inputFilename) {
+    public ResponseEntity<ZipResponse> zip(@RequestParam(value= "inputfile") String inputFilename) {
         try {
             ArchivationFileManager.ZipFile(inputFilename);
         } catch (Exception ex) {
@@ -83,7 +78,7 @@ public class FileReaderController {
     }
 
     @GetMapping("unzip/")
-    public ResponseEntity<UnzipResponse> UnZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
+    public ResponseEntity<UnzipResponse> unZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
         try {
             ArchivationFileManager.UnZipFile(inputFilename, outputFilename);
         } catch (Exception ex) {

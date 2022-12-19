@@ -15,30 +15,30 @@ public class ZipFileReader extends FileReader {
     }
 
     @Override
-    public void Write(IStream stream, String outputFilename) throws IOException, CryptoException {
-        _reader.Write(stream, outputFilename);
+    public void write(IStream stream, String outputFilename) throws IOException, CryptoException {
+        _reader.write(stream, outputFilename);
     }
 
     @Override
-    public IStream Read() throws IOException, CryptoException, JAXBException {
+    public IStream read() throws IOException, CryptoException, JAXBException {
         var unzippingResult = ArchivationFileManager.GetUnZipped(inputFilename);
-        return _reader.Transform(unzippingResult);
+        return _reader.transform(unzippingResult);
     }
 
     @Override
-    public IStream Transform(IStream stream) throws IOException, CryptoException, JAXBException {
-        return _reader.Transform(stream);
+    public IStream transform(IStream stream) throws IOException, CryptoException, JAXBException {
+        return _reader.transform(stream);
     }
 
     @Override
-    public IStream Calculate(IStream stream) throws IOException, CryptoException, JAXBException {
-        return _reader.Calculate(stream);
+    public IStream calculate(IStream stream) throws IOException, CryptoException, JAXBException {
+        return _reader.calculate(stream);
     }
 
     @Override
-    public void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException {
-        var readingResult = Read();
-        var calculatedResult = Calculate(readingResult);
-        Write(calculatedResult, outputFileName);
+    public void getResult(String outputFileName) throws IOException, CryptoException, JAXBException {
+        var readingResult = read();
+        var calculatedResult = calculate(readingResult);
+        write(calculatedResult, outputFileName);
     }
 }

@@ -15,7 +15,7 @@ class TxtFileReaderTest {
         var expectedCalculationResultLines = expectedCalculationResult.lines();
 
         // Act
-        var calculationResult = spyReader.Calculate(streamForCalculation);
+        var calculationResult = spyReader.calculate(streamForCalculation);
         var calculationResultLines = calculationResult.lines();
 
         // Assert

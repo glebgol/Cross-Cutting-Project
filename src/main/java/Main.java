@@ -30,12 +30,12 @@ public class Main {
         builder.setZipping(true);
 
         var reader = builder.getFileReader();
-        reader.GetResult(TxtOutputFileName);
+        reader.getResult(TxtOutputFileName);
 
         var jsonReader = new JsonFileReader(JsonFileName);
-        jsonReader.GetResult(JsonOutputFileName);
+        jsonReader.getResult(JsonOutputFileName);
 
         var xmlReader = new XmlFileReader(XmlFileName);
-        xmlReader.GetResult(XmlOutputFileName);
+        xmlReader.getResult(XmlOutputFileName);
     }
 }

@@ -7,9 +7,9 @@ import java.io.IOException;
 
 public interface IFileReader {
     String getInputFilename();
-    void Write(IStream stream, String outputFilename) throws IOException, CryptoException;
-    IStream Read() throws IOException, CryptoException, JAXBException;
-    IStream Transform(IStream stream) throws IOException, CryptoException, JAXBException;
-    IStream Calculate(IStream stream) throws IOException, CryptoException, JAXBException;
-    void GetResult(String outputFileName) throws IOException, CryptoException, JAXBException;
+    void write(IStream stream, String outputFilename) throws IOException, CryptoException;
+    IStream read() throws IOException, CryptoException, JAXBException;
+    IStream transform(IStream stream) throws IOException, CryptoException, JAXBException;
+    IStream calculate(IStream stream) throws IOException, CryptoException, JAXBException;
+    void getResult(String outputFileName) throws IOException, CryptoException, JAXBException;
 }
