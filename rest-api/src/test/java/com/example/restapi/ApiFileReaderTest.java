@@ -1,6 +1,5 @@
 package com.example.restapi;
 
-import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -15,7 +14,7 @@ class ApiFileReaderTest {
     protected final String InputFilename = "rest-api//src//test//resources//input-file.txt";
     protected final String OutputFilename = "rest-api//src//test//resources//output-file.txt";
     protected final String DecryptionKeys = "qwsdcvbgfthyrdfw,asdfghjkqewrtyto";
-    protected final Object[] DecryptionKeysList = new String[] {"qwsdcvbgfthyrdfw", "asdfghjkqewrtyto" };
+    protected final Object[] DecryptionKeysList = new String[] { "qwsdcvbgfthyrdfw", "asdfghjkqewrtyto" };
     protected final String DecryptionKey = "qwsdcvbgfthyrdfw";
     protected final String FileExtension = "txt";
     protected final String NotValidExtension = "yaml";
@@ -24,45 +23,54 @@ class ApiFileReaderTest {
 
     @Test
     void Calculate_ExistingFile_Returns_200_StatusCode() {
-        given().contentType(ContentType.JSON)
+        given()
                 .queryParam("inputfile", ExistingFilename)
                 .queryParam("outputfile", OutputFilename)
                 .queryParam("iszipped", IsZipped)
                 .queryParam("decryptionkeys", DecryptionKeysList)
                 .queryParam("extension", FileExtension)
-                .log().parameters()
-                .log().uri()
-                .when().get(CalculateUri).then().log().all().statusCode(200);
+                .expect().statusCode(200)
+                .when()
+                .get(CalculateUri).then().log().all();
     }
 
     @Test
     void Calculate_NonExistingFile_Returns_400_StatusCode() {
-        var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, NonExistingFilename, OutputFilename, DecryptionKeys, FileExtension);
-
-        when()
-                .get(uri)
-                .then()
-                .statusCode(400);
+        given()
+                .queryParam("inputfile", NonExistingFilename)
+                .queryParam("outputfile", OutputFilename)
+                .queryParam("iszipped", IsZipped)
+                .queryParam("decryptionkeys", DecryptionKeysList)
+                .queryParam("extension", FileExtension)
+                .expect().statusCode(400)
+                .when()
+                .get(CalculateUri).then().log().all();
     }
 
     @Test
     void Calculate_NotValidKeys_Returns_400_StatusCode() {
-        var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, ExistingFilename, OutputFilename, NotValidDecryptionKeys, FileExtension);
-
-        when()
-                .get(uri)
-                .then()
-                .statusCode(400);
+        given()
+                .queryParam("inputfile", ExistingFilename)
+                .queryParam("outputfile", OutputFilename)
+                .queryParam("iszipped", IsZipped)
+                .queryParam("decryptionkeys", NotValidDecryptionKeys)
+                .queryParam("extension", FileExtension)
+                .expect().statusCode(400)
+                .when()
+                .get(CalculateUri).then().log().all();
     }
 
     @Test
     void Calculate_NotValidExtension_Returns_400_StatusCode() {
-        var uri = String.format("%s/calculate/?inputfile=%s&outputfile=%s&iszipped=true&decryptionkeys=%s&extension=%s", Uri, ExistingFilename, OutputFilename, DecryptionKeys, NotValidExtension);
-
-        when()
-                .get(uri)
-                .then()
-                .statusCode(400);
+        given()
+                .queryParam("inputfile", ExistingFilename)
+                .queryParam("outputfile", OutputFilename)
+                .queryParam("iszipped", IsZipped)
+                .queryParam("decryptionkeys", DecryptionKeysList)
+                .queryParam("extension", NotValidExtension)
+                .expect().statusCode(400)
+                .when()
+                .get(CalculateUri).then().log().all();
     }
 
     @Test
