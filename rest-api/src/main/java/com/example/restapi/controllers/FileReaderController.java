@@ -35,6 +35,7 @@ public class FileReaderController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
     @GetMapping("calculate/")
     public ResponseEntity<CalculateResponse> calculate(@RequestParam(value= "inputfile") String inputFilename,
                             @RequestParam(value = "outputfile") String outputFilename,
