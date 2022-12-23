@@ -4,22 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rest Assured tests">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/dao/FileDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/interfaces/IFileDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/interfaces/IFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/model/FileInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/services/FileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Deleting">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_12_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_rest_assured_5_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_68.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_68.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_68.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_23.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_23.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileDownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/FileUploadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/dao/FileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/interfaces/IFileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/interfaces/IFileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/model/FileInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/services/FileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileDownloadUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +125,15 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;
+      &quot;sqlserver.localdb&quot;,
+      &quot;postgresql&quot;
     ]
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.restapi" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Cross-Cutting-Project\selenium-ui-tests" />
       <recent name="D:\Anton\Cross-Cutting-Project" />
@@ -123,20 +155,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FileManager">
-    <configuration name="FileManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.restapi.utils.FileManager" />
-      <module name="rest-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.restapi.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ApiTests">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -162,7 +181,6 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.FileManager" />
       <item itemvalue="HTTP Request.generated-requests | #10" />
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="JUnit.ApiTests" />
@@ -174,7 +192,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FileManager" />
         <item itemvalue="HTTP Request.generated-requests | #10" />
       </list>
     </recent_temporary>
@@ -227,63 +244,14 @@
       <workItem from="1671023848696" duration="469000" />
       <workItem from="1671047763452" duration="1126000" />
       <workItem from="1671090719696" duration="178000" />
-      <workItem from="1671094802204" duration="8786000" />
-    </task>
-    <task id="LOCAL-00081" summary="Rename ProcessingTxtFile to CalculationEngine">
-      <created>1668795782385</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1668795782385</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Calculated Json file">
-      <created>1668796040372</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1668796040372</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Refactor streams">
-      <created>1668796994992</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1668796994992</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Added JsonFileReader Test">
-      <created>1668801797314</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1668801797314</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Added new api test (for not valid keys)">
-      <created>1668802634995</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1668802634995</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Changed FileReaderBuilder">
-      <created>1668803455562</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1668803455562</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Added file extension">
-      <created>1668804459024</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1668804459024</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Added xml">
-      <created>1668843343598</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1668843343599</updated>
+      <workItem from="1671094802204" duration="11630000" />
+      <workItem from="1671209487659" duration="4084000" />
+      <workItem from="1671287736299" duration="497000" />
+      <workItem from="1671310992649" duration="670000" />
+      <workItem from="1671427017648" duration="985000" />
+      <workItem from="1671462135389" duration="4928000" />
+      <workItem from="1671659094838" duration="1266000" />
+      <workItem from="1671702521294" duration="12564000" />
     </task>
     <task id="LOCAL-00089" summary="Added Xml Expression">
       <created>1668843358947</created>
@@ -572,7 +540,63 @@
       <option name="project" value="LOCAL" />
       <updated>1671123781707</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="File Manager, upload, download">
+      <created>1671140817479</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1671140817479</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Refactor naming">
+      <created>1671462499485</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1671462499486</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Refactor xml and json expressions">
+      <created>1671462901167</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1671462901168</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Rename and refactor ArchivingFileManager">
+      <created>1671463115332</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1671463115332</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Refactor CryptoUtils">
+      <created>1671463329980</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1671463329980</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Change xml, json streams">
+      <created>1671465076121</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1671465076121</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Added query params to rest-assured tests">
+      <created>1671705793807</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1671705793807</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Added query params to rest-assured tests">
+      <created>1671729524514</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1671729524514</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,15 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ZipResponse and UnzipResponse" />
-    <MESSAGE value="Created api test for not valid file extension" />
-    <MESSAGE value="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)" />
-    <MESSAGE value="Refactoring readers" />
-    <MESSAGE value="Rename getResult in FileBuilder to getFileReader" />
-    <MESSAGE value="Calculated xml and json files" />
-    <MESSAGE value="Added proxy" />
-    <MESSAGE value="Create components" />
-    <MESSAGE value="Create routing" />
     <MESSAGE value="Fetch calculating" />
     <MESSAGE value="Deleted default css" />
     <MESSAGE value="temp" />
@@ -622,7 +637,16 @@
     <MESSAGE value="Created FileUploadController" />
     <MESSAGE value="Added FileDownloadUtil and FileDownloadController" />
     <MESSAGE value="Rest Assured tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rest Assured tests" />
+    <MESSAGE value="File Manager, upload, download" />
+    <MESSAGE value="Refactor naming" />
+    <MESSAGE value="Refactor xml and json expressions" />
+    <MESSAGE value="Rename ArchivingFileManager" />
+    <MESSAGE value="Rename and refactor ArchivingFileManager" />
+    <MESSAGE value="Refactor CryptoUtils" />
+    <MESSAGE value="Change xml, json streams" />
+    <MESSAGE value="Added query params to rest-assured tests" />
+    <MESSAGE value="Deleting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
