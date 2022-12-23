@@ -12,6 +12,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -26,38 +27,46 @@ public class FileReaderController {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         long size = multipartFile.getSize();
 
-        String filecode = FileUploadUtil.saveFile(fileName, multipartFile);
+        FileUploadUtil.saveFile(fileName, multipartFile);
 
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(fileName);
         response.setSize(size);
-        response.setDownloadUri("/downloadFile/" + filecode);
+        response.setDownloadUri("/downloadFile/" + fileName);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("calculate/")
-    public ResponseEntity<CalculateResponse> calculate(@RequestParam(value= "inputfile") String inputFilename,
+    @PostMapping("/calculate")
+    public ResponseEntity<FileUploadResponse> calculate(@RequestParam("file") MultipartFile inputFile,
                             @RequestParam(value = "outputfile") String outputFilename,
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
-                                            @RequestParam(value = "extension") String extension) {
+                                            @RequestParam(value = "extension") String extension) throws IOException {
+        FileUploadUtil.saveFile(inputFile.getOriginalFilename(), inputFile);
 
         if (decryptionKeys != null && !KeyValidation.isValidDecryptionKeys(decryptionKeys)) {
             return ResponseEntity.badRequest().build();
         }
 
         try {
-            var readerBuilder = new FileReaderBuilder(extension, inputFilename);
+            var readerBuilder = new FileReaderBuilder(extension, inputFile.getOriginalFilename());
             readerBuilder.setEncrypting(decryptionKeys);
             readerBuilder.setZipping(isZipped);
 
+            File file = new File("Files-Upload/" + outputFilename);
             var reader = readerBuilder.getFileReader();
-            reader.getResult(outputFilename);
+            reader.getResult(file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ok().body(new CalculateResponse(inputFilename, outputFilename));
+
+        FileUploadResponse response = new FileUploadResponse();
+        response.setFileName("Files-Upload/" + outputFilename);
+        response.setSize(inputFile.getSize());
+        response.setDownloadUri("/downloadFile/" + outputFilename);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("encrypt/")

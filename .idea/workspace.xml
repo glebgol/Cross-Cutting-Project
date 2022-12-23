@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="File-upload-download util">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileDownloadController.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="File download controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileDownloadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileDownloadUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,14 +212,7 @@
       <workItem from="1671427017648" duration="985000" />
       <workItem from="1671462135389" duration="4928000" />
       <workItem from="1671659094838" duration="1266000" />
-      <workItem from="1671702521294" duration="15190000" />
-    </task>
-    <task id="LOCAL-00091" summary="Added FileReaderBuilder constructor with string fileExtension">
-      <created>1668852991800</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1668852991801</updated>
+      <workItem from="1671702521294" duration="17706000" />
     </task>
     <task id="LOCAL-00092" summary="Renamed JsonExpression">
       <created>1668853455595</created>
@@ -556,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671808644386</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="File download controller">
+      <created>1671810608298</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1671810608298</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted default css" />
     <MESSAGE value="temp" />
     <MESSAGE value="css" />
     <MESSAGE value="Fetch Calculating and added result info message" />
@@ -606,7 +606,8 @@
     <MESSAGE value="Added query params to rest-assured tests" />
     <MESSAGE value="Deleting" />
     <MESSAGE value="File-upload-download util" />
-    <option name="LAST_COMMIT_MESSAGE" value="File-upload-download util" />
+    <MESSAGE value="File download controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="File download controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
