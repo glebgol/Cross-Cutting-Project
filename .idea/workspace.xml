@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="File download controller">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactor getResult method (returns file)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileDownloadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileDownloadUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/utils/FileUploadUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" root0="FORCE_HIGHLIGHTING" />
@@ -120,20 +119,27 @@
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
     <configuration name="TestSelenium" type="TestNG" nameIsGenerated="true">
       <module name="selenium-ui-tests" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.seleniumuitests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.example.seleniumuitests" />
       <option name="MAIN_CLASS_NAME" value="com.example.seleniumuitests.TestSelenium" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -143,7 +149,6 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="HTTP Request.generated-requests | #10" />
-      <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="JUnit.ApiTests" />
       <item itemvalue="JUnit.FileReaderTests" />
       <item itemvalue="JUnit.CalculatingTests" />
@@ -213,6 +218,7 @@
       <workItem from="1671462135389" duration="4928000" />
       <workItem from="1671659094838" duration="1266000" />
       <workItem from="1671702521294" duration="17706000" />
+      <workItem from="1671884801670" duration="5957000" />
     </task>
     <task id="LOCAL-00092" summary="Renamed JsonExpression">
       <created>1668853455595</created>

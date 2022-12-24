@@ -17,6 +17,8 @@ const Calculate = () => {
     const [extension, setExtension] = useState('Txt')
     const [resultInfo, setResultInfo] = useState('')
 
+    const [downloadUri, setDownloadUri] = useState('')
+
     const inputFileBlurHandler = (e) => {
         setInputFileIsDirty(true)
     }
@@ -40,7 +42,23 @@ const Calculate = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetchCalculating(inputFile, outputFile, isZipped, keys, extension, setResultInfo);
+
+        let url = 'api/file-reader/calculate/?inputfile=' + inputFile + '&outputfile=' + outputFile +
+            '&iszipped=' + isZipped + '&extension=' + extension;
+        if (keys !== '') {
+            url += '&decryptionkeys=' + keys
+        }
+        fetch(url,  {
+            method: 'POST'
+        })
+            .then(response => response.json())
+            .then(data => {
+                setDownloadUri(data.downloadUri);
+                console.log(downloadUri);
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
     return (
         <div>
@@ -50,12 +68,12 @@ const Calculate = () => {
                 <input
                     placeholder='Enter input file name:'
                     name='inputFile'
-                    type="text"
+                    type="file"
                     required
                     value={inputFile}
-                    onBlur={e => inputFileBlurHandler(e)}
-                    onChange={(e) => inputFileOnChangeHandler(e)}
-                />
+                    onChange={(e) => {
+                        setInputFile(e.target.value);
+                    }}                />
                 <label>Output file:</label>
                 {(outputFileIsDirty && outputFileError) && <div style={{color:'red'}}>{outputFileError}</div>}
                 <input
