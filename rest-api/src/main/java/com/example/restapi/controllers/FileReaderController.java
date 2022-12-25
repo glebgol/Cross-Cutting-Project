@@ -63,14 +63,14 @@ public class FileReaderController {
 
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName("Files-Upload/" + outputFilename);
-        response.setSize(inputFile.getSize());
+        //response.setSize(inputFile.getSize());
         response.setDownloadUri("/downloadFile/" + outputFilename);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("encrypt/")
-    public ResponseEntity<EncryptResponse> encrypt(@RequestParam(value= "inputfile") String inputFilename,
+    @PostMapping("encrypt/")
+    public ResponseEntity<FileUploadResponse> encrypt(@RequestParam(value= "inputfile") String inputFilename,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) {
         if (!KeyValidation.isValidDecryptionKey(key)) {
@@ -81,7 +81,11 @@ public class FileReaderController {
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ok(new EncryptResponse(inputFilename, outputFilename));
+        FileUploadResponse response = new FileUploadResponse();
+        response.setFileName("Files-Upload/" + outputFilename);
+        //response.setSize(inputFile.getSize());
+        response.setDownloadUri("/downloadFile/" + outputFilename);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("decrypt/")
