@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Upload and calculate file">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Download calculating file">
+      <change afterPath="$PROJECT_DIR$/reactui/src/services/DownloadFile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,9 +19,9 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -220,14 +220,7 @@
       <workItem from="1671659094838" duration="1266000" />
       <workItem from="1671702521294" duration="17706000" />
       <workItem from="1671884801670" duration="12651000" />
-      <workItem from="1671990840528" duration="3483000" />
-    </task>
-    <task id="LOCAL-00095" summary="Added unzip endpoint">
-      <created>1668897410726</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1668897410726</updated>
+      <workItem from="1671990840528" duration="4169000" />
     </task>
     <task id="LOCAL-00096" summary="Added test for calculating Encrypted Xml file">
       <created>1668936327110</created>
@@ -565,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671994103158</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Download calculating file">
+      <created>1671995031893</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1671995031893</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fetch Encrypting" />
     <MESSAGE value="Fetch Decrypting" />
     <MESSAGE value="Fetch Zip and UnZip" />
     <MESSAGE value="Renamed react-ui module" />
@@ -615,7 +614,8 @@
     <MESSAGE value="fetch calculating" />
     <MESSAGE value="IFileReader default method getResult" />
     <MESSAGE value="Upload and calculate file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload and calculate file" />
+    <MESSAGE value="Download calculating file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Download calculating file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
