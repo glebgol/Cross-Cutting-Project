@@ -11,5 +11,9 @@ public interface IFileReader {
     IStream read() throws IOException, CryptoException, JAXBException;
     IStream transform(IStream stream) throws IOException, CryptoException, JAXBException;
     IStream calculate(IStream stream) throws IOException, CryptoException, JAXBException;
-    void getResult(String outputFileName) throws IOException, CryptoException, JAXBException;
+    default void getResult(String outputFileName) throws IOException, CryptoException, JAXBException {
+        var readingResult = read();
+        var calculatedResult = calculate(readingResult);
+        write(calculatedResult, outputFileName);
+    }
 }

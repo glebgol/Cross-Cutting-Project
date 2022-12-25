@@ -47,11 +47,4 @@ public class XmlFileReader extends DefaultFileReader {
         var xmlStream = (XmlStream) stream;
         return xmlStream.calculate();
     }
-
-    @Override
-    public void getResult(String outputFileName) throws IOException, CryptoException, JAXBException {
-        var readingResult = read();
-        var calculatedResult = calculate(readingResult);
-        write(calculatedResult, outputFileName);
-    }
 }

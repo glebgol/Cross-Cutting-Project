@@ -37,11 +37,4 @@ public class EncryptedFileReader extends FileReader {
     public IStream calculate(IStream stream) throws IOException, CryptoException, JAXBException {
         return _reader.calculate(stream);
     }
-
-    @Override
-    public void getResult(String outputFileName) throws IOException, CryptoException, JAXBException {
-        var readingResult = read();
-        var calculatedResult = calculate(readingResult);
-        write(calculatedResult, outputFileName);
-    }
 }

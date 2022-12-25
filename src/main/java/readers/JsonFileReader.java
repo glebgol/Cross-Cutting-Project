@@ -41,11 +41,4 @@ public class JsonFileReader extends DefaultFileReader {
         var jsonStream = (JsonStream) stream;
         return jsonStream.calculate();
     }
-
-    @Override
-    public void getResult(String outputFileName) throws IOException, CryptoException {
-        var readingResult = read();
-        var calculatedResult = calculate(readingResult);
-        write(calculatedResult, outputFileName);
-    }
 }

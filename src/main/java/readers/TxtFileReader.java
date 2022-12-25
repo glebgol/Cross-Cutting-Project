@@ -42,11 +42,4 @@ public class TxtFileReader extends DefaultFileReader {
         }
         return new TxtStream(calculatedLines);
     }
-
-    @Override
-    public void getResult(String outputFileName) throws IOException {
-        var readingResult = read();
-        var calculatedResult = calculate(readingResult);
-        write(calculatedResult, outputFileName);
-    }
 }
