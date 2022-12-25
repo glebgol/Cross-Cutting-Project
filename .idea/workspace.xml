@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="fetch calculating">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="IFileReader default method getResult">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +115,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileReaderTests">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -223,14 +218,8 @@
       <workItem from="1671462135389" duration="4928000" />
       <workItem from="1671659094838" duration="1266000" />
       <workItem from="1671702521294" duration="17706000" />
-      <workItem from="1671884801670" duration="7122000" />
-    </task>
-    <task id="LOCAL-00093" summary="Add Decrypt endpoint">
-      <created>1668892860486</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1668892860487</updated>
+      <workItem from="1671884801670" duration="12651000" />
+      <workItem from="1671990840528" duration="2667000" />
     </task>
     <task id="LOCAL-00094" summary="Read, Write, Calculate Xml file">
       <created>1668895960492</created>
@@ -568,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671914399685</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="IFileReader default method getResult">
+      <created>1671927236742</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1671927236742</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +589,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="css" />
     <MESSAGE value="Fetch Calculating and added result info message" />
     <MESSAGE value="Fetch Encrypting" />
     <MESSAGE value="Fetch Decrypting" />
@@ -618,7 +613,8 @@
     <MESSAGE value="File-upload-download util" />
     <MESSAGE value="File download controller" />
     <MESSAGE value="fetch calculating" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch calculating" />
+    <MESSAGE value="IFileReader default method getResult" />
+    <option name="LAST_COMMIT_MESSAGE" value="IFileReader default method getResult" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

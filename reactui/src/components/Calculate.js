@@ -3,9 +3,12 @@ import {Link} from "react-router-dom";
 import fetchCalculating from "../fetching/fetchCalculating";
 
 const Calculate = () => {
-    const [inputFile, setInputFile] = useState('')
-    const [inputFileIsDirty, setInputFileIsDirty] = useState(false)
-    const [inputFileError, setInputFileError] = useState('Input file name can\'t be empty')
+    const [selectedFile, setSelectedFile] = useState();
+    const [isFilePicked, setIsFilePicked] = useState(false);
+    const changeHandler = (event) => {
+        setSelectedFile(event.target.files[0]);
+        setIsFilePicked(true);
+    };
 
     const [outputFile, setOutputFile] = useState('')
     const [outputFileIsDirty, setOutputFileIsDirty] = useState(false)
@@ -19,37 +22,25 @@ const Calculate = () => {
 
     const [downloadUri, setDownloadUri] = useState('')
 
-    const inputFileBlurHandler = (e) => {
-        setInputFileIsDirty(true)
-    }
+
     const outputFileBlurHandler = (e) => {
         setOutputFileIsDirty(true)
     }
 
-    const inputFileOnChangeHandler = (e) => {
-        setInputFile(e.target.value)
 
-        //todo validation
-        const allowedExtensions =
-            '.txt';
-
-        if (e.target.value !== '' && !allowedExtensions.exec(e.target.value)) {
-            setInputFileError('Not valid file name')
-        } else {
-            setInputFile(e.target.value)
-            setInputFileError('')
-        }
-    }
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formData = new FormData();
+        formData.append("file", selectedFile);
+        formData.append("outputfile", outputFile);
+        formData.append("iszipped", isZipped.toString());
+        formData.append("decryptionkeys", keys);
+        formData.append("extension", extension);
+        let url = 'api/file-reader/calculate';
 
-        let url = 'api/file-reader/calculate/?inputfile=' + inputFile + '&outputfile=' + outputFile +
-            '&iszipped=' + isZipped + '&extension=' + extension;
-        if (keys !== '') {
-            url += '&decryptionkeys=' + keys
-        }
         fetch(url,  {
-            method: 'POST'
+            method: 'POST',
+            body: formData
         })
             .then(response => response.json())
             .then(data => {
@@ -64,16 +55,20 @@ const Calculate = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Input file:</label>
-                {(inputFileIsDirty && inputFileError) && <div style={{color:'red'}}>{inputFileError}</div>}
-                <input
-                    placeholder='Enter input file name:'
-                    name='inputFile'
-                    type="file"
-                    required
-                    value={inputFile}
-                    onChange={(e) => {
-                        setInputFile(e.target.value);
-                    }}                />
+                <input type="file" name="file" onChange={changeHandler} />
+                {isFilePicked ? (
+                    <div>
+                        <p>Filename: {selectedFile.name}</p>
+                        <p>Filetype: {selectedFile.type}</p>
+                        <p>Size in bytes: {selectedFile.size}</p>
+                        <p>
+                            lastModifiedDate:{' '}
+                            {selectedFile.lastModifiedDate.toLocaleDateString()}
+                        </p>
+                    </div>
+                ) : (
+                    <p>Select a file to show details</p>
+                )}
                 <label>Output file:</label>
                 {(outputFileIsDirty && outputFileError) && <div style={{color:'red'}}>{outputFileError}</div>}
                 <input
