@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="IFileReader default method getResult">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Upload and calculate file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +116,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -219,14 +220,7 @@
       <workItem from="1671659094838" duration="1266000" />
       <workItem from="1671702521294" duration="17706000" />
       <workItem from="1671884801670" duration="12651000" />
-      <workItem from="1671990840528" duration="2667000" />
-    </task>
-    <task id="LOCAL-00094" summary="Read, Write, Calculate Xml file">
-      <created>1668895960492</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1668895960492</updated>
+      <workItem from="1671990840528" duration="3483000" />
     </task>
     <task id="LOCAL-00095" summary="Added unzip endpoint">
       <created>1668897410726</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671927236742</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Upload and calculate file">
+      <created>1671994103158</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1671994103158</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fetch Calculating and added result info message" />
     <MESSAGE value="Fetch Encrypting" />
     <MESSAGE value="Fetch Decrypting" />
     <MESSAGE value="Fetch Zip and UnZip" />
@@ -614,7 +614,8 @@
     <MESSAGE value="File download controller" />
     <MESSAGE value="fetch calculating" />
     <MESSAGE value="IFileReader default method getResult" />
-    <option name="LAST_COMMIT_MESSAGE" value="IFileReader default method getResult" />
+    <MESSAGE value="Upload and calculate file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload and calculate file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

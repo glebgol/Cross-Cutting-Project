@@ -1,6 +1,8 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import fetchCalculating from "../fetching/fetchCalculating";
+import axios from 'axios';
+import fileDownload from 'js-file-download';
 
 const Calculate = () => {
     const [selectedFile, setSelectedFile] = useState();
@@ -50,6 +52,14 @@ const Calculate = () => {
             .catch(err => {
                 console.log(err);
             });
+    }
+    const download = () => {
+        axios.get(downloadUri, {
+            responseType: 'blob',
+        })
+            .then((res) => {
+                fileDownload(res.data, outputFile)
+            })
     }
     return (
         <div>
@@ -110,6 +120,7 @@ const Calculate = () => {
             </form>
             <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
+            <button onClick={download}>Download</button>
         </div>
     );
 }
