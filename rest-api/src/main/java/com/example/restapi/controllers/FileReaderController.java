@@ -89,7 +89,7 @@ public class FileReaderController {
     }
 
     @GetMapping("decrypt/")
-    public ResponseEntity<DecryptResponse> decrypt(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<FileUploadResponse> decrypt(@RequestParam(value= "inputfile") String inputFilename,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) {
         if (!KeyValidation.isValidDecryptionKey(key)) {
@@ -100,7 +100,11 @@ public class FileReaderController {
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ok(new DecryptResponse(inputFilename, outputFilename));
+        FileUploadResponse response = new FileUploadResponse();
+        response.setFileName("Files-Upload/" + outputFilename);
+        //response.setSize(inputFile.getSize());
+        response.setDownloadUri("/downloadFile/" + outputFilename);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("zip/")
