@@ -1,6 +1,5 @@
 package com.example.restapi.utils;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -11,15 +10,15 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 public class FileUploadUtil {
-    public static void saveFile(String fileName, MultipartFile multipartFile)
+    public static void saveFile(String uploadPathName, MultipartFile multipartFile)
             throws IOException {
-        Path uploadPath = Paths.get("Files-Upload");
+        Path uploadPath = Paths.get(uploadPathName);
 
         if (!Files.exists(uploadPath)) {
             Files.createDirectories(uploadPath);
         }
 
-
+        String fileName = multipartFile.getOriginalFilename();
         try (InputStream inputStream = multipartFile.getInputStream()) {
             Path filePath = uploadPath.resolve(fileName);
             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);

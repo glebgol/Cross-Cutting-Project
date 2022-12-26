@@ -19,6 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
+    private final String FILE_UPLOAD_PATH = "Files-Upload/";
     @PostMapping("/uploadFile")
     public ResponseEntity<FileUploadResponse> uploadFile(
             @RequestParam("file") MultipartFile multipartFile)
@@ -27,7 +28,7 @@ public class FileReaderController {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         long size = multipartFile.getSize();
 
-        FileUploadUtil.saveFile(fileName, multipartFile);
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, multipartFile);
 
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(fileName);
@@ -43,7 +44,7 @@ public class FileReaderController {
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
                                             @RequestParam(value = "extension") String extension) throws IOException {
-        FileUploadUtil.saveFile(inputFile.getOriginalFilename(), inputFile);
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
 
         if (decryptionKeys != null && !KeyValidation.isValidDecryptionKeys(decryptionKeys)) {
             return ResponseEntity.badRequest().build();
@@ -54,7 +55,7 @@ public class FileReaderController {
             readerBuilder.setEncrypting(decryptionKeys);
             readerBuilder.setZipping(isZipped);
 
-            File file = new File("Files-Upload/" + outputFilename);
+            File file = new File(FILE_UPLOAD_PATH + outputFilename);
             var reader = readerBuilder.getFileReader();
             reader.getResult(file.getAbsolutePath());
         } catch (Exception ex) {
@@ -62,7 +63,7 @@ public class FileReaderController {
         }
 
         FileUploadResponse response = new FileUploadResponse();
-        response.setFileName("Files-Upload/" + outputFilename);
+        response.setFileName(FILE_UPLOAD_PATH + outputFilename);
         //response.setSize(inputFile.getSize());
         response.setDownloadUri("/downloadFile/" + outputFilename);
 
@@ -70,38 +71,46 @@ public class FileReaderController {
     }
 
     @PostMapping("encrypt/")
-    public ResponseEntity<FileUploadResponse> encrypt(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<FileUploadResponse> encrypt(@RequestParam(value= "inputfile") MultipartFile inputFile,
                                                    @RequestParam(value = "outputfile") String outputFilename,
-                                                   @RequestParam(value="key") String key) {
+                                                   @RequestParam(value="key") String key) throws IOException {
         if (!KeyValidation.isValidDecryptionKey(key)) {
             return ResponseEntity.badRequest().build();
         }
+        FileUploadUtil.saveFile(inputFile.getOriginalFilename(), inputFile);
+
         try {
-            CryptoUtils.encrypt(key, inputFilename, outputFilename);
+            File file = new File(FILE_UPLOAD_PATH + outputFilename);
+            file.createNewFile();
+            CryptoUtils.encrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.internalServerError().build();
         }
         FileUploadResponse response = new FileUploadResponse();
-        response.setFileName("Files-Upload/" + outputFilename);
+        response.setFileName(FILE_UPLOAD_PATH + outputFilename);
         //response.setSize(inputFile.getSize());
         response.setDownloadUri("/downloadFile/" + outputFilename);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("decrypt/")
-    public ResponseEntity<FileUploadResponse> decrypt(@RequestParam(value= "inputfile") String inputFilename,
+    public ResponseEntity<FileUploadResponse> decrypt(@RequestParam(value= "inputfile") MultipartFile inputFile,
                                                    @RequestParam(value = "outputfile") String outputFilename,
-                                                   @RequestParam(value="key") String key) {
-        if (!KeyValidation.isValidDecryptionKey(key)) {
-            return ResponseEntity.badRequest().build();
-        }
+                                                   @RequestParam(value="key") String key) throws IOException {
+//        if (!KeyValidation.isValidDecryptionKey(key)) {
+//            return ResponseEntity.badRequest().build();
+//        }
+        FileUploadUtil.saveFile(inputFile.getOriginalFilename(), inputFile);
         try {
-            CryptoUtils.decrypt(key, inputFilename, outputFilename);
+            File file = new File(FILE_UPLOAD_PATH + outputFilename);
+            file.createNewFile();
+
+            CryptoUtils.decrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.internalServerError().build();
         }
         FileUploadResponse response = new FileUploadResponse();
-        response.setFileName("Files-Upload/" + outputFilename);
+        response.setFileName(FILE_UPLOAD_PATH + outputFilename);
         //response.setSize(inputFile.getSize());
         response.setDownloadUri("/downloadFile/" + outputFilename);
         return new ResponseEntity<>(response, HttpStatus.OK);
