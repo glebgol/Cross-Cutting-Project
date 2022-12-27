@@ -1,26 +1,64 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import fetchDecrypting from "../fetching/fetchDecrypting";
+import downloadFile from "../services/DownloadFile";
 
 const Decrypt = () => {
-    const [inputFile, setInputFile] = useState('')
+    const [selectedFile, setSelectedFile] = useState();
+    const [isFilePicked, setIsFilePicked] = useState(false);
+    const changeHandler = (event) => {
+        setSelectedFile(event.target.files[0]);
+        setIsFilePicked(true);
+    };
+
     const [outputFile, setOutputFile] = useState('')
     const [key, setKey] = useState('')
     const [resultInfo, setResultInfo] = useState('')
+    const [isDecrypted, setIsDecrypted] = useState(false)
+    const [downloadUri, setDownloadUri] = useState('')
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetchDecrypting(inputFile, outputFile, key, setResultInfo);
+        const formData = new FormData();
+        formData.append("file", selectedFile);
+        formData.append("outputfile", outputFile);
+        formData.append("key", key);
+
+        fetch('api/file-reader/decrypt', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                setDownloadUri(data.downloadUri);
+                setIsDecrypted(true);
+                console.log(downloadUri);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+    const download = () => {
+        downloadFile(downloadUri, outputFile);
     }
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Input file:</label>
-                <input
-                    type="text"
-                    required
-                    value={inputFile}
-                    onChange={(e) => setInputFile(e.target.value)}
-                />
+                <input type="file" name="file" onChange={changeHandler} />
+                {isFilePicked ? (
+                    <div>
+                        <p>Filename: {selectedFile.name}</p>
+                        <p>Filetype: {selectedFile.type}</p>
+                        <p>Size in bytes: {selectedFile.size}</p>
+                        <p>
+                            lastModifiedDate:{' '}
+                            {selectedFile.lastModifiedDate.toLocaleDateString()}
+                        </p>
+                    </div>
+                ) : (
+                    <p>Select a file to show details</p>
+                )}
                 <label>Output file:</label>
                 <input
                     type="text"
@@ -40,6 +78,7 @@ const Decrypt = () => {
             </form>
             <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
+            <button disabled={!isDecrypted} onClick={download}>Download</button>
         </div>
     );
 }
