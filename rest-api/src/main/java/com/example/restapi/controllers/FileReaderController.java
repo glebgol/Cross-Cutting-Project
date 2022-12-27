@@ -70,18 +70,18 @@ public class FileReaderController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PostMapping("encrypt/")
-    public ResponseEntity<FileUploadResponse> encrypt(@RequestParam(value= "inputfile") MultipartFile inputFile,
+    @PostMapping("/encrypt")
+    public ResponseEntity<FileUploadResponse> encrypt(@RequestParam(value= "file") MultipartFile inputFile,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) throws IOException {
         if (!KeyValidation.isValidDecryptionKey(key)) {
             return ResponseEntity.badRequest().build();
         }
-        FileUploadUtil.saveFile(inputFile.getOriginalFilename(), inputFile);
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
 
         try {
             File file = new File(FILE_UPLOAD_PATH + outputFilename);
-            file.createNewFile();
+            //file.createNewFile();
             CryptoUtils.encrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
@@ -93,17 +93,17 @@ public class FileReaderController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("decrypt/")
-    public ResponseEntity<FileUploadResponse> decrypt(@RequestParam(value= "inputfile") MultipartFile inputFile,
+    @PostMapping("/decrypt")
+    public ResponseEntity<FileUploadResponse> decrypt(@RequestParam(value= "file") MultipartFile inputFile,
                                                    @RequestParam(value = "outputfile") String outputFilename,
                                                    @RequestParam(value="key") String key) throws IOException {
-//        if (!KeyValidation.isValidDecryptionKey(key)) {
-//            return ResponseEntity.badRequest().build();
-//        }
-        FileUploadUtil.saveFile(inputFile.getOriginalFilename(), inputFile);
+        if (!KeyValidation.isValidDecryptionKey(key)) {
+            return ResponseEntity.badRequest().build();
+        }
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
         try {
             File file = new File(FILE_UPLOAD_PATH + outputFilename);
-            file.createNewFile();
+            //file.createNewFile();
 
             CryptoUtils.decrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
@@ -126,7 +126,7 @@ public class FileReaderController {
         return ResponseEntity.ok(new ZipResponse(inputFilename));
     }
 
-    @GetMapping("unzip/")
+    @GetMapping("/unzip")
     public ResponseEntity<UnzipResponse> unZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
         try {
             ArchivingFileManager.unZipFile(inputFilename, outputFilename);
