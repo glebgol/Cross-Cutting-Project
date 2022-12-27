@@ -20,6 +20,7 @@ const Calculate = () => {
     const [extension, setExtension] = useState('Txt')
     const [resultInfo, setResultInfo] = useState('')
 
+    const [isCalculated, setIsCalculated] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
 
 
@@ -36,15 +37,15 @@ const Calculate = () => {
         formData.append("iszipped", isZipped.toString());
         formData.append("decryptionkeys", keys);
         formData.append("extension", extension);
-        let url = 'api/file-reader/calculate';
 
-        fetch(url,  {
+        fetch('api/file-reader/calculate', {
             method: 'POST',
             body: formData
         })
             .then(response => response.json())
             .then(data => {
                 setDownloadUri(data.downloadUri);
+                setIsCalculated(true);
                 console.log(downloadUri);
             })
             .catch(err => {
@@ -113,7 +114,7 @@ const Calculate = () => {
             </form>
             <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
-            <button onClick={download}>Download</button>
+            <button disabled={!isCalculated} onClick={download}>Download</button>
         </div>
     );
 }
