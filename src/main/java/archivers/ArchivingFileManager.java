@@ -12,7 +12,7 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class ArchivingFileManager {
-    private static String getNameOfArchiveFile(String notZipFileName) {
+    public static String getNameOfArchiveFile(String notZipFileName) {
         var lastIndexOfDot = notZipFileName.lastIndexOf('.');
         return notZipFileName.substring(0, lastIndexOfDot)  + ".zip";
     }

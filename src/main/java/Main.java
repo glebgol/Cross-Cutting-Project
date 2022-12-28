@@ -1,4 +1,5 @@
 import builder.FileReaderBuilder;
+import ciphers.CryptoUtils;
 import enums.FileExtension;
 import exceptions.CryptoException;
 import readers.JsonFileReader;
@@ -37,5 +38,8 @@ public class Main {
 
         var xmlReader = new XmlFileReader(XmlFileName);
         xmlReader.getResult(XmlOutputFileName);
+
+
+        CryptoUtils.decrypt("1234567812345678", "Files-Upload/qw.txt", "ss.txt");
     }
 }
