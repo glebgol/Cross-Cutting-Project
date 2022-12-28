@@ -74,7 +74,6 @@ const Decrypt = () => {
                 />
                 <button>Decrypt</button>
             </form>
-            <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isDecrypted} onClick={download}>Download</button>
         </div>

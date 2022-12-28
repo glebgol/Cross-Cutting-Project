@@ -74,7 +74,6 @@ const Encrypt = () => {
                 />
                 <button>Encrypt</button>
             </form>
-            <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isEncrypted} onClick={download}>Download</button>
         </div>
