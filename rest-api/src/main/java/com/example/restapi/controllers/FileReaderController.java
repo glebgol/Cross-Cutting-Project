@@ -22,10 +22,10 @@ import java.util.List;
 @RequestMapping("api/file-reader/")
 public class FileReaderController {
     private final String FILE_UPLOAD_PATH = "Files-Upload/";
+    private final String DOWNLOAD_URI = "/downloadFile/";
+
     @PostMapping("/uploadFile")
-    public ResponseEntity<FileUploadResponse> uploadFile(
-            @RequestParam("file") MultipartFile multipartFile)
-            throws IOException {
+    public ResponseEntity<FileUploadResponse> uploadFile(@RequestParam("file") MultipartFile multipartFile) throws IOException {
 
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         long size = multipartFile.getSize();
@@ -35,7 +35,7 @@ public class FileReaderController {
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(fileName);
         response.setSize(size);
-        response.setDownloadUri("/downloadFile/" + fileName);
+        response.setDownloadUri(DOWNLOAD_URI + fileName);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -68,7 +68,7 @@ public class FileReaderController {
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(FILE_UPLOAD_PATH + outputFilename);
         response.setSize(file.getTotalSpace());
-        response.setDownloadUri("/downloadFile/" + outputFilename);
+        response.setDownloadUri(DOWNLOAD_URI + outputFilename);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -91,7 +91,7 @@ public class FileReaderController {
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(FILE_UPLOAD_PATH + outputFilename);
         response.setSize(file.getTotalSpace());
-        response.setDownloadUri("/downloadFile/" + outputFilename);
+        response.setDownloadUri(DOWNLOAD_URI + outputFilename);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -113,7 +113,7 @@ public class FileReaderController {
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(FILE_UPLOAD_PATH + outputFilename);
         response.setSize(file.getTotalSpace());
-        response.setDownloadUri("/downloadFile/" + outputFilename);
+        response.setDownloadUri(DOWNLOAD_URI + outputFilename);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
