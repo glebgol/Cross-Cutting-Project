@@ -46,7 +46,7 @@ public class FileReaderController {
             IFileReader reader = builder.getFileReader();
             reader.getResult(file.getAbsolutePath());
         } catch (Exception ex) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.internalServerError().build();
         }
 
         FileUploadResponse response = new FileUploadResponse();
@@ -101,24 +101,39 @@ public class FileReaderController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("zip/")
-    public ResponseEntity<ZipResponse> zip(@RequestParam(value= "inputfile") String inputFilename) {
+    @PostMapping("/zip")
+    public ResponseEntity<FileUploadResponse> zip(@RequestParam(value= "file") MultipartFile inputFile) throws IOException {
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
+        File file = null;
         try {
-            ArchivingFileManager.zipFile(inputFilename);
+            file = new File(FILE_UPLOAD_PATH + ArchivingFileManager.getNameOfArchiveFile(inputFile.getOriginalFilename()));
+            ArchivingFileManager.zipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
         } catch (Exception ex) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.internalServerError().build();
         }
-        return ResponseEntity.ok(new ZipResponse(inputFilename));
+
+        FileUploadResponse response = new FileUploadResponse();
+        response.setFileName(FILE_UPLOAD_PATH + file.getName());
+        response.setSize(file.getTotalSpace());
+        response.setDownloadUri(DOWNLOAD_URI + file.getName());
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/unzip")
-    public ResponseEntity<UnzipResponse> unZip(@RequestParam(value= "inputfile") String inputFilename, @RequestParam(value= "outputfile") String outputFilename) {
+    @PostMapping("/unzip")
+    public ResponseEntity<FileUploadResponse> unZip(@RequestParam(value= "file") MultipartFile inputFile, @RequestParam(value= "outputfile") String outputFilename) throws IOException {
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
+        File file = null;
         try {
-            ArchivingFileManager.unZipFile(inputFilename, outputFilename);
+            file = new File(FILE_UPLOAD_PATH + outputFilename);
+            ArchivingFileManager.unZipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), FILE_UPLOAD_PATH + outputFilename);
         } catch (Exception ex) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.internalServerError().build();
         }
-        return ResponseEntity.ok(new UnzipResponse(inputFilename, outputFilename));
+        FileUploadResponse response = new FileUploadResponse();
+        response.setFileName(FILE_UPLOAD_PATH + file.getName());
+        response.setSize(file.getTotalSpace());
+        response.setDownloadUri(DOWNLOAD_URI + file.getName());
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping("/uploadFile")
