@@ -6,6 +6,8 @@ import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
 import com.example.restapi.responses.*;
 import com.example.restapi.utils.FileUploadUtil;
+import interfaces.IFileReader;
+import interfaces.IFileReaderBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
@@ -49,14 +51,15 @@ public class FileReaderController {
         if (decryptionKeys != null && !KeyValidation.isValidDecryptionKeys(decryptionKeys)) {
             return ResponseEntity.badRequest().build();
         }
-
+        File file = null;
         try {
-            var readerBuilder = new FileReaderBuilder(extension, inputFile.getOriginalFilename());
-            readerBuilder.setEncrypting(decryptionKeys);
-            readerBuilder.setZipping(isZipped);
+            IFileReaderBuilder builder = new FileReaderBuilder(extension, inputFile.getOriginalFilename());
+            builder.setEncrypting(decryptionKeys);
+            builder.setZipping(isZipped);
 
-            File file = new File(FILE_UPLOAD_PATH + outputFilename);
-            var reader = readerBuilder.getFileReader();
+            file = new File(FILE_UPLOAD_PATH + outputFilename);
+
+            IFileReader reader = builder.getFileReader();
             reader.getResult(file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.badRequest().build();
@@ -64,7 +67,7 @@ public class FileReaderController {
 
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(FILE_UPLOAD_PATH + outputFilename);
-        //response.setSize(inputFile.getSize());
+        response.setSize(file.getTotalSpace());
         response.setDownloadUri("/downloadFile/" + outputFilename);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -78,17 +81,16 @@ public class FileReaderController {
             return ResponseEntity.badRequest().build();
         }
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
-
+        File file = null;
         try {
-            File file = new File(FILE_UPLOAD_PATH + outputFilename);
-            //file.createNewFile();
+            file = new File(FILE_UPLOAD_PATH + outputFilename);
             CryptoUtils.encrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(FILE_UPLOAD_PATH + outputFilename);
-        //response.setSize(inputFile.getSize());
+        response.setSize(file.getTotalSpace());
         response.setDownloadUri("/downloadFile/" + outputFilename);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -101,17 +103,16 @@ public class FileReaderController {
             return ResponseEntity.badRequest().build();
         }
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
+        File file = null;
         try {
-            File file = new File(FILE_UPLOAD_PATH + outputFilename);
-            //file.createNewFile();
-
+            file = new File(FILE_UPLOAD_PATH + outputFilename);
             CryptoUtils.decrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
         FileUploadResponse response = new FileUploadResponse();
         response.setFileName(FILE_UPLOAD_PATH + outputFilename);
-        //response.setSize(inputFile.getSize());
+        response.setSize(file.getTotalSpace());
         response.setDownloadUri("/downloadFile/" + outputFilename);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
