@@ -24,22 +24,6 @@ public class FileReaderController {
     private final String FILE_UPLOAD_PATH = "Files-Upload/";
     private final String DOWNLOAD_URI = "/downloadFile/";
 
-    @PostMapping("/uploadFile")
-    public ResponseEntity<FileUploadResponse> uploadFile(@RequestParam("file") MultipartFile multipartFile) throws IOException {
-
-        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-        long size = multipartFile.getSize();
-
-        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, multipartFile);
-
-        FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(fileName);
-        response.setSize(size);
-        response.setDownloadUri(DOWNLOAD_URI + fileName);
-
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
-
     @PostMapping("/calculate")
     public ResponseEntity<FileUploadResponse> calculate(@RequestParam("file") MultipartFile inputFile,
                             @RequestParam(value = "outputfile") String outputFilename,
@@ -135,5 +119,25 @@ public class FileReaderController {
             return ResponseEntity.badRequest().build();
         }
         return ResponseEntity.ok(new UnzipResponse(inputFilename, outputFilename));
+    }
+
+    @PostMapping("/uploadFile")
+    public ResponseEntity<FileUploadResponse> uploadFile(@RequestParam("file") MultipartFile multipartFile) throws IOException {
+        if (!multipartFile.isEmpty()) {
+            String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+            long size = multipartFile.getSize();
+
+            FileUploadUtil.saveFile(FILE_UPLOAD_PATH, multipartFile);
+
+            FileUploadResponse response = new FileUploadResponse();
+            response.setFileName(fileName);
+            response.setSize(size);
+            response.setDownloadUri(DOWNLOAD_URI + fileName);
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+        else {
+            return ResponseEntity.badRequest().build();
+        }
     }
 }
