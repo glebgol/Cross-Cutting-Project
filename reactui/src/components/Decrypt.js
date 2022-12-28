@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import fetchDecrypting from "../fetching/fetchDecrypting";
 import downloadFile from "../services/DownloadFile";
 
 const Decrypt = () => {
@@ -13,7 +12,6 @@ const Decrypt = () => {
 
     const [outputFile, setOutputFile] = useState('')
     const [key, setKey] = useState('')
-    const [resultInfo, setResultInfo] = useState('')
     const [isDecrypted, setIsDecrypted] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
 

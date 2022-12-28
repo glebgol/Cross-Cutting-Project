@@ -8,15 +8,15 @@ Spring Boot, React, Design Patterns, Unit testing, Api testing
 
 ### Using REST API
 
-| Method| Url                                                                                                                                                                             | Description                                                  |
-|:------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------|
-| GET   | api/file-reader/calculate/?inputfile={inputfileName}&outputfile={outputfileName}&iszipped={true/false}&decryptionkeys={keys}&extension={extension}                              | Calculates math expressions in file and write to output file |
-| GET   | api/file-reader/encrypt/?inputfile={inputfileName}&outputfile={outputfileName}&key={key}                                                                                        | Encrypts file                                                |
-| GET   | api/file-reader/decrypt/?inputfile={inputfileName}&outputfile={outputfileName}&key={key}                                                                                        | Decrypts file                                                |
-| GET   | api/file-reader/zip/?inputfile={inputfileName}                                                                                                                                  | Zip file                                                     |
-| GET   | api/file-reader/unzip/?inputfile={inputfileName}&outputfile={outputfileName}                                                                                                    | Unzip file                                                   |
+| Method | Url                      | Params                    |Description                                                  |
+|:-------|:-------------------------|---------------------------|:-------------------------------------------------------------|
+| Post   | api/file-reader/calculate| -file'type='file'<br/> -f |Calculates math expressions in file and write to output file |
+| Post    | api/file-reader/encrypt  |                           |Encrypts file|
+| Post    | api/file-reader/decrypt  |                           |Decrypts file|
+| Post    | api/file-reader/zip      |                           |Zip file|
+| Post    | api/file-reader/unzip    |                           |Unzip file|
 
-### UNIT Testing
+### UNIT Testing JUnit
 1. EncryptedFileReader - 4 tests
 2. TxtFileReader - 1 test
 3. JsonFileReader - 1 test
@@ -24,5 +24,5 @@ Spring Boot, React, Design Patterns, Unit testing, Api testing
 5. ZipFileReader - 3 tests
 6. CalculatingEngine - 9 tests
 
-### API Testing
+### API Testing Rest-Assured
 1. 12 tests

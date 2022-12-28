@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import fetchEncrypting from "../fetching/fetchEncrypting";
 import downloadFile from "../services/DownloadFile";
 
 const Encrypt = () => {
@@ -13,7 +12,6 @@ const Encrypt = () => {
 
     const [outputFile, setOutputFile] = useState('')
     const [key, setKey] = useState('')
-    const [resultInfo, setResultInfo] = useState('')
     const [isEncrypted, setIsEncrypted] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
 

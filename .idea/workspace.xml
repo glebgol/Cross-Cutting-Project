@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Download calculating file">
-      <change afterPath="$PROJECT_DIR$/reactui/src/services/DownloadFile.js" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Zip unzip post methods">
+      <change afterPath="$PROJECT_DIR$/reactui/src/services/IsValidFileName.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/components/UnZip.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/UnZip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/components/Zip.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Zip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivingFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivingFileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +26,8 @@
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,43 +60,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Cross-Cutting-Project/selenium-ui-tests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "D:/Cross-Cutting-Project/selenium-ui-tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.restapi" />
@@ -105,6 +111,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Cross-Cutting-Project" />
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src" />
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
       <recent name="D:\Anton\Cross-Cutting-Project\src\test\resources" />
@@ -116,7 +123,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -220,91 +227,12 @@
       <workItem from="1671659094838" duration="1266000" />
       <workItem from="1671702521294" duration="17706000" />
       <workItem from="1671884801670" duration="12651000" />
-      <workItem from="1671990840528" duration="4169000" />
-    </task>
-    <task id="LOCAL-00096" summary="Added test for calculating Encrypted Xml file">
-      <created>1668936327110</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1668936327110</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Added test for calculating Encrypted Json file">
-      <created>1668950609134</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1668950609134</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Added body strings to ResponseEntities">
-      <created>1668951510904</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1668951510904</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Calculated xml, json and double encrypted files">
-      <created>1668952129414</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1668952129414</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Calculated double encrypted file">
-      <created>1668952173165</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1668952173165</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Update README.md">
-      <created>1668953381497</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1668953381497</updated>
-    </task>
-    <task id="LOCAL-00102" summary="Update README.md">
-      <created>1668954155780</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1668954155780</updated>
-    </task>
-    <task id="LOCAL-00103" summary="Delete unused XmlReadingResult">
-      <created>1669131814649</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1669131814649</updated>
-    </task>
-    <task id="LOCAL-00104" summary="Created CalculateResponse">
-      <created>1669227886793</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1669227886793</updated>
-    </task>
-    <task id="LOCAL-00105" summary="Added EncryptResponse and DecryptResponse">
-      <created>1669228219639</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1669228219639</updated>
-    </task>
-    <task id="LOCAL-00106" summary="Added ZipResponse and UnzipResponse">
-      <created>1669228468016</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1669228468016</updated>
-    </task>
-    <task id="LOCAL-00107" summary="Created api test for not valid file extension">
-      <created>1669229086665</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1669229086666</updated>
+      <workItem from="1671990840528" duration="9438000" />
+      <workItem from="1672032727160" duration="6740000" />
+      <workItem from="1672056439630" duration="96000" />
+      <workItem from="1672062887348" duration="69000" />
+      <workItem from="1672063127160" duration="16079000" />
+      <workItem from="1672219516676" duration="13370000" />
     </task>
     <task id="LOCAL-00108" summary="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)">
       <created>1670596115755</created>
@@ -565,7 +493,91 @@
       <option name="project" value="LOCAL" />
       <updated>1671995031893</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="DownloadFile service">
+      <created>1671997135281</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1671997135281</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Post encrypting">
+      <created>1672001287011</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1672001287011</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Post decrypting">
+      <created>1672001323799</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1672001323799</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Refactor FileUploadUtil">
+      <created>1672084565270</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1672084565270</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Post encrypting and decrypting">
+      <created>1672160521328</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1672160521328</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Added isCalculated state">
+      <created>1672160574075</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1672160574075</updated>
+    </task>
+    <task id="LOCAL-00151" summary="fetch encrypting">
+      <created>1672160593290</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1672160593290</updated>
+    </task>
+    <task id="LOCAL-00152" summary="fetch decrypting">
+      <created>1672160603106</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1672160603106</updated>
+    </task>
+    <task id="LOCAL-00153" summary="set size of uploading file">
+      <created>1672254833245</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1672254833245</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Set download uri">
+      <created>1672255325937</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1672255325938</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Added isEmpty check for multipartfile">
+      <created>1672256290691</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1672256290691</updated>
+    </task>
+    <task id="LOCAL-00156" summary="Zip unzip post methods">
+      <created>1672262453369</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1672262453369</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,18 +602,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fetch Decrypting" />
-    <MESSAGE value="Fetch Zip and UnZip" />
-    <MESSAGE value="Renamed react-ui module" />
-    <MESSAGE value="Catch server errors" />
-    <MESSAGE value="Create selenium-ui-tests-module" />
-    <MESSAGE value="Form validation in process" />
-    <MESSAGE value="Created FileUploadUtil" />
-    <MESSAGE value="Created FileUploadController" />
-    <MESSAGE value="Added FileDownloadUtil and FileDownloadController" />
-    <MESSAGE value="Rest Assured tests" />
-    <MESSAGE value="File Manager, upload, download" />
-    <MESSAGE value="Refactor naming" />
     <MESSAGE value="Refactor xml and json expressions" />
     <MESSAGE value="Rename ArchivingFileManager" />
     <MESSAGE value="Rename and refactor ArchivingFileManager" />
@@ -615,7 +615,19 @@
     <MESSAGE value="IFileReader default method getResult" />
     <MESSAGE value="Upload and calculate file" />
     <MESSAGE value="Download calculating file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Download calculating file" />
+    <MESSAGE value="DownloadFile service" />
+    <MESSAGE value="Post encrypting" />
+    <MESSAGE value="Post decrypting" />
+    <MESSAGE value="Refactor FileUploadUtil" />
+    <MESSAGE value="Post encrypting and decrypting" />
+    <MESSAGE value="Added isCalculated state" />
+    <MESSAGE value="fetch encrypting" />
+    <MESSAGE value="fetch decrypting" />
+    <MESSAGE value="set size of uploading file" />
+    <MESSAGE value="Set download uri" />
+    <MESSAGE value="Added isEmpty check for multipartfile" />
+    <MESSAGE value="Zip unzip post methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zip unzip post methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
