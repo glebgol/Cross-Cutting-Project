@@ -37,7 +37,7 @@ public class FileReaderController {
         }
         File file = null;
         try {
-            IFileReaderBuilder builder = new FileReaderBuilder(extension, inputFile.getOriginalFilename());
+            IFileReaderBuilder builder = new FileReaderBuilder(extension, FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
             builder.setEncrypting(decryptionKeys);
             builder.setZipping(isZipped);
 
