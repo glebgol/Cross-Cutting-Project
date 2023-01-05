@@ -30,7 +30,7 @@ public class FileReaderController {
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
                                             @RequestParam(value = "extension") String extension) throws IOException {
-        if (decryptionKeys != null && !KeyValidation.isValidDecryptionKeys(decryptionKeys)) {
+        if (!KeyValidation.isValidForCalculation(decryptionKeys)) {
             return ResponseEntity.badRequest().build();
         }
 

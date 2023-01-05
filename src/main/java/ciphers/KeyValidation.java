@@ -12,6 +12,10 @@ public class KeyValidation {
         return true;
     }
 
+    public static boolean isValidForCalculation(List<String> decryptionKeys) {
+        return decryptionKeys == null || KeyValidation.isValidDecryptionKeys(decryptionKeys);
+    }
+
     public static boolean isValidDecryptionKey(String decryptionKey) {
         return decryptionKey.length() == 16;
     }
