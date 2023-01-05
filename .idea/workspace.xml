@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Zip unzip post methods">
-      <change afterPath="$PROJECT_DIR$/reactui/src/services/IsValidFileName.js" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Fix uploaded file name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/components/UnZip.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/UnZip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/components/Zip.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Zip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/FileUploadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/FileUploadResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivingFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/archivers/ArchivingFileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,43 +55,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Cross-Cutting-Project/selenium-ui-tests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Cross-Cutting-Project/selenium-ui-tests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.restapi" />
@@ -232,49 +227,15 @@
       <workItem from="1672056439630" duration="96000" />
       <workItem from="1672062887348" duration="69000" />
       <workItem from="1672063127160" duration="16079000" />
-      <workItem from="1672219516676" duration="13370000" />
-    </task>
-    <task id="LOCAL-00108" summary="Refactor WriteCalculated (rename to GetResult, added outputFileName parameter)">
-      <created>1670596115755</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1670596115755</updated>
-    </task>
-    <task id="LOCAL-00109" summary="Refactoring readers">
-      <created>1670596957366</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1670596957366</updated>
-    </task>
-    <task id="LOCAL-00110" summary="Rename getResult in FileBuilder to getFileReader">
-      <created>1670597357143</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1670597357144</updated>
-    </task>
-    <task id="LOCAL-00111" summary="Calculated xml and json files">
-      <created>1670597865270</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1670597865270</updated>
-    </task>
-    <task id="LOCAL-00112" summary="Added proxy">
-      <created>1670696268960</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1670696268960</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Create components">
-      <created>1670770743263</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1670770743263</updated>
+      <workItem from="1672219516676" duration="21145000" />
+      <workItem from="1672500518215" duration="228000" />
+      <workItem from="1672528787323" duration="168000" />
+      <workItem from="1672565373270" duration="401000" />
+      <workItem from="1672647216052" duration="18000" />
+      <workItem from="1672684595334" duration="409000" />
+      <workItem from="1672783769986" duration="834000" />
+      <workItem from="1672923811998" duration="3256000" />
+      <workItem from="1672940515211" duration="1765000" />
     </task>
     <task id="LOCAL-00114" summary="Create routing">
       <created>1670770750138</created>
@@ -577,7 +538,49 @@
       <option name="project" value="LOCAL" />
       <updated>1672262453369</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="getNameOfArchiveFile">
+      <created>1672262998012</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1672262998012</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Fetch zip and unzip">
+      <created>1672263046514</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1672263046514</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Delete fetching">
+      <created>1672263239973</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1672263239973</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Is valid file name">
+      <created>1672263932850</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1672263932850</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Delete unused responses">
+      <created>1672330691606</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1672330691606</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Fix uploaded file name">
+      <created>1672926872670</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1672926872671</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,12 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor xml and json expressions" />
-    <MESSAGE value="Rename ArchivingFileManager" />
-    <MESSAGE value="Rename and refactor ArchivingFileManager" />
-    <MESSAGE value="Refactor CryptoUtils" />
-    <MESSAGE value="Change xml, json streams" />
-    <MESSAGE value="Added query params to rest-assured tests" />
     <MESSAGE value="Deleting" />
     <MESSAGE value="File-upload-download util" />
     <MESSAGE value="File download controller" />
@@ -627,7 +624,13 @@
     <MESSAGE value="Set download uri" />
     <MESSAGE value="Added isEmpty check for multipartfile" />
     <MESSAGE value="Zip unzip post methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zip unzip post methods" />
+    <MESSAGE value="getNameOfArchiveFile" />
+    <MESSAGE value="Fetch zip and unzip" />
+    <MESSAGE value="Delete fetching" />
+    <MESSAGE value="Is valid file name" />
+    <MESSAGE value="Delete unused responses" />
+    <MESSAGE value="Fix uploaded file name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix uploaded file name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

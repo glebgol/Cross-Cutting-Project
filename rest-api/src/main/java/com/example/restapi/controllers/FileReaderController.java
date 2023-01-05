@@ -30,11 +30,11 @@ public class FileReaderController {
                             @RequestParam(value = "iszipped", required = false) boolean isZipped,
                             @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
                                             @RequestParam(value = "extension") String extension) throws IOException {
-        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
-
         if (decryptionKeys != null && !KeyValidation.isValidDecryptionKeys(decryptionKeys)) {
             return ResponseEntity.badRequest().build();
         }
+
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
         File file = null;
         try {
             IFileReaderBuilder builder = new FileReaderBuilder(extension, FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
@@ -48,12 +48,11 @@ public class FileReaderController {
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
-
-        FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(FILE_UPLOAD_PATH + outputFilename);
-        response.setSize(file.getTotalSpace());
-        response.setDownloadUri(DOWNLOAD_URI + outputFilename);
-
+        FileUploadResponse response = FileUploadResponse.builder()
+                .fileName(outputFilename)
+                .size(file.getTotalSpace())
+                .downloadUri(DOWNLOAD_URI + outputFilename)
+                .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -68,14 +67,15 @@ public class FileReaderController {
         File file = null;
         try {
             file = new File(FILE_UPLOAD_PATH + outputFilename);
-            CryptoUtils.encrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
+            CryptoUtils.encrypt(key, FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
-        FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(FILE_UPLOAD_PATH + outputFilename);
-        response.setSize(file.getTotalSpace());
-        response.setDownloadUri(DOWNLOAD_URI + outputFilename);
+        FileUploadResponse response = FileUploadResponse.builder()
+                .fileName(outputFilename)
+                .size(file.getTotalSpace())
+                .downloadUri(DOWNLOAD_URI + outputFilename)
+                .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -90,32 +90,35 @@ public class FileReaderController {
         File file = null;
         try {
             file = new File(FILE_UPLOAD_PATH + outputFilename);
-            CryptoUtils.decrypt(key, inputFile.getOriginalFilename(), file.getAbsolutePath());
+            CryptoUtils.decrypt(key, FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
-        FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(FILE_UPLOAD_PATH + outputFilename);
-        response.setSize(file.getTotalSpace());
-        response.setDownloadUri(DOWNLOAD_URI + outputFilename);
+        FileUploadResponse response = FileUploadResponse.builder()
+                .fileName(outputFilename)
+                .size(file.getTotalSpace())
+                .downloadUri(DOWNLOAD_URI + outputFilename)
+                .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping("/zip")
     public ResponseEntity<FileUploadResponse> zip(@RequestParam(value= "file") MultipartFile inputFile) throws IOException {
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
+        String achieveFileName = ArchivingFileManager.getNameOfArchiveFile(inputFile.getOriginalFilename());
         File file = null;
         try {
-            file = new File(FILE_UPLOAD_PATH + ArchivingFileManager.getNameOfArchiveFile(inputFile.getOriginalFilename()));
+            file = new File(FILE_UPLOAD_PATH + achieveFileName);
             ArchivingFileManager.zipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
 
-        FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(FILE_UPLOAD_PATH + file.getName());
-        response.setSize(file.getTotalSpace());
-        response.setDownloadUri(DOWNLOAD_URI + file.getName());
+        FileUploadResponse response = FileUploadResponse.builder()
+                .fileName(achieveFileName)
+                .size(file.getTotalSpace())
+                .downloadUri(DOWNLOAD_URI + achieveFileName)
+                .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -129,30 +132,28 @@ public class FileReaderController {
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }
-        FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(FILE_UPLOAD_PATH + file.getName());
-        response.setSize(file.getTotalSpace());
-        response.setDownloadUri(DOWNLOAD_URI + file.getName());
+        FileUploadResponse response = FileUploadResponse.builder()
+                .fileName(outputFilename)
+                .size(file.getTotalSpace())
+                .downloadUri(DOWNLOAD_URI + outputFilename)
+                .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping("/uploadFile")
     public ResponseEntity<FileUploadResponse> uploadFile(@RequestParam("file") MultipartFile multipartFile) throws IOException {
-        if (!multipartFile.isEmpty()) {
-            String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-            long size = multipartFile.getSize();
-
-            FileUploadUtil.saveFile(FILE_UPLOAD_PATH, multipartFile);
-
-            FileUploadResponse response = new FileUploadResponse();
-            response.setFileName(fileName);
-            response.setSize(size);
-            response.setDownloadUri(DOWNLOAD_URI + fileName);
-
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-        else {
+        if (multipartFile.isEmpty()) {
             return ResponseEntity.badRequest().build();
         }
+
+        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, multipartFile);
+
+        FileUploadResponse response = FileUploadResponse.builder()
+                .fileName(fileName)
+                .size(multipartFile.getSize())
+                .downloadUri(DOWNLOAD_URI + fileName)
+                .build();
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
