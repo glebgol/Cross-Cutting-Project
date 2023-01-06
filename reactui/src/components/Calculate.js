@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import isValidFileName from "../services/IsValidFileName";
+import isValidEncryptionKeys from "../services/IsValidEncryptionKeys";
 
 const Calculate = () => {
     const [selectedFile, setSelectedFile] = useState();
@@ -16,7 +17,11 @@ const Calculate = () => {
     const [outputFileError, setOutputFileError] = useState('Output file name can\'t be empty')
 
     const [isZipped, setIsZipped] = useState(false)
+
     const [keys, setKeys] = useState('')
+    const [keysIsDirty, setKeysIsDirty] = useState(false)
+    const [keysError, setKeysError] = useState('')
+
     const [extension, setExtension] = useState('Txt')
 
     const [isCalculated, setIsCalculated] = useState(false)
@@ -26,7 +31,7 @@ const Calculate = () => {
 
     const [formValid, setFormValid] = useState(false)
     useEffect(() => {
-        if (outputFileError) {
+        if (outputFileError || keysError || !isFilePicked) {
             setFormValid(false)
         } else {
             setFormValid(true)
@@ -42,6 +47,14 @@ const Calculate = () => {
             setOutputFileError("Invalid filename")
         } else {
             setOutputFileError('')
+        }
+    }
+    const keysHandler = (e) => {
+        setKeys(e.target.value)
+        if (!isValidEncryptionKeys(e.target.value)) {
+            setKeysError("Invalid keys")
+        } else {
+            setKeysError('')
         }
     }
     const download = () => {
@@ -72,6 +85,11 @@ const Calculate = () => {
                 console.log(err);
             });
     }
+
+    function keysBlurHandler() {
+        setKeysIsDirty(true)
+    }
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -109,12 +127,12 @@ const Calculate = () => {
                     }}
                 />
                 <label>Encrypted keys</label>
+                {(keysIsDirty && keysError) && <div style={{color:'red'}}>{keysError}</div>}
                 <input
                     type="text"
                     value={keys}
-                    onChange={(e) => {
-                        setKeys(e.target.value);
-                    }}
+                    onChange={(e) => keysHandler(e)}
+                    onBlur={keysBlurHandler}
                 />
                 <select
                     value={extension}
