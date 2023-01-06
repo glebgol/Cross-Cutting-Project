@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import isValidFileName from "../services/IsValidFileName";
-import isValidEncryptionKeys from "../services/IsValidEncryptionKeys";
+import isValidEncryptionKey from "../services/IsValidEncryptionKey";
 
 const Calculate = () => {
     const [selectedFile, setSelectedFile] = useState();
@@ -51,7 +51,7 @@ const Calculate = () => {
     }
     const keysHandler = (e) => {
         setKeys(e.target.value)
-        if (!isValidEncryptionKeys(e.target.value)) {
+        if (!isValidEncryptionKey(e.target.value)) {
             setKeysError("Invalid keys")
         } else {
             setKeysError('')
