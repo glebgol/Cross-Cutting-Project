@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Validation for output file name">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Validation for encryption keys">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,8 @@
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -235,28 +237,7 @@
       <workItem from="1672783769986" duration="834000" />
       <workItem from="1672923811998" duration="3256000" />
       <workItem from="1672940515211" duration="6729000" />
-      <workItem from="1673038280131" duration="4104000" />
-    </task>
-    <task id="LOCAL-00116" summary="Deleted default css">
-      <created>1670779770822</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1670779770822</updated>
-    </task>
-    <task id="LOCAL-00117" summary="temp">
-      <created>1670780473765</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1670780473765</updated>
-    </task>
-    <task id="LOCAL-00118" summary="css">
-      <created>1670780656587</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1670780656587</updated>
+      <workItem from="1673038280131" duration="5580000" />
     </task>
     <task id="LOCAL-00119" summary="Fetch Calculating and added result info message">
       <created>1670784573278</created>
@@ -580,7 +561,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672943666715</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="Validation for output file name">
+      <created>1673042606403</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1673042606403</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Validation for encryption keys">
+      <created>1673043576972</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1673043576972</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Validation for encryption keys">
+      <created>1673043782993</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1673043782993</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +607,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fetch calculating" />
     <MESSAGE value="IFileReader default method getResult" />
     <MESSAGE value="Upload and calculate file" />
     <MESSAGE value="Download calculating file" />
@@ -630,7 +631,8 @@
     <MESSAGE value="Added lombock builder annotation" />
     <MESSAGE value="is Valid for calculation method" />
     <MESSAGE value="Validation for output file name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation for output file name" />
+    <MESSAGE value="Validation for encryption keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation for encryption keys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

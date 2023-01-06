@@ -40,11 +40,10 @@ public class FileReaderController {
             IFileReaderBuilder builder = new FileReaderBuilder(extension, FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
             builder.setEncrypting(decryptionKeys);
             builder.setZipping(isZipped);
+            IFileReader reader = builder.getFileReader();
 
             file = new File(FILE_UPLOAD_PATH + outputFilename);
-
-            IFileReader reader = builder.getFileReader();
-            reader.getResult(file.getAbsolutePath());
+            reader.calculate(file);
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         }

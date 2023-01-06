@@ -31,13 +31,13 @@ public class Main {
         builder.setZipping(true);
 
         var reader = builder.getFileReader();
-        reader.getResult(TxtOutputFileName);
+        reader.calculate(TxtOutputFileName);
 
         var jsonReader = new JsonFileReader(JsonFileName);
-        jsonReader.getResult(JsonOutputFileName);
+        jsonReader.calculate(JsonOutputFileName);
 
         var xmlReader = new XmlFileReader(XmlFileName);
-        xmlReader.getResult(XmlOutputFileName);
+        xmlReader.calculate(XmlOutputFileName);
 
 
         CryptoUtils.decrypt("1234567812345678", "Files-Upload/qw.txt", "ss.txt");
