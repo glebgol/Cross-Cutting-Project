@@ -1,6 +1,7 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
+import isValidFileName from "../services/IsValidFileName";
 
 const Calculate = () => {
     const [selectedFile, setSelectedFile] = useState();
@@ -16,19 +17,36 @@ const Calculate = () => {
 
     const [isZipped, setIsZipped] = useState(false)
     const [keys, setKeys] = useState('')
-
     const [extension, setExtension] = useState('Txt')
-    const [resultInfo, setResultInfo] = useState('')
 
     const [isCalculated, setIsCalculated] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
 
+    const [resultInfo, setResultInfo] = useState('')
 
-    const outputFileBlurHandler = (e) => {
+    const [formValid, setFormValid] = useState(false)
+    useEffect(() => {
+        if (outputFileError) {
+            setFormValid(false)
+        } else {
+            setFormValid(true)
+        }
+    })
+
+    const outputFileBlurHandler = () => {
         setOutputFileIsDirty(true)
     }
-
-
+    const outputFileHandler = (e) => {
+        setOutputFile(e.target.value)
+        if (!isValidFileName(e.target.value)) {
+            setOutputFileError("Invalid filename")
+        } else {
+            setOutputFileError('')
+        }
+    }
+    const download = () => {
+        downloadFile(downloadUri, outputFile);
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
@@ -46,14 +64,13 @@ const Calculate = () => {
             .then(data => {
                 setDownloadUri(data.downloadUri);
                 setIsCalculated(true);
+                setResultInfo('Successfully calculated!')
                 console.log(downloadUri);
             })
             .catch(err => {
+                setResultInfo('Server error!')
                 console.log(err);
             });
-    }
-    const download = () => {
-        downloadFile(downloadUri, outputFile);
     }
     return (
         <div>
@@ -71,7 +88,7 @@ const Calculate = () => {
                         </p>
                     </div>
                 ) : (
-                    <p>Select a file to show details</p>
+                    <p>Select a file to calculate</p>
                 )}
                 <label>Output file:</label>
                 {(outputFileIsDirty && outputFileError) && <div style={{color:'red'}}>{outputFileError}</div>}
@@ -81,8 +98,8 @@ const Calculate = () => {
                     type="text"
                     required
                     value={outputFile}
-                    onBlur={e => outputFileBlurHandler(e)}
-                    onChange={(e) => setOutputFile(e.target.value)}
+                    onBlur={outputFileBlurHandler}
+                    onChange={e => outputFileHandler(e)}
                 />
                 <label>Is zipped?</label>
                 <input
@@ -103,14 +120,13 @@ const Calculate = () => {
                     value={extension}
                     onChange={(e) => {
                         setExtension(e.target.value);
-                        console.log(e.target.value);
                     }}
                 >
                     <option value="txt">Txt</option>
                     <option value="json">Json</option>
                     <option value="xml">Xml</option>
                 </select>
-                <button>Calculate</button>
+                <button disabled={!formValid}>Calculate</button>
             </form>
             <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>

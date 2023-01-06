@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Fix uploaded file name">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Validation for output file name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/FileUploadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/responses/FileUploadResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +117,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -235,21 +234,8 @@
       <workItem from="1672684595334" duration="409000" />
       <workItem from="1672783769986" duration="834000" />
       <workItem from="1672923811998" duration="3256000" />
-      <workItem from="1672940515211" duration="1765000" />
-    </task>
-    <task id="LOCAL-00114" summary="Create routing">
-      <created>1670770750138</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1670770750138</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Fetch calculating">
-      <created>1670778716584</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1670778716584</updated>
+      <workItem from="1672940515211" duration="6729000" />
+      <workItem from="1673038280131" duration="4104000" />
     </task>
     <task id="LOCAL-00116" summary="Deleted default css">
       <created>1670779770822</created>
@@ -580,7 +566,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672926872671</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Added lombock builder annotation">
+      <created>1672942570175</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1672942570176</updated>
+    </task>
+    <task id="LOCAL-00164" summary="is Valid for calculation method">
+      <created>1672943666715</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1672943666715</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,9 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleting" />
-    <MESSAGE value="File-upload-download util" />
-    <MESSAGE value="File download controller" />
     <MESSAGE value="fetch calculating" />
     <MESSAGE value="IFileReader default method getResult" />
     <MESSAGE value="Upload and calculate file" />
@@ -630,7 +627,10 @@
     <MESSAGE value="Is valid file name" />
     <MESSAGE value="Delete unused responses" />
     <MESSAGE value="Fix uploaded file name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix uploaded file name" />
+    <MESSAGE value="Added lombock builder annotation" />
+    <MESSAGE value="is Valid for calculation method" />
+    <MESSAGE value="Validation for output file name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation for output file name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
