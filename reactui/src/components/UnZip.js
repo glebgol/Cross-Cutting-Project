@@ -1,23 +1,18 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
+import useUnZipForm from "../hooks/forms/useUnZipForm";
 
 const UnZip = () => {
-    const [selectedFile, setSelectedFile] = useState();
-    const [isFilePicked, setIsFilePicked] = useState(false);
-    const [outputFile, setOutputFile] = useState('')
+    const form = useUnZipForm();
     const [isUnzipped, setIsUnzipped] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
-    const changeHandler = (event) => {
-        setSelectedFile(event.target.files[0]);
-        setIsFilePicked(true);
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("file", selectedFile);
-        formData.append("outputfile", outputFile);
+        formData.append("file", form.file.selectedFile);
+        formData.append("outputfile", form.outputFile.outputFileName);
         fetch('api/file-reader/unzip', {
             method: 'POST',
             body: formData
@@ -33,36 +28,38 @@ const UnZip = () => {
             });
     }
     const download = () => {
-        downloadFile(downloadUri, outputFile);
+        downloadFile(downloadUri, form.outputFile.outputFileName);
     }
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Input file:</label>
-                <input type="file" name="file" onChange={changeHandler} />
-                {isFilePicked ? (
+                <input type="file" name="file" onChange={(e) => form.file.onChange(e)} />
+                {form.file.isPicked ? (
                     <div>
-                        <p>Filename: {selectedFile.name}</p>
-                        <p>Filetype: {selectedFile.type}</p>
-                        <p>Size in bytes: {selectedFile.size}</p>
+                        <p>Filename: {form.file.selectedFile.name}</p>
+                        <p>Filetype: {form.file.selectedFile.type}</p>
+                        <p>Size in bytes: {form.file.selectedFile.size}</p>
                         <p>
                             lastModifiedDate:{' '}
-                            {selectedFile.lastModifiedDate.toLocaleDateString()}
+                            {form.file.selectedFile.lastModifiedDate.toLocaleDateString()}
                         </p>
                     </div>
                 ) : (
                     <p>Select a file to show details</p>
                 )}
                 <label>Output file:</label>
+                {(form.outputFile.isDirty && form.outputFile.error) && <div style={{color:'red'}}>{form.outputFile.error}</div>}
                 <input
                     placeholder='Enter output file name:'
                     name='outputFile'
                     type="text"
                     required
-                    value={outputFile}
-                    onChange={(e) => setOutputFile(e.target.value)}
+                    value={form.outputFile.value}
+                    onBlur={e => form.outputFile.onBlur(e)}
+                    onChange={e => form.outputFile.onChange(e)}
                 />
-                <button>Zip</button>
+                <button disabled={!form.formValid}>Zip</button>
             </form>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isUnzipped} onClick={download}>Download</button>
