@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 const useDecryptForm = () => {
     const file = useFileInput();
     const outputFile = useOutputFileNameInput('');
-    const key = useEncryptionKeyInput('');
+    const key = useEncryptionKeyInput('', true);
 
     const [formValid, setFormValid] = useState(false)
     useEffect(() => {

@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 const useCalculateForm = () => {
     const file = useFileInput();
     const outputFile = useOutputFileNameInput('');
-    const encryptionKey = useEncryptionKeyInput('');
+    const encryptionKey = useEncryptionKeyInput('', false);
     const extension = useFileExtensionInput('Txt');
     const [isZipped, setIsZipped] = useState(false)
     const [isValid, setIsValid] = useState(false)

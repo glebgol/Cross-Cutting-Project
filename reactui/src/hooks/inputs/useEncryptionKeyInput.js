@@ -1,16 +1,25 @@
 import isValidEncryptionKey from "../../services/IsValidEncryptionKey";
 import {useState} from "react";
 
-const useEncryptionKeyInput = (initialValue) => {
+const useEncryptionKeyInput = (initialValue, required) => {
     const [key, setKey] = useState(initialValue)
     const [isDirty, setIsDirty] = useState(false)
-    const [error, setError] = useState('')
+    const [error, setError] = useState(required ? 'Encryption key can\'t be empty' : '')
 
     const onChange = (e) => {
         setKey(e.target.value)
-        if (!isValidEncryptionKey(e.target.value)) {
+        if (required) {
+            if (!isValidEncryptionKey(e.target.value)) {
+                setError("Invalid keys")
+            }
+            else {
+                setError('')
+            }
+        }
+        else if (!isValidEncryptionKey(e.target.value) && e.target.value.length !== 0) {
             setError("Invalid keys")
-        } else {
+        }
+        else {
             setError('')
         }
     }
