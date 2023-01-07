@@ -1,6 +1,6 @@
-import useFileInput from "../useFileInput";
-import useOutputFileNameInput from "../useOutputFileNameInput";
-import useEncryptionKeyInput from "../useEncryptionKeyInput";
+import useFileInput from "../inputs/useFileInput";
+import useOutputFileNameInput from "../inputs/useOutputFileNameInput";
+import useEncryptionKeyInput from "../inputs/useEncryptionKeyInput";
 import {useEffect, useState} from "react";
 
 const useDecryptForm = () => {

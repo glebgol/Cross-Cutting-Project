@@ -1,4 +1,4 @@
-import isValidEncryptionKey from "../services/IsValidEncryptionKey";
+import isValidEncryptionKey from "../../services/IsValidEncryptionKey";
 import {useState} from "react";
 
 const useEncryptionKeyInput = (initialValue) => {

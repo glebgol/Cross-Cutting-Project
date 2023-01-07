@@ -1,4 +1,4 @@
-import isValidFileName from "../services/IsValidFileName";
+import isValidFileName from "../../services/IsValidFileName";
 import {useState} from "react";
 
 const useOutputFileNameInput = (initialValue) => {
@@ -15,7 +15,7 @@ const useOutputFileNameInput = (initialValue) => {
         }
     }
 
-    const onBlur = (e) => {
+    const onBlur = () => {
         setIsDirty(true)
     }
 

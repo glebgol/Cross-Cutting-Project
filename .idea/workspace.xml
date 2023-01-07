@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Change error default state">
-      <change afterPath="$PROJECT_DIR$/reactui/src/hooks/useFileInput.js" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create useCalculateForm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/hooks/forms/useCalculateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/hooks/forms/useCalculateForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,35 +236,8 @@
       <workItem from="1672783769986" duration="834000" />
       <workItem from="1672923811998" duration="3256000" />
       <workItem from="1672940515211" duration="6729000" />
-      <workItem from="1673038280131" duration="10684000" />
-    </task>
-    <task id="LOCAL-00123" summary="Renamed react-ui module">
-      <created>1670787089035</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1670787089035</updated>
-    </task>
-    <task id="LOCAL-00124" summary="Create selenium-ui-tests-module">
-      <created>1670865300901</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1670865300901</updated>
-    </task>
-    <task id="LOCAL-00125" summary="Form validation in process">
-      <created>1670883309971</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1670883309971</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Created FileUploadUtil">
-      <created>1670883793814</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1670883793814</updated>
+      <workItem from="1673038280131" duration="15617000" />
+      <workItem from="1673093226026" duration="2551000" />
     </task>
     <task id="LOCAL-00127" summary="Created FileUploadController">
       <created>1670884195850</created>
@@ -581,7 +554,35 @@
       <option name="project" value="LOCAL" />
       <updated>1673087813222</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Create hook for input file">
+      <created>1673088031596</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1673088031596</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Create hook for file extension input">
+      <created>1673090753166</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1673090753166</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Create useDecryptForm">
+      <created>1673094622028</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1673094622028</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Create useCalculateForm">
+      <created>1673096089323</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1673096089323</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,10 +607,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Post encrypting" />
-    <MESSAGE value="Post decrypting" />
-    <MESSAGE value="Refactor FileUploadUtil" />
-    <MESSAGE value="Post encrypting and decrypting" />
     <MESSAGE value="Added isCalculated state" />
     <MESSAGE value="fetch encrypting" />
     <MESSAGE value="fetch decrypting" />
@@ -631,7 +628,11 @@
     <MESSAGE value="Create Output file name input hook" />
     <MESSAGE value="Create Encryption key input hook" />
     <MESSAGE value="Change error default state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change error default state" />
+    <MESSAGE value="Create hook for input file" />
+    <MESSAGE value="Create hook for file extension input" />
+    <MESSAGE value="Create useDecryptForm" />
+    <MESSAGE value="Create useCalculateForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create useCalculateForm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

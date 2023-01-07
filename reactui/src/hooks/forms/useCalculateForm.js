@@ -1,7 +1,8 @@
-import useFileInput from "../useFileInput";
-import useOutputFileNameInput from "../useOutputFileNameInput";
-import useEncryptionKeyInput from "../useEncryptionKeyInput";
-import useFileExtensionInput from "../useFileExtensionInput";
+import useFileInput from "../inputs/useFileInput";
+import useOutputFileNameInput from "../inputs/useOutputFileNameInput";
+import useEncryptionKeyInput from "../inputs/useEncryptionKeyInput";
+import useFileExtensionInput from "../inputs/useFileExtensionInput";
+import {useEffect, useState} from "react";
 
 const useCalculateForm = () => {
     const file = useFileInput();
@@ -21,7 +22,7 @@ const useCalculateForm = () => {
         } else {
             setIsValid(true)
         }
-    }, [outputFile, encryptionKey, file])
+    }, [outputFile.error, encryptionKey.error, file.isPicked])
 
     return {
         file,
