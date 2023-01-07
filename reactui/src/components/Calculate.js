@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
-import isValidEncryptionKey from "../services/IsValidEncryptionKey";
 import useOutputFileNameInput from "../hooks/useOutputFileNameInput";
+import useEncryptionKeyInput from "../hooks/useEncryptionKeyInput";
 
 const Calculate = () => {
     const [selectedFile, setSelectedFile] = useState();
@@ -13,12 +13,9 @@ const Calculate = () => {
     };
 
     const outputFile = useOutputFileNameInput('');
+    const encryptionKey = useEncryptionKeyInput('');
 
     const [isZipped, setIsZipped] = useState(false)
-
-    const [keys, setKeys] = useState('')
-    const [keysIsDirty, setKeysIsDirty] = useState(false)
-    const [keysError, setKeysError] = useState('')
 
     const [extension, setExtension] = useState('Txt')
 
@@ -29,21 +26,13 @@ const Calculate = () => {
 
     const [formValid, setFormValid] = useState(false)
     useEffect(() => {
-        if (outputFile.error || keysError || !isFilePicked) {
+        if (outputFile.error || encryptionKey.error || !isFilePicked) {
             setFormValid(false)
         } else {
             setFormValid(true)
         }
     })
 
-    const keysHandler = (e) => {
-        setKeys(e.target.value)
-        if (!isValidEncryptionKey(e.target.value)) {
-            setKeysError("Invalid keys")
-        } else {
-            setKeysError('')
-        }
-    }
     const download = () => {
         downloadFile(downloadUri, outputFile.outputFileName);
     }
@@ -53,7 +42,7 @@ const Calculate = () => {
         formData.append("file", selectedFile);
         formData.append("outputfile", outputFile.outputFileName);
         formData.append("iszipped", isZipped.toString());
-        formData.append("decryptionkeys", keys);
+        formData.append("decryptionkeys", encryptionKey.key);
         formData.append("extension", extension);
 
         fetch('api/file-reader/calculate', {
@@ -71,10 +60,6 @@ const Calculate = () => {
                 setResultInfo('Server error!')
                 console.log(err);
             });
-    }
-
-    function keysBlurHandler() {
-        setKeysIsDirty(true)
     }
 
     return (
@@ -114,12 +99,12 @@ const Calculate = () => {
                     }}
                 />
                 <label>Encrypted keys</label>
-                {(keysIsDirty && keysError) && <div style={{color:'red'}}>{keysError}</div>}
+                {(encryptionKey.isDirty && encryptionKey.error) && <div style={{color:'red'}}>{encryptionKey.error}</div>}
                 <input
                     type="text"
-                    value={keys}
-                    onChange={(e) => keysHandler(e)}
-                    onBlur={keysBlurHandler}
+                    value={encryptionKey.value}
+                    onChange={(e) => encryptionKey.onChange(e)}
+                    onBlur={(e) => encryptionKey.onBlur(e)}
                 />
                 <select
                     value={extension}
