@@ -1,22 +1,18 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
+import useFileInput from "../hooks/inputs/useFileInput";
 
 const Zip = () => {
-    const [selectedFile, setSelectedFile] = useState();
-    const [isFilePicked, setIsFilePicked] = useState(false);
+    const file = useFileInput();
     const [outputFile, setOutputFile] = useState('')
     const [isZipped, setIsZipped] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
-    const changeHandler = (event) => {
-        setSelectedFile(event.target.files[0]);
-        setIsFilePicked(true);
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("file", selectedFile);
+        formData.append("file", file.selectedFile);
 
         fetch('api/file-reader/zip', {
             method: 'POST',
@@ -26,7 +22,7 @@ const Zip = () => {
             .then(data => {
                 setDownloadUri(data.downloadUri);
                 setIsZipped(true);
-                setOutputFile(data.FileName);
+                setOutputFile(data.fileName);
                 console.log(downloadUri);
             })
             .catch(err => {
@@ -40,15 +36,15 @@ const Zip = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Input file:</label>
-                <input type="file" name="file" onChange={changeHandler} />
-                {isFilePicked ? (
+                <input type="file" name="file" onChange={(e) => file.onChange(e)} />
+                {file.isPicked ? (
                     <div>
-                        <p>Filename: {selectedFile.name}</p>
-                        <p>Filetype: {selectedFile.type}</p>
-                        <p>Size in bytes: {selectedFile.size}</p>
+                        <p>Filename: {file.selectedFile.name}</p>
+                        <p>Filetype: {file.selectedFile.type}</p>
+                        <p>Size in bytes: {file.selectedFile.size}</p>
                         <p>
                             lastModifiedDate:{' '}
-                            {selectedFile.lastModifiedDate.toLocaleDateString()}
+                            {file.selectedFile.lastModifiedDate.toLocaleDateString()}
                         </p>
                     </div>
                 ) : (
