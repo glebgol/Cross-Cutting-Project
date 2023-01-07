@@ -3,20 +3,15 @@ import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useOutputFileNameInput from "../hooks/useOutputFileNameInput";
 import useEncryptionKeyInput from "../hooks/useEncryptionKeyInput";
+import useFileInput from "../hooks/useFileInput";
 
 const Calculate = () => {
-    const [selectedFile, setSelectedFile] = useState();
-    const [isFilePicked, setIsFilePicked] = useState(false);
-    const changeHandler = (event) => {
-        setSelectedFile(event.target.files[0]);
-        setIsFilePicked(true);
-    };
-
+    const file = useFileInput();
     const outputFile = useOutputFileNameInput('');
     const encryptionKey = useEncryptionKeyInput('');
 
-    const [isZipped, setIsZipped] = useState(false)
 
+    const [isZipped, setIsZipped] = useState(false)
     const [extension, setExtension] = useState('Txt')
 
     const [isCalculated, setIsCalculated] = useState(false)
@@ -26,12 +21,12 @@ const Calculate = () => {
 
     const [formValid, setFormValid] = useState(false)
     useEffect(() => {
-        if (outputFile.error || encryptionKey.error || !isFilePicked) {
+        if (outputFile.error || encryptionKey.error || !file.isPicked) {
             setFormValid(false)
         } else {
             setFormValid(true)
         }
-    })
+    }, [outputFile.error, encryptionKey.error, file.isPicked])
 
     const download = () => {
         downloadFile(downloadUri, outputFile.outputFileName);
@@ -39,7 +34,7 @@ const Calculate = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("file", selectedFile);
+        formData.append("file", file.selectedFile);
         formData.append("outputfile", outputFile.outputFileName);
         formData.append("iszipped", isZipped.toString());
         formData.append("decryptionkeys", encryptionKey.key);
@@ -66,15 +61,15 @@ const Calculate = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Input file:</label>
-                <input type="file" name="file" onChange={changeHandler} />
-                {isFilePicked ? (
+                <input type="file" name="file" onChange={e => file.onChange(e)} />
+                {file.isPicked ? (
                     <div>
-                        <p>Filename: {selectedFile.name}</p>
-                        <p>Filetype: {selectedFile.type}</p>
-                        <p>Size in bytes: {selectedFile.size}</p>
+                        <p>Filename: {file.selectedFile.name}</p>
+                        <p>Filetype: {file.selectedFile.type}</p>
+                        <p>Size in bytes: {file.selectedFile.size}</p>
                         <p>
                             lastModifiedDate:{' '}
-                            {selectedFile.lastModifiedDate.toLocaleDateString()}
+                            {file.selectedFile.lastModifiedDate.toLocaleDateString()}
                         </p>
                     </div>
                 ) : (

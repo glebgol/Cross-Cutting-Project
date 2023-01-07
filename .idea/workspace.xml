@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactoring calculate method">
-      <change afterPath="$PROJECT_DIR$/reactui/src/hooks/useOutputFileNameInput.js" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Change error default state">
+      <change afterPath="$PROJECT_DIR$/reactui/src/hooks/useFileInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
@@ -236,28 +236,7 @@
       <workItem from="1672783769986" duration="834000" />
       <workItem from="1672923811998" duration="3256000" />
       <workItem from="1672940515211" duration="6729000" />
-      <workItem from="1673038280131" duration="8561000" />
-    </task>
-    <task id="LOCAL-00120" summary="Fetch Encrypting">
-      <created>1670785270323</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1670785270323</updated>
-    </task>
-    <task id="LOCAL-00121" summary="Fetch Decrypting">
-      <created>1670785488078</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1670785488078</updated>
-    </task>
-    <task id="LOCAL-00122" summary="Fetch Zip and UnZip">
-      <created>1670785875013</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1670785875013</updated>
+      <workItem from="1673038280131" duration="10684000" />
     </task>
     <task id="LOCAL-00123" summary="Renamed react-ui module">
       <created>1670787089035</created>
@@ -581,7 +560,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673044107131</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Create Output file name input hook">
+      <created>1673083904102</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1673083904102</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Create Encryption key input hook">
+      <created>1673084680688</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1673084680689</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Change error default state">
+      <created>1673087813222</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1673087813222</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,9 +606,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upload and calculate file" />
-    <MESSAGE value="Download calculating file" />
-    <MESSAGE value="DownloadFile service" />
     <MESSAGE value="Post encrypting" />
     <MESSAGE value="Post decrypting" />
     <MESSAGE value="Refactor FileUploadUtil" />
@@ -631,7 +628,10 @@
     <MESSAGE value="Validation for output file name" />
     <MESSAGE value="Validation for encryption keys" />
     <MESSAGE value="Refactoring calculate method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring calculate method" />
+    <MESSAGE value="Create Output file name input hook" />
+    <MESSAGE value="Create Encryption key input hook" />
+    <MESSAGE value="Change error default state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change error default state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
