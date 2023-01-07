@@ -4,7 +4,7 @@ import {useState} from "react";
 const useEncryptionKeyInput = (initialValue) => {
     const [key, setKey] = useState(initialValue)
     const [isDirty, setIsDirty] = useState(false)
-    const [error, setError] = useState('Output file name can\'t be empty')
+    const [error, setError] = useState('')
 
     const onChange = (e) => {
         setKey(e.target.value)
