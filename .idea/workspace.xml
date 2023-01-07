@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Validation for encryption keys">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactoring calculate method">
+      <change afterPath="$PROJECT_DIR$/reactui/src/hooks/useOutputFileNameInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/example/restapi/controllers/FileReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/src/components/Calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/components/Calculate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,7 @@
       <recent name="parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -237,14 +236,7 @@
       <workItem from="1672783769986" duration="834000" />
       <workItem from="1672923811998" duration="3256000" />
       <workItem from="1672940515211" duration="6729000" />
-      <workItem from="1673038280131" duration="5580000" />
-    </task>
-    <task id="LOCAL-00119" summary="Fetch Calculating and added result info message">
-      <created>1670784573278</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1670784573278</updated>
+      <workItem from="1673038280131" duration="8561000" />
     </task>
     <task id="LOCAL-00120" summary="Fetch Encrypting">
       <created>1670785270323</created>
@@ -582,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673043782993</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Refactoring calculate method">
+      <created>1673044107131</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1673044107131</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +606,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="IFileReader default method getResult" />
     <MESSAGE value="Upload and calculate file" />
     <MESSAGE value="Download calculating file" />
     <MESSAGE value="DownloadFile service" />
@@ -632,7 +630,8 @@
     <MESSAGE value="is Valid for calculation method" />
     <MESSAGE value="Validation for output file name" />
     <MESSAGE value="Validation for encryption keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation for encryption keys" />
+    <MESSAGE value="Refactoring calculate method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring calculate method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

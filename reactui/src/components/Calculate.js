@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
-import isValidFileName from "../services/IsValidFileName";
 import isValidEncryptionKey from "../services/IsValidEncryptionKey";
+import useOutputFileNameInput from "../hooks/useOutputFileNameInput";
 
 const Calculate = () => {
     const [selectedFile, setSelectedFile] = useState();
@@ -12,9 +12,7 @@ const Calculate = () => {
         setIsFilePicked(true);
     };
 
-    const [outputFile, setOutputFile] = useState('')
-    const [outputFileIsDirty, setOutputFileIsDirty] = useState(false)
-    const [outputFileError, setOutputFileError] = useState('Output file name can\'t be empty')
+    const outputFile = useOutputFileNameInput('');
 
     const [isZipped, setIsZipped] = useState(false)
 
@@ -31,24 +29,13 @@ const Calculate = () => {
 
     const [formValid, setFormValid] = useState(false)
     useEffect(() => {
-        if (outputFileError || keysError || !isFilePicked) {
+        if (outputFile.error || keysError || !isFilePicked) {
             setFormValid(false)
         } else {
             setFormValid(true)
         }
     })
 
-    const outputFileBlurHandler = () => {
-        setOutputFileIsDirty(true)
-    }
-    const outputFileHandler = (e) => {
-        setOutputFile(e.target.value)
-        if (!isValidFileName(e.target.value)) {
-            setOutputFileError("Invalid filename")
-        } else {
-            setOutputFileError('')
-        }
-    }
     const keysHandler = (e) => {
         setKeys(e.target.value)
         if (!isValidEncryptionKey(e.target.value)) {
@@ -58,13 +45,13 @@ const Calculate = () => {
         }
     }
     const download = () => {
-        downloadFile(downloadUri, outputFile);
+        downloadFile(downloadUri, outputFile.outputFileName);
     }
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append("file", selectedFile);
-        formData.append("outputfile", outputFile);
+        formData.append("outputfile", outputFile.outputFileName);
         formData.append("iszipped", isZipped.toString());
         formData.append("decryptionkeys", keys);
         formData.append("extension", extension);
@@ -109,15 +96,15 @@ const Calculate = () => {
                     <p>Select a file to calculate</p>
                 )}
                 <label>Output file:</label>
-                {(outputFileIsDirty && outputFileError) && <div style={{color:'red'}}>{outputFileError}</div>}
+                {(outputFile.isDirty && outputFile.error) && <div style={{color:'red'}}>{outputFile.error}</div>}
                 <input
                     placeholder='Enter output file name:'
                     name='outputFile'
                     type="text"
                     required
-                    value={outputFile}
-                    onBlur={outputFileBlurHandler}
-                    onChange={e => outputFileHandler(e)}
+                    value={outputFile.value}
+                    onBlur={e => outputFile.onBlur(e)}
+                    onChange={e => outputFile.onChange(e)}
                 />
                 <label>Is zipped?</label>
                 <input
