@@ -4,19 +4,17 @@ import downloadFile from "../services/DownloadFile";
 import useOutputFileNameInput from "../hooks/useOutputFileNameInput";
 import useEncryptionKeyInput from "../hooks/useEncryptionKeyInput";
 import useFileInput from "../hooks/useFileInput";
+import useFileExtensionInput from "../hooks/useFileExtensionInput";
 
 const Calculate = () => {
     const file = useFileInput();
     const outputFile = useOutputFileNameInput('');
     const encryptionKey = useEncryptionKeyInput('');
-
-
+    const extension = useFileExtensionInput('Txt');
     const [isZipped, setIsZipped] = useState(false)
-    const [extension, setExtension] = useState('Txt')
 
     const [isCalculated, setIsCalculated] = useState(false)
     const [downloadUri, setDownloadUri] = useState('')
-
     const [resultInfo, setResultInfo] = useState('')
 
     const [formValid, setFormValid] = useState(false)
@@ -38,7 +36,7 @@ const Calculate = () => {
         formData.append("outputfile", outputFile.outputFileName);
         formData.append("iszipped", isZipped.toString());
         formData.append("decryptionkeys", encryptionKey.key);
-        formData.append("extension", extension);
+        formData.append("extension", extension.extension);
 
         fetch('api/file-reader/calculate', {
             method: 'POST',
@@ -89,8 +87,10 @@ const Calculate = () => {
                 <label>Is zipped?</label>
                 <input
                     type="checkbox"
+                    value={isZipped}
                     onChange={() => {
                         setIsZipped(!isZipped);
+                        console.log(isZipped)
                     }}
                 />
                 <label>Encrypted keys</label>
@@ -102,10 +102,8 @@ const Calculate = () => {
                     onBlur={(e) => encryptionKey.onBlur(e)}
                 />
                 <select
-                    value={extension}
-                    onChange={(e) => {
-                        setExtension(e.target.value);
-                    }}
+                    value={extension.value}
+                    onChange={(e) => extension.onChange(e)}
                 >
                     <option value="txt">Txt</option>
                     <option value="json">Json</option>
