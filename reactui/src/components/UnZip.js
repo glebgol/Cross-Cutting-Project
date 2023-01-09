@@ -59,7 +59,7 @@ const UnZip = () => {
                     onBlur={e => form.outputFile.onBlur(e)}
                     onChange={e => form.outputFile.onChange(e)}
                 />
-                <button disabled={!form.formValid}>Zip</button>
+                <button disabled={!form.formValid}>Unzip</button>
             </form>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isUnzipped} onClick={download}>Download</button>

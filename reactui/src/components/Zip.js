@@ -50,7 +50,7 @@ const Zip = () => {
                 ) : (
                     <p>Select a file to show details</p>
                 )}
-                <button>Zip</button>
+                <button disabled={!file.isPicked}>Zip</button>
             </form>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isZipped} onClick={download}>Download</button>
