@@ -7,4 +7,10 @@ public class FileUtil {
         File file = new File(fileName);
         return file.exists();
     }
+
+    public static void deleteFile(String fileName) {
+        String path = System.getProperty("user.dir");
+        File file = new File(path+ "\\" + fileName);
+        file.delete();
+    }
 }
