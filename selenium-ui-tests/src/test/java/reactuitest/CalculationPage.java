@@ -1,11 +1,8 @@
-package reactuitest.pages;
+package reactuitest;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import reactuitest.BaseSeleniumPage;
 
 public class CalculationPage extends BaseSeleniumPage {
     private final String URL = "http://localhost:3000/calculate";
@@ -58,7 +55,7 @@ public class CalculationPage extends BaseSeleniumPage {
         //fileExtensionSelect.selectByValue(extension);
     }
 
-    public void submitCalculation() {
+    public void calculate() {
         submitButton.click();
     }
 
@@ -66,7 +63,7 @@ public class CalculationPage extends BaseSeleniumPage {
         return submitButton.isEnabled();
     }
 
-    public void downloadFile() {
+    public void download() {
         downloadButton.click();
     }
 

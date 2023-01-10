@@ -1,14 +1,22 @@
 package reactuitest;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import reactuitest.pages.CalculationPage;
 
 public class CalculationPageTest extends BaseSeleniumTest {
     @Test
-    public void check() {
+    public void verifyDownloadFile() throws InterruptedException {
         CalculationPage page = new CalculationPage();
+        String fileName = "otput.txt";
+        page.setFile("D:/Cross-Cutting-Project/selenium-ui-tests/src/test/resources/default.txt");
+        page.setOutputFileName(fileName);
+        page.selectFileExtension("txt");
+        page.calculate();
+        page.download();
 
-        page.setFile("D:\\Cross-Cutting-Project\\src\\test\\resources\\input.xml");
-        page.clickZipCheckBox();
+        Thread.sleep(5000);
+
+        boolean isExist = FileUtil.isExist(fileName);
+        Assert.assertTrue(isExist);
     }
 }
