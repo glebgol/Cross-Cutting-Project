@@ -21,14 +21,15 @@ public class CalculationPage extends BaseSeleniumPage {
 
     @FindBy(xpath = "//select")
     private WebElement fileExtensionSelect;
-
-    //private Select fileExtensionSelect = new Select(driver.findElement(By.xpath("//select")));
-
+    
     @FindBy(xpath = "//form/button")
     private WebElement submitButton;
 
     @FindBy(xpath = "//button[@name='download']")
     private WebElement downloadButton;
+
+    @FindBy(xpath = "//p/b")
+    public WebElement resultInfo;
 
     public CalculationPage() {
         driver.get(URL);
@@ -52,7 +53,7 @@ public class CalculationPage extends BaseSeleniumPage {
     }
 
     public void selectFileExtension(String extension) {
-        //fileExtensionSelect.selectByValue(extension);
+        fileExtensionSelect.sendKeys(extension);
     }
 
     public void calculate() {
@@ -69,5 +70,9 @@ public class CalculationPage extends BaseSeleniumPage {
 
     public boolean isEnabledDownloadButton() {
         return downloadButton.isEnabled();
+    }
+
+    public String getResultText() {
+        return resultInfo.getText();
     }
 }
