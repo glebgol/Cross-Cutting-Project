@@ -9,7 +9,6 @@ public class CalculationPageTest extends BaseSeleniumTest {
     protected final String OUTPUT_XML = "output.xml";
     protected final String OUTPUT_JSON = "output.json";
 
-
     protected final long TIME_TO_CALCULATE = 3500;
     protected final long TIME_TO_DOWNLOAD = 4000;
 
@@ -21,6 +20,11 @@ public class CalculationPageTest extends BaseSeleniumTest {
     @AfterMethod(onlyForGroups = OUTPUT_XML)
     void deleteXmlFile() {
         FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_XML);
+    }
+
+    @AfterMethod(onlyForGroups = OUTPUT_JSON)
+    void deleteJsonFile() {
+        FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_JSON);
     }
 
     @Test(groups = OUTPUT_TXT)
@@ -89,7 +93,7 @@ public class CalculationPageTest extends BaseSeleniumTest {
 
         page.setFile(TestInfo.JSON_FILE);
         page.setOutputFileName(OUTPUT_JSON);
-        page.selectFileExtension("xml");
+        page.selectFileExtension("json");
 
         page.calculate();
         waitForMilliseconds(TIME_TO_CALCULATE);
