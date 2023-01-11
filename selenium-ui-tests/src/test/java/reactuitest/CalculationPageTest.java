@@ -6,10 +6,12 @@ import org.testng.asserts.SoftAssert;
 
 public class CalculationPageTest extends BaseSeleniumTest {
     protected final String OUTPUT_TXT = "output.txt";
+    protected final String OUTPUT_XML = "output.xml";
+
     protected final long TIME_TO_CALCULATE = 3500;
     protected final long TIME_TO_DOWNLOAD = 4000;
     @AfterMethod(onlyForGroups = OUTPUT_TXT)
-    void deleteFile() {
+    void deleteTxtFile() {
         FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_TXT);
     }
     @Test(groups = OUTPUT_TXT)
@@ -39,6 +41,35 @@ public class CalculationPageTest extends BaseSeleniumTest {
         softAssert.assertEquals(resultInfo, TestInfo.ExpectedCalculationResultInfo);
         softAssert.assertTrue(isEnabledDownloadButton, TestInfo.EnabledButtonErrorMessage);
         softAssert.assertTrue(isExist, TestInfo.ErrorMessageForNonExistentFile(OUTPUT_TXT));
+
+        softAssert.assertAll();
+    }
+
+    @Test(groups = OUTPUT_XML)
+    public void shouldExpectDownloadFileWhenCalculateXmlFile() throws InterruptedException {
+        CalculationPage page = new CalculationPage();
+
+        page.setFile(TestInfo.XmlFile);
+        page.setOutputFileName(OUTPUT_XML);
+        page.selectFileExtension("xml");
+
+        page.calculate();
+        waitForMilliseconds(TIME_TO_CALCULATE);
+
+        page.download();
+        waitForMilliseconds(TIME_TO_DOWNLOAD);
+
+        boolean isExist = FileUtil.isExist(OUTPUT_XML);
+        boolean isEnabledSubmitButton = page.isEnabledSubmitButton();
+        boolean isEnabledDownloadButton = page.isEnabledDownloadButton();
+        String resultInfo = page.getResultText();
+
+        SoftAssert softAssert = new SoftAssert();
+
+        softAssert.assertTrue(isEnabledSubmitButton, TestInfo.NotValidFormErrorMessage);
+        softAssert.assertEquals(resultInfo, TestInfo.ExpectedCalculationResultInfo);
+        softAssert.assertTrue(isEnabledDownloadButton, TestInfo.EnabledButtonErrorMessage);
+        softAssert.assertTrue(isExist, TestInfo.ErrorMessageForNonExistentFile(OUTPUT_XML));
 
         softAssert.assertAll();
     }
