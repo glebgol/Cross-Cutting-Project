@@ -19,6 +19,10 @@ public abstract class BaseSeleniumTest {
 
         String downloadFilePath = System.getProperty("user.dir");
         chromePrefs.put("download.default_directory", downloadFilePath);
+        chromePrefs.put("download.prompt_for_download", false);
+        chromePrefs.put("download.extensions_to_open", "xml");
+        chromePrefs.put("safebrowsing.enabled", true);
+
         options.setExperimentalOption("prefs", chromePrefs);
 
         driver = new ChromeDriver(options);
