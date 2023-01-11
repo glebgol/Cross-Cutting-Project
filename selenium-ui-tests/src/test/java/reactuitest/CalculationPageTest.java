@@ -14,6 +14,12 @@ public class CalculationPageTest extends BaseSeleniumTest {
     void deleteTxtFile() {
         FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_TXT);
     }
+
+    @AfterMethod(onlyForGroups = OUTPUT_XML)
+    void deleteXmlFile() {
+        FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_XML);
+    }
+
     @Test(groups = OUTPUT_TXT)
     public void shouldExpectDownloadFileWhenCalculateZipEncryptedFile() throws InterruptedException {
         CalculationPage page = new CalculationPage();
