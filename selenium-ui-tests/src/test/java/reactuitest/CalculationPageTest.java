@@ -1,32 +1,45 @@
 package reactuitest;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class CalculationPageTest extends BaseSeleniumTest {
-    @AfterMethod(groups = "download-output.txt")
+    protected final String OUTPUT_TXT = "output.txt";
+    protected final long TIME_TO_CALCULATE = 3500;
+    protected final long TIME_TO_DOWNLOAD = 4000;
+    @AfterMethod(onlyForGroups = OUTPUT_TXT)
     void deleteFile() {
-        FileUtil.deleteFile("output.txt");
+        FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_TXT);
     }
-    @Test(groups = "download-output.txt")
-    public void verifyDownloadFile() throws InterruptedException {
+    @Test(groups = OUTPUT_TXT)
+    public void shouldExpectDownloadFileWhenCalculateZipEncryptedFile() throws InterruptedException {
         CalculationPage page = new CalculationPage();
-        String fileName = "output.txt";
-        String defaultTxtFile = System.getProperty("user.dir") + "\\src\\test\\resources\\default.txt";
 
-        page.setFile(defaultTxtFile);
-        page.setOutputFileName(fileName);
+        page.setFile(TestInfo.EncryptedAndZippedFile);
+        page.setOutputFileName(OUTPUT_TXT);
+        page.clickZipCheckBox();
         page.selectFileExtension("txt");
+        page.setEncryptedKey(TestInfo.Key);
+
         page.calculate();
+        waitForMilliseconds(TIME_TO_CALCULATE);
+
         page.download();
+        waitForMilliseconds(TIME_TO_DOWNLOAD);
 
-        Thread.sleep(5000);
+        boolean isExist = FileUtil.isExist(OUTPUT_TXT);
+        boolean isEnabledSubmitButton = page.isEnabledSubmitButton();
+        boolean isEnabledDownloadButton = page.isEnabledDownloadButton();
+        String resultInfo = page.getResultText();
 
-        boolean isExist = FileUtil.isExist(fileName);
+        SoftAssert softAssert = new SoftAssert();
 
-        Assert.assertTrue(isExist);
+        softAssert.assertTrue(isEnabledSubmitButton, TestInfo.NotValidFormErrorMessage);
+        softAssert.assertEquals(resultInfo, TestInfo.ExpectedCalculationResultInfo);
+        softAssert.assertTrue(isEnabledDownloadButton, TestInfo.EnabledButtonErrorMessage);
+        softAssert.assertTrue(isExist, TestInfo.ErrorMessageForNonExistentFile(OUTPUT_TXT));
+
+        softAssert.assertAll();
     }
 }

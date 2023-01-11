@@ -30,4 +30,8 @@ public abstract class BaseSeleniumTest {
         driver.close();
         driver.quit();
     }
+
+    protected void waitForMilliseconds(long time) throws InterruptedException {
+        Thread.sleep(time);
+    }
 }
