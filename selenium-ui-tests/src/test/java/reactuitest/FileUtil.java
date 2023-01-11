@@ -8,9 +8,8 @@ public class FileUtil {
         return file.exists();
     }
 
-    public static void deleteFile(String fileName) {
-        String path = System.getProperty("user.dir");
-        File file = new File(path+ "\\" + fileName);
+    public static void deleteFile(String path, String fileName) {
+        File file = new File(path + "\\" + fileName);
         file.delete();
     }
 }
