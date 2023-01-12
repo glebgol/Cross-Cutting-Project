@@ -1,8 +1,11 @@
 package reactuitest;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import java.io.IOException;
 
 public class EncryptionDecryptionTest extends BaseSeleniumTest {
     @AfterClass
@@ -51,5 +54,11 @@ public class EncryptionDecryptionTest extends BaseSeleniumTest {
         softAssert.assertTrue(isEnabledDownloadButton, TestValues.DISABLED_DOWNLOAD_BUTTON);
         softAssert.assertTrue(isExist, TestValues.ErrorMessageForNonExistentFile(TestValues.FILE_TO_ENCRYPT));
         softAssert.assertAll();
+    }
+
+    @Test(dependsOnMethods = "shouldExpectDownloadFileWhenDecryptFile")
+    public void verifyOriginalFileAndTheEncryptedAndAfterDecryptedFileEqual() throws IOException {
+        boolean isEqual = FileUtil.isEqualFileBytes(TestValues.FILE_TO_ENCRYPT, System.getProperty("user.dir") + "\\" + TestValues.DECRYPTED_FILE_NAME);
+        Assert.assertTrue(isEqual, TestValues.FILE_TO_ENCRYPT + "   " + System.getProperty("user.dir") + "\\" + TestValues.DECRYPTED_FILE_NAME);
     }
 }
