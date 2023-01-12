@@ -30,11 +30,11 @@ public class CalculationPageTest extends BaseSeleniumTest {
     @Test(groups = OUTPUT_TXT)
     public void shouldExpectDownloadFileWhenCalculateZipEncryptedFile() throws InterruptedException {
         CalculationPage page = new CalculationPage()
-                .setFile(TestInfo.ENCRYPTED_AND_ZIPPED_FILE)
+                .setFile(TestValues.ENCRYPTED_AND_ZIPPED_FILE)
                 .setOutputFileName(OUTPUT_TXT)
                 .clickZipCheckBox()
                 .selectFileExtension("txt")
-                .setEncryptedKey(TestInfo.KEY);
+                .setEncryptedKey(TestValues.KEY);
 
         page.calculate();
         waitForMilliseconds(TIME_TO_CALCULATE);
@@ -47,17 +47,17 @@ public class CalculationPageTest extends BaseSeleniumTest {
         String resultInfo = page.getResultText();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(isEnabledSubmitButton, TestInfo.NOT_VALID_FORM);
-        softAssert.assertEquals(resultInfo, TestInfo.SUCCESSFULLY_CALCULATED);
-        softAssert.assertTrue(isEnabledDownloadButton, TestInfo.DISABLED_DOWNLOAD_BUTTON);
-        softAssert.assertTrue(isExist, TestInfo.ErrorMessageForNonExistentFile(OUTPUT_TXT));
+        softAssert.assertTrue(isEnabledSubmitButton, TestValues.NOT_VALID_FORM);
+        softAssert.assertEquals(resultInfo, TestValues.SUCCESSFULLY_CALCULATED);
+        softAssert.assertTrue(isEnabledDownloadButton, TestValues.DISABLED_DOWNLOAD_BUTTON);
+        softAssert.assertTrue(isExist, TestValues.ErrorMessageForNonExistentFile(OUTPUT_TXT));
         softAssert.assertAll();
     }
 
     @Test(groups = OUTPUT_XML)
     public void shouldExpectDownloadFileWhenCalculateXmlFile() throws InterruptedException {
         CalculationPage page = new CalculationPage()
-                .setFile(TestInfo.XML_FILE)
+                .setFile(TestValues.XML_FILE)
                 .setOutputFileName(OUTPUT_XML)
                 .selectFileExtension("xml");
 
@@ -72,17 +72,17 @@ public class CalculationPageTest extends BaseSeleniumTest {
         String resultInfo = page.getResultText();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(isEnabledSubmitButton, TestInfo.NOT_VALID_FORM);
-        softAssert.assertEquals(resultInfo, TestInfo.SUCCESSFULLY_CALCULATED);
-        softAssert.assertTrue(isEnabledDownloadButton, TestInfo.DISABLED_DOWNLOAD_BUTTON);
-        softAssert.assertTrue(isExist, TestInfo.ErrorMessageForNonExistentFile(OUTPUT_XML));
+        softAssert.assertTrue(isEnabledSubmitButton, TestValues.NOT_VALID_FORM);
+        softAssert.assertEquals(resultInfo, TestValues.SUCCESSFULLY_CALCULATED);
+        softAssert.assertTrue(isEnabledDownloadButton, TestValues.DISABLED_DOWNLOAD_BUTTON);
+        softAssert.assertTrue(isExist, TestValues.ErrorMessageForNonExistentFile(OUTPUT_XML));
         softAssert.assertAll();
     }
 
     @Test(groups = OUTPUT_JSON)
     public void shouldExpectDownloadFileWhenCalculateJsonFile() throws InterruptedException {
         CalculationPage page = new CalculationPage()
-                .setFile(TestInfo.JSON_FILE)
+                .setFile(TestValues.JSON_FILE)
                 .setOutputFileName(OUTPUT_JSON)
                 .selectFileExtension("json");
 
@@ -97,10 +97,10 @@ public class CalculationPageTest extends BaseSeleniumTest {
         String resultInfo = page.getResultText();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(isEnabledSubmitButton, TestInfo.NOT_VALID_FORM);
-        softAssert.assertEquals(resultInfo, TestInfo.SUCCESSFULLY_CALCULATED);
-        softAssert.assertTrue(isEnabledDownloadButton, TestInfo.DISABLED_DOWNLOAD_BUTTON);
-        softAssert.assertTrue(isExist, TestInfo.ErrorMessageForNonExistentFile(OUTPUT_JSON));
+        softAssert.assertTrue(isEnabledSubmitButton, TestValues.NOT_VALID_FORM);
+        softAssert.assertEquals(resultInfo, TestValues.SUCCESSFULLY_CALCULATED);
+        softAssert.assertTrue(isEnabledDownloadButton, TestValues.DISABLED_DOWNLOAD_BUTTON);
+        softAssert.assertTrue(isExist, TestValues.ErrorMessageForNonExistentFile(OUTPUT_JSON));
         softAssert.assertAll();
     }
 }
