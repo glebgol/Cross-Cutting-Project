@@ -69,14 +69,15 @@ const Encrypt = () => {
                 <input
                     type="text"
                     required
+                    name='key'
                     value={form.key.value}
                     onChange={(e) => form.key.onChange(e)}
                     onBlur={(e) => form.key.onBlur(e)}
                 />
-                <button disabled={!form.formValid}>Encrypt</button>
+                <button name="encrypt" disabled={!form.formValid}>Encrypt</button>
             </form>
             <Link to="/">Back to Home Page</Link>
-            <button disabled={!isEncrypted} onClick={download}>Download</button>
+            <button name="download" disabled={!isEncrypted} onClick={download}>Download</button>
         </div>
     );
 }

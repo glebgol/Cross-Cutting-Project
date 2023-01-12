@@ -41,12 +41,12 @@ const Calculate = () => {
     }
 
     return (
-        <div>
+        <div id='calculator'>
             <form onSubmit={handleSubmit}>
                 <label>Input file:</label>
                 <input type="file" name="file" onChange={e => form.file.onChange(e)} />
                 {form.file.isPicked ? (
-                    <div>
+                    <div id="selectedFile">
                         <p>Filename: {form.file.selectedFile.name}</p>
                         <p>Filetype: {form.file.selectedFile.type}</p>
                         <p>Size in bytes: {form.file.selectedFile.size}</p>
@@ -81,6 +81,7 @@ const Calculate = () => {
                 {(form.encryptionKey.isDirty && form.encryptionKey.error) && <div style={{color:'red'}}>{form.encryptionKey.error}</div>}
                 <input
                     type="text"
+                    name='key'
                     value={form.encryptionKey.value}
                     onChange={(e) => form.encryptionKey.onChange(e)}
                     onBlur={(e) => form.encryptionKey.onBlur(e)}
@@ -93,11 +94,11 @@ const Calculate = () => {
                     <option value="json">Json</option>
                     <option value="xml">Xml</option>
                 </select>
-                <button disabled={!form.isValid}>Calculate</button>
+                <button name='calculate' disabled={!form.isValid}>Calculate</button>
             </form>
             <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
-            <button disabled={!isCalculated} onClick={download}>Download</button>
+            <button name='download' disabled={!isCalculated} onClick={download}>Download</button>
         </div>
     );
 }

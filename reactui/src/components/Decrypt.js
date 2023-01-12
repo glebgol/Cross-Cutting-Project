@@ -67,6 +67,7 @@ const Decrypt = () => {
                 <input
                     type="text"
                     required
+                    name="key"
                     value={form.key.value}
                     onChange={(e) => form.key.onChange(e)}
                     onBlur={(e) => form.key.onBlur(e)}
@@ -74,7 +75,7 @@ const Decrypt = () => {
                 <button disabled={!form.formValid}>Decrypt</button>
             </form>
             <Link to="/">Back to Home Page</Link>
-            <button disabled={!isDecrypted} onClick={download}>Download</button>
+            <button name="download" disabled={!isDecrypted} onClick={download}>Download</button>
         </div>
     );
 }
