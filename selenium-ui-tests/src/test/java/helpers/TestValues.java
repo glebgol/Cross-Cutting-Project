@@ -1,4 +1,4 @@
-package reactuitest;
+package helpers;
 
 public class TestValues {
     public static long TIME_TO_CALCULATION = 3500;

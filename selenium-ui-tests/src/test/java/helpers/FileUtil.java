@@ -1,4 +1,4 @@
-package reactuitest;
+package helpers;
 
 import java.io.File;
 import java.io.FileInputStream;
