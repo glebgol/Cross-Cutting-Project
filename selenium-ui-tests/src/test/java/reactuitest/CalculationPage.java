@@ -29,31 +29,36 @@ public class CalculationPage extends BaseSeleniumPage {
     private WebElement downloadButton;
 
     @FindBy(xpath = "//p/b")
-    public WebElement resultInfo;
+    private WebElement resultInfo;
 
     public CalculationPage() {
         driver.get(URL);
         PageFactory.initElements(driver, this);
     }
 
-    public void setFile(String filePath) {
+    public CalculationPage setFile(String filePath) {
         fileInput.sendKeys(filePath);
+        return this;
     }
 
-    public void setOutputFileName(String fileName) {
+    public CalculationPage setOutputFileName(String fileName) {
         outputFileNameInput.sendKeys(fileName);
+        return this;
     }
 
-    public void clickZipCheckBox() {
+    public CalculationPage clickZipCheckBox() {
         izZippedCheckBox.click();
+        return this;
     }
 
-    public void setEncryptedKey(String key) {
+    public CalculationPage setEncryptedKey(String key) {
         encryptedKeyInput.sendKeys(key);
+        return this;
     }
 
-    public void selectFileExtension(String extension) {
+    public CalculationPage selectFileExtension(String extension) {
         fileExtensionSelect.sendKeys(extension);
+        return this;
     }
 
     public void calculate() {
