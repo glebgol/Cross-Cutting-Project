@@ -61,16 +61,20 @@ public class CalculationPage extends BaseSeleniumPage {
         return this;
     }
 
-    public void calculate() {
+    public CalculationPage clickCalculating() throws InterruptedException {
         submitButton.click();
+        Thread.sleep(TestValues.TIME_TO_CALCULATION);
+        return this;
     }
 
     public boolean isEnabledSubmitButton() {
         return submitButton.isEnabled();
     }
 
-    public void download() {
+    public CalculationPage clickDownload() throws InterruptedException {
         downloadButton.click();
+        Thread.sleep(TestValues.TIME_TO_DOWNLOAD);
+        return this;
     }
 
     public boolean isEnabledDownloadButton() {

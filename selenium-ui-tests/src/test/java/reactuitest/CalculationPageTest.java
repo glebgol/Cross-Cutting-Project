@@ -9,9 +9,6 @@ public class CalculationPageTest extends BaseSeleniumTest {
     protected final String OUTPUT_XML = "output.xml";
     protected final String OUTPUT_JSON = "output.json";
 
-    protected final long TIME_TO_CALCULATE = 3500;
-    protected final long TIME_TO_DOWNLOAD = 4000;
-
     @AfterMethod(onlyForGroups = OUTPUT_TXT)
     void deleteTxtFile() {
         FileUtil.deleteFile(System.getProperty("user.dir"), OUTPUT_TXT);
@@ -34,12 +31,9 @@ public class CalculationPageTest extends BaseSeleniumTest {
                 .setOutputFileName(OUTPUT_TXT)
                 .clickZipCheckBox()
                 .selectFileExtension("txt")
-                .setEncryptedKey(TestValues.KEY);
-
-        page.calculate();
-        waitForMilliseconds(TIME_TO_CALCULATE);
-        page.download();
-        waitForMilliseconds(TIME_TO_DOWNLOAD);
+                .setEncryptedKey(TestValues.KEY)
+                .clickCalculating()
+                .clickDownload();
 
         boolean isExist = FileUtil.isExist(OUTPUT_TXT);
         boolean isEnabledSubmitButton = page.isEnabledSubmitButton();
@@ -59,12 +53,9 @@ public class CalculationPageTest extends BaseSeleniumTest {
         CalculationPage page = new CalculationPage()
                 .setFile(TestValues.XML_FILE)
                 .setOutputFileName(OUTPUT_XML)
-                .selectFileExtension("xml");
-
-        page.calculate();
-        waitForMilliseconds(TIME_TO_CALCULATE);
-        page.download();
-        waitForMilliseconds(TIME_TO_DOWNLOAD);
+                .selectFileExtension("xml")
+                .clickCalculating()
+                .clickDownload();
 
         boolean isExist = FileUtil.isExist(OUTPUT_XML);
         boolean isEnabledSubmitButton = page.isEnabledSubmitButton();
@@ -84,12 +75,9 @@ public class CalculationPageTest extends BaseSeleniumTest {
         CalculationPage page = new CalculationPage()
                 .setFile(TestValues.JSON_FILE)
                 .setOutputFileName(OUTPUT_JSON)
-                .selectFileExtension("json");
-
-        page.calculate();
-        waitForMilliseconds(TIME_TO_CALCULATE);
-        page.download();
-        waitForMilliseconds(TIME_TO_DOWNLOAD);
+                .selectFileExtension("json")
+                .clickCalculating()
+                .clickDownload();
 
         boolean isExist = FileUtil.isExist(OUTPUT_JSON);
         boolean isEnabledSubmitButton = page.isEnabledSubmitButton();
