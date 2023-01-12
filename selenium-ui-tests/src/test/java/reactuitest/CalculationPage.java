@@ -1,13 +1,12 @@
 package reactuitest;
 
 import helpers.TestValues;
+import helpers.Urls;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CalculationPage extends BaseSeleniumPage {
-    private final String URL = "http://localhost:3000/calculate";
-
     @FindBy(xpath = "//form/input[@name='file']")
     private WebElement fileInput;
 
@@ -33,7 +32,7 @@ public class CalculationPage extends BaseSeleniumPage {
     private WebElement resultInfo;
 
     public CalculationPage() {
-        driver.get(URL);
+        driver.get(Urls.CALCULATE_URL);
         PageFactory.initElements(driver, this);
     }
 

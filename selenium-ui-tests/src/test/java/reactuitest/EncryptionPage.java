@@ -1,13 +1,12 @@
 package reactuitest;
 
 import helpers.TestValues;
+import helpers.Urls;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class EncryptionPage extends BaseSeleniumPage {
-    private final String URL = "http://localhost:3000/encrypt";
-
     @FindBy(xpath = "//input[@type='file']")
     private WebElement fileInput;
 
@@ -24,7 +23,7 @@ public class EncryptionPage extends BaseSeleniumPage {
     private WebElement downloadButton;
 
     public EncryptionPage() {
-        driver.get(URL);
+        driver.get(Urls.ENCRYPT_URL);
         PageFactory.initElements(driver, this);
     }
 
