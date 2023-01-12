@@ -9,9 +9,7 @@ public class TestValues {
     public static final String XML_FILE = System.getProperty("user.dir") + "\\selenium-ui-tests\\src\\test\\resources\\input.xml";
     public static final String JSON_FILE = System.getProperty("user.dir") + "\\selenium-ui-tests\\src\\test\\resources\\input.json";
     public static final String FILE_TO_ENCRYPT = System.getProperty("user.dir") + "\\selenium-ui-tests\\src\\test\\resources\\fileForEnc.txt";
-    public static final String ENCRYPTED_FILE = System.getProperty("user.dir") + "\\selenium-ui-tests\\src\\test\\resources\\encrypted.txt";
-    public static final String DECRYPTED_FILE = System.getProperty("user.dir") + "\\selenium-ui-tests\\src\\test\\resources\\decrypted.txt";
-
+    public static final String DOWNLOADED_ENCRYPTED_FILE = System.getProperty("user.dir") + "\\" + TestValues.ENCRYPTED_FILE_NAME;
     public static final String ENCRYPTED_FILE_NAME = "encrypted.txt";
     public static final String DECRYPTED_FILE_NAME = "decrypted.txt";
 

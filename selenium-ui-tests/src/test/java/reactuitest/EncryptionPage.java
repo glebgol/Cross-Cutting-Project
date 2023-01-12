@@ -42,12 +42,16 @@ public class EncryptionPage extends BaseSeleniumPage {
         return this;
     }
 
-    public void encrypt() {
+    public EncryptionPage clickEncrypt() throws InterruptedException {
         encryptButton.click();
+        Thread.sleep(TestValues.TIME_TO_ENC_DEC);
+        return this;
     }
 
-    public void download() {
+    public EncryptionPage clickDownload() throws InterruptedException {
         downloadButton.click();
+        Thread.sleep(TestValues.TIME_TO_DOWNLOAD);
+        return this;
     }
 
     public boolean isEnabledEncryptButton() {
