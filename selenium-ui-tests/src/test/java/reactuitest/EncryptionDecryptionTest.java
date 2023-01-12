@@ -58,7 +58,11 @@ public class EncryptionDecryptionTest extends BaseSeleniumTest {
 
     @Test(dependsOnMethods = "shouldExpectDownloadFileWhenDecryptFile")
     public void verifyOriginalFileAndTheEncryptedAndAfterDecryptedFileEqual() throws IOException {
-        boolean isEqual = FileUtil.isEqualFileBytes(TestValues.FILE_TO_ENCRYPT, System.getProperty("user.dir") + "\\" + TestValues.DECRYPTED_FILE_NAME);
-        Assert.assertTrue(isEqual, TestValues.FILE_TO_ENCRYPT + "   " + System.getProperty("user.dir") + "\\" + TestValues.DECRYPTED_FILE_NAME);
+        String originalFileName = TestValues.FILE_TO_ENCRYPT;
+        String encryptedAndAfterDecryptedFileName = TestValues.DOWNLOADED_DECRYPTED_FILE;
+
+        boolean isEqual = FileUtil.isEqualFileBytes(originalFileName, encryptedAndAfterDecryptedFileName);
+
+        Assert.assertTrue(isEqual, TestValues.ErrorMessageNotEqualFiles(originalFileName, encryptedAndAfterDecryptedFileName));
     }
 }
