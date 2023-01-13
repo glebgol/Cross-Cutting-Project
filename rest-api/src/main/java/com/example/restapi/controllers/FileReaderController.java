@@ -5,6 +5,7 @@ import builder.FileReaderBuilder;
 import ciphers.CryptoUtils;
 import ciphers.KeyValidation;
 import com.example.restapi.responses.*;
+import com.example.restapi.utils.FileDeleteUtil;
 import com.example.restapi.utils.FileUploadUtil;
 import interfaces.IFileReader;
 import interfaces.IFileReaderBuilder;
@@ -46,6 +47,8 @@ public class FileReaderController {
             reader.calculate(file);
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
+        } finally {
+            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(outputFilename)
@@ -69,6 +72,8 @@ public class FileReaderController {
             CryptoUtils.encrypt(key, FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
+        } finally {
+            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(outputFilename)
@@ -92,6 +97,8 @@ public class FileReaderController {
             CryptoUtils.decrypt(key, FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), file.getAbsolutePath());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
+        } finally {
+            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(outputFilename)
@@ -111,6 +118,8 @@ public class FileReaderController {
             ArchivingFileManager.zipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
+        } finally {
+            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
 
         FileUploadResponse response = FileUploadResponse.builder()
@@ -130,6 +139,8 @@ public class FileReaderController {
             ArchivingFileManager.unZipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), FILE_UPLOAD_PATH + outputFilename);
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
+        } finally {
+            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(outputFilename)
