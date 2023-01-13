@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useCalculateForm from "../hooks/forms/useCalculateForm";
-
+import {CALCULATE_URL} from "../Urls";
 const Calculate = () => {
     const form = useCalculateForm();
 
@@ -19,7 +19,7 @@ const Calculate = () => {
         formData.append("decryptionkeys", form.encryptionKey.key);
         formData.append("extension", form.extension.extension);
 
-        fetch('api/file-reader/calculate', {
+        fetch(CALCULATE_URL, {
             method: 'POST',
             body: formData
         })

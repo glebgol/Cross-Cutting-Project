@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useDecryptForm from "../hooks/forms/useDecryptForm";
+import {DECRYPT} from "../Urls";
 
 const Decrypt = () => {
     const form = useDecryptForm();
@@ -16,7 +17,7 @@ const Decrypt = () => {
         formData.append("outputfile", form.outputFile.outputFileName);
         formData.append("key", form.key.key);
 
-        fetch('api/file-reader/decrypt', {
+        fetch(DECRYPT, {
             method: 'POST',
             body: formData
         })

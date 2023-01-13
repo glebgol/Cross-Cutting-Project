@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useEncryptForm from "../hooks/forms/useEncryptForm";
-
+import {ENCRYPT} from "../Urls"
 const Encrypt = () => {
     const form = useEncryptForm();
 
@@ -20,7 +20,7 @@ const Encrypt = () => {
         formData.append("outputfile", form.outputFile.outputFileName);
         formData.append("key", form.key.key);
 
-        fetch('api/file-reader/encrypt', {
+        fetch(ENCRYPT, {
             method: 'POST',
             body: formData
         })

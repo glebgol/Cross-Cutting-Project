@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useFileInput from "../hooks/inputs/useFileInput";
+import {ZIP} from "../Urls";
 
 const Zip = () => {
     const file = useFileInput();
@@ -14,7 +15,7 @@ const Zip = () => {
         const formData = new FormData();
         formData.append("file", file.selectedFile);
 
-        fetch('api/file-reader/zip', {
+        fetch(ZIP, {
             method: 'POST',
             body: formData
         })

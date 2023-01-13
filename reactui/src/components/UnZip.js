@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useUnZipForm from "../hooks/forms/useUnZipForm";
+import {UNZIP} from "../Urls"
 
 const UnZip = () => {
     const form = useUnZipForm();
@@ -13,7 +14,7 @@ const UnZip = () => {
         const formData = new FormData();
         formData.append("file", form.file.selectedFile);
         formData.append("outputfile", form.outputFile.outputFileName);
-        fetch('api/file-reader/unzip', {
+        fetch(UNZIP, {
             method: 'POST',
             body: formData
         })
