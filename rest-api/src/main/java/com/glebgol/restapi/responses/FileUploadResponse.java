@@ -1,4 +1,4 @@
-package com.example.restapi.responses;
+package com.glebgol.restapi.responses;
 
 import lombok.Builder;
 import lombok.Getter;

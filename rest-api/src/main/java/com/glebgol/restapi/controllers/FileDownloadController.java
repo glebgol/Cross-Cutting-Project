@@ -1,6 +1,6 @@
-package com.example.restapi.controllers;
+package com.glebgol.restapi.controllers;
 
-import com.example.restapi.utils.FileDownloadUtil;
+import com.glebgol.restapi.utils.FileDownloadUtil;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

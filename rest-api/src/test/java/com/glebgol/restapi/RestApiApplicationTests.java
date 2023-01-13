@@ -1,4 +1,4 @@
-package com.example.restapi;
+package com.glebgol.restapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

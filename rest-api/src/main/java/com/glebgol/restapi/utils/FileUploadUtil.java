@@ -1,4 +1,4 @@
-package com.example.restapi.utils;
+package com.glebgol.restapi.utils;
 
 import org.springframework.web.multipart.MultipartFile;
 
