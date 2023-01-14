@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Add to builder throw IllegalArgumentException for not supported file extension">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/BaseRestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_1.xml" beforeDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="delete file after testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileCalculationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileCalculationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileDownloadControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileUploadControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,20 +289,6 @@
       <workItem from="1673413037033" duration="164000" />
       <workItem from="1673417425008" duration="3852000" />
       <workItem from="1673444804342" duration="74088000" />
-    </task>
-    <task id="LOCAL-00165" summary="Validation for output file name">
-      <created>1673042606403</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1673042606403</updated>
-    </task>
-    <task id="LOCAL-00166" summary="Validation for encryption keys">
-      <created>1673043576972</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1673043576972</updated>
     </task>
     <task id="LOCAL-00167" summary="Validation for encryption keys">
       <created>1673043782993</created>
@@ -634,7 +619,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673697277853</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="Create first Rest-Assured test">
+      <created>1673722649132</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1673722649133</updated>
+    </task>
+    <task id="LOCAL-00215" summary="delete file after testing">
+      <created>1673724142318</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1673724142318</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,8 +658,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SoftAssert: isExist file, is correct result info, is enabled download and calculate buttons" />
-    <MESSAGE value="Enable to download xml files" />
     <MESSAGE value="Test for xml file" />
     <MESSAGE value="Change tearDown method" />
     <MESSAGE value="Create AfterMethod test for OUTPUT_XML group" />
@@ -684,7 +681,9 @@
     <MESSAGE value="Rename package and create new controllers" />
     <MESSAGE value="Moved business logic to rest-api module" />
     <MESSAGE value="Add to builder throw IllegalArgumentException for not supported file extension" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to builder throw IllegalArgumentException for not supported file extension" />
+    <MESSAGE value="Create first Rest-Assured test" />
+    <MESSAGE value="delete file after testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete file after testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
