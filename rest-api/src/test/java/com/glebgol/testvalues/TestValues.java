@@ -7,6 +7,8 @@ public class TestValues {
 
 
     public static final String ENCRYPTED_TXT = System.getProperty("user.dir") + "\\src\\test\\resources\\encrypted.txt";
+    public static final String INPUT_FILE_TXT = System.getProperty("user.dir") + "\\src\\test\\resources\\input-file.txt";
+
     public static final String OUTPUT_TXT = "output.txt";
     public static final String OUTPUT_XML = "output.xml";
     public static final String OUTPUT_JSON = "output.json";

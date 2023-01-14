@@ -3,8 +3,6 @@ package com.glebgol.restapi.controllers;
 import org.junit.jupiter.api.BeforeAll;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.port;
@@ -31,7 +29,6 @@ public abstract class BaseRestTest {
 
     private static String getPathName() {
         String userDir = System.getProperty("user.dir");
-        String path = System.getProperty("user.dir").substring(0, userDir.lastIndexOf('\\')) + "\\Files-Upload\\";
-        return path;
+        return System.getProperty("user.dir").substring(0, userDir.lastIndexOf('\\')) + "\\Files-Upload\\";
     }
 }
