@@ -1,6 +1,8 @@
 package com.glebgol.restapi.controllers;
 
 import com.glebgol.testvalues.TestValues;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -11,8 +13,8 @@ import static io.restassured.RestAssured.given;
 
 public class FileCalculationControllerTest extends BaseRestTest {
     public static final String CALCULATE_URL = "/calculate";
-    @AfterClass
-    public void deleteFiles() {
+    @AfterAll
+    public static void deleteFiles() {
         deleteFile(TestValues.OUTPUT_TXT);
     }
     @Test

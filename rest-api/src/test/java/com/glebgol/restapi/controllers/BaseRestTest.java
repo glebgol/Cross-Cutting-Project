@@ -2,6 +2,10 @@ package com.glebgol.restapi.controllers;
 
 import org.junit.jupiter.api.BeforeAll;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.port;
 
@@ -14,10 +18,20 @@ public abstract class BaseRestTest {
     }
 
     public boolean verifyFileIsUploaded(String fileName) {
-        return true;
+        String pathName = getPathName();
+        File file = new File(pathName + fileName);
+        return file.exists();
     }
 
-    public void deleteFile(String fileName) {
+    public static void deleteFile(String fileName) {
+        String pathName = getPathName();
+        File file = new File(pathName + fileName);
+        file.delete();
+    }
 
+    private static String getPathName() {
+        String userDir = System.getProperty("user.dir");
+        String path = System.getProperty("user.dir").substring(0, userDir.lastIndexOf('\\')) + "\\Files-Upload\\";
+        return path;
     }
 }
