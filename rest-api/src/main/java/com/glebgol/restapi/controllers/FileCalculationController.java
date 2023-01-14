@@ -1,13 +1,13 @@
 package com.glebgol.restapi.controllers;
 
-import builder.FileReaderBuilder;
-import ciphers.KeyValidation;
+import com.glebgol.businesslogic.builder.FileReaderBuilder;
+import com.glebgol.businesslogic.contracts.interfaces.IFileReader;
+import com.glebgol.businesslogic.contracts.interfaces.IFileReaderBuilder;
+import com.glebgol.businesslogic.utils.ciphers.KeyValidation;
 import com.glebgol.restapi.responses.FileUploadResponse;
 import com.glebgol.restapi.utils.constants.Constants;
 import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
-import interfaces.IFileReader;
-import interfaces.IFileReaderBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

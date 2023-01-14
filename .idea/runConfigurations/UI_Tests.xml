@@ -1,6 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="UI-Tests" type="TestNG">
+  <configuration default="false" name="UI-Tests" type="TestNG" show_console_on_std_err="true" show_console_on_std_out="true">
     <shortenClasspath name="NONE" />
+    <useClassPathOnly />
     <option name="SUITE_NAME" value="" />
     <option name="PACKAGE_NAME" value="reactuitest" />
     <option name="MAIN_CLASS_NAME" value="" />

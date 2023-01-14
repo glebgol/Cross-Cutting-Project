@@ -1,7 +1,7 @@
 package com.glebgol.restapi.controllers;
 
-import ciphers.CryptoUtils;
-import ciphers.KeyValidation;
+import com.glebgol.businesslogic.utils.ciphers.CryptoUtils;
+import com.glebgol.businesslogic.utils.ciphers.KeyValidation;
 import com.glebgol.restapi.responses.FileUploadResponse;
 import com.glebgol.restapi.utils.constants.Constants;
 import com.glebgol.restapi.utils.FileDeleteUtil;

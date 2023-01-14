@@ -1,6 +1,6 @@
 package com.glebgol.restapi.controllers;
 
-import archivers.ArchivingFileManager;
+import com.glebgol.businesslogic.utils.archivers.ArchivingFileManager;
 import com.glebgol.restapi.responses.FileUploadResponse;
 import com.glebgol.restapi.utils.constants.Constants;
 import com.glebgol.restapi.utils.FileDeleteUtil;

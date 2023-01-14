@@ -4,11 +4,93 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create useCalculateForm">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Moved business logic to rest-api module">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_10_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/API_Tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Calculation_Tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/CalculationEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/default.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/encrypted.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/ApiTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FileReader_Tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/CalculatingTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FileReaderTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/RestApiApplication.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UI_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/UI_Tests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/src/hooks/forms/useCalculateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/src/hooks/forms/useCalculateForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input-file.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileArchivingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileArchivingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-ui-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-ui-tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/enums/FileExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/exceptions/CryptoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/exceptions/CryptoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IJsonExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IJsonExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IXmlExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IXmlExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivingFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/utils/archivers/ArchivingFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/builder/FileReaderBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/utils/ciphers/CryptoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/KeyValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/utils/ciphers/KeyValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ArithmeticExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/ArithmeticExpressionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/CalculationEngine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/json/JsonExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/json/JsonExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/xml/XmlExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/xml/XmlExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/DefaultFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/DefaultFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/EncryptedFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/JsonFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/TxtFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/XmlFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/ZipFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/DefaultStreamResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/DefaultStreamResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/EncryptingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/EncryptingResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/JsonStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/TxtStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/TxtStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streams/XmlStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/XmlStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/CalculateTxtLineArgumentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/providers/CalculateTxtLineArgumentProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/providers/StreamArguments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/calculation/CalculationEngineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/EncryptedFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/readers/JsonFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/JsonFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/readers/TxtFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/TxtFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/readers/XmlFileReaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/readers/ZipFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/ZipFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/default.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/default.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/default.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/double_encrypted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/double_encrypted.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/double_encrypted.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/enc_json.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/enc_json.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/enc_xml.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/enc_xml.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/encrypted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/encrypted.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/encrypted.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/input.json" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,28 +101,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
         <option value="JavaScript File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/contracts/interfaces/IJsonExpressionList.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/contracts/interfaces/IXmlExpressionList.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/parsers/json/JsonExpression.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpression.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" />
@@ -55,115 +126,114 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Cross-Cutting-Project/selenium-ui-tests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "D:/Cross-Cutting-Project/rest-api/src/test/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs.jest.jest_package": "D:/Cross-Cutting-Project/reactui/node_modules/react-scripts",
+    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="reactuitest" />
       <recent name="com.example.restapi" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Cross-Cutting-Project\selenium-ui-tests" />
-      <recent name="D:\Anton\Cross-Cutting-Project" />
-      <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
-      <recent name="D:\Anton\Cross-Cutting-Project\lib" />
+      <recent name="D:\Cross-Cutting-Project\rest-api\src\test\resources" />
+      <recent name="D:\Cross-Cutting-Project\rest-api\src\test\java\com\glebgol\businesslogic" />
+      <recent name="D:\Cross-Cutting-Project\rest-api\src\test\java\com\glebgol" />
+      <recent name="D:\Cross-Cutting-Project\rest-api\src\main\java\com\glebgol\buisinesslogic" />
+      <recent name="D:\Cross-Cutting-Project\selenium-ui-tests\src\test\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Cross-Cutting-Project\rest-api\src\test\resources" />
+      <recent name="D:\Cross-Cutting-Project\reactui\src\hooks\inputs" />
       <recent name="D:\Cross-Cutting-Project" />
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src" />
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
-      <recent name="D:\Anton\Cross-Cutting-Project\src\test\resources" />
-      <recent name="D:\Anton\Cross-Cutting-Project\rest-api\src\test\resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.glebgol.buisinesslogic.calculation" />
+      <recent name="com.glebgol.restapi.controllers" />
       <recent name="readers" />
       <recent name="com.example.restapi" />
       <recent name="parsers" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.glebgol.businesslogic" />
+      <recent name="com.glebgol.providers" />
+      <recent name="com.glebgol.buisinesslogic.utils.ciphers" />
+      <recent name="com.glebgol.buisinesslogic.utils.archivers" />
+      <recent name="com.glebgol.buisinesslogic.contracts.enums" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
-    <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSelenium" type="TestNG" nameIsGenerated="true">
-      <module name="selenium-ui-tests" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.seleniumuitests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.example.seleniumuitests" />
-      <option name="MAIN_CLASS_NAME" value="com.example.seleniumuitests.TestSelenium" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="open spring-boot-file-upload" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.API-Tests">
+    <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="rest-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.glebgol.restapi.RestApiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="HTTP Request.generated-requests | #10" />
-      <item itemvalue="JUnit.ApiTests" />
-      <item itemvalue="JUnit.FileReaderTests" />
-      <item itemvalue="JUnit.CalculatingTests" />
+      <item itemvalue="JUnit.FileReader-Tests" />
+      <item itemvalue="JUnit.Calculation-Tests" />
+      <item itemvalue="JUnit.API-Tests" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
-      <item itemvalue="TestNG.TestSelenium" />
+      <item itemvalue="TestNG.UI-Tests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #10" />
+        <item itemvalue="JUnit.API-Tests" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SeleniumInternalSettingsState">
+    <option name="lastFrameworkName" value="Selenium" />
+    <option name="lastLanguageId" value="JAVA" />
+    <option name="lastUrl" value="http://localhost:3000/" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -237,259 +307,13 @@
       <workItem from="1672923811998" duration="3256000" />
       <workItem from="1672940515211" duration="6729000" />
       <workItem from="1673038280131" duration="15617000" />
-      <workItem from="1673093226026" duration="2551000" />
-    </task>
-    <task id="LOCAL-00127" summary="Created FileUploadController">
-      <created>1670884195850</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1670884195850</updated>
-    </task>
-    <task id="LOCAL-00128" summary="Added FileDownloadUtil and FileDownloadController">
-      <created>1670884363150</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1670884363150</updated>
-    </task>
-    <task id="LOCAL-00129" summary="Rest Assured tests">
-      <created>1671123781707</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1671123781707</updated>
-    </task>
-    <task id="LOCAL-00130" summary="File Manager, upload, download">
-      <created>1671140817479</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1671140817479</updated>
-    </task>
-    <task id="LOCAL-00131" summary="Refactor naming">
-      <created>1671462499485</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1671462499486</updated>
-    </task>
-    <task id="LOCAL-00132" summary="Refactor xml and json expressions">
-      <created>1671462901167</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1671462901168</updated>
-    </task>
-    <task id="LOCAL-00133" summary="Rename and refactor ArchivingFileManager">
-      <created>1671463115332</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1671463115332</updated>
-    </task>
-    <task id="LOCAL-00134" summary="Refactor CryptoUtils">
-      <created>1671463329980</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1671463329980</updated>
-    </task>
-    <task id="LOCAL-00135" summary="Change xml, json streams">
-      <created>1671465076121</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1671465076121</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Added query params to rest-assured tests">
-      <created>1671705793807</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1671705793807</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Added query params to rest-assured tests">
-      <created>1671729524514</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1671729524514</updated>
-    </task>
-    <task id="LOCAL-00138" summary="Deleting">
-      <created>1671807999974</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1671807999975</updated>
-    </task>
-    <task id="LOCAL-00139" summary="File-upload-download util">
-      <created>1671808644386</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1671808644386</updated>
-    </task>
-    <task id="LOCAL-00140" summary="File download controller">
-      <created>1671810608298</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1671810608298</updated>
-    </task>
-    <task id="LOCAL-00141" summary="fetch calculating">
-      <created>1671914399684</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1671914399685</updated>
-    </task>
-    <task id="LOCAL-00142" summary="IFileReader default method getResult">
-      <created>1671927236742</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1671927236742</updated>
-    </task>
-    <task id="LOCAL-00143" summary="Upload and calculate file">
-      <created>1671994103158</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1671994103158</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Download calculating file">
-      <created>1671995031893</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1671995031893</updated>
-    </task>
-    <task id="LOCAL-00145" summary="DownloadFile service">
-      <created>1671997135281</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1671997135281</updated>
-    </task>
-    <task id="LOCAL-00146" summary="Post encrypting">
-      <created>1672001287011</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1672001287011</updated>
-    </task>
-    <task id="LOCAL-00147" summary="Post decrypting">
-      <created>1672001323799</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1672001323799</updated>
-    </task>
-    <task id="LOCAL-00148" summary="Refactor FileUploadUtil">
-      <created>1672084565270</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1672084565270</updated>
-    </task>
-    <task id="LOCAL-00149" summary="Post encrypting and decrypting">
-      <created>1672160521328</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1672160521328</updated>
-    </task>
-    <task id="LOCAL-00150" summary="Added isCalculated state">
-      <created>1672160574075</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1672160574075</updated>
-    </task>
-    <task id="LOCAL-00151" summary="fetch encrypting">
-      <created>1672160593290</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1672160593290</updated>
-    </task>
-    <task id="LOCAL-00152" summary="fetch decrypting">
-      <created>1672160603106</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1672160603106</updated>
-    </task>
-    <task id="LOCAL-00153" summary="set size of uploading file">
-      <created>1672254833245</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1672254833245</updated>
-    </task>
-    <task id="LOCAL-00154" summary="Set download uri">
-      <created>1672255325937</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1672255325938</updated>
-    </task>
-    <task id="LOCAL-00155" summary="Added isEmpty check for multipartfile">
-      <created>1672256290691</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1672256290691</updated>
-    </task>
-    <task id="LOCAL-00156" summary="Zip unzip post methods">
-      <created>1672262453369</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1672262453369</updated>
-    </task>
-    <task id="LOCAL-00157" summary="getNameOfArchiveFile">
-      <created>1672262998012</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1672262998012</updated>
-    </task>
-    <task id="LOCAL-00158" summary="Fetch zip and unzip">
-      <created>1672263046514</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1672263046514</updated>
-    </task>
-    <task id="LOCAL-00159" summary="Delete fetching">
-      <created>1672263239973</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1672263239973</updated>
-    </task>
-    <task id="LOCAL-00160" summary="Is valid file name">
-      <created>1672263932850</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1672263932850</updated>
-    </task>
-    <task id="LOCAL-00161" summary="Delete unused responses">
-      <created>1672330691606</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1672330691606</updated>
-    </task>
-    <task id="LOCAL-00162" summary="Fix uploaded file name">
-      <created>1672926872670</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1672926872671</updated>
+      <workItem from="1673093226026" duration="3412000" />
+      <workItem from="1673101348019" duration="8847000" />
+      <workItem from="1673130261562" duration="40261000" />
+      <workItem from="1673352391020" duration="10839000" />
+      <workItem from="1673413037033" duration="164000" />
+      <workItem from="1673417425008" duration="3852000" />
+      <workItem from="1673444804342" duration="73460000" />
     </task>
     <task id="LOCAL-00163" summary="Added lombock builder annotation">
       <created>1672942570175</created>
@@ -582,7 +406,259 @@
       <option name="project" value="LOCAL" />
       <updated>1673096089323</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Refactor folders">
+      <created>1673096483659</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1673096483659</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Create encrypt form">
+      <created>1673109570554</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1673109570554</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Create unzip form">
+      <created>1673110196084</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1673110196084</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Added useFileInput to Zip component">
+      <created>1673110471688</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1673110471688</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Fix disabled">
+      <created>1673263558717</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1673263558717</updated>
+    </task>
+    <task id="LOCAL-00181" summary="Create BaseSeleniumTest">
+      <created>1673280707424</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1673280707424</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Create BaseSeleniumPage">
+      <created>1673280726752</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1673280726752</updated>
+    </task>
+    <task id="LOCAL-00183" summary="Add CalculationPage">
+      <created>1673280752412</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1673280752412</updated>
+    </task>
+    <task id="LOCAL-00184" summary="Create CalculationPageTest">
+      <created>1673280762682</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1673280762682</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Verify if the file was downloaded">
+      <created>1673343293471</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1673343293472</updated>
+    </task>
+    <task id="LOCAL-00186" summary="Delete file after test">
+      <created>1673345524092</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1673345524093</updated>
+    </task>
+    <task id="LOCAL-00187" summary="Delete result files">
+      <created>1673445312766</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1673445312767</updated>
+    </task>
+    <task id="LOCAL-00188" summary="Create TestInfo class">
+      <created>1673450849261</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1673450849261</updated>
+    </task>
+    <task id="LOCAL-00189" summary="Added resultInfo WebElement">
+      <created>1673450917984</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1673450917984</updated>
+    </task>
+    <task id="LOCAL-00190" summary="SoftAssert: isExist file, is correct result info, is enabled download and calculate buttons">
+      <created>1673456016826</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1673456016826</updated>
+    </task>
+    <task id="LOCAL-00191" summary="Enable to download xml files">
+      <created>1673457758136</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1673457758136</updated>
+    </task>
+    <task id="LOCAL-00192" summary="Test for xml file">
+      <created>1673457869734</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1673457869734</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Change tearDown method">
+      <created>1673458323256</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1673458323256</updated>
+    </task>
+    <task id="LOCAL-00194" summary="Create AfterMethod test for OUTPUT_XML group">
+      <created>1673458374503</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1673458374503</updated>
+    </task>
+    <task id="LOCAL-00195" summary="Changed names for constants">
+      <created>1673463050533</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1673463050533</updated>
+    </task>
+    <task id="LOCAL-00196" summary="Test for downloading json file">
+      <created>1673463309733</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1673463309733</updated>
+    </task>
+    <task id="LOCAL-00197" summary="Fluent interface">
+      <created>1673529459971</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1673529459971</updated>
+    </task>
+    <task id="LOCAL-00198" summary="Renamed test values">
+      <created>1673534276228</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1673534276228</updated>
+    </task>
+    <task id="LOCAL-00199" summary="Create EncryptionPage and EncryptionTest">
+      <created>1673535429326</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1673535429326</updated>
+    </task>
+    <task id="LOCAL-00200" summary="Renamed click and calculate methods">
+      <created>1673550354779</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1673550354779</updated>
+    </task>
+    <task id="LOCAL-00201" summary="Create Decryption page and test">
+      <created>1673552874783</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1673552874783</updated>
+    </task>
+    <task id="LOCAL-00202" summary="Verify file bytes before and after encrypting and decrypting equals">
+      <created>1673554248606</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1673554248606</updated>
+    </task>
+    <task id="LOCAL-00203" summary="Added name attribute">
+      <created>1673555087910</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1673555087910</updated>
+    </task>
+    <task id="LOCAL-00204" summary="Tests for encrypting and decrypting">
+      <created>1673556617575</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1673556617575</updated>
+    </task>
+    <task id="LOCAL-00205" summary="Create helpers package for FileUtil and TestValues">
+      <created>1673557323078</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1673557323078</updated>
+    </task>
+    <task id="LOCAL-00206" summary="Refactor TestValues">
+      <created>1673563245998</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1673563245998</updated>
+    </task>
+    <task id="LOCAL-00207" summary="Create Urls class">
+      <created>1673564381138</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1673564381138</updated>
+    </task>
+    <task id="LOCAL-00208" summary="Create Main page tests">
+      <created>1673564668530</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1673564668530</updated>
+    </task>
+    <task id="LOCAL-00209" summary="Add finally block for deleting input file">
+      <created>1673607494491</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1673607494491</updated>
+    </task>
+    <task id="LOCAL-00210" summary="Add Urls">
+      <created>1673638381407</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1673638381407</updated>
+    </task>
+    <task id="LOCAL-00211" summary="Rename package and create new controllers">
+      <created>1673638624512</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1673638624512</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,32 +683,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added isCalculated state" />
-    <MESSAGE value="fetch encrypting" />
-    <MESSAGE value="fetch decrypting" />
-    <MESSAGE value="set size of uploading file" />
-    <MESSAGE value="Set download uri" />
-    <MESSAGE value="Added isEmpty check for multipartfile" />
-    <MESSAGE value="Zip unzip post methods" />
-    <MESSAGE value="getNameOfArchiveFile" />
-    <MESSAGE value="Fetch zip and unzip" />
-    <MESSAGE value="Delete fetching" />
-    <MESSAGE value="Is valid file name" />
-    <MESSAGE value="Delete unused responses" />
-    <MESSAGE value="Fix uploaded file name" />
-    <MESSAGE value="Added lombock builder annotation" />
-    <MESSAGE value="is Valid for calculation method" />
-    <MESSAGE value="Validation for output file name" />
-    <MESSAGE value="Validation for encryption keys" />
-    <MESSAGE value="Refactoring calculate method" />
-    <MESSAGE value="Create Output file name input hook" />
-    <MESSAGE value="Create Encryption key input hook" />
-    <MESSAGE value="Change error default state" />
-    <MESSAGE value="Create hook for input file" />
-    <MESSAGE value="Create hook for file extension input" />
-    <MESSAGE value="Create useDecryptForm" />
-    <MESSAGE value="Create useCalculateForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create useCalculateForm" />
+    <MESSAGE value="Added resultInfo WebElement" />
+    <MESSAGE value="SoftAssert: isExist file, is correct result info, is enabled download and calculate buttons" />
+    <MESSAGE value="Enable to download xml files" />
+    <MESSAGE value="Test for xml file" />
+    <MESSAGE value="Change tearDown method" />
+    <MESSAGE value="Create AfterMethod test for OUTPUT_XML group" />
+    <MESSAGE value="Changed names for constants" />
+    <MESSAGE value="Test for downloading json file" />
+    <MESSAGE value="Fluent interface" />
+    <MESSAGE value="Renamed test values" />
+    <MESSAGE value="Create EncryptionPage and EncryptionTest" />
+    <MESSAGE value="Create DecryptionPage" />
+    <MESSAGE value="Renamed click and calculate methods" />
+    <MESSAGE value="Create Decryption page and test" />
+    <MESSAGE value="Verify file bytes before and after encrypting and decrypting equals" />
+    <MESSAGE value="Added name attribute" />
+    <MESSAGE value="Tests for encrypting and decrypting" />
+    <MESSAGE value="Create helpers package for FileUtil and TestValues" />
+    <MESSAGE value="Refactor TestValues" />
+    <MESSAGE value="Create Urls class" />
+    <MESSAGE value="Create Main page tests" />
+    <MESSAGE value="Add finally block for deleting input file" />
+    <MESSAGE value="Add Urls" />
+    <MESSAGE value="Rename package and create new controllers" />
+    <MESSAGE value="Moved business logic to rest-api module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved business logic to rest-api module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
