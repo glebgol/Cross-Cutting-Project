@@ -13,9 +13,9 @@ public abstract class DefaultStreamResult implements IStream {
     protected byte[] bytes;
     public DefaultStreamResult(byte[] bytes) {
         this.bytes = bytes;
-        var lines = new ArrayList<String>();
-        var str = new String(bytes, StandardCharsets.UTF_8);
-        var stringTokenizer = new StringTokenizer(str, "\n");
+        List<String> lines = new ArrayList<>();
+        String str = new String(bytes, StandardCharsets.UTF_8);
+        StringTokenizer stringTokenizer = new StringTokenizer(str, "\n");
         while (stringTokenizer.hasMoreTokens()) {
             lines.add(stringTokenizer.nextToken());
         }

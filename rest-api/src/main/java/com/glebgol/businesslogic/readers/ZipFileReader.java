@@ -1,7 +1,6 @@
 package com.glebgol.businesslogic.readers;
 
 
-
 import com.glebgol.businesslogic.contracts.exceptions.CryptoException;
 import com.glebgol.businesslogic.contracts.interfaces.IFileReader;
 import com.glebgol.businesslogic.contracts.interfaces.IStream;
@@ -23,7 +22,7 @@ public class ZipFileReader extends FileReader {
 
     @Override
     public IStream read() throws IOException, CryptoException, JAXBException {
-        var unzippingResult = ArchivingFileManager.getUnZipped(inputFilename);
+        IStream unzippingResult = ArchivingFileManager.getUnZipped(inputFilename);
         return _reader.transform(unzippingResult);
     }
 

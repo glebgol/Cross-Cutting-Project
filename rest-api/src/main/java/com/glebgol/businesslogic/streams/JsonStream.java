@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class JsonStream extends DefaultStreamResult {
@@ -14,7 +15,7 @@ public class JsonStream extends DefaultStreamResult {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String str = gson.toJson(expressions);
         bytes = str.getBytes();
-        var lines = new ArrayList<String>();
+        List<String> lines = new ArrayList<>();
         var stringTokenizer = new StringTokenizer(str, "\n");
         while (stringTokenizer.hasMoreTokens()) {
             lines.add(stringTokenizer.nextToken());

@@ -9,6 +9,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class XmlStream extends DefaultStreamResult {
@@ -16,14 +17,14 @@ public class XmlStream extends DefaultStreamResult {
     public XmlStream(IXmlExpressionList expressions) throws JAXBException {
         this.expressions = expressions;
 
-        var jaxbContext = JAXBContext.newInstance(XmlExpressionList.class);
-        var jaxbMarshaller = jaxbContext.createMarshaller();
+        JAXBContext jaxbContext = JAXBContext.newInstance(XmlExpressionList.class);
+        Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        var sw = new StringWriter();
+        StringWriter sw = new StringWriter();
         jaxbMarshaller.marshal(expressions, sw);
         bytes = sw.toString().getBytes();
 
-        var lines = new ArrayList<String>();
+        List<String> lines = new ArrayList<>();
         var stringTokenizer = new StringTokenizer(sw.toString(), "\n");
         while (stringTokenizer.hasMoreTokens()) {
             lines.add(stringTokenizer.nextToken());
