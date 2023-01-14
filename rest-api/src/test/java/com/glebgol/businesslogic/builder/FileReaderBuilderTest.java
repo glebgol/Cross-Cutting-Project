@@ -12,16 +12,15 @@ import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
+import static com.glebgol.testvalues.TestValues.*;
+
 
 class FileReaderBuilderTest {
-    private static final String FirstKey = "qwsdcvbgfthyrdfw";
-    private static final String SecondKey = "asdfghjkqewrtyto";
-
     @Test
     public void twiceEncryptedAndZippedFileReaderBuilderTest() throws JAXBException, IOException, CryptoException {
-        IFileReaderBuilder builder = new FileReaderBuilder("txt", System.getProperty("user.dir") + "\\src\\test\\resources\\double_encrypted.zip");
-        builder.setEncrypting(FirstKey);
-        builder.setEncrypting(SecondKey);
+        IFileReaderBuilder builder = new FileReaderBuilder("txt", TWICE_ENCRYPTED_ZIP);
+        builder.setEncrypting(FIRST_KEY);
+        builder.setEncrypting(SECOND_KEY);
         builder.setZipping(true);
 
         IFileReader reader = builder.getFileReader();

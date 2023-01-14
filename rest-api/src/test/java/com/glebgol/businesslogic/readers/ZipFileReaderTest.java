@@ -11,13 +11,13 @@ import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
+import static com.glebgol.testvalues.TestValues.*;
+
 class ZipFileReaderTest {
-    private static final String FirstKey = "qwsdcvbgfthyrdfw";
-    private static final String SecondKey = "asdfghjkqewrtyto";
     @Test
     void Calculate_ZippedFile() throws IOException, CryptoException, JAXBException {
         IFileReader reader = new ZipFileReader(
-                new TxtFileReader(System.getProperty("user.dir") +"\\src\\test\\resources\\default.zip"));
+                new TxtFileReader(DEFAULT_ZIP));
         IStream expectedCalculationResult = StreamArguments.CalculationResult();
         List<String> expectedCalculationResultLines = expectedCalculationResult.lines();
 
@@ -31,8 +31,8 @@ class ZipFileReaderTest {
     @Test
     void Calculate_ZippedAndEncryptedFile() throws IOException, CryptoException, JAXBException {
         IFileReader reader = new ZipFileReader(
-                new EncryptedFileReader(FirstKey,
-                        new TxtFileReader(System.getProperty("user.dir") +"\\src\\test\\resources\\encrypted.zip")));
+                new EncryptedFileReader(FIRST_KEY,
+                        new TxtFileReader(ENCRYPTED_ZIP)));
         IStream expectedCalculationResult = StreamArguments.CalculationResult();
         List<String> expectedCalculationResultLines = expectedCalculationResult.lines();
 
@@ -46,9 +46,9 @@ class ZipFileReaderTest {
     @Test
     void Calculate_ZippedAndDoubleEncryptedFile() throws IOException, CryptoException, JAXBException {
         IFileReader reader = new ZipFileReader(
-                new EncryptedFileReader(SecondKey,
-                        new EncryptedFileReader(FirstKey,
-                                new TxtFileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\double_encrypted.zip"))));
+                new EncryptedFileReader(SECOND_KEY,
+                        new EncryptedFileReader(FIRST_KEY,
+                                new TxtFileReader(TWICE_ENCRYPTED_ZIP))));
         IStream expectedCalculationResult = StreamArguments.CalculationResult();
         List<String> expectedCalculationResultLines = expectedCalculationResult.lines();
 

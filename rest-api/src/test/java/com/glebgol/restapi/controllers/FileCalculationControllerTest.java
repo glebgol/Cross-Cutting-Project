@@ -23,7 +23,7 @@ public class FileCalculationControllerTest extends BaseRestTest {
     public void calculateTwiceEncryptedAndZippedTxtFile() {
         String txtFileName = TestValues.OUTPUT_TXT;
         given()
-                .multiPart("file", new File(TestValues.ZIPPED_AND_TWICE_ENCRYPTED_TXT))
+                .multiPart("file", new File(TestValues.TWICE_ENCRYPTED_ZIP))
                 .queryParam("outputfile", txtFileName)
                 .queryParam("decryptionkeys", TestValues.KEYS)
                 .queryParam("iszipped", true)

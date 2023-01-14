@@ -13,14 +13,14 @@ import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
+import static com.glebgol.testvalues.TestValues.*;
+
 class EncryptedFileReaderTest {
-    private static final String FirstKey = "qwsdcvbgfthyrdfw";
-    private static final String SecondKey = "asdfghjkqewrtyto";
 
     @Test
     void Calculate_EncryptedFile() throws IOException, CryptoException, JAXBException {
-        IFileReader reader = new EncryptedFileReader(FirstKey,
-                new TxtFileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\encrypted.txt"));
+        IFileReader reader = new EncryptedFileReader(FIRST_KEY,
+                new TxtFileReader(ENCRYPTED_TXT));
         IStream expectedCalculationResult = StreamArguments.CalculationResult();
         List<String> expectedCalculationResultLines = expectedCalculationResult.lines();
 
@@ -33,9 +33,9 @@ class EncryptedFileReaderTest {
 
     @Test
     void Calculate_DoubleEncryptedFile() throws IOException, CryptoException, JAXBException {
-        IFileReader reader = new EncryptedFileReader(SecondKey,
-                new EncryptedFileReader(FirstKey,
-                        new TxtFileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\double_encrypted.txt")));
+        IFileReader reader = new EncryptedFileReader(SECOND_KEY,
+                new EncryptedFileReader(FIRST_KEY,
+                        new TxtFileReader(TWICE_ENCRYPTED)));
 
         IStream expectedCalculationResult = StreamArguments.CalculationResult();
         List<String> expectedCalculationResultLines = expectedCalculationResult.lines();
@@ -48,8 +48,8 @@ class EncryptedFileReaderTest {
     }
     @Test
     void Calculate_EncryptedXmlFile() throws IOException, CryptoException, JAXBException {
-        IFileReader reader = new EncryptedFileReader(FirstKey,
-                        new XmlFileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\enc_xml.txt"));
+        IFileReader reader = new EncryptedFileReader(FIRST_KEY,
+                        new XmlFileReader(ENC_XML));
 
         List<String> expectedCalculationResultLines = StreamArguments.CalculatedXmlLines();
 
@@ -62,8 +62,8 @@ class EncryptedFileReaderTest {
 
     @Test
     void Calculate_EncryptedJsonFile() throws IOException, CryptoException, JAXBException {
-        IFileReader reader = new EncryptedFileReader(FirstKey,
-                new JsonFileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\enc_json.txt"));
+        IFileReader reader = new EncryptedFileReader(FIRST_KEY,
+                new JsonFileReader(ENC_JSON));
 
         List<String> expectedCalculationResultLines = StreamArguments.CalculatedJsonLines();
 
