@@ -4,93 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Moved business logic to rest-api module">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3e68018-e978-4133-abd8-c6893990189a/storage_v2/_src_/database/cross-cutting-project.7_qyzQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_10_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/API_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Calculation_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/CalculationEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/default.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/test/resources/encrypted.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/ApiTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FileReader_Tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/CalculatingTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FileReaderTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/RestApiApplication.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UI_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/UI_Tests.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Add to builder throw IllegalArgumentException for not supported file extension">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/builder/FileReaderBuilderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cross-Cutting-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cross-Cutting-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileArchivingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileArchivingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-ui-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-ui-tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/enums/FileExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/enums/FileExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/exceptions/CryptoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/exceptions/CryptoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IFileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IFileReaderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IJsonExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IJsonExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/contracts/interfaces/IXmlExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/contracts/interfaces/IXmlExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/archivers/ArchivingFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/utils/archivers/ArchivingFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/FileReaderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/builder/FileReaderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/CryptoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/utils/ciphers/CryptoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ciphers/KeyValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/utils/ciphers/KeyValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/ArithmeticExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/ArithmeticExpressionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/CalculationEngine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/json/JsonExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/json/JsonExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/json/JsonExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/xml/XmlExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/xml/XmlExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/calculation/xml/XmlExpressionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/DefaultFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/DefaultFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/EncryptedFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/EncryptedFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/TxtFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/TxtFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/XmlFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/readers/ZipFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/readers/ZipFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/DefaultStreamResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/DefaultStreamResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/EncryptingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/EncryptingResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/JsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/JsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/TxtStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/TxtStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/XmlStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/businesslogic/streams/XmlStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/CalculateTxtLineArgumentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/providers/CalculateTxtLineArgumentProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArgumentProviders/StreamArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/providers/StreamArguments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parsers/ProcessingTxtFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/calculation/CalculationEngineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/EncryptedFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/JsonFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/JsonFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/TxtFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/TxtFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/XmlFileReaderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/readers/ZipFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/ZipFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/default.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/default.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/default.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/double_encrypted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/double_encrypted.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/double_encrypted.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/enc_json.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/enc_json.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/enc_xml.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/enc_xml.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/encrypted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/encrypted.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/encrypted.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/input.json" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/resources/input.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,11 +104,11 @@
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.glebgol.businesslogic.builder" />
       <recent name="com.glebgol.buisinesslogic.calculation" />
       <recent name="com.glebgol.restapi.controllers" />
       <recent name="readers" />
       <recent name="com.example.restapi" />
-      <recent name="parsers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.glebgol.businesslogic" />
@@ -207,7 +123,7 @@
       <command value="open spring-boot-file-upload" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.API-Tests">
+  <component name="RunManager" selected="JUnit.FileReaderBuilderTest">
     <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="rest-api" />
@@ -220,12 +136,14 @@
       <item itemvalue="JUnit.FileReader-Tests" />
       <item itemvalue="JUnit.Calculation-Tests" />
       <item itemvalue="JUnit.API-Tests" />
+      <item itemvalue="JUnit.FileReaderBuilderTest" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
       <item itemvalue="TestNG.UI-Tests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileReaderBuilderTest" />
         <item itemvalue="JUnit.API-Tests" />
       </list>
     </recent_temporary>
@@ -313,21 +231,7 @@
       <workItem from="1673352391020" duration="10839000" />
       <workItem from="1673413037033" duration="164000" />
       <workItem from="1673417425008" duration="3852000" />
-      <workItem from="1673444804342" duration="73460000" />
-    </task>
-    <task id="LOCAL-00163" summary="Added lombock builder annotation">
-      <created>1672942570175</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1672942570176</updated>
-    </task>
-    <task id="LOCAL-00164" summary="is Valid for calculation method">
-      <created>1672943666715</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1672943666715</updated>
+      <workItem from="1673444804342" duration="74088000" />
     </task>
     <task id="LOCAL-00165" summary="Validation for output file name">
       <created>1673042606403</created>
@@ -658,7 +562,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673638624512</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="Moved business logic to rest-api module">
+      <created>1673696889687</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1673696889687</updated>
+    </task>
+    <task id="LOCAL-00213" summary="Add to builder throw IllegalArgumentException for not supported file extension">
+      <created>1673697277853</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1673697277853</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +601,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added resultInfo WebElement" />
     <MESSAGE value="SoftAssert: isExist file, is correct result info, is enabled download and calculate buttons" />
     <MESSAGE value="Enable to download xml files" />
     <MESSAGE value="Test for xml file" />
@@ -708,7 +625,8 @@
     <MESSAGE value="Add Urls" />
     <MESSAGE value="Rename package and create new controllers" />
     <MESSAGE value="Moved business logic to rest-api module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved business logic to rest-api module" />
+    <MESSAGE value="Add to builder throw IllegalArgumentException for not supported file extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add to builder throw IllegalArgumentException for not supported file extension" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
