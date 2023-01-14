@@ -1,5 +1,6 @@
 package com.glebgol.restapi.controllers;
 
+import com.glebgol.restapi.Urls.Urls;
 import com.glebgol.testvalues.TestValues;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -11,7 +12,7 @@ import static com.glebgol.testvalues.TestValues.MESSAGE_FOR_NOT_UPLOADED_FILE;
 import static io.restassured.RestAssured.given;
 
 public class FileCalculationControllerTest extends BaseRestTest {
-    public static final String CALCULATE_URL = "/calculate";
+    public static final String CALCULATE_URL = Urls.CALCULATE_URL;
     @AfterAll
     public static void deleteFiles() {
         deleteFile(TestValues.OUTPUT_TXT);

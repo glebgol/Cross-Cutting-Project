@@ -1,5 +1,6 @@
 package com.glebgol.restapi.controllers;
 
+import com.glebgol.restapi.Urls.Urls;
 import com.glebgol.testvalues.TestValues;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -11,7 +12,7 @@ import static com.glebgol.testvalues.TestValues.MESSAGE_FOR_NOT_UPLOADED_FILE;
 import static io.restassured.RestAssured.given;
 
 public class FileEncryptionControllerTest extends BaseRestTest {
-    public final String ENCRYPTION_URL = "/encrypt";
+    public final String ENCRYPTION_URL = Urls.ENCRYPT_URL;
     @AfterEach
     public void deleteFile() {
         deleteFile(TestValues.OUTPUT_TXT);

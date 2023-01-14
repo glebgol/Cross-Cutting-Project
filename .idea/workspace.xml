@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="delete file after testing">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rest-Assured tests encrypting">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/Urls/Urls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileArchivingControllerTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileCalculationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileCalculationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileDownloadControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileUploadControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileEncryptionControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileEncryptionControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,81 +125,19 @@
       <command value="open spring-boot-file-upload" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FileCalculationControllerTest">
-    <configuration name="FileCalculationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileCalculationControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileCalculationControllerTest.calculateEncryptedTxtFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileCalculationControllerTest" />
-      <option name="METHOD_NAME" value="calculateEncryptedTxtFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileCalculationControllerTest.calculateTwiceEncryptedAndZippedTxtFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileCalculationControllerTest" />
-      <option name="METHOD_NAME" value="calculateTwiceEncryptedAndZippedTxtFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
-      <module name="rest-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.glebgol.restapi.RestApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.UI-Tests">
     <list>
-      <item itemvalue="JUnit.FileReader-Tests" />
       <item itemvalue="JUnit.Calculation-Tests" />
-      <item itemvalue="JUnit.API-Tests" />
+      <item itemvalue="JUnit.FileReader-Tests" />
       <item itemvalue="JUnit.FileReaderBuilderTest" />
-      <item itemvalue="JUnit.FileCalculationControllerTest" />
-      <item itemvalue="JUnit.FileCalculationControllerTest.calculateEncryptedTxtFile" />
-      <item itemvalue="JUnit.FileCalculationControllerTest.calculateTwiceEncryptedAndZippedTxtFile" />
+      <item itemvalue="JUnit.API-Tests" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
       <item itemvalue="TestNG.UI-Tests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FileCalculationControllerTest" />
-        <item itemvalue="JUnit.FileCalculationControllerTest.calculateTwiceEncryptedAndZippedTxtFile" />
-        <item itemvalue="JUnit.FileCalculationControllerTest.calculateEncryptedTxtFile" />
         <item itemvalue="JUnit.FileReaderBuilderTest" />
-        <item itemvalue="JUnit.API-Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -289,20 +225,6 @@
       <workItem from="1673413037033" duration="164000" />
       <workItem from="1673417425008" duration="3852000" />
       <workItem from="1673444804342" duration="74088000" />
-    </task>
-    <task id="LOCAL-00167" summary="Validation for encryption keys">
-      <created>1673043782993</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1673043782993</updated>
-    </task>
-    <task id="LOCAL-00168" summary="Refactoring calculate method">
-      <created>1673044107131</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1673044107131</updated>
     </task>
     <task id="LOCAL-00169" summary="Create Output file name input hook">
       <created>1673083904102</created>
@@ -633,7 +555,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673724142318</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="Rest-Assured tests for calculating xml and json files">
+      <created>1673725179299</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1673725179299</updated>
+    </task>
+    <task id="LOCAL-00217" summary="Rest-Assured tests encrypting">
+      <created>1673726561390</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1673726561390</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,8 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test for xml file" />
-    <MESSAGE value="Change tearDown method" />
     <MESSAGE value="Create AfterMethod test for OUTPUT_XML group" />
     <MESSAGE value="Changed names for constants" />
     <MESSAGE value="Test for downloading json file" />
@@ -683,7 +617,9 @@
     <MESSAGE value="Add to builder throw IllegalArgumentException for not supported file extension" />
     <MESSAGE value="Create first Rest-Assured test" />
     <MESSAGE value="delete file after testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete file after testing" />
+    <MESSAGE value="Rest-Assured tests for calculating xml and json files" />
+    <MESSAGE value="Rest-Assured tests encrypting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest-Assured tests encrypting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
