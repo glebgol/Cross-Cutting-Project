@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public abstract class BaseSeleniumTest {
     protected WebDriver driver;
-
-    @BeforeMethod
-    public void setUp() {
-        ChromeOptions options = new ChromeOptions();
+    protected ChromeOptions options;
+    private void setUpOptions() {
+        options = new ChromeOptions();
         HashMap<String, Object> chromePrefs = new HashMap<>();
         chromePrefs.put("profile.default_content_setting.popups", 0);
 
@@ -24,7 +23,11 @@ public abstract class BaseSeleniumTest {
         chromePrefs.put("safebrowsing.enabled", true);
 
         options.setExperimentalOption("prefs", chromePrefs);
+    }
 
+    @BeforeMethod
+    public void setUp() {
+        setUpOptions();
         driver = new ChromeDriver(options);
         BaseSeleniumPage.setDriver(driver);
     }
@@ -32,9 +35,5 @@ public abstract class BaseSeleniumTest {
     @AfterMethod
     public void tearDown() {
         driver.quit();
-    }
-
-    protected void waitForMilliseconds(long time) throws InterruptedException {
-        Thread.sleep(time);
     }
 }
