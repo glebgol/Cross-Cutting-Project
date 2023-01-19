@@ -3,19 +3,21 @@ package reactuitest;
 import helpers.FileUtil;
 import helpers.TestValues;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
 public class EncryptionDecryptionTest extends BaseSeleniumTest {
-    @AfterClass
+    @AfterGroups(groups = "enc-dec-group")
     public void deleteFiles() {
-        FileUtil.deleteFile(System.getProperty("user.dir"), TestValues.ENCRYPTED_FILE_NAME);
-        FileUtil.deleteFile(System.getProperty("user.dir"), TestValues.DECRYPTED_FILE_NAME);
+        String path = System.getProperty("user.dir");
+        FileUtil.deleteFile(path, TestValues.ENCRYPTED_FILE_NAME);
+        FileUtil.deleteFile(path, TestValues.DECRYPTED_FILE_NAME);
     }
-    @Test
+
+    @Test(groups = "enc-dec-group")
     public void shouldExpectDownloadFileWhenEncryptFile() throws InterruptedException {
         String encryptedFileName = TestValues.ENCRYPTED_FILE_NAME;
         EncryptionPage page = new EncryptionPage()
@@ -36,7 +38,7 @@ public class EncryptionDecryptionTest extends BaseSeleniumTest {
         softAssert.assertAll();
     }
 
-    @Test(dependsOnMethods = "shouldExpectDownloadFileWhenEncryptFile")
+    @Test(groups = "enc-dec-group", dependsOnMethods = "shouldExpectDownloadFileWhenEncryptFile")
     public void shouldExpectDownloadFileWhenDecryptFile() throws InterruptedException {
         DecryptionPage page = new DecryptionPage()
                 .setFile(TestValues.DOWNLOADED_ENCRYPTED_FILE)
@@ -56,7 +58,7 @@ public class EncryptionDecryptionTest extends BaseSeleniumTest {
         softAssert.assertAll();
     }
 
-    @Test(dependsOnMethods = "shouldExpectDownloadFileWhenDecryptFile")
+    @Test(groups = "enc-dec-group", dependsOnMethods = "shouldExpectDownloadFileWhenDecryptFile")
     public void verifyOriginalFileAndTheEncryptedAndAfterDecryptedFileEqual() throws IOException {
         String originalFileName = TestValues.FILE_TO_ENCRYPT;
         String encryptedAndAfterDecryptedFileName = TestValues.DOWNLOADED_DECRYPTED_FILE;
