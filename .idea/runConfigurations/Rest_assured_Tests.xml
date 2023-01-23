@@ -1,9 +1,16 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="UI-Tests" type="TestNG" show_console_on_std_err="true" show_console_on_std_out="true">
+  <configuration default="false" name="Rest-assured-Tests" type="TestNG">
+    <module name="rest-api" />
     <shortenClasspath name="NONE" />
     <useClassPathOnly />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.glebgol.restapi.restassured.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
     <option name="SUITE_NAME" value="" />
-    <option name="PACKAGE_NAME" value="reactuitest" />
+    <option name="PACKAGE_NAME" value="com.glebgol.restapi.restassured" />
     <option name="MAIN_CLASS_NAME" value="" />
     <option name="METHOD_NAME" value="" />
     <option name="GROUP_NAME" value="" />

@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Delete var">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create SpringBootTestBase and delete file after testing">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Rest_assured_Tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/API_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Spring_Boot_Tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UI_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Selenium_UI_Tests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/builder/FileReaderBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/builder/FileReaderBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/EncryptedFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/EncryptedFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/ZipFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/ZipFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileCalculationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/restapi/controllers/FileCalculationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/testvalues/TestValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactui/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +71,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Cross-Cutting-Project/rest-api/src/test/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Cross-Cutting-Project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -108,9 +115,9 @@
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.glebgol.restapi.controllers" />
       <recent name="com.glebgol.businesslogic.builder" />
       <recent name="com.glebgol.buisinesslogic.calculation" />
-      <recent name="com.glebgol.restapi.controllers" />
       <recent name="readers" />
       <recent name="com.example.restapi" />
     </key>
@@ -127,19 +134,33 @@
       <command value="open spring-boot-file-upload" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EncryptedFileReaderTest.Calculate_DoubleEncryptedFile">
-    <configuration name="EncryptedFileReaderTest.Calculate_DoubleEncryptedFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Spring-Boot-Tests">
+    <configuration name="FileCalculationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.glebgol.businesslogic.readers.*" />
+          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.businesslogic.readers" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.businesslogic.readers.EncryptedFileReaderTest" />
-      <option name="METHOD_NAME" value="Calculate_DoubleEncryptedFile" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileCalculationControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileEncryptionControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileEncryptionControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,16 +169,19 @@
       <item itemvalue="JUnit.Calculation-Tests" />
       <item itemvalue="JUnit.FileReader-Tests" />
       <item itemvalue="JUnit.FileReaderBuilderTest" />
-      <item itemvalue="JUnit.API-Tests" />
-      <item itemvalue="JUnit.EncryptedFileReaderTest.Calculate_DoubleEncryptedFile" />
+      <item itemvalue="JUnit.Spring-Boot-Tests" />
+      <item itemvalue="JUnit.FileCalculationControllerTest" />
+      <item itemvalue="JUnit.FileEncryptionControllerTest" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
-      <item itemvalue="TestNG.UI-Tests" />
+      <item itemvalue="TestNG.Selenium-UI-Tests" />
+      <item itemvalue="TestNG.Rest-assured-Tests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EncryptedFileReaderTest.Calculate_DoubleEncryptedFile" />
-        <item itemvalue="JUnit.FileReaderBuilderTest" />
+        <item itemvalue="JUnit.FileEncryptionControllerTest" />
+        <item itemvalue="JUnit.FileCalculationControllerTest" />
+        <item itemvalue="TestNG.Rest-assured-Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -245,118 +269,16 @@
       <workItem from="1673413037033" duration="164000" />
       <workItem from="1673417425008" duration="3852000" />
       <workItem from="1673444804342" duration="74088000" />
-    </task>
-    <task id="LOCAL-00171" summary="Change error default state">
-      <created>1673087813222</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1673087813222</updated>
-    </task>
-    <task id="LOCAL-00172" summary="Create hook for input file">
-      <created>1673088031596</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1673088031596</updated>
-    </task>
-    <task id="LOCAL-00173" summary="Create hook for file extension input">
-      <created>1673090753166</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1673090753166</updated>
-    </task>
-    <task id="LOCAL-00174" summary="Create useDecryptForm">
-      <created>1673094622028</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1673094622028</updated>
-    </task>
-    <task id="LOCAL-00175" summary="Create useCalculateForm">
-      <created>1673096089323</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1673096089323</updated>
-    </task>
-    <task id="LOCAL-00176" summary="Refactor folders">
-      <created>1673096483659</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1673096483659</updated>
-    </task>
-    <task id="LOCAL-00177" summary="Create encrypt form">
-      <created>1673109570554</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1673109570554</updated>
-    </task>
-    <task id="LOCAL-00178" summary="Create unzip form">
-      <created>1673110196084</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1673110196084</updated>
-    </task>
-    <task id="LOCAL-00179" summary="Added useFileInput to Zip component">
-      <created>1673110471688</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1673110471688</updated>
-    </task>
-    <task id="LOCAL-00180" summary="Fix disabled">
-      <created>1673263558717</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1673263558717</updated>
-    </task>
-    <task id="LOCAL-00181" summary="Create BaseSeleniumTest">
-      <created>1673280707424</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1673280707424</updated>
-    </task>
-    <task id="LOCAL-00182" summary="Create BaseSeleniumPage">
-      <created>1673280726752</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1673280726752</updated>
-    </task>
-    <task id="LOCAL-00183" summary="Add CalculationPage">
-      <created>1673280752412</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1673280752412</updated>
-    </task>
-    <task id="LOCAL-00184" summary="Create CalculationPageTest">
-      <created>1673280762682</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1673280762682</updated>
-    </task>
-    <task id="LOCAL-00185" summary="Verify if the file was downloaded">
-      <created>1673343293471</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1673343293472</updated>
-    </task>
-    <task id="LOCAL-00186" summary="Delete file after test">
-      <created>1673345524092</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1673345524093</updated>
+      <workItem from="1673733080177" duration="77000" />
+      <workItem from="1673738026485" duration="1671000" />
+      <workItem from="1673770806524" duration="918000" />
+      <workItem from="1673775907955" duration="56000" />
+      <workItem from="1673788445407" duration="23557000" />
+      <workItem from="1674155853967" duration="2795000" />
+      <workItem from="1674219693896" duration="94000" />
+      <workItem from="1674246810245" duration="1431000" />
+      <workItem from="1674469333069" duration="9527000" />
+      <workItem from="1674507954947" duration="2463000" />
     </task>
     <task id="LOCAL-00187" summary="Delete result files">
       <created>1673445312766</created>
@@ -589,7 +511,119 @@
       <option name="project" value="LOCAL" />
       <updated>1673727560632</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="Add constants to TestValues">
+      <created>1673728979765</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1673728979765</updated>
+    </task>
+    <task id="LOCAL-00221" summary="Update README.md">
+      <created>1673731957405</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1673731957405</updated>
+    </task>
+    <task id="LOCAL-00222" summary="Set up ChromeOptions">
+      <created>1673732316062</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1673732316062</updated>
+    </task>
+    <task id="LOCAL-00223" summary="Update README.md">
+      <created>1673732337134</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1673732337134</updated>
+    </task>
+    <task id="LOCAL-00224" summary="Create test group and after group method">
+      <created>1674156869573</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1674156869573</updated>
+    </task>
+    <task id="LOCAL-00225" summary="switch case to FileReaderBuilder constructor">
+      <created>1674157049368</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1674157049368</updated>
+    </task>
+    <task id="LOCAL-00226" summary="Remove null check in setEncrypting method in FileReaderBuilder">
+      <created>1674469911434</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1674469911434</updated>
+    </task>
+    <task id="LOCAL-00227" summary="Refactor calculate method in FileCalculationController">
+      <created>1674470586710</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1674470586710</updated>
+    </task>
+    <task id="LOCAL-00228" summary="Create SpringBootTest calculateAndExpectOkStatusCode">
+      <created>1674472133793</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1674472133793</updated>
+    </task>
+    <task id="LOCAL-00229" summary="Moved rest-assured tests">
+      <created>1674472213274</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1674472213274</updated>
+    </task>
+    <task id="LOCAL-00230" summary="Add After each group method to delete files">
+      <created>1674472765535</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1674472765535</updated>
+    </task>
+    <task id="LOCAL-00231" summary="Create Spring Boot test for Not Valid Decryption Keys">
+      <created>1674474516423</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1674474516423</updated>
+    </task>
+    <task id="LOCAL-00232" summary="Create Spring Boot tests for encrypting">
+      <created>1674474698237</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1674474698237</updated>
+    </task>
+    <task id="LOCAL-00233" summary="Add testng">
+      <created>1674508720846</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1674508720847</updated>
+    </task>
+    <task id="LOCAL-00234" summary="Rewrite rest-assured tests to TestNG">
+      <created>1674509099274</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1674509099274</updated>
+    </task>
+    <task id="LOCAL-00235" summary="Create SpringBootTestBase and delete file after testing">
+      <created>1674510314721</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1674510314721</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,18 +635,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="date">
-                    <value>
-                      <list>
-                        <option value="1673640347258" />
-                        <option value="" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
               <option name="COLUMN_ID_WIDTH">
                 <map>
                   <entry key="Table.Default.Author.ColumnIdWidth" value="98" />
@@ -626,21 +648,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test for downloading json file" />
-    <MESSAGE value="Fluent interface" />
-    <MESSAGE value="Renamed test values" />
-    <MESSAGE value="Create EncryptionPage and EncryptionTest" />
-    <MESSAGE value="Create DecryptionPage" />
-    <MESSAGE value="Renamed click and calculate methods" />
-    <MESSAGE value="Create Decryption page and test" />
-    <MESSAGE value="Verify file bytes before and after encrypting and decrypting equals" />
-    <MESSAGE value="Added name attribute" />
-    <MESSAGE value="Tests for encrypting and decrypting" />
-    <MESSAGE value="Create helpers package for FileUtil and TestValues" />
-    <MESSAGE value="Refactor TestValues" />
-    <MESSAGE value="Create Urls class" />
-    <MESSAGE value="Create Main page tests" />
-    <MESSAGE value="Add finally block for deleting input file" />
     <MESSAGE value="Add Urls" />
     <MESSAGE value="Rename package and create new controllers" />
     <MESSAGE value="Moved business logic to rest-api module" />
@@ -651,7 +658,22 @@
     <MESSAGE value="Rest-Assured tests encrypting" />
     <MESSAGE value="Urls created" />
     <MESSAGE value="Delete var" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete var" />
+    <MESSAGE value="Add constants to TestValues" />
+    <MESSAGE value="Set up ChromeOptions" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Create test group and after group method" />
+    <MESSAGE value="switch case to FileReaderBuilder constructor" />
+    <MESSAGE value="Remove null check in setEncrypting method in FileReaderBuilder" />
+    <MESSAGE value="Refactor calculate method in FileCalculationController" />
+    <MESSAGE value="Create SpringBootTest calculateAndExpectOkStatusCode" />
+    <MESSAGE value="Moved rest-assured tests" />
+    <MESSAGE value="Add After each group method to delete files" />
+    <MESSAGE value="Create Spring Boot test for Not Valid Decryption Keys" />
+    <MESSAGE value="Create Spring Boot tests for encrypting" />
+    <MESSAGE value="Add testng" />
+    <MESSAGE value="Rewrite rest-assured tests to TestNG" />
+    <MESSAGE value="Create SpringBootTestBase and delete file after testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create SpringBootTestBase and delete file after testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -664,11 +686,6 @@
           <properties class="groovy.lang.GroovyRuntimeException" package="groovy.lang" />
           <option name="timeStamp" value="53" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rest-api/src/test/java/com/glebgol/businesslogic/readers/EncryptedFileReaderTest.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

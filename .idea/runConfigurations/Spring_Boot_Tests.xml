@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="API-Tests" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="Spring-Boot-Tests" type="JUnit" factoryName="JUnit">
     <module name="rest-api" />
     <extension name="coverage">
       <pattern>
