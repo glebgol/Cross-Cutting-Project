@@ -1,4 +1,4 @@
-package com.glebgol.restapi.controllers;
+package com.glebgol.restapi.restassured;
 
 import org.junit.jupiter.api.BeforeAll;
 
