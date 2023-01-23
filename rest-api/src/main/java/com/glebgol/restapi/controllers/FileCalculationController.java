@@ -36,14 +36,16 @@ public class FileCalculationController {
             return ResponseEntity.badRequest().build();
         }
         FileUploadUtil.saveFile(uploadPath, inputFile);
-        File file = null;
-        try {
-            IFileReaderBuilder builder = new FileReaderBuilder(extension, uploadPath + inputFile.getOriginalFilename());
-            builder.setEncrypting(decryptionKeys);
-            builder.setZipping(isZipped);
-            IFileReader reader = builder.getFileReader();
 
-            file = new File(uploadPath + outputFilename);
+        IFileReaderBuilder builder = new FileReaderBuilder(extension, uploadPath + inputFile.getOriginalFilename());
+        if (decryptionKeys != null) {
+            builder.setEncrypting(decryptionKeys);
+        }
+        builder.setZipping(isZipped);
+        IFileReader reader = builder.getFileReader();
+
+        File file = new File(uploadPath + outputFilename);
+        try {
             reader.calculate(file);
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
