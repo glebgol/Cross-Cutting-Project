@@ -30,4 +30,16 @@ class FileCalculationControllerTest {
                 .andExpect(status().is(200));
     }
 
+    @Test
+    public void calculateNotValidKeysAndExpectBadRequestStatusCode() throws Exception {
+        MockMultipartFile file = new MockMultipartFile("file", "filename.txt", "text/plain", "(123 + 456) / 0".getBytes());
+
+        mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/calculate")
+                        .file(file)
+                        .queryParam("outputfile", "output.txt")
+                        .queryParam("decryptionkeys", "123")
+                        .queryParam("extension", "txt"))
+                .andExpect(status().is(400));
+    }
+
 }
