@@ -2,9 +2,7 @@ package com.glebgol.restapi.restassured;
 
 import com.glebgol.restapi.Urls.Urls;
 import com.glebgol.testvalues.TestValues;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.File;
 
@@ -13,13 +11,26 @@ import static io.restassured.RestAssured.given;
 
 public class ApiFileCalculationTest extends BaseRestTest {
     public static final String CALCULATE_URL = Urls.CALCULATE_URL;
-    @AfterAll
-    public static void deleteFiles() {
+    @AfterEach
+    @Tag("group_txt")
+    public void deleteTxtFile() {
         deleteFile(TestValues.OUTPUT_TXT);
+    }
+
+    @AfterEach
+    @Tag("group_xml")
+    public void deleteXmlFile() {
         deleteFile(TestValues.OUTPUT_XML);
+    }
+
+    @AfterEach
+    @Tag("group_json")
+    public void deleteJsonFile() {
         deleteFile(TestValues.OUTPUT_JSON);
     }
+
     @Test
+    @Tag("group_txt")
     public void calculateTwiceEncryptedAndZippedTxtFile() {
         String txtFileName = TestValues.OUTPUT_TXT;
         given()
@@ -35,7 +46,9 @@ public class ApiFileCalculationTest extends BaseRestTest {
 
         Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(txtFileName));
     }
+
     @Test
+    @Tag("group_xml")
     public void calculateXmlFile() {
         String xmlFileName = TestValues.OUTPUT_XML;
         given()
@@ -52,6 +65,7 @@ public class ApiFileCalculationTest extends BaseRestTest {
     }
 
     @Test
+    @Tag("group_json")
     public void calculateJsonFile() {
         String jsonFileName = TestValues.OUTPUT_JSON;
         given()
