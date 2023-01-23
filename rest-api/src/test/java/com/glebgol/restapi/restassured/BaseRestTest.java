@@ -1,6 +1,7 @@
 package com.glebgol.restapi.restassured;
 
-import org.junit.jupiter.api.BeforeAll;
+
+import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 
@@ -9,7 +10,7 @@ import static io.restassured.RestAssured.port;
 
 
 public abstract class BaseRestTest {
-    @BeforeAll
+    @BeforeClass
     public static void setUp() {
         baseURI = "http://localhost/api/v1/";
         port = 8080;

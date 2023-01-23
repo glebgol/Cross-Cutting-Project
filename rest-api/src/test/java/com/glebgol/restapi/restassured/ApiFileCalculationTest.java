@@ -2,35 +2,34 @@ package com.glebgol.restapi.restassured;
 
 import com.glebgol.restapi.Urls.Urls;
 import com.glebgol.testvalues.TestValues;
-import org.junit.jupiter.api.*;
+import org.testng.annotations.AfterGroups;
+import org.testng.annotations.Test;
 
 import java.io.File;
 
 import static com.glebgol.testvalues.TestValues.MESSAGE_FOR_NOT_UPLOADED_FILE;
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertTrue;
 
 public class ApiFileCalculationTest extends BaseRestTest {
     public static final String CALCULATE_URL = Urls.CALCULATE_URL;
-    @AfterEach
-    @Tag("group_txt")
+
+    @AfterGroups(groups = "txt")
     public void deleteTxtFile() {
         deleteFile(TestValues.OUTPUT_TXT);
     }
 
-    @AfterEach
-    @Tag("group_xml")
+    @AfterGroups(groups = "xml")
     public void deleteXmlFile() {
         deleteFile(TestValues.OUTPUT_XML);
     }
 
-    @AfterEach
-    @Tag("group_json")
+    @AfterGroups(groups = "json")
     public void deleteJsonFile() {
         deleteFile(TestValues.OUTPUT_JSON);
     }
 
-    @Test
-    @Tag("group_txt")
+    @Test(groups = "txt")
     public void calculateTwiceEncryptedAndZippedTxtFile() {
         String txtFileName = TestValues.OUTPUT_TXT;
         given()
@@ -44,41 +43,38 @@ public class ApiFileCalculationTest extends BaseRestTest {
 
         boolean isFileExist = verifyFileIsUploaded(txtFileName);
 
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(txtFileName));
+        assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(txtFileName));
     }
 
-    @Test
-    @Tag("group_xml")
+    @Test(groups = "xml")
     public void calculateXmlFile() {
         String xmlFileName = TestValues.OUTPUT_XML;
         given()
                 .multiPart("file", new File(TestValues.XML_FILE))
                 .queryParam("outputfile", xmlFileName)
-                .queryParam("iszipped", true)
-                .queryParam("extension", "txt").log().all()
+                .queryParam("iszipped", false)
+                .queryParam("extension", "xml").log().all()
                 .when().post(CALCULATE_URL)
                 .then().statusCode(200);
 
         boolean isFileExist = verifyFileIsUploaded(xmlFileName);
 
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(xmlFileName));
+        assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(xmlFileName));
     }
 
-    @Test
-    @Tag("group_json")
+    @Test(groups = "json")
     public void calculateJsonFile() {
         String jsonFileName = TestValues.OUTPUT_JSON;
         given()
                 .multiPart("file", new File(TestValues.JSON_FILE))
                 .queryParam("outputfile", jsonFileName)
-                .queryParam("decryptionkeys", TestValues.KEYS)
-                .queryParam("iszipped", true)
-                .queryParam("extension", "txt").log().all()
+                .queryParam("iszipped", false)
+                .queryParam("extension", "json").log().all()
                 .when().post(CALCULATE_URL)
                 .then().statusCode(200);
 
         boolean isFileExist = verifyFileIsUploaded(jsonFileName);
 
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(jsonFileName));
+        assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(jsonFileName));
     }
 }

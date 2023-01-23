@@ -2,18 +2,18 @@ package com.glebgol.restapi.restassured;
 
 import com.glebgol.restapi.Urls.Urls;
 import com.glebgol.testvalues.TestValues;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
 import java.io.File;
 
 import static com.glebgol.testvalues.TestValues.MESSAGE_FOR_NOT_UPLOADED_FILE;
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertTrue;
 
 public class ApiFileEncryptionTest extends BaseRestTest {
     public final String ENCRYPTION_URL = Urls.ENCRYPT_URL;
-    @AfterEach
+    @AfterMethod
     public void deleteFile() {
         deleteFile(TestValues.OUTPUT_TXT);
     }
@@ -30,7 +30,7 @@ public class ApiFileEncryptionTest extends BaseRestTest {
 
         boolean isFileExist = verifyFileIsUploaded(fileName);
 
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(fileName));
+        assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(fileName));
     }
 
     @Test
