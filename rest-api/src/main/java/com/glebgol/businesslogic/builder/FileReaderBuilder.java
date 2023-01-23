@@ -28,10 +28,8 @@ public class FileReaderBuilder implements IFileReaderBuilder {
 
     @Override
     public void setEncrypting(List<String> keys) {
-        if (keys != null) {
-            for (var key : keys) {
-                fileReader = new EncryptedFileReader(key, fileReader);
-            }
+        for (var key : keys) {
+            setEncrypting(key);
         }
     }
 
