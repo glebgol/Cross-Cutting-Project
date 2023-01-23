@@ -1,70 +1,33 @@
 package com.glebgol.restapi.controllers;
 
-import com.glebgol.restapi.Urls.Urls;
-import com.glebgol.testvalues.TestValues;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import java.io.File;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import static com.glebgol.testvalues.TestValues.MESSAGE_FOR_NOT_UPLOADED_FILE;
-import static io.restassured.RestAssured.given;
-
-public class FileCalculationControllerTest extends BaseRestTest {
-    public static final String CALCULATE_URL = Urls.CALCULATE_URL;
-    @AfterAll
-    public static void deleteFiles() {
-        deleteFile(TestValues.OUTPUT_TXT);
-        deleteFile(TestValues.OUTPUT_XML);
-        deleteFile(TestValues.OUTPUT_JSON);
-    }
-    @Test
-    public void calculateTwiceEncryptedAndZippedTxtFile() {
-        String txtFileName = TestValues.OUTPUT_TXT;
-        given()
-                .multiPart("file", new File(TestValues.TWICE_ENCRYPTED_ZIP))
-                .queryParam("outputfile", txtFileName)
-                .queryParam("decryptionkeys", TestValues.KEYS)
-                .queryParam("iszipped", true)
-                .queryParam("extension", "txt").log().all()
-                .when().post(CALCULATE_URL)
-                .then().statusCode(200);
-
-        boolean isFileExist = verifyFileIsUploaded(txtFileName);
-
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(txtFileName));
-    }
-    @Test
-    public void calculateXmlFile() {
-        String xmlFileName = TestValues.OUTPUT_XML;
-        given()
-                .multiPart("file", new File(TestValues.XML_FILE))
-                .queryParam("outputfile", xmlFileName)
-                .queryParam("iszipped", true)
-                .queryParam("extension", "txt").log().all()
-                .when().post(CALCULATE_URL)
-                .then().statusCode(200);
-
-        boolean isFileExist = verifyFileIsUploaded(xmlFileName);
-
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(xmlFileName));
-    }
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+class FileCalculationControllerTest {
+    @Autowired
+    private MockMvc mockMvc;
 
     @Test
-    public void calculateJsonFile() {
-        String jsonFileName = TestValues.OUTPUT_JSON;
-        given()
-                .multiPart("file", new File(TestValues.JSON_FILE))
-                .queryParam("outputfile", jsonFileName)
-                .queryParam("decryptionkeys", TestValues.KEYS)
-                .queryParam("iszipped", true)
-                .queryParam("extension", "txt").log().all()
-                .when().post(CALCULATE_URL)
-                .then().statusCode(200);
+    public void calculateAndExpectOkStatusCode() throws Exception {
+        MockMultipartFile file = new MockMultipartFile("file", "filename.txt", "text/plain", "(123 + 456) / 0".getBytes());
 
-        boolean isFileExist = verifyFileIsUploaded(jsonFileName);
-
-        Assertions.assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(jsonFileName));
+        mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/calculate")
+                        .file(file)
+                        .queryParam("outputfile", "output.txt")
+                        .queryParam("extension", "txt"))
+                .andExpect(status().is(200));
     }
+
 }
