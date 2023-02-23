@@ -2,6 +2,7 @@ package com.glebgol.restapi.restassured;
 
 import com.glebgol.restapi.Urls.Urls;
 import com.glebgol.testvalues.TestValues;
+import io.restassured.response.Response;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.Test;
 
@@ -9,6 +10,7 @@ import java.io.File;
 
 import static com.glebgol.testvalues.TestValues.MESSAGE_FOR_NOT_UPLOADED_FILE;
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class ApiFileCalculationTest extends BaseRestTest {
@@ -49,17 +51,22 @@ public class ApiFileCalculationTest extends BaseRestTest {
     @Test(groups = "xml")
     public void calculateXmlFile() {
         String xmlFileName = TestValues.OUTPUT_XML;
-        given()
+        Response response = given()
                 .multiPart("inputFile", new File(TestValues.XML_FILE))
                 .queryParam("outputFilename", xmlFileName)
                 .queryParam("isZipped", false)
                 .queryParam("extension", "xml").log().all()
-                .when().post(CALCULATE_URL)
+                .when().post(CALCULATE_URL);
+
+        response
                 .then().statusCode(200);
+
+        String actualDownloadUri = response.getBody().jsonPath().get("downloadUri");
 
         boolean isFileExist = verifyFileIsUploaded(xmlFileName);
 
         assertTrue(isFileExist, MESSAGE_FOR_NOT_UPLOADED_FILE(xmlFileName));
+        assertEquals(actualDownloadUri, "/downloadFile/output.xml");
     }
 
     @Test(groups = "json")
