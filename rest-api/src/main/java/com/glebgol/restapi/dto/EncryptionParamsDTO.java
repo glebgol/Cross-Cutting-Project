@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Getter
 @Setter
 @NoArgsConstructor
-public class EncryptionParamsDTO {
+public final class EncryptionParamsDTO {
     @NotNull
     private MultipartFile inputFile;
     @NotNull
