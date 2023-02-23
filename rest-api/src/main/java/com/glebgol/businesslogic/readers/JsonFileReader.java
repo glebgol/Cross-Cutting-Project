@@ -3,6 +3,7 @@ package com.glebgol.businesslogic.readers;
 
 import com.glebgol.businesslogic.calculation.json.JsonExpressionList;
 import com.glebgol.businesslogic.contracts.exceptions.CryptoException;
+import com.glebgol.businesslogic.contracts.interfaces.IJsonExpressionList;
 import com.glebgol.businesslogic.contracts.interfaces.IStream;
 import com.glebgol.businesslogic.streams.JsonStream;
 import com.google.gson.Gson;
@@ -25,21 +26,21 @@ public class JsonFileReader extends DefaultFileReader {
 
     @Override
     public IStream read() throws IOException {
-        var expressions = new JsonExpressionList();
+        IJsonExpressionList expressions = new JsonExpressionList();
         expressions.readFromJsonFile(inputFilename);
         return new JsonStream(expressions);
     }
 
     @Override
     public IStream transform(IStream stream) {
-        var str = new String(stream.bytes());
-        var lst = new Gson().fromJson(str, JsonExpressionList.class);
+        String str = new String(stream.bytes());
+        IJsonExpressionList lst = new Gson().fromJson(str, JsonExpressionList.class);
         return new JsonStream(lst);
     }
 
     @Override
     public IStream calculate(IStream stream) throws IOException, CryptoException {
-        var jsonStream = (JsonStream) stream;
+        JsonStream jsonStream = (JsonStream) stream;
         return jsonStream.calculate();
     }
 }
