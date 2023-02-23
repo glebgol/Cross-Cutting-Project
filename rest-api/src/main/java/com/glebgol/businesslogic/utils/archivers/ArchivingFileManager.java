@@ -43,7 +43,8 @@ public class ArchivingFileManager {
 
     public static IStream getUnZipped(String filename) throws IOException {
         byte[] buffer = new byte[1024];
-        ZipInputStream zis = new ZipInputStream(new FileInputStream(filename));
+        FileInputStream fis = new FileInputStream(filename);
+        ZipInputStream zis = new ZipInputStream(fis);
         ZipEntry zipEntry = zis.getNextEntry();
         StringBuilder stringBuilder = new StringBuilder();
         while (zipEntry != null) {
@@ -56,6 +57,7 @@ public class ArchivingFileManager {
         }
         zis.closeEntry();
         zis.close();
+        fis.close();
 
         var bytes = stringBuilder.toString().getBytes(StandardCharsets.UTF_8);
         return new TxtStream(bytes);
