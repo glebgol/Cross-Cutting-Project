@@ -24,13 +24,13 @@ public class EncryptedFileReader extends FileReader {
 
     @Override
     public IStream read() throws CryptoException, IOException, JAXBException {
-        var result = CryptoUtils.getDecrypting(key, inputFilename);
+        IStream result = CryptoUtils.getDecrypting(key, inputFilename);
         return _reader.transform(result);
     }
 
     @Override
     public IStream transform(IStream stream) throws CryptoException, IOException, JAXBException {
-        var result = CryptoUtils.decrypt(stream, key);
+        IStream result = CryptoUtils.decrypt(stream, key);
         return _reader.transform(result);
     }
 
