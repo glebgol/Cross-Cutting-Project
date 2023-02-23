@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rest controller">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/dto/CalculationParamsDTO.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create CalculationParams DTO">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/services/CalculationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/services/CalculationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" afterDir="false" />
     </list>
@@ -18,10 +19,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="TestNG Test Class" />
         <option value="JavaScript File" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -276,14 +277,7 @@
       <workItem from="1675971630636" duration="39000" />
       <workItem from="1676457810276" duration="617000" />
       <workItem from="1676893969920" duration="623000" />
-      <workItem from="1677175012945" duration="929000" />
-    </task>
-    <task id="LOCAL-00188" summary="Create TestInfo class">
-      <created>1673450849261</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1673450849261</updated>
+      <workItem from="1677175012945" duration="1727000" />
     </task>
     <task id="LOCAL-00189" summary="Added resultInfo WebElement">
       <created>1673450917984</created>
@@ -621,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675183773813</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="Create CalculationParams DTO">
+      <created>1677176057224</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1677176057224</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rename package and create new controllers" />
     <MESSAGE value="Moved business logic to rest-api module" />
     <MESSAGE value="Add to builder throw IllegalArgumentException for not supported file extension" />
     <MESSAGE value="Create first Rest-Assured test" />
@@ -671,7 +671,8 @@
     <MESSAGE value="Rewrite rest-assured tests to TestNG" />
     <MESSAGE value="Create SpringBootTestBase and delete file after testing" />
     <MESSAGE value="Rest controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rest controller" />
+    <MESSAGE value="Create CalculationParams DTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create CalculationParams DTO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
