@@ -22,8 +22,8 @@ public class ApiFileEncryptionTest extends BaseRestTest {
     public void encryptFile() {
         String fileName = TestValues.OUTPUT_TXT;
         given()
-                .multiPart("file", new File(TestValues.INPUT_FILE_TXT))
-                .queryParam("outputfile", fileName)
+                .multiPart("inputFile", new File(TestValues.INPUT_FILE_TXT))
+                .queryParam("outputFilename", fileName)
                 .queryParam("key", TestValues.FIRST_KEY)
                 .when().post(ENCRYPTION_URL)
                 .then().statusCode(200);
@@ -37,8 +37,8 @@ public class ApiFileEncryptionTest extends BaseRestTest {
     public void encryptFileWithNotValidKeysReturnsBadRequestStatusCode() {
         String fileName = TestValues.OUTPUT_TXT;
         given()
-                .multiPart("file", new File(TestValues.INPUT_FILE_TXT))
-                .queryParam("outputfile", fileName)
+                .multiPart("inputFile", new File(TestValues.INPUT_FILE_TXT))
+                .queryParam("outputFilename", fileName)
                 .queryParam("key", "hello")
                 .when().post(ENCRYPTION_URL)
                 .then().statusCode(400);

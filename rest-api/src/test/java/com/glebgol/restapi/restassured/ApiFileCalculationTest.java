@@ -33,10 +33,10 @@ public class ApiFileCalculationTest extends BaseRestTest {
     public void calculateTwiceEncryptedAndZippedTxtFile() {
         String txtFileName = TestValues.OUTPUT_TXT;
         given()
-                .multiPart("file", new File(TestValues.TWICE_ENCRYPTED_ZIP))
-                .queryParam("outputfile", txtFileName)
-                .queryParam("decryptionkeys", TestValues.KEYS)
-                .queryParam("iszipped", true)
+                .multiPart("inputFile", new File(TestValues.TWICE_ENCRYPTED_ZIP))
+                .queryParam("outputFilename", txtFileName)
+                .queryParam("decryptionKeys", TestValues.KEYS)
+                .queryParam("isZipped", true)
                 .queryParam("extension", "txt").log().all()
                 .when().post(CALCULATE_URL)
                 .then().statusCode(200);
@@ -50,9 +50,9 @@ public class ApiFileCalculationTest extends BaseRestTest {
     public void calculateXmlFile() {
         String xmlFileName = TestValues.OUTPUT_XML;
         given()
-                .multiPart("file", new File(TestValues.XML_FILE))
-                .queryParam("outputfile", xmlFileName)
-                .queryParam("iszipped", false)
+                .multiPart("inputFile", new File(TestValues.XML_FILE))
+                .queryParam("outputFilename", xmlFileName)
+                .queryParam("isZipped", false)
                 .queryParam("extension", "xml").log().all()
                 .when().post(CALCULATE_URL)
                 .then().statusCode(200);
@@ -66,9 +66,9 @@ public class ApiFileCalculationTest extends BaseRestTest {
     public void calculateJsonFile() {
         String jsonFileName = TestValues.OUTPUT_JSON;
         given()
-                .multiPart("file", new File(TestValues.JSON_FILE))
-                .queryParam("outputfile", jsonFileName)
-                .queryParam("iszipped", false)
+                .multiPart("inputFile", new File(TestValues.JSON_FILE))
+                .queryParam("outputFilename", jsonFileName)
+                .queryParam("isZipped", false)
                 .queryParam("extension", "json").log().all()
                 .when().post(CALCULATE_URL)
                 .then().statusCode(200);
