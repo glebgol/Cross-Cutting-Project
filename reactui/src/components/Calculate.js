@@ -13,10 +13,10 @@ const Calculate = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("file", form.file.selectedFile);
-        formData.append("outputfile", form.outputFile.outputFileName);
-        formData.append("iszipped", form.isZipped.toString());
-        formData.append("decryptionkeys", form.encryptionKey.key);
+        formData.append("inputFile", form.file.selectedFile);
+        formData.append("outputFilename", form.outputFile.outputFileName);
+        formData.append("isZipped", form.isZipped.toString());
+        formData.append("decryptionKeys", form.encryptionKey.key);
         formData.append("extension", form.extension.extension);
 
         fetch(CALCULATE_URL, {

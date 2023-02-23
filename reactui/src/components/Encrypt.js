@@ -16,8 +16,8 @@ const Encrypt = () => {
     const handleEncrypt = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("file", form.file.selectedFile);
-        formData.append("outputfile", form.outputFile.outputFileName);
+        formData.append("inputFile", form.file.selectedFile);
+        formData.append("outputFilename", form.outputFile.outputFileName);
         formData.append("key", form.key.key);
 
         fetch(ENCRYPT, {

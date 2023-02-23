@@ -13,7 +13,7 @@ const Zip = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("file", file.selectedFile);
+        formData.append("inputFile", file.selectedFile);
 
         fetch(ZIP, {
             method: 'POST',
