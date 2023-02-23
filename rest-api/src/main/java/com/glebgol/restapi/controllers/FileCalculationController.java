@@ -4,21 +4,18 @@ import com.glebgol.businesslogic.builder.FileReaderBuilder;
 import com.glebgol.businesslogic.contracts.interfaces.IFileReader;
 import com.glebgol.businesslogic.contracts.interfaces.IFileReaderBuilder;
 import com.glebgol.businesslogic.utils.ciphers.KeyValidation;
+import com.glebgol.restapi.dto.CalculationParamsDTO;
 import com.glebgol.restapi.responses.FileUploadResponse;
 import com.glebgol.restapi.utils.constants.Constants;
 import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/")
@@ -27,35 +24,31 @@ public class FileCalculationController {
     protected final String downloadUri = Constants.DOWNLOAD_URI;
 
     @PostMapping("/calculate")
-    public ResponseEntity<FileUploadResponse> calculate(@RequestParam("file") MultipartFile inputFile,
-                                                        @RequestParam(value = "outputfile") String outputFilename,
-                                                        @RequestParam(value = "iszipped", required = false) boolean isZipped,
-                                                        @RequestParam(value="decryptionkeys", required = false) List<String> decryptionKeys,
-                                                        @RequestParam(value = "extension") String extension) throws IOException {
-        if (!KeyValidation.isValidForCalculation(decryptionKeys)) {
+    public ResponseEntity<FileUploadResponse> calculate(@Validated CalculationParamsDTO calculationParams) throws IOException {
+        if (!KeyValidation.isValidForCalculation(calculationParams.getDecryptionKeys())) {
             return ResponseEntity.badRequest().build();
         }
-        FileUploadUtil.saveFile(uploadPath, inputFile);
+        FileUploadUtil.saveFile(uploadPath, calculationParams.getInputFile());
 
-        IFileReaderBuilder builder = new FileReaderBuilder(extension, uploadPath + inputFile.getOriginalFilename());
-        if (decryptionKeys != null) {
-            builder.setEncrypting(decryptionKeys);
+        IFileReaderBuilder builder = new FileReaderBuilder(calculationParams.getExtension(), uploadPath + calculationParams.getInputFile().getOriginalFilename());
+        if (calculationParams.getDecryptionKeys() != null) {
+            builder.setEncrypting(calculationParams.getDecryptionKeys());
         }
-        builder.setZipping(isZipped);
+        builder.setZipping(calculationParams.isZipped());
         IFileReader reader = builder.getFileReader();
 
-        File file = new File(uploadPath + outputFilename);
+        File file = new File(uploadPath + calculationParams.getOutputFilename());
         try {
             reader.calculate(file);
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         } finally {
-            FileDeleteUtil.deleteFile(uploadPath, inputFile.getOriginalFilename());
+            FileDeleteUtil.deleteFile(uploadPath, calculationParams.getInputFile().getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
-                .fileName(outputFilename)
+                .fileName(calculationParams.getOutputFilename())
                 .size(file.getTotalSpace())
-                .downloadUri(downloadUri + outputFilename)
+                .downloadUri(downloadUri + calculationParams.getOutputFilename())
                 .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create SpringBootTestBase and delete file after testing">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Rest_assured_Tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/API_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Spring_Boot_Tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UI_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Selenium_UI_Tests.xml" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Rest controller">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/dto/CalculationParamsDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactui/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reactui/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +61,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Cross-Cutting-Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Design-Patterns&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -134,7 +124,7 @@
       <command value="open spring-boot-file-upload" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Spring-Boot-Tests">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication">
     <configuration name="FileCalculationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-api" />
       <extension name="coverage">
@@ -181,7 +171,6 @@
       <list>
         <item itemvalue="JUnit.FileEncryptionControllerTest" />
         <item itemvalue="JUnit.FileCalculationControllerTest" />
-        <item itemvalue="TestNG.Rest-assured-Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -279,13 +268,15 @@
       <workItem from="1674246810245" duration="1431000" />
       <workItem from="1674469333069" duration="9527000" />
       <workItem from="1674507954947" duration="2463000" />
-    </task>
-    <task id="LOCAL-00187" summary="Delete result files">
-      <created>1673445312766</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1673445312767</updated>
+      <workItem from="1675028605192" duration="892000" />
+      <workItem from="1675183636534" duration="738000" />
+      <workItem from="1675286017603" duration="160000" />
+      <workItem from="1675351422311" duration="47000" />
+      <workItem from="1675801563447" duration="1434000" />
+      <workItem from="1675971630636" duration="39000" />
+      <workItem from="1676457810276" duration="617000" />
+      <workItem from="1676893969920" duration="623000" />
+      <workItem from="1677175012945" duration="929000" />
     </task>
     <task id="LOCAL-00188" summary="Create TestInfo class">
       <created>1673450849261</created>
@@ -623,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674510314721</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="Rest controller">
+      <created>1675183773813</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1675183773813</updated>
+    </task>
+    <option name="localTasksCounter" value="237" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +646,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Urls" />
     <MESSAGE value="Rename package and create new controllers" />
     <MESSAGE value="Moved business logic to rest-api module" />
     <MESSAGE value="Add to builder throw IllegalArgumentException for not supported file extension" />
@@ -673,7 +670,8 @@
     <MESSAGE value="Add testng" />
     <MESSAGE value="Rewrite rest-assured tests to TestNG" />
     <MESSAGE value="Create SpringBootTestBase and delete file after testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create SpringBootTestBase and delete file after testing" />
+    <MESSAGE value="Rest controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
