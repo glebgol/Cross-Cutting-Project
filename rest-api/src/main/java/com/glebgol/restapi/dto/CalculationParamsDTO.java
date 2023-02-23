@@ -16,7 +16,7 @@ public final class CalculationParamsDTO {
     private MultipartFile inputFile;
     @NotNull
     private String outputFilename;
-    private boolean isZipped;
+    private Boolean isZipped;
     private List<String> decryptionKeys;
     @NotNull
     private String extension;

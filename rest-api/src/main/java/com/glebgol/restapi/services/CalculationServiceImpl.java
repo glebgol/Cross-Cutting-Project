@@ -20,7 +20,7 @@ public class CalculationServiceImpl implements CalculationService {
         if (calculationParamsDTO.getDecryptionKeys() != null) {
             builder.setEncrypting(calculationParamsDTO.getDecryptionKeys());
         }
-        builder.setZipping(calculationParamsDTO.isZipped());
+        builder.setZipping(calculationParamsDTO.getIsZipped());
         IFileReader reader = builder.getFileReader();
 
         File file = new File(FILE_UPLOAD_PATH + calculationParamsDTO.getOutputFilename());
@@ -28,7 +28,7 @@ public class CalculationServiceImpl implements CalculationService {
         try {
             reader.calculate(file);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage(), e);
         }
         return file;
     }
