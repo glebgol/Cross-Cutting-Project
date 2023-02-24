@@ -1,6 +1,7 @@
 package com.glebgol.restapi.dto;
 
 import com.glebgol.restapi.validation.DecryptionKeysForCalculation;
+import com.glebgol.restapi.validation.FileExtension;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Getter
@@ -22,6 +22,6 @@ public final class CalculationParamsDTO {
     private Boolean isZipped;
     @DecryptionKeysForCalculation(message = "not valid for calculation decryption keys")
     private List<String> decryptionKeys;
-    @Pattern(regexp = "txt|xml|json", message = "Calculation supports only txt|xml|json extensions")
+    @FileExtension
     private String extension;
 }
