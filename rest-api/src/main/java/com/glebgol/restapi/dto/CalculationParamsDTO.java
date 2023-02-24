@@ -20,7 +20,7 @@ public final class CalculationParamsDTO {
     @NotBlank(message = "output file name can't be null or empty")
     private String outputFilename;
     private Boolean isZipped;
-    @DecryptionKeysForCalculation(message = "fuck")
+    @DecryptionKeysForCalculation(message = "not valid for calculation decryption keys")
     private List<String> decryptionKeys;
     @Pattern(regexp = "txt|xml|json", message = "Calculation supports only txt|xml|json extensions")
     private String extension;
