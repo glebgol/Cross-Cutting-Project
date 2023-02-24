@@ -1,6 +1,5 @@
 package com.glebgol.restapi.controllers;
 
-import com.glebgol.businesslogic.utils.ciphers.KeyValidation;
 import com.glebgol.restapi.dto.EncryptionParamsDTO;
 import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.services.EncryptionService;
@@ -9,10 +8,12 @@ import com.glebgol.restapi.utils.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.io.File;
 
 import static com.glebgol.restapi.utils.constants.Constants.DOWNLOAD_URI;
@@ -23,10 +24,11 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 @RequiredArgsConstructor
 public class FileEncryptionController {
     private final EncryptionService encryptionService;
+
     @PostMapping("/encrypt")
-    public ResponseEntity<FileUploadResponse> encrypt(EncryptionParamsDTO encryptionParamsDTO) {
-        if (!KeyValidation.isValidDecryptionKey(encryptionParamsDTO.getKey())) {
-            return ResponseEntity.badRequest().build();
+    public ResponseEntity<?> encrypt(@Valid EncryptionParamsDTO encryptionParamsDTO, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
         }
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
         File file = null;
@@ -46,9 +48,9 @@ public class FileEncryptionController {
     }
 
     @PostMapping("/decrypt")
-    public ResponseEntity<FileUploadResponse> decrypt(EncryptionParamsDTO encryptionParamsDTO) {
-        if (!KeyValidation.isValidDecryptionKey(encryptionParamsDTO.getKey())) {
-            return ResponseEntity.badRequest().build();
+    public ResponseEntity<?> decrypt(@Valid EncryptionParamsDTO encryptionParamsDTO, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
         }
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
         File file = null;

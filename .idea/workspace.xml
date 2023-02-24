@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create CalculationParams DTO">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/services/CalculationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/services/CalculationServiceImpl.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Change message for not valid keys">
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/validation/EncryptionKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/validation/EncryptionKeyValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileCalculationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/dto/EncryptionParamsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/dto/EncryptionParamsDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
         <option value="JavaScript File" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -44,47 +46,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Design-Patterns&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;D:/Cross-Cutting-Project/reactui/node_modules/react-scripts&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "D:/Anton/Design-Patterns",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs.jest.jest_package": "D:/Cross-Cutting-Project/reactui/node_modules/react-scripts",
+    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.glebgol.restapi.validation" />
       <recent name="reactuitest" />
       <recent name="com.example.restapi" />
     </key>
@@ -156,6 +158,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiFileEncryptionTest.encryptFile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.glebgol.restapi.restassured.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.glebgol.restapi.restassured" />
+      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.restassured.ApiFileEncryptionTest" />
+      <option name="METHOD_NAME" value="encryptFile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.Calculation-Tests" />
       <item itemvalue="JUnit.FileReader-Tests" />
@@ -167,9 +187,11 @@
       <item itemvalue="Spring Boot.RestApiApplication" />
       <item itemvalue="TestNG.Selenium-UI-Tests" />
       <item itemvalue="TestNG.Rest-assured-Tests" />
+      <item itemvalue="TestNG.ApiFileEncryptionTest.encryptFile" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ApiFileEncryptionTest.encryptFile" />
         <item itemvalue="JUnit.FileEncryptionControllerTest" />
         <item itemvalue="JUnit.FileCalculationControllerTest" />
       </list>
@@ -277,119 +299,7 @@
       <workItem from="1675971630636" duration="39000" />
       <workItem from="1676457810276" duration="617000" />
       <workItem from="1676893969920" duration="623000" />
-      <workItem from="1677175012945" duration="1727000" />
-    </task>
-    <task id="LOCAL-00189" summary="Added resultInfo WebElement">
-      <created>1673450917984</created>
-      <option name="number" value="00189" />
-      <option name="presentableId" value="LOCAL-00189" />
-      <option name="project" value="LOCAL" />
-      <updated>1673450917984</updated>
-    </task>
-    <task id="LOCAL-00190" summary="SoftAssert: isExist file, is correct result info, is enabled download and calculate buttons">
-      <created>1673456016826</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1673456016826</updated>
-    </task>
-    <task id="LOCAL-00191" summary="Enable to download xml files">
-      <created>1673457758136</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1673457758136</updated>
-    </task>
-    <task id="LOCAL-00192" summary="Test for xml file">
-      <created>1673457869734</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1673457869734</updated>
-    </task>
-    <task id="LOCAL-00193" summary="Change tearDown method">
-      <created>1673458323256</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1673458323256</updated>
-    </task>
-    <task id="LOCAL-00194" summary="Create AfterMethod test for OUTPUT_XML group">
-      <created>1673458374503</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1673458374503</updated>
-    </task>
-    <task id="LOCAL-00195" summary="Changed names for constants">
-      <created>1673463050533</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1673463050533</updated>
-    </task>
-    <task id="LOCAL-00196" summary="Test for downloading json file">
-      <created>1673463309733</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1673463309733</updated>
-    </task>
-    <task id="LOCAL-00197" summary="Fluent interface">
-      <created>1673529459971</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1673529459971</updated>
-    </task>
-    <task id="LOCAL-00198" summary="Renamed test values">
-      <created>1673534276228</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1673534276228</updated>
-    </task>
-    <task id="LOCAL-00199" summary="Create EncryptionPage and EncryptionTest">
-      <created>1673535429326</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1673535429326</updated>
-    </task>
-    <task id="LOCAL-00200" summary="Renamed click and calculate methods">
-      <created>1673550354779</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1673550354779</updated>
-    </task>
-    <task id="LOCAL-00201" summary="Create Decryption page and test">
-      <created>1673552874783</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1673552874783</updated>
-    </task>
-    <task id="LOCAL-00202" summary="Verify file bytes before and after encrypting and decrypting equals">
-      <created>1673554248606</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1673554248606</updated>
-    </task>
-    <task id="LOCAL-00203" summary="Added name attribute">
-      <created>1673555087910</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1673555087910</updated>
-    </task>
-    <task id="LOCAL-00204" summary="Tests for encrypting and decrypting">
-      <created>1673556617575</created>
-      <option name="number" value="00204" />
-      <option name="presentableId" value="LOCAL-00204" />
-      <option name="project" value="LOCAL" />
-      <updated>1673556617575</updated>
+      <workItem from="1677175012945" duration="18814000" />
     </task>
     <task id="LOCAL-00205" summary="Create helpers package for FileUtil and TestValues">
       <created>1673557323078</created>
@@ -622,7 +532,119 @@
       <option name="project" value="LOCAL" />
       <updated>1677176057224</updated>
     </task>
-    <option name="localTasksCounter" value="238" />
+    <task id="LOCAL-00238" summary="Create CalculationService">
+      <created>1677176942705</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1677176942705</updated>
+    </task>
+    <task id="LOCAL-00239" summary="Create EncryptionParamsDTO and EncryptionService">
+      <created>1677178027903</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1677178027903</updated>
+    </task>
+    <task id="LOCAL-00240" summary="Add EncryptionService">
+      <created>1677178071031</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1677178071031</updated>
+    </task>
+    <task id="LOCAL-00241" summary="Final class">
+      <created>1677178106911</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1677178106911</updated>
+    </task>
+    <task id="LOCAL-00242" summary="Create ZipArchivingService">
+      <created>1677179717140</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1677179717140</updated>
+    </task>
+    <task id="LOCAL-00243" summary="Close FileInputStream">
+      <created>1677185914589</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1677185914589</updated>
+    </task>
+    <task id="LOCAL-00244" summary="Changed request params names">
+      <created>1677185932033</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1677185932033</updated>
+    </task>
+    <task id="LOCAL-00245" summary="Change isZipped from boolean to Boolean">
+      <created>1677185989008</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1677185989008</updated>
+    </task>
+    <task id="LOCAL-00246" summary="IStream result">
+      <created>1677186074464</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1677186074464</updated>
+    </task>
+    <task id="LOCAL-00247" summary="Add IJsonExpressionList">
+      <created>1677186184443</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1677186184443</updated>
+    </task>
+    <task id="LOCAL-00248" summary="Change request params in rest-assured tests">
+      <created>1677186512945</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1677186512945</updated>
+    </task>
+    <task id="LOCAL-00249" summary="Verify download uri in rest-assured tests">
+      <created>1677186819233</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1677186819233</updated>
+    </task>
+    <task id="LOCAL-00250" summary="Move FileUploadResponse to dto package">
+      <created>1677253683055</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1677253683055</updated>
+    </task>
+    <task id="LOCAL-00251" summary="Create custom validation DecryptionKeysForCalculation">
+      <created>1677254163554</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1677254163554</updated>
+    </task>
+    <task id="LOCAL-00252" summary="Add validation for file calculation">
+      <created>1677254238751</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1677254238751</updated>
+    </task>
+    <task id="LOCAL-00253" summary="Change message for not valid keys">
+      <created>1677254356120</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
+      <option name="project" value="LOCAL" />
+      <updated>1677254356120</updated>
+    </task>
+    <option name="localTasksCounter" value="254" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,22 +669,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved business logic to rest-api module" />
-    <MESSAGE value="Add to builder throw IllegalArgumentException for not supported file extension" />
-    <MESSAGE value="Create first Rest-Assured test" />
-    <MESSAGE value="delete file after testing" />
-    <MESSAGE value="Rest-Assured tests for calculating xml and json files" />
-    <MESSAGE value="Rest-Assured tests encrypting" />
-    <MESSAGE value="Urls created" />
-    <MESSAGE value="Delete var" />
-    <MESSAGE value="Add constants to TestValues" />
-    <MESSAGE value="Set up ChromeOptions" />
-    <MESSAGE value="Update README.md" />
-    <MESSAGE value="Create test group and after group method" />
-    <MESSAGE value="switch case to FileReaderBuilder constructor" />
-    <MESSAGE value="Remove null check in setEncrypting method in FileReaderBuilder" />
-    <MESSAGE value="Refactor calculate method in FileCalculationController" />
-    <MESSAGE value="Create SpringBootTest calculateAndExpectOkStatusCode" />
     <MESSAGE value="Moved rest-assured tests" />
     <MESSAGE value="Add After each group method to delete files" />
     <MESSAGE value="Create Spring Boot test for Not Valid Decryption Keys" />
@@ -672,7 +678,23 @@
     <MESSAGE value="Create SpringBootTestBase and delete file after testing" />
     <MESSAGE value="Rest controller" />
     <MESSAGE value="Create CalculationParams DTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create CalculationParams DTO" />
+    <MESSAGE value="Create CalculationService" />
+    <MESSAGE value="Create EncryptionParamsDTO and EncryptionService" />
+    <MESSAGE value="Add EncryptionService" />
+    <MESSAGE value="Final class" />
+    <MESSAGE value="Create ZipArchivingService" />
+    <MESSAGE value="Close FileInputStream" />
+    <MESSAGE value="Changed request params names" />
+    <MESSAGE value="Change isZipped from boolean to Boolean" />
+    <MESSAGE value="IStream result" />
+    <MESSAGE value="Add IJsonExpressionList" />
+    <MESSAGE value="Change request params in rest-assured tests" />
+    <MESSAGE value="Verify download uri in rest-assured tests" />
+    <MESSAGE value="Move FileUploadResponse to dto package" />
+    <MESSAGE value="Create custom validation DecryptionKeysForCalculation" />
+    <MESSAGE value="Add validation for file calculation" />
+    <MESSAGE value="Change message for not valid keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change message for not valid keys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -696,5 +718,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Cross_Cutting_Project$RestApiApplication.ic" NAME="RestApiApplication Coverage Results" MODIFIED="1677184499655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
