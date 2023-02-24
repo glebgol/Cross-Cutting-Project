@@ -1,6 +1,6 @@
 package com.glebgol.restapi.controllers;
 
-import com.glebgol.restapi.responses.FileUploadResponse;
+import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.utils.constants.Constants;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import org.springframework.http.HttpStatus;

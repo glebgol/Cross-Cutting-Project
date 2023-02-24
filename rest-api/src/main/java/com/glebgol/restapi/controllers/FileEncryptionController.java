@@ -2,7 +2,7 @@ package com.glebgol.restapi.controllers;
 
 import com.glebgol.businesslogic.utils.ciphers.KeyValidation;
 import com.glebgol.restapi.dto.EncryptionParamsDTO;
-import com.glebgol.restapi.responses.FileUploadResponse;
+import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.services.EncryptionService;
 import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
-import java.io.IOException;
 
 import static com.glebgol.restapi.utils.constants.Constants.DOWNLOAD_URI;
 import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;

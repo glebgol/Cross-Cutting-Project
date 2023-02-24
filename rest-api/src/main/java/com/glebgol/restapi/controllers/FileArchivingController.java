@@ -1,6 +1,6 @@
 package com.glebgol.restapi.controllers;
 
-import com.glebgol.restapi.responses.FileUploadResponse;
+import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.services.ZipArchivingService;
 import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
