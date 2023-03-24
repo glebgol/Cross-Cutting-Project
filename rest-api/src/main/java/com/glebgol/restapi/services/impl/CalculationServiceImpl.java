@@ -8,6 +8,7 @@ import com.glebgol.restapi.services.CalculationService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.util.List;
 
 import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 
@@ -15,21 +16,27 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 public class CalculationServiceImpl implements CalculationService {
     @Override
     public File calculate(CalculationParamsDTO calculationParamsDTO) {
-        IFileReaderBuilder builder = new FileReaderBuilder(calculationParamsDTO.getExtension(),
-                FILE_UPLOAD_PATH + calculationParamsDTO.getInputFile().getOriginalFilename());
+        String fileExtension = calculationParamsDTO.getExtension();
+        List<String> encryptionKeys = calculationParamsDTO.getDecryptionKeys();
+        boolean isZipped = calculationParamsDTO.getIsZipped();
+        String uploadPath = FILE_UPLOAD_PATH + calculationParamsDTO.getInputFile().getOriginalFilename();
+        String outputFilename = calculationParamsDTO.getOutputFilename();
 
-        if (calculationParamsDTO.getDecryptionKeys() != null) {
-            builder.setEncrypting(calculationParamsDTO.getDecryptionKeys());
+        IFileReaderBuilder builder = new FileReaderBuilder(fileExtension, uploadPath);
+
+        if (encryptionKeys != null) {
+            builder.setEncrypting(encryptionKeys);
         }
-        builder.setZipping(calculationParamsDTO.getIsZipped());
+        builder.setZipping(isZipped);
+
         IFileReader reader = builder.getFileReader();
 
-        File file = new File(FILE_UPLOAD_PATH + calculationParamsDTO.getOutputFilename());
+        File file = new File(FILE_UPLOAD_PATH + outputFilename);
 
         try {
             reader.calculate(file);
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
+            throw new RuntimeException(e);
         }
         return file;
     }

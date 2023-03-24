@@ -14,10 +14,12 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 public class ZipArchivingServiceImpl implements ZipArchivingService {
     @Override
     public File zip(MultipartFile inputFile) {
-        String achieveFileName = ArchivingFileManager.getNameOfArchiveFile(inputFile.getOriginalFilename());
+        final String inputFilename = inputFile.getOriginalFilename();
+        String achieveFileName = ArchivingFileManager.getNameOfArchiveFile(inputFilename);
         File file = new File(FILE_UPLOAD_PATH + achieveFileName);
+
         try {
-            ArchivingFileManager.zipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename());
+            ArchivingFileManager.zipFile(FILE_UPLOAD_PATH + inputFilename);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -26,9 +28,11 @@ public class ZipArchivingServiceImpl implements ZipArchivingService {
 
     @Override
     public File unzip(MultipartFile inputFile, String outputFilename) {
+        final String inputFilename = inputFile.getOriginalFilename();
         File file = new File(FILE_UPLOAD_PATH + outputFilename);
+
         try {
-            ArchivingFileManager.unZipFile(FILE_UPLOAD_PATH + inputFile.getOriginalFilename(), FILE_UPLOAD_PATH + outputFilename);
+            ArchivingFileManager.unZipFile(FILE_UPLOAD_PATH + inputFilename, FILE_UPLOAD_PATH + outputFilename);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

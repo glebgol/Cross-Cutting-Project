@@ -14,25 +14,31 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 public class EncryptionServiceImpl implements EncryptionService {
     @Override
     public File encrypt(EncryptionParamsDTO encryptionParamsDTO) {
-        final File file = new File(FILE_UPLOAD_PATH + encryptionParamsDTO.getOutputFilename());
-        final String filename = FILE_UPLOAD_PATH + encryptionParamsDTO.getInputFile().getOriginalFilename();
+        String encryptionKey = encryptionParamsDTO.getKey();
+        String outputFilename = encryptionParamsDTO.getOutputFilename();
+        String inputFilename = FILE_UPLOAD_PATH + encryptionParamsDTO.getInputFile().getOriginalFilename();
+        File outputFile = new File(FILE_UPLOAD_PATH + outputFilename);
+
         try {
-            CryptoUtils.encrypt(encryptionParamsDTO.getKey(), filename, file.getAbsolutePath());
+            CryptoUtils.encrypt(encryptionKey, inputFilename, outputFile.getAbsolutePath());
         } catch (CryptoException e) {
             throw new RuntimeException(e);
         }
-        return file;
+        return outputFile;
     }
 
     @Override
     public File decrypt(EncryptionParamsDTO encryptionParamsDTO) {
-        final File file = new File(FILE_UPLOAD_PATH + encryptionParamsDTO.getOutputFilename());
-        final String filename = FILE_UPLOAD_PATH + encryptionParamsDTO.getInputFile().getOriginalFilename();
+        String encryptionKey = encryptionParamsDTO.getKey();
+        String outputFilename = encryptionParamsDTO.getOutputFilename();
+        String inputFilename = FILE_UPLOAD_PATH + encryptionParamsDTO.getInputFile().getOriginalFilename();
+        File outputFile = new File(FILE_UPLOAD_PATH + outputFilename);
+
         try {
-            CryptoUtils.decrypt(encryptionParamsDTO.getKey(), filename, file.getAbsolutePath());
+            CryptoUtils.decrypt(encryptionKey, inputFilename, outputFile.getAbsolutePath());
         } catch (CryptoException e) {
             throw new RuntimeException(e);
         }
-        return file;
+        return outputFile;
     }
 }
