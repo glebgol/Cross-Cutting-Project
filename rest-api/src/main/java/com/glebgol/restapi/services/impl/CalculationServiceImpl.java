@@ -1,9 +1,10 @@
-package com.glebgol.restapi.services;
+package com.glebgol.restapi.services.impl;
 
 import com.glebgol.businesslogic.builder.FileReaderBuilder;
 import com.glebgol.businesslogic.contracts.interfaces.IFileReader;
 import com.glebgol.businesslogic.contracts.interfaces.IFileReaderBuilder;
 import com.glebgol.restapi.dto.CalculationParamsDTO;
+import com.glebgol.restapi.services.CalculationService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

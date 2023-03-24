@@ -1,6 +1,7 @@
-package com.glebgol.restapi.services;
+package com.glebgol.restapi.services.impl;
 
 import com.glebgol.businesslogic.utils.archivers.ArchivingFileManager;
+import com.glebgol.restapi.services.ZipArchivingService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

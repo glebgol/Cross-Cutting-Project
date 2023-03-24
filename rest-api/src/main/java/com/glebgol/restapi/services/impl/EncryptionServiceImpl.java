@@ -1,8 +1,9 @@
-package com.glebgol.restapi.services;
+package com.glebgol.restapi.services.impl;
 
 import com.glebgol.businesslogic.contracts.exceptions.CryptoException;
 import com.glebgol.businesslogic.utils.ciphers.CryptoUtils;
 import com.glebgol.restapi.dto.EncryptionParamsDTO;
+import com.glebgol.restapi.services.EncryptionService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
