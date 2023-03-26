@@ -1,6 +1,7 @@
 package steps;
 
 
+import com.codeborne.selenide.Selenide;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,10 +10,10 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 import static org.junit.Assert.*;
 
-public class FileCalculatingValidationSteps {
-    @When("attached file")
-    public void attachedFile() {
-        $(By.name("file")).sendKeys("D:\\Cross-Cutting-Project\\cucumber-tests\\testfiles\\helloworld.txt");
+public class FileCalculatingSteps {
+    @When("attached file {string}")
+    public void attachedFile(String file) {
+        $(By.name("file")).sendKeys(file);
     }
 
     @And("^type to input with name \"([^\"]*)\" text: \"([^\"]*)\"$")
@@ -20,14 +21,15 @@ public class FileCalculatingValidationSteps {
         $(By.name(input)).sendKeys(text);
     }
 
-    @And("select file extension")
-    public void selectFileExtension() {
-        $(By.cssSelector("select")).selectOption("Txt");
+    @And("select {string} file extension")
+    public void selectFileExtension(String fileExtension) {
+        $(By.cssSelector("select")).selectOption(fileExtension);
     }
 
-    @And("click calculate button")
-    public void clickCalculateButton() {
-        $(By.name("calculate")).click();
+    @And("click {string} button")
+    public void clickButton(String name) {
+        $(By.name(name)).click();
+        Selenide.sleep(1000);
     }
 
     @Then("appears message {string}")
