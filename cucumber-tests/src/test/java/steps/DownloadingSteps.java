@@ -10,12 +10,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static org.junit.Assert.assertTrue;
 
 public class DownloadingSteps {
-    @Then("download file and delete file")
-    public void downloadFileAndDeleteFile() {
+    @Then("download file, verify downloading and delete file")
+    public void downloadFileVerifyDownloadingAndDeleteFile() {
         boolean isExist;
         try {
             File file = $(By.name("download")).download();
             isExist = file.exists();
+            file.delete();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
