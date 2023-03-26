@@ -1,7 +1,6 @@
 package steps;
 
 
-import com.codeborne.selenide.Selenide;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,13 +13,11 @@ public class FileCalculatingValidationSteps {
     @When("attached file")
     public void attachedFile() {
         $(By.name("file")).sendKeys("D:\\Cross-Cutting-Project\\cucumber-tests\\testfiles\\helloworld.txt");
-        Selenide.sleep(1000);
     }
 
     @And("^type to input with name \"([^\"]*)\" text: \"([^\"]*)\"$")
     public void typeToInputWithNameText(String input, String text) {
         $(By.name(input)).sendKeys(text);
-        Selenide.sleep(1000);
     }
 
     @And("select file extension")
