@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="FLOW" />
   </component>
@@ -9,6 +10,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/rest-api/pom.xml" />
         <option value="$PROJECT_DIR$/selenium-ui-tests/pom.xml" />
+        <option value="$PROJECT_DIR$/../cucumber-tests/pom.xml" />
+        <option value="$PROJECT_DIR$/cucumber-tests/pom.xml" />
       </list>
     </option>
   </component>

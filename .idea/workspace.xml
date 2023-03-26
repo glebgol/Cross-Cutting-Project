@@ -4,12 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Change message for not valid keys">
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/validation/EncryptionKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/validation/EncryptionKeyValidator.java" afterDir="false" />
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Refactoring in services">
+      <change afterPath="$PROJECT_DIR$/cucumber-tests/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cucumber-tests/src/test/java/steps/BeforeStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cucumber-tests/src/test/java/steps/FileCalculatingValidationSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cucumber-tests/src/test/resources/fileCalculatingValidation#1.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cucumber-tests/testfiles/helloworld.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_kqueue_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_84_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_api_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_api_logs_1_19_0_alpha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_context_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_exporter_common_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_exporter_logging_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_common_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_1_19_0_alpha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_spi_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_logs_1_19_0_alpha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_metrics_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_sdk_trace_1_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentelemetry_opentelemetry_semconv_1_19_0_alpha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chromium_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v106_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v107_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v108_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v85_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_http_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_json_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_manager_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_4_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/controllers/FileEncryptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/dto/EncryptionParamsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-api/src/main/java/com/glebgol/restapi/dto/EncryptionParamsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-ui-tests/src/test/java/reactuitest/CalculationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-ui-tests/src/test/java/reactuitest/CalculationPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,44 +94,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/Anton/Design-Patterns",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs.jest.jest_package": "D:/Cross-Cutting-Project/reactui/node_modules/react-scripts",
-    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Design-Patterns&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;D:/Cross-Cutting-Project/reactui/node_modules/react-scripts&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.glebgol.restapi.validation" />
@@ -101,11 +149,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Cross-Cutting-Project\cucumber-tests\src\test\resources" />
       <recent name="D:\Cross-Cutting-Project\rest-api\src\test\resources" />
       <recent name="D:\Cross-Cutting-Project\reactui\src\hooks\inputs" />
       <recent name="D:\Cross-Cutting-Project" />
       <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src" />
-      <recent name="D:\Anton\Cross-Cutting-Project\react-ui\src\components" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.glebgol.restapi.controllers" />
@@ -127,80 +175,132 @@
       <command value="open spring-boot-file-upload" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication">
-    <configuration name="FileCalculationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-api" />
+  <component name="RunManager" selected="Cucumber Java.Feature: fileCalculatingValidation#1">
+    <configuration name="Feature: fileCalculatingValidation#1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/resources/fileCalculatingValidation#1.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="cucumber-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: fileCalculatingValidation#1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileCalculationControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileEncryptionControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-api" />
+    <configuration name="Feature: filecalculating#1 (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/java/features/filecalculating#1.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumber-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: filecalculating#1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.glebgol.restapi.controllers.*" />
+          <option name="PATTERN" value="cucumber.api.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.restapi.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.controllers.FileEncryptionControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiFileEncryptionTest.encryptFile" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-api" />
+    <configuration name="Feature: filecalculating#1 (2)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/resources/filecalculating#1.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumber-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: filecalculating#1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.glebgol.restapi.restassured.*" />
+          <option name="PATTERN" value="cucumber.api.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.glebgol.restapi.restassured" />
-      <option name="MAIN_CLASS_NAME" value="com.glebgol.restapi.restassured.ApiFileEncryptionTest" />
-      <option name="METHOD_NAME" value="encryptFile" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: entered invalid output filename (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/resources/filecalculating#1.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="cucumber-tests" />
+      <option name="NAME_FILTER" value="^entered invalid output filename$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^entered invalid output filename$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: entered invalid output filename" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: entered invalid output filename" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/java/features/filecalculating#1.feature" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumber-tests" />
+      <option name="NAME_FILTER" value="^entered invalid output filename$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^entered invalid output filename$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: entered invalid output filename" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: fileCalculatingValidation#1" />
+      <item itemvalue="Cucumber Java.Feature: filecalculating#1 (2)" />
+      <item itemvalue="Cucumber Java.Scenario: entered invalid output filename (1)" />
+      <item itemvalue="Cucumber Java.Feature: filecalculating#1 (1)" />
+      <item itemvalue="Cucumber Java.Scenario: entered invalid output filename" />
       <item itemvalue="JUnit.Calculation-Tests" />
       <item itemvalue="JUnit.FileReader-Tests" />
       <item itemvalue="JUnit.FileReaderBuilderTest" />
       <item itemvalue="JUnit.Spring-Boot-Tests" />
-      <item itemvalue="JUnit.FileCalculationControllerTest" />
-      <item itemvalue="JUnit.FileEncryptionControllerTest" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Spring Boot.RestApiApplication" />
       <item itemvalue="TestNG.Selenium-UI-Tests" />
       <item itemvalue="TestNG.Rest-assured-Tests" />
-      <item itemvalue="TestNG.ApiFileEncryptionTest.encryptFile" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ApiFileEncryptionTest.encryptFile" />
-        <item itemvalue="JUnit.FileEncryptionControllerTest" />
-        <item itemvalue="JUnit.FileCalculationControllerTest" />
+        <item itemvalue="Cucumber Java.Feature: fileCalculatingValidation#1" />
+        <item itemvalue="Cucumber Java.Scenario: entered invalid output filename (1)" />
+        <item itemvalue="Cucumber Java.Feature: filecalculating#1 (2)" />
+        <item itemvalue="Cucumber Java.Feature: filecalculating#1 (1)" />
+        <item itemvalue="Cucumber Java.Scenario: entered invalid output filename" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
     <option name="lastFrameworkName" value="Selenium" />
     <option name="lastLanguageId" value="JAVA" />
-    <option name="lastUrl" value="http://localhost:3000/" />
+    <option name="lastUrl" value="http://localhost:3000/calculate" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -299,35 +399,14 @@
       <workItem from="1675971630636" duration="39000" />
       <workItem from="1676457810276" duration="617000" />
       <workItem from="1676893969920" duration="623000" />
-      <workItem from="1677175012945" duration="18814000" />
-    </task>
-    <task id="LOCAL-00205" summary="Create helpers package for FileUtil and TestValues">
-      <created>1673557323078</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1673557323078</updated>
-    </task>
-    <task id="LOCAL-00206" summary="Refactor TestValues">
-      <created>1673563245998</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1673563245998</updated>
-    </task>
-    <task id="LOCAL-00207" summary="Create Urls class">
-      <created>1673564381138</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1673564381138</updated>
-    </task>
-    <task id="LOCAL-00208" summary="Create Main page tests">
-      <created>1673564668530</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1673564668530</updated>
+      <workItem from="1677175012945" duration="25646000" />
+      <workItem from="1677346969544" duration="3284000" />
+      <workItem from="1677488313552" duration="900000" />
+      <workItem from="1678958325580" duration="591000" />
+      <workItem from="1679680991872" duration="3959000" />
+      <workItem from="1679685358465" duration="4825000" />
+      <workItem from="1679771336450" duration="4000" />
+      <workItem from="1679771360007" duration="7447000" />
     </task>
     <task id="LOCAL-00209" summary="Add finally block for deleting input file">
       <created>1673607494491</created>
@@ -644,7 +723,35 @@
       <option name="project" value="LOCAL" />
       <updated>1677254356120</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="Create custom validation for EncryptionKey">
+      <created>1677255173526</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1677255173526</updated>
+    </task>
+    <task id="LOCAL-00255" summary="Create custom validation for FileExtension">
+      <created>1677257141147</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1677257141147</updated>
+    </task>
+    <task id="LOCAL-00256" summary="Create impl package">
+      <created>1679683094491</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1679683094492</updated>
+    </task>
+    <task id="LOCAL-00257" summary="Refactoring in services">
+      <created>1679683878438</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1679683878438</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,10 +776,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved rest-assured tests" />
-    <MESSAGE value="Add After each group method to delete files" />
-    <MESSAGE value="Create Spring Boot test for Not Valid Decryption Keys" />
-    <MESSAGE value="Create Spring Boot tests for encrypting" />
     <MESSAGE value="Add testng" />
     <MESSAGE value="Rewrite rest-assured tests to TestNG" />
     <MESSAGE value="Create SpringBootTestBase and delete file after testing" />
@@ -694,7 +797,11 @@
     <MESSAGE value="Create custom validation DecryptionKeysForCalculation" />
     <MESSAGE value="Add validation for file calculation" />
     <MESSAGE value="Change message for not valid keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change message for not valid keys" />
+    <MESSAGE value="Create custom validation for EncryptionKey" />
+    <MESSAGE value="Create custom validation for FileExtension" />
+    <MESSAGE value="Create impl package" />
+    <MESSAGE value="Refactoring in services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring in services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

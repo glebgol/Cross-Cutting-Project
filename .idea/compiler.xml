@@ -8,14 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rest-api" />
+        <module name="cucumber-tests" />
         <module name="selenium-ui-tests" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Cross-Cutting-Project" target="18" />
       <module name="demo" target="17" />
-      <module name="rest-api" target="17" />
-      <module name="selenium-ui-tests" target="18" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
