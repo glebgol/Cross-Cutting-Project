@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useUnZipForm from "../hooks/forms/useUnZipForm";
-import {UNZIP} from "../Urls"
+import {PROXY, UNZIP} from "../Urls"
 
 const UnZip = () => {
     const form = useUnZipForm();
@@ -64,6 +64,7 @@ const UnZip = () => {
             </form>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isUnzipped} onClick={download}>Download</button>
+            <a id='#download' href={PROXY + downloadUri} download="">Download link</a>
         </div>
     );
 }

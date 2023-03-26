@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useCalculateForm from "../hooks/forms/useCalculateForm";
-import {CALCULATE_URL} from "../Urls";
+import {CALCULATE_URL, PROXY} from "../Urls";
 const Calculate = () => {
     const form = useCalculateForm();
 
@@ -99,6 +99,7 @@ const Calculate = () => {
             <p><b>{resultInfo}</b></p>
             <Link to="/">Back to Home Page</Link>
             <button name='download' disabled={!isCalculated} onClick={download}>Download</button>
+            <a id='#download' href={PROXY + downloadUri} download="">Download link</a>
         </div>
     );
 }

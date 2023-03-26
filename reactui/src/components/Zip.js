@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useFileInput from "../hooks/inputs/useFileInput";
-import {ZIP} from "../Urls";
+import {PROXY, ZIP} from "../Urls";
 
 const Zip = () => {
     const file = useFileInput();
@@ -55,6 +55,7 @@ const Zip = () => {
             </form>
             <Link to="/">Back to Home Page</Link>
             <button disabled={!isZipped} onClick={download}>Download</button>
+            <a id='#download' href={PROXY + downloadUri} download="">Download link</a>
         </div>
     );
 }

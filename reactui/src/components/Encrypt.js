@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useEncryptForm from "../hooks/forms/useEncryptForm";
-import {ENCRYPT} from "../Urls"
+import {ENCRYPT, PROXY} from "../Urls"
 const Encrypt = () => {
     const form = useEncryptForm();
 
@@ -78,6 +78,7 @@ const Encrypt = () => {
             </form>
             <Link to="/">Back to Home Page</Link>
             <button name="download" disabled={!isEncrypted} onClick={download}>Download</button>
+            <a id='#download' href={PROXY + downloadUri} download="">Download link</a>
         </div>
     );
 }

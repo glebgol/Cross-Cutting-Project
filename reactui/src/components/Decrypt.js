@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import downloadFile from "../services/DownloadFile";
 import useDecryptForm from "../hooks/forms/useDecryptForm";
-import {DECRYPT} from "../Urls";
+import {DECRYPT, PROXY} from "../Urls";
 
 const Decrypt = () => {
     const form = useDecryptForm();
@@ -77,6 +77,7 @@ const Decrypt = () => {
             </form>
             <Link to="/">Back to Home Page</Link>
             <button name="download" disabled={!isDecrypted} onClick={download}>Download</button>
+            <a id='#download' href={PROXY + downloadUri} download="">Download link</a>
         </div>
     );
 }
