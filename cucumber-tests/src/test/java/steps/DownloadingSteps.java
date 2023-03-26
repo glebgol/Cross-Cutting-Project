@@ -14,7 +14,7 @@ public class DownloadingSteps {
     public void downloadFileVerifyDownloadingAndDeleteFile() {
         boolean isExist;
         try {
-            File file = $(By.name("download")).download();
+            File file = $(By.id("#download")).download();
             isExist = file.exists();
             file.delete();
         } catch (FileNotFoundException e) {
