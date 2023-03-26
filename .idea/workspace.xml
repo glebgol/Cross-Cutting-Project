@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Create first cucumber test">
+    <list default="true" id="7bdc8b4d-ab77-4b4e-a191-930064cf1ab6" name="Changes" comment="Add file download link">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-tests/src/test/resources/fileCalculatingValidation#1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-tests/src/test/resources/fileCalculatingValidation#1.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-tests/src/test/java/steps/DownloadingSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-tests/src/test/java/steps/DownloadingSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,44 +43,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Anton/Design-Patterns&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;D:/Cross-Cutting-Project/reactui/node_modules/react-scripts&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1d9ddd56403cb54aecb11fb26fd7851e&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "D:/Cross-Cutting-Project/cucumber-tests/src/test/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs.jest.jest_package": "D:/Cross-Cutting-Project/reactui/node_modules/react-scripts",
+    "nodejs_interpreter_path": "C:/Users/HP/AppData/Roaming/JetBrains/IntelliJIdea2022.2/node/node-v14.15.0-win-x64/node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "1d9ddd56403cb54aecb11fb26fd7851e"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.glebgol.restapi.validation" />
@@ -88,11 +88,11 @@
       <recent name="com.example.restapi" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Cross-Cutting-Project\cucumber-tests\testfiles" />
       <recent name="D:\Cross-Cutting-Project\rest-api\src\test\resources" />
       <recent name="D:\Cross-Cutting-Project\rest-api\src\test\java\com\glebgol\businesslogic" />
       <recent name="D:\Cross-Cutting-Project\rest-api\src\test\java\com\glebgol" />
       <recent name="D:\Cross-Cutting-Project\rest-api\src\main\java\com\glebgol\buisinesslogic" />
-      <recent name="D:\Cross-Cutting-Project\selenium-ui-tests\src\test\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -124,109 +124,9 @@
       <command value="open spring-boot-file-upload" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: fileCalculatingValidation#1">
-    <configuration name="Feature: fileCalculatingValidation#1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/resources/fileCalculatingValidation#1.feature" />
-      <option name="GLUE" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="cucumber-tests" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: fileCalculatingValidation#1" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: filecalculating#1 (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/java/features/filecalculating#1.feature" />
-      <option name="GLUE" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="cucumber-tests" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: filecalculating#1" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: filecalculating#1 (2)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/resources/filecalculating#1.feature" />
-      <option name="GLUE" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="cucumber-tests" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: filecalculating#1" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: entered invalid output filename (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/resources/filecalculating#1.feature" />
-      <option name="GLUE" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="cucumber-tests" />
-      <option name="NAME_FILTER" value="^entered invalid output filename$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^entered invalid output filename$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: entered invalid output filename" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: entered invalid output filename" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/cucumber-tests/src/test/java/features/filecalculating#1.feature" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="cucumber-tests" />
-      <option name="NAME_FILTER" value="^entered invalid output filename$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^entered invalid output filename$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: entered invalid output filename" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Cucumber Java.cucumber-end-to-end-tests">
     <list>
-      <item itemvalue="Cucumber Java.Feature: fileCalculatingValidation#1" />
-      <item itemvalue="Cucumber Java.Feature: filecalculating#1 (2)" />
-      <item itemvalue="Cucumber Java.Scenario: entered invalid output filename (1)" />
-      <item itemvalue="Cucumber Java.Feature: filecalculating#1 (1)" />
-      <item itemvalue="Cucumber Java.Scenario: entered invalid output filename" />
+      <item itemvalue="Cucumber Java.cucumber-end-to-end-tests" />
       <item itemvalue="JUnit.Calculation-Tests" />
       <item itemvalue="JUnit.FileReader-Tests" />
       <item itemvalue="JUnit.FileReaderBuilderTest" />
@@ -238,11 +138,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: fileCalculatingValidation#1" />
-        <item itemvalue="Cucumber Java.Scenario: entered invalid output filename (1)" />
-        <item itemvalue="Cucumber Java.Feature: filecalculating#1 (2)" />
-        <item itemvalue="Cucumber Java.Feature: filecalculating#1 (1)" />
-        <item itemvalue="Cucumber Java.Scenario: entered invalid output filename" />
+        <item itemvalue="Cucumber Java.cucumber-end-to-end-tests" />
       </list>
     </recent_temporary>
   </component>
@@ -355,42 +251,7 @@
       <workItem from="1679680991872" duration="3959000" />
       <workItem from="1679685358465" duration="4825000" />
       <workItem from="1679771336450" duration="4000" />
-      <workItem from="1679771360007" duration="8542000" />
-    </task>
-    <task id="LOCAL-00210" summary="Add Urls">
-      <created>1673638381407</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1673638381407</updated>
-    </task>
-    <task id="LOCAL-00211" summary="Rename package and create new controllers">
-      <created>1673638624512</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1673638624512</updated>
-    </task>
-    <task id="LOCAL-00212" summary="Moved business logic to rest-api module">
-      <created>1673696889687</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1673696889687</updated>
-    </task>
-    <task id="LOCAL-00213" summary="Add to builder throw IllegalArgumentException for not supported file extension">
-      <created>1673697277853</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1673697277853</updated>
-    </task>
-    <task id="LOCAL-00214" summary="Create first Rest-Assured test">
-      <created>1673722649132</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1673722649133</updated>
+      <workItem from="1679771360007" duration="15923000" />
     </task>
     <task id="LOCAL-00215" summary="delete file after testing">
       <created>1673724142318</created>
@@ -700,7 +561,42 @@
       <option name="project" value="LOCAL" />
       <updated>1679829733333</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Create scenario for invalid encryption keys">
+      <created>1679830609620</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1679830609621</updated>
+    </task>
+    <task id="LOCAL-00260" summary="Create testing Calculating and Downloading feature">
+      <created>1679833786039</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1679833786039</updated>
+    </task>
+    <task id="LOCAL-00261" summary="Create new Scenario: encrypted txt file">
+      <created>1679834001755</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1679834001755</updated>
+    </task>
+    <task id="LOCAL-00262" summary="Create new Scenario: encrypted and archived file">
+      <created>1679834356389</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1679834356389</updated>
+    </task>
+    <task id="LOCAL-00263" summary="Add file download link">
+      <created>1679858664692</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1679858664692</updated>
+    </task>
+    <option name="localTasksCounter" value="264" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -725,11 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rewrite rest-assured tests to TestNG" />
-    <MESSAGE value="Create SpringBootTestBase and delete file after testing" />
-    <MESSAGE value="Rest controller" />
-    <MESSAGE value="Create CalculationParams DTO" />
-    <MESSAGE value="Create CalculationService" />
     <MESSAGE value="Create EncryptionParamsDTO and EncryptionService" />
     <MESSAGE value="Add EncryptionService" />
     <MESSAGE value="Final class" />
@@ -750,7 +641,12 @@
     <MESSAGE value="Create impl package" />
     <MESSAGE value="Refactoring in services" />
     <MESSAGE value="Create first cucumber test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create first cucumber test" />
+    <MESSAGE value="Create scenario for invalid encryption keys" />
+    <MESSAGE value="Create testing Calculating and Downloading feature" />
+    <MESSAGE value="Create new Scenario: encrypted txt file" />
+    <MESSAGE value="Create new Scenario: encrypted and archived file" />
+    <MESSAGE value="Add file download link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add file download link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
