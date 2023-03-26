@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.junit.Assert.*;
 
 public class FileCalculatingSteps {
@@ -42,5 +43,11 @@ public class FileCalculatingSteps {
     public void buttonWithNameShouldBeDisabled(String name) {
         boolean isEnabled = $(By.name(name)).isEnabled();
         assertFalse("Button with name " + name + " should be disabled", isEnabled);
+    }
+
+    @And("click checkbox")
+    public void clickCheckbox() {
+        $(By.xpath("//input[@type='checkbox']")).click();
+        sleep(1000);
     }
 }
