@@ -1,6 +1,8 @@
 Feature: calculating and downloading file
-  Scenario: unencrypted txt file
+  Background: main page of the site
     Given open site "http://localhost:3000/calculate"
+
+  Scenario: unencrypted txt file
     When attached file "D:\Cross-Cutting-Project\cucumber-tests\testfiles\helloworld.txt"
     And type to input with name "outputFile" text: "output.txt"
     And select "Txt" file extension
@@ -8,7 +10,6 @@ Feature: calculating and downloading file
     Then download file, verify downloading and delete file
 
   Scenario: encrypted txt file
-    Given open site "http://localhost:3000/calculate"
     When attached file "D:\Cross-Cutting-Project\cucumber-tests\testfiles\encrypted.txt"
     And type to input with name "outputFile" text: "output.txt"
     And select "Txt" file extension
@@ -17,7 +18,6 @@ Feature: calculating and downloading file
     Then download file, verify downloading and delete file
 
   Scenario: encrypted and archived file
-    Given open site "http://localhost:3000/calculate"
     When attached file "D:\Cross-Cutting-Project\cucumber-tests\testfiles\encrypted.zip"
     And type to input with name "outputFile" text: "output.txt"
     And click checkbox

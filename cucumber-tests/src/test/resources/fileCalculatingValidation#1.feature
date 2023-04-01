@@ -1,6 +1,8 @@
 Feature: file calculating validation
-  Scenario: entered invalid output filename
+  Background: main page of the site
     Given open site "http://localhost:3000/calculate"
+
+  Scenario: entered invalid output filename
     When attached file "D:\Cross-Cutting-Project\cucumber-tests\testfiles\helloworld.txt"
     And type to input with name "outputFile" text: "invalidfile"
     And select "Txt" file extension
@@ -9,7 +11,6 @@ Feature: file calculating validation
     And button with name "download" should be disabled
 
   Scenario: entered invalid encryption keys
-    Given open site "http://localhost:3000/calculate"
     When attached file "D:\Cross-Cutting-Project\cucumber-tests\testfiles\helloworld.txt"
     And type to input with name "key" text: "111"
     And type to input with name "outputFile" text: "output.txt"
