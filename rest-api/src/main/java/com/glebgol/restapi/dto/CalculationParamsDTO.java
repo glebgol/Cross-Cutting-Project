@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public final class CalculationParamsDTO extends ParamsDTO {
-    private Boolean isZipped;
+    private Boolean isZipped = false;
     @DecryptionKeysForCalculation(message = "not valid for calculation decryption keys")
     private List<String> decryptionKeys;
     @FileExtension

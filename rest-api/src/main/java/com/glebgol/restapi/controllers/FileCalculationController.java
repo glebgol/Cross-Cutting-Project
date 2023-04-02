@@ -3,7 +3,7 @@ package com.glebgol.restapi.controllers;
 import com.glebgol.restapi.dto.CalculationParamsDTO;
 import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.services.CalculationService;
-import com.glebgol.restapi.utils.FileUploadUtil;
+import com.glebgol.restapi.utils.InputFileResource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -23,7 +23,6 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 @RequiredArgsConstructor
 public class FileCalculationController {
     private final CalculationService calculationService;
-    private final FileUploadUtil fileUploadUtil;
 
     @PostMapping(value = "/calculate", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> calculate(@Valid CalculationParamsDTO calculationParams, BindingResult bindingResult) {
@@ -31,15 +30,12 @@ public class FileCalculationController {
             log.warn("Calculate POST method Bad Request");
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
         }
-        fileUploadUtil.saveFile(FILE_UPLOAD_PATH, calculationParams.getInputFile());
         File file = null;
-        try {
+        try (var inputFileResource = new InputFileResource(FILE_UPLOAD_PATH, calculationParams)) {
             file = calculationService.calculate(calculationParams);
         } catch (Exception ex) {
             log.error("Calculate POST method Internal Server Error");
             return ResponseEntity.internalServerError().build();
-        } finally {
-            fileUploadUtil.deleteFile(FILE_UPLOAD_PATH, calculationParams.getInputFile().getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(calculationParams.getOutputFilename())
