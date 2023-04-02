@@ -7,6 +7,7 @@ import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,10 +45,10 @@ public class FileEncryptionController {
                 .size(file.getTotalSpace())
                 .downloadUri(DOWNLOAD_URI + encryptionParamsDTO.getOutputFilename())
                 .build();
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @PostMapping("/decrypt")
+    @PostMapping(value = "/decrypt", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> decrypt(@Valid EncryptionParamsDTO encryptionParamsDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
@@ -66,6 +67,6 @@ public class FileEncryptionController {
                 .size(file.getTotalSpace())
                 .downloadUri(DOWNLOAD_URI + encryptionParamsDTO.getOutputFilename())
                 .build();
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }

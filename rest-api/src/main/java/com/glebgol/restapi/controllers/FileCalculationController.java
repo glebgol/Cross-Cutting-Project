@@ -7,6 +7,7 @@ import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -41,6 +42,6 @@ public class FileCalculationController {
                 .size(file.getTotalSpace())
                 .downloadUri(DOWNLOAD_URI + calculationParams.getOutputFilename())
                 .build();
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }
