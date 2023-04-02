@@ -5,20 +5,13 @@ import com.glebgol.restapi.validation.FileExtension;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public final class CalculationParamsDTO {
-    @NotNull(message = "input file can't be null")
-    private MultipartFile inputFile;
-    @NotBlank(message = "output file name can't be null or empty")
-    private String outputFilename;
+public final class CalculationParamsDTO extends ParamsDTO {
     private Boolean isZipped;
     @DecryptionKeysForCalculation(message = "not valid for calculation decryption keys")
     private List<String> decryptionKeys;
