@@ -41,7 +41,7 @@ public class ApiFileCalculationTest extends BaseRestTest {
                 .queryParam("isZipped", true)
                 .queryParam("extension", "txt").log().all()
                 .when().post(CALCULATE_URL)
-                .then().statusCode(200);
+                .then().statusCode(201);
 
         boolean isFileExist = verifyFileIsUploaded(txtFileName);
 
@@ -59,7 +59,7 @@ public class ApiFileCalculationTest extends BaseRestTest {
                 .when().post(CALCULATE_URL);
 
         response
-                .then().statusCode(200);
+                .then().statusCode(201);
 
         String actualDownloadUri = response.getBody().jsonPath().get("downloadUri");
 
@@ -78,7 +78,7 @@ public class ApiFileCalculationTest extends BaseRestTest {
                 .queryParam("isZipped", false)
                 .queryParam("extension", "json").log().all()
                 .when().post(CALCULATE_URL)
-                .then().statusCode(200);
+                .then().statusCode(201);
 
         boolean isFileExist = verifyFileIsUploaded(jsonFileName);
 

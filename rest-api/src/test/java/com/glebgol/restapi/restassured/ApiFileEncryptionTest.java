@@ -30,7 +30,7 @@ public class ApiFileEncryptionTest extends BaseRestTest {
                 .when().post(ENCRYPTION_URL);
 
         response
-                .then().statusCode(200);
+                .then().statusCode(201);
 
         String actualDownloadUri = response.getBody().jsonPath().get("downloadUri");
 
