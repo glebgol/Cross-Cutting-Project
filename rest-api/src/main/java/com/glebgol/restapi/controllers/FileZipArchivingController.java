@@ -25,7 +25,7 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 public class FileZipArchivingController {
     private final ZipArchivingService zipArchivingService;
 
-    @PostMapping("/zip")
+    @PostMapping(value = "/zip", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<FileUploadResponse> zip(@RequestParam MultipartFile inputFile) {
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
         File file = null;
@@ -44,7 +44,7 @@ public class FileZipArchivingController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @PostMapping("/unzip")
+    @PostMapping(value = "/unzip", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<FileUploadResponse> unzip(@RequestParam MultipartFile inputFile, @RequestParam String outputFilename) {
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
         File file = null;

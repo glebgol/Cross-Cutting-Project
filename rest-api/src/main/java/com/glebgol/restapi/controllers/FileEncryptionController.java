@@ -26,7 +26,7 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 public class FileEncryptionController {
     private final EncryptionService encryptionService;
 
-    @PostMapping("/encrypt")
+    @PostMapping(value = "/encrypt", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> encrypt(@Valid EncryptionParamsDTO encryptionParamsDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());

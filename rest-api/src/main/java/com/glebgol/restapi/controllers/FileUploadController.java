@@ -4,12 +4,11 @@ import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.utils.constants.Constants;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
 
 @RestController
 @RequestMapping("api/v1/")
@@ -17,8 +16,8 @@ public class FileUploadController {
     protected final String uploadPath = Constants.FILE_UPLOAD_PATH;
     protected final String downloadUri = Constants.DOWNLOAD_URI;
 
-    @PostMapping("/uploadFile")
-    public ResponseEntity<FileUploadResponse> uploadFile(@RequestParam("file") MultipartFile multipartFile) throws IOException {
+    @PostMapping(value = "/uploadFile", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    public ResponseEntity<FileUploadResponse> uploadFile(@RequestParam("file") MultipartFile multipartFile) {
         if (multipartFile.isEmpty()) {
             return ResponseEntity.badRequest().build();
         }

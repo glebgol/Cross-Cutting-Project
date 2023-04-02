@@ -23,7 +23,7 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 public class FileCalculationController {
     private final CalculationService calculationService;
 
-    @PostMapping("/calculate")
+    @PostMapping(value = "/calculate", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> calculate(@Valid CalculationParamsDTO calculationParams, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
