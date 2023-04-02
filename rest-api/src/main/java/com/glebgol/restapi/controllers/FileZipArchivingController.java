@@ -21,7 +21,7 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 @RestController
 @RequestMapping("api/v1/")
 @RequiredArgsConstructor
-public class FileArchivingController {
+public class FileZipArchivingController {
     private final ZipArchivingService zipArchivingService;
 
     @PostMapping("/zip")
