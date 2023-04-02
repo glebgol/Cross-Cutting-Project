@@ -3,7 +3,6 @@ package com.glebgol.restapi.controllers;
 import com.glebgol.restapi.dto.EncryptionParamsDTO;
 import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.services.EncryptionService;
-import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -27,6 +26,7 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 @RequiredArgsConstructor
 public class FileEncryptionController {
     private final EncryptionService encryptionService;
+    private final FileUploadUtil fileUploadUtil;
 
     @PostMapping(value = "/encrypt", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> encrypt(@Valid EncryptionParamsDTO encryptionParamsDTO, BindingResult bindingResult) {
@@ -34,7 +34,7 @@ public class FileEncryptionController {
             log.warn("Encrypt POST method Bad Request");
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
         }
-        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
+        fileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
         File file = null;
         try {
             file = encryptionService.encrypt(encryptionParamsDTO);
@@ -42,7 +42,7 @@ public class FileEncryptionController {
             log.error("Encrypt POST method Internal Server Error");
             return ResponseEntity.internalServerError().build();
         } finally {
-            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile().getOriginalFilename());
+            fileUploadUtil.deleteFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile().getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(encryptionParamsDTO.getOutputFilename())
@@ -57,14 +57,14 @@ public class FileEncryptionController {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
         }
-        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
+        fileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
         File file = null;
         try {
             file = encryptionService.decrypt(encryptionParamsDTO);
         } catch (Exception ex) {
             return ResponseEntity.internalServerError().build();
         } finally {
-            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile().getOriginalFilename());
+            fileUploadUtil.deleteFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile().getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(encryptionParamsDTO.getOutputFilename())

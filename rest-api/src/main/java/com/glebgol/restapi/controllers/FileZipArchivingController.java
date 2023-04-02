@@ -2,7 +2,6 @@ package com.glebgol.restapi.controllers;
 
 import com.glebgol.restapi.dto.FileUploadResponse;
 import com.glebgol.restapi.services.ZipArchivingService;
-import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -26,10 +25,11 @@ import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 @RequiredArgsConstructor
 public class FileZipArchivingController {
     private final ZipArchivingService zipArchivingService;
+    private final FileUploadUtil fileUploadUtil;
 
     @PostMapping(value = "/zip", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<FileUploadResponse> zip(@RequestParam MultipartFile inputFile) {
-        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
+        fileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
         File file = null;
         try {
             file = zipArchivingService.zip(inputFile);
@@ -37,7 +37,7 @@ public class FileZipArchivingController {
             log.error("zip POST method Internal Server Error");
             return ResponseEntity.internalServerError().build();
         } finally {
-            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
+            fileUploadUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(file.getName())
@@ -49,7 +49,7 @@ public class FileZipArchivingController {
 
     @PostMapping(value = "/unzip", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<FileUploadResponse> unzip(@RequestParam MultipartFile inputFile, @RequestParam String outputFilename) {
-        FileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
+        fileUploadUtil.saveFile(FILE_UPLOAD_PATH, inputFile);
         File file = null;
         try {
             file = zipArchivingService.unzip(inputFile, outputFilename);
@@ -57,7 +57,7 @@ public class FileZipArchivingController {
             log.error("unzip POST method Internal Server Error");
             return ResponseEntity.internalServerError().build();
         } finally {
-            FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
+            fileUploadUtil.deleteFile(FILE_UPLOAD_PATH, inputFile.getOriginalFilename());
         }
         FileUploadResponse response = FileUploadResponse.builder()
                 .fileName(outputFilename)

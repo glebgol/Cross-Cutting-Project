@@ -1,6 +1,7 @@
 package com.glebgol.restapi.controllers;
 
 import com.glebgol.restapi.utils.FileDownloadUtil;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -15,14 +16,14 @@ import java.io.IOException;
 
 @Log4j2
 @RestController
+@RequiredArgsConstructor
 public class FileDownloadController {
+    private final FileDownloadUtil fileDownloadUtil;
     @GetMapping("/downloadFile/{fileCode}")
     public ResponseEntity<?> downloadFile(@PathVariable("fileCode") String fileCode) {
-        FileDownloadUtil downloadUtil = new FileDownloadUtil();
-
         Resource resource = null;
         try {
-            resource = downloadUtil.getFileAsResource(fileCode);
+            resource = fileDownloadUtil.getFileAsResource(fileCode);
         } catch (IOException e) {
             log.error("Downloading file Internal Server Error");
             return ResponseEntity.internalServerError().build();
