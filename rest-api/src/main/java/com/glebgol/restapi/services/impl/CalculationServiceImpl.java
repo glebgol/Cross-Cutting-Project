@@ -5,6 +5,7 @@ import com.glebgol.businesslogic.contracts.interfaces.IFileReader;
 import com.glebgol.businesslogic.contracts.interfaces.IFileReaderBuilder;
 import com.glebgol.restapi.dto.CalculationParamsDTO;
 import com.glebgol.restapi.services.CalculationService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -12,6 +13,7 @@ import java.util.List;
 
 import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 
+@Log4j2
 @Service
 public class CalculationServiceImpl implements CalculationService {
     @Override
@@ -23,19 +25,17 @@ public class CalculationServiceImpl implements CalculationService {
         String outputFilename = calculationParamsDTO.getOutputFilename();
 
         IFileReaderBuilder builder = new FileReaderBuilder(fileExtension, uploadPath);
-
         if (encryptionKeys != null) {
             builder.setEncrypting(encryptionKeys);
         }
         builder.setZipping(isZipped);
-
         IFileReader reader = builder.getFileReader();
 
         File file = new File(FILE_UPLOAD_PATH + outputFilename);
-
         try {
             reader.calculate(file);
         } catch (Exception e) {
+            log.error("Exception in calculate service");
             throw new RuntimeException(e);
         }
         return file;
