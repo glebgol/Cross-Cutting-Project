@@ -6,6 +6,7 @@ import com.glebgol.restapi.services.EncryptionService;
 import com.glebgol.restapi.utils.FileDeleteUtil;
 import com.glebgol.restapi.utils.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ import java.io.File;
 import static com.glebgol.restapi.utils.constants.Constants.DOWNLOAD_URI;
 import static com.glebgol.restapi.utils.constants.Constants.FILE_UPLOAD_PATH;
 
+@Log4j2
 @RestController
 @RequestMapping("api/v1/")
 @RequiredArgsConstructor
@@ -29,6 +31,7 @@ public class FileEncryptionController {
     @PostMapping(value = "/encrypt", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> encrypt(@Valid EncryptionParamsDTO encryptionParamsDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
+            log.warn("Encrypt POST method Bad Request");
             return ResponseEntity.badRequest().body(bindingResult.getFieldError().getDefaultMessage());
         }
         FileUploadUtil.saveFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile());
@@ -36,6 +39,7 @@ public class FileEncryptionController {
         try {
             file = encryptionService.encrypt(encryptionParamsDTO);
         } catch (Exception ex) {
+            log.error("Encrypt POST method Internal Server Error");
             return ResponseEntity.internalServerError().build();
         } finally {
             FileDeleteUtil.deleteFile(FILE_UPLOAD_PATH, encryptionParamsDTO.getInputFile().getOriginalFilename());
