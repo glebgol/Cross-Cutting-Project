@@ -10,23 +10,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 class FileEncryptionControllerTest extends SpringBootTestBase {
     @Test
-    public void encryptAndExpectOkStatusCode() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
+    public void encryptAndExpect_201_StatusCode() throws Exception {
+        MockMultipartFile file = new MockMultipartFile("inputFile", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
 
         mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/encrypt")
                         .file(file)
-                        .queryParam("outputfile", OUTPUT_FILE_NAME)
+                        .queryParam("extension", "txt")
+                        .queryParam("outputFilename", OUTPUT_FILE_NAME)
                         .queryParam("key", "1234123412341234"))
-                .andExpect(status().is(200));
+                .andExpect(status().is(201));
     }
 
     @Test
     public void calculateNotValidKeysAndExpectBadRequestStatusCode() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
+        MockMultipartFile file = new MockMultipartFile("inputFile", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
 
         mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/calculate")
                         .file(file)
                         .queryParam("outputfile", OUTPUT_FILE_NAME)
+                        .queryParam("extension", "txt")
                         .queryParam("key", "123"))
                 .andExpect(status().is(400));
     }

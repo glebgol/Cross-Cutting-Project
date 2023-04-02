@@ -8,19 +8,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 class FileCalculationControllerTest extends SpringBootTestBase{
     @Test
-    public void calculateAndExpectOkStatusCode() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
+    public void calculateAndExpect_201_StatusCode() throws Exception {
+        MockMultipartFile file = new MockMultipartFile("inputFile", FILE_NAME,   "text/plain", "(123 + 456) / 0".getBytes());
 
         mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/calculate")
                         .file(file)
-                        .queryParam("outputfile", OUTPUT_FILE_NAME)
-                        .queryParam("extension", "txt"))
-                .andExpect(status().is(200));
+                        .queryParam("outputFilename", OUTPUT_FILE_NAME)
+                        .queryParam("extension", "Txt"))
+                .andExpect(status().is(201));
     }
 
     @Test
     public void calculateNotValidKeysAndExpectBadRequestStatusCode() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
+        MockMultipartFile file = new MockMultipartFile("inputFile", FILE_NAME, "text/plain", "(123 + 456) / 0".getBytes());
 
         mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/calculate")
                         .file(file)
