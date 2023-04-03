@@ -16,13 +16,11 @@ public class InputFileResource implements AutoCloseable {
     }
 
     public InputFileResource(String uploadPath, ParamsDTO paramsDTO) {
-        fileUploadUtil.saveFile(uploadPath, paramsDTO.getInputFile());
-        inputFilename = paramsDTO.getInputFile().getOriginalFilename();
-        UPLOAD_PATH = uploadPath;
+        this(uploadPath, paramsDTO.getInputFile());
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() {
         fileUploadUtil.deleteFile(UPLOAD_PATH, inputFilename);
     }
 }
