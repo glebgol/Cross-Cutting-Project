@@ -18,8 +18,6 @@ public interface IFileReader {
         write(calculatedResult, outputFileName);
     }
     default void calculate(File outputFile) throws IOException, CryptoException, JAXBException {
-        IStream readingResult = read();
-        IStream calculatedResult = calculate(readingResult);
-        write(calculatedResult, outputFile.getAbsolutePath());
+        calculate(outputFile.getAbsolutePath());
     }
 }
