@@ -1,26 +1,51 @@
-# Cross-Cutting-Project
-Rest-Service, Unit-Testing, Api-Testing, UI-Testing, Design Patterns, React
+## Cross-Cutting-Project
+* Counting arithmetic expressions in an encrypted any number of times and archived file (txt, xml, json);
+* encrypting-decrypting files; 
+* zip-unzip files.
 
-### Design Patterns:
-1. Decorator 
-2. Builder
+Rest-Service: `Spring Boot`
 
+Web UI: `React JS`
 
-### Using REST API
+Used test-runners: `JUnit, TestNG`
 
-| Method | Url                     | Params                                                            | Description                                                                                                                                                       |
-|:-------|:------------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| POST   | api/v1/calculate        | file<br/>outputfile<br/>iszipped<br/>decryptionkeys<br/>extension | Calculates math expressions in file and write to output file. Input file can be encrypted any number of times and archived. Supported extensions: txt, xml, json. |
-| POST   | api/v1/encrypt          | file<br/>outputfile<br/>key                                       | Encrypts file                                                                                                                                                     |
-| POST   | api/v1/decrypt          | file<br/>outputfile<br/>key                                       | Decrypts file                                                                                                                                                     |
-| POST   | api/v1/zip              | file                                                              | Zip file                                                                                                                                                          |
-| POST   | api/v1/unzip            | file<br/>outputfile                                               | Unzip file                                                                                                                                                        |
-| GET    | downloadFile/{filecode} |                                                                   | Downloads file                                                                                                                                                    |
+Integration testing: `REST-assured`
 
-### UNIT Testing JUnit
+UI testing: `Selenium WebDriver, Selenide`
 
-### API Testing Rest-Assured and JUNIT
+BDD testing: `Cucumber`
 
-### UI-testing with Selenium WebDriver and TestNG
+### Used Design Patterns:
+#### 1. Decorator
+```java 
+IFileReader reader = new ZipFileReader(
+   new EncryptedFileReader(SECOND_KEY,
+   new EncryptedFileReader(FIRST_KEY,
+   new TxtFileReader(TWICE_ENCRYPTED_ZIP))));
+```
+#### 2. Builder
+```java 
+IFileReaderBuilder builder = new FileReaderBuilder("txt", TWICE_ENCRYPTED_ZIP);
+builder.setEncrypting(FIRST_KEY);
+builder.setEncrypting(SECOND_KEY);
+builder.setZipping(true);
 
-### React JS
+IFileReader reader = builder.getFileReader();
+```
+#### 3. Template Method
+```java
+public interface IFileReader {
+    String getInputFilename();
+    
+    void write(IStream stream, String outputFilename);
+    IStream read();
+    IStream transform(IStream stream);
+    IStream calculate(IStream stream);
+    
+    default void calculate(String outputFileName) {
+        IStream readingResult = read();
+        IStream calculatedResult = calculate(readingResult);
+        write(calculatedResult, outputFileName);
+    }
+}
+```
