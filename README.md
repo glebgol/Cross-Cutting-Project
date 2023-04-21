@@ -19,9 +19,9 @@ BDD testing: `Cucumber`
 #### 1. Decorator
 ```java 
 IFileReader reader = new ZipFileReader(
-   new EncryptedFileReader(SECOND_KEY,
-   new EncryptedFileReader(FIRST_KEY,
-   new TxtFileReader(TWICE_ENCRYPTED_ZIP))));
+                new EncryptedFileReader(SECOND_KEY,
+                        new EncryptedFileReader(FIRST_KEY,
+                                new TxtFileReader(TWICE_ENCRYPTED_ZIP))));
 ```
 #### 2. Builder
 ```java 
